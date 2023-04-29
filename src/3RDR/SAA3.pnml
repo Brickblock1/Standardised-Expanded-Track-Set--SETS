@@ -78,7 +78,7 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
-		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3RD_RAIL, STANDARD_GAUGE_RAILTYPE_DUAL, STANDARD_GAUGE_RAILTYPE_4TH_RAIL] ;
+		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3RD] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 8 ;
@@ -112,7 +112,7 @@ item(FEAT_RAILTYPES, rail_SAAZ) {
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_3RDC_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
-		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_EVERY_ELEC] ;
+		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 10 ;

@@ -1,17 +1,17 @@
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAAA) {
+item(FEAT_RAILTYPES, rail_SAAa) {
 	property {
-		label						: "SAAA" ;
-		name						: string(STR_SAAA_NAME) ;
-		menu_text					: string(STR_SAAA_NAME) ;
-		build_window_caption		: string(STR_SAAA_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
+		label						: "SAAa" ;
+		name						: string(STR_SAAa_NAME) ;
+		menu_text					: string(STR_SAAa_NAME) ;
+		build_window_caption		: string(STR_SAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
-		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_25KV] ;
+		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_15KV] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;
@@ -31,7 +31,7 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 		fences				: sw_fences_SAAN ;
 		depots				: sw_depot_SAAN ;
 		signals				: sw_signals ;
-		catenary_pylons		: gfx_catenary_masts_25 ;
+		catenary_pylons		: gfx_catenary_masts_15 ;
 	}
 }
 
