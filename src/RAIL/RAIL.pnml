@@ -131,6 +131,7 @@ item(FEAT_RAILTYPES, rail_ELRL) {
 		fences				: sw_fences_RAIL ;
 		depots				: sw_depot_RAIL ;
 		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_15 ;
 	}
 }
 

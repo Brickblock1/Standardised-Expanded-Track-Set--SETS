@@ -585,5 +585,5 @@ template template_catenarywires() {
  [ 300, 700, 64, 42, -17, -20]
 }
 
-
+#include "src/catenary_masts.pnml"
 

@@ -1,0 +1,26 @@
+template tmpl_catenary_masts (y) {
+    [0,  y, 8, 18, -7, -14]
+    [10, y, 8, 18, -1, -17]
+    [20, y, 8, 18,  1, -14]
+    [30, y, 8, 18, -7, -17]
+    [40, y, 8, 18, -7, -14]
+    [50, y, 8, 18, -1, -17]
+    [60, y, 8, 18,  1, -14]
+    [70, y, 8, 18, -7, -17]
+}
+
+spriteset (gfx_catenary_masts_15, "gfx/catenary_masts.png") {
+    tmpl_catenary_masts(0)
+}
+
+spriteset (gfx_catenary_masts_25, "gfx/catenary_masts.png") {
+    tmpl_catenary_masts(20)
+}
+
+spriteset (gfx_catenary_masts_1500, "gfx/catenary_masts.png") {
+    tmpl_catenary_masts(40)
+}
+
+spriteset (gfx_catenary_masts_3, "gfx/catenary_masts.png") {
+    tmpl_catenary_masts(60)
+}
