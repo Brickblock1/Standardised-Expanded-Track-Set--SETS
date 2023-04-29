@@ -70,7 +70,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SAAN, fence_number < 1){
 
 item(FEAT_RAILTYPES, rail_SAAN) {
 	property {
-		label						: "SAAN" ;
+		label						: "RAIL" ;
 		name						: string(STR_SAAN_NAME) ;
 		menu_text					: string(STR_SAAN_NAME) ;
 		build_window_caption		: string(STR_RAIL_BUILD_NAME) ;
@@ -103,7 +103,7 @@ item(FEAT_RAILTYPES, rail_SAAN) {
 
 item(FEAT_RAILTYPES, rail_SAAE) {
 	property {
-		label						: "SAAE" ;
+		label						: "ELRL" ;
 		name						: string(STR_SAAE_NAME) ;
 		menu_text					: string(STR_SAAE_NAME) ;
 		build_window_caption		: string(STR_ELRL_BUILD_NAME) ;

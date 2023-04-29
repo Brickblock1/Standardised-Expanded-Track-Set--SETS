@@ -57,7 +57,7 @@ switch(FEAT_RAILTYPES, SELF, sw_depot_SBAN, depot_type){
 
 // Fences?
 
-switch(FEAT_RAILTYPES, SELF, sw_fences_SBAN, fence_number < 1){
+switch(FEAT_RAILTYPES, SELF, sw_fences_SBAN, fence_number < 2){
 	1 : gfx_fences_SBAN ;
 	gfx_blank ;
 }
@@ -81,12 +81,12 @@ item(FEAT_RAILTYPES, rail_SBAN) {
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 8 ;
+		construction_cost			: 11 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
 		introduction_date			: date(1804,1,1) ;
-		sort_order					: 51 ;
-		speed_limit					: param[3] mph ;
+		sort_order					: 53 ;
+		speed_limit					: param[5] mph ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {
@@ -114,12 +114,12 @@ item(FEAT_RAILTYPES, rail_SBAE) {
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_OHLE_ONLY] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 11 ;
+		construction_cost			: 14 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		introduction_date			: date(1883,1,1) ;
-		sort_order					: 61 ;
-		speed_limit					: param[3] mph ;
+		sort_order					: 63 ;
+		speed_limit					: param[5] mph ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {

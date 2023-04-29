@@ -203,10 +203,6 @@ grf{
 	}
 }
 
-railtypetable {
-    STANDARD_GAUGE_RAILTYPE_ALL, NARROW_GAUGE_RAILTYPE_ALL,
-}
-
 basecost{
 	PR_BUILD_RAIL	: (param[1]-3) ;
 }
