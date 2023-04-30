@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 STR_GRF_NAME	:Standardised Multivoltage Track Set - SMTS
-STR_GRF_DESC	:{GOLD}A track set that adds a customisable roster of different track types that follow the standardised track scheme! Graphics drawn by {RED}UnholyPhish {GOLD}and {PURPLE}Gwyd{GOLD} and coded by {RED}UnholyPhish {GOLD}and {PURPLE}Gwyd{GOLD}, additional code and graphics by {PURPLE}Brickblock1{GOLD}. Licenced under GPL v2. Check licence for details.
+STR_GRF_DESC	:{GOLD}A track set that adds a customisable roster of different track types that follow the standardised track scheme! Graphics drawn by and coded by {RED}UnholyPhish {GOLD}and {PURPLE}Gwyd{GOLD}, additional code and graphics by {BLUE}Brickblock1{GOLD}. Licenced under GPL v2. Check licence for details.
 
 STR_PARAM_SPEEDLIMITS_DESC			:Turn on track speed limits.
 
@@ -124,14 +124,14 @@ STR_SY3N_NAME				:Standard Gauge {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrow
 STR_SY4N_NAME				:Standard Gauge {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
 
 
-STR_SAAE_NAME				:Standard Gauge (Overhead){GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBAE_NAME				:Standard Gauge (Overhead){GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCAE_NAME				:Standard Gauge (Overhead){GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+STR_SAAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SBAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
+STR_SCAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
 
-STR_SY1E_NAME				:Standard Gauge (Overhead){GOLD}(Sleeper: ISR, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY2E_NAME				:Standard Gauge (Overhead){GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY3E_NAME				:Standard Gauge (Overhead){GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY4E_NAME				:Standard Gauge (Overhead){GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY1E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: ISR, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY2E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY3E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY4E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
 
 
 STR_SAA3_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
@@ -139,7 +139,7 @@ STR_SBA3_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Wooden, 
 STR_SCA3_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
 
 STR_SY13_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: ISR, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY23_NAME				:Standard Gauge {BROWN}(750v 3rd Rail){GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY23_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SY33_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SY43_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
 

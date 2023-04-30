@@ -613,7 +613,7 @@ grf{
 			desc    : string(STR_PARAM_SPEED_DESC) ;
 			min_value	: 0 ;
 			max_value	: 500 ;
-			def_value	: 160 ;
+			def_value	: 161 ;
 		}
 	}
 	param 4{
@@ -1598,6 +1598,7 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA"] ;
+		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;
@@ -1734,6 +1735,7 @@ item(FEAT_RAILTYPES, rail_SAAa) {
 		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa"] ;
+		introduces_railtype_list	: ["SAAa", "SBAa", "SCAa"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;
@@ -1937,6 +1939,7 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ"] ;
+		introduces_railtype_list	: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 8 ;
