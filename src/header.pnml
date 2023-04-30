@@ -93,7 +93,7 @@ grf{
 			def_value	: 0 ;
 		}
 	}
-	param 5{
+	param 6{
 		metro_track {
  			type:    int;
  			name:    string(STR_PARAM_METRO_TRACK_NAME);

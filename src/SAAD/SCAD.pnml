@@ -1,25 +1,24 @@
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SCAA) {
+item(FEAT_RAILTYPES, rail_SCAD) {
 	property {
-		label						: "SCAA" ;
-		name						: string(STR_SCAA_NAME) ;
-		menu_text					: string(STR_SCAA_NAME) ;
-		build_window_caption		: string(STR_SAAA_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
+		label						: "SCAD" ;
+		name						: string(STR_SCAD_NAME) ;
+		menu_text					: string(STR_SCAD_NAME) ;
+		build_window_caption		: string(STR_SAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
-		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_25KV] ;
+		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3KV] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 20 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1935,1,1) ;
 		sort_order					: 66 ;
-		speed_limit					: param[8] mph ;
+		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {
@@ -31,7 +30,14 @@ item(FEAT_RAILTYPES, rail_SCAA) {
 		fences				: sw_fences_SCAN ;
 		depots				: sw_depot_SCAN ;
 		signals				: sw_signals ;
-		catenary_pylons		: gfx_catenary_masts_25 ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
 	}
 }
 
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SCAD) {
+		property {
+			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+		}
+	}
+}

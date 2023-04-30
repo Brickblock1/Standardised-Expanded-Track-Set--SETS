@@ -656,7 +656,7 @@ grf{
 			def_value	: 0 ;
 		}
 	}
-	param 5{
+	param 6{
 		metro_track {
  			type:    int;
  			name:    string(STR_PARAM_METRO_TRACK_NAME);
@@ -1870,6 +1870,282 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SCAa) {
+		property {
+			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+		}
+	}
+}
+# 1 "sukts.pnml" 2
+
+# 1 "src/SAAD/SAAD.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SAAD) {
+	property {
+		label						: "SAAD" ;
+		name						: string(STR_SAAD_NAME) ;
+		menu_text					: string(STR_SAAD_NAME) ;
+		build_window_caption		: string(STR_SAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAAD", "SBAD", "SCAD"] ;
+		introduces_railtype_list	: ["SAAD", "SBAD", "SCAD"] ;
+		alternative_railtype_list	: ["SABD", "SACD", "SADD", "SAED", "IHF_"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 9 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 60 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SAAN ;
+		underlay			: sw_underlay_SAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_SAAN ;
+		tunnels				: gfx_tunnel_tracks_SAAN ;
+		level_crossings		: sw_lc_SAAN_state ;
+		fences				: sw_fences_SAAN ;
+		depots				: sw_depot_SAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SAAD) {
+		property {
+			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+		}
+	}
+}
+# 1 "sukts.pnml" 2
+# 1 "src/SAAD/SBAD.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SBAD) {
+	property {
+		label						: "SBAD" ;
+		name						: string(STR_SBAD_NAME) ;
+		menu_text					: string(STR_SBAD_NAME) ;
+		build_window_caption		: string(STR_SAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAAD", "SBAD", "SCAD"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBAN ;
+		underlay			: sw_underlay_SBAN ;
+		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+		tunnels				: gfx_tunnel_tracks_SBAN ;
+		level_crossings		: sw_lc_SBAN_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SBAD) {
+		property {
+			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+		}
+	}
+}
+# 1 "sukts.pnml" 2
+# 1 "src/SAAD/SCAD.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SCAD) {
+	property {
+		label						: "SCAD" ;
+		name						: string(STR_SCAD_NAME) ;
+		menu_text					: string(STR_SCAD_NAME) ;
+		build_window_caption		: string(STR_SAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAAD", "SBAD", "SCAD"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 20 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 66 ;
+		speed_limit					: param[4] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SCAN ;
+		underlay			: sw_underlay_SCAN ;
+		bridge_surfaces		: gfx_bridge_tracks_SCAN ;
+		tunnels				: gfx_tunnel_tracks_SCAN ;
+		level_crossings		: sw_lc_SCAN_state ;
+		fences				: sw_fences_SCAN ;
+		depots				: sw_depot_SCAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SCAD) {
+		property {
+			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+		}
+	}
+}
+# 1 "sukts.pnml" 2
+
+# 1 "src/SAAd_/SAAd.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SAAd) {
+	property {
+		label						: "SAAd" ;
+		name						: string(STR_SAAd_NAME) ;
+		menu_text					: string(STR_SAAd_NAME) ;
+		build_window_caption		: string(STR_SAAd_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAAd", "SBAd", "SCAd"] ;
+		introduces_railtype_list	: ["SAAd", "SBAd", "SCAd"] ;
+		alternative_railtype_list	: ["SABd", "SACd", "SADd", "SAEd"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 9 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 60 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SAAN ;
+		underlay			: sw_underlay_SAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_SAAN ;
+		tunnels				: gfx_tunnel_tracks_SAAN ;
+		level_crossings		: sw_lc_SAAN_state ;
+		fences				: sw_fences_SAAN ;
+		depots				: sw_depot_SAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_1500 ;
+	}
+}
+
+if (SAAZ_SAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_SAAd) {
+		property {
+			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+		}
+	}
+}
+# 1 "sukts.pnml" 2
+# 1 "src/SAAd_/SBAd.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SBAd) {
+	property {
+		label						: "SBAd" ;
+		name						: string(STR_SBAd_NAME) ;
+		menu_text					: string(STR_SBAd_NAME) ;
+		build_window_caption		: string(STR_SAAd_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAAd", "SBAd", "SCAd"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBAN ;
+		underlay			: sw_underlay_SBAN ;
+		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+		tunnels				: gfx_tunnel_tracks_SBAN ;
+		level_crossings		: sw_lc_SBAN_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_1500 ;
+	}
+}
+
+if (SAAZ_SAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_SBAd) {
+		property {
+			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+		}
+	}
+}
+# 1 "sukts.pnml" 2
+# 1 "src/SAAd_/SCAd.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SCAd) {
+	property {
+		label						: "SCAd" ;
+		name						: string(STR_SCAd_NAME) ;
+		menu_text					: string(STR_SCAd_NAME) ;
+		build_window_caption		: string(STR_SAAd_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAAd", "SBAd", "SCAd"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 20 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 66 ;
+		speed_limit					: param[4] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SCAN ;
+		underlay			: sw_underlay_SCAN ;
+		bridge_surfaces		: gfx_bridge_tracks_SCAN ;
+		tunnels				: gfx_tunnel_tracks_SCAN ;
+		level_crossings		: sw_lc_SCAN_state ;
+		fences				: sw_fences_SCAN ;
+		depots				: sw_depot_SCAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_1500 ;
+	}
+}
+
+if (SAAZ_SAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_SCAd) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ"] ;
 		}

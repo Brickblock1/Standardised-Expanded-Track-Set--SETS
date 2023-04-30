@@ -1,0 +1,45 @@
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SAAD) {
+	property {
+		label						: "SAAD" ;
+		name						: string(STR_SAAD_NAME) ;
+		menu_text					: string(STR_SAAD_NAME) ;
+		build_window_caption		: string(STR_SAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
+		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3KV] ;
+		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_3KV] ;
+		alternative_railtype_list	: ["SABD", "SACD", "SADD", "SAED", "IHF_"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 9 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 60 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SAAN ;
+		underlay			: sw_underlay_SAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_SAAN ;
+		tunnels				: gfx_tunnel_tracks_SAAN ;
+		level_crossings		: sw_lc_SAAN_state ;
+		fences				: sw_fences_SAAN ;
+		depots				: sw_depot_SAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SAAD) {
+		property {
+			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+		}
+	}
+}

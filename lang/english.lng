@@ -116,6 +116,17 @@ STR_SAAa_REPLACE_NAME		:Replace Standard Gauge (15kv Overhead) vehicles.
 STR_SAAa_NEW_TRAIN			:Standard Gauge (15kv Overhead)
 
 
+STR_SAAD_TOOLBAR			:Standard Gauge (3kv Overhead) construction.{YELLOW}
+STR_SAAD_BUILD_NAME			:New Standard Gauge (3kv Overhead) vehicles.
+STR_SAAD_REPLACE_NAME		:Replace Standard Gauge (3kv Overhead) vehicles.
+STR_SAAD_NEW_TRAIN			:Standard Gauge (3kv Overhead)
+
+STR_SAAd_TOOLBAR			:Standard Gauge (1.5kv Overhead) construction.{YELLOW}
+STR_SAAd_BUILD_NAME			:New Standard Gauge (1.5kv Overhead) vehicles.
+STR_SAAd_REPLACE_NAME		:Replace Standard Gauge (1.5kv Overhead) vehicles.
+STR_SAAd_NEW_TRAIN			:Standard Gauge (1.5kv Overhead)
+
+
 
 
 STR_BLST_NAME				:Empty track ballast.{YELLOW}
@@ -169,3 +180,12 @@ STR_SCAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, R
 STR_SAAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SBAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
 STR_SCAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+
+
+STR_SAAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SBAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
+STR_SCAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+
+STR_SAAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SBAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
+STR_SCAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
