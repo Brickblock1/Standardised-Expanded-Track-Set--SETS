@@ -12,12 +12,12 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_25KV] ;
+		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_25KV] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 60 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;

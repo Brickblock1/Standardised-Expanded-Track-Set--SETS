@@ -6,10 +6,10 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 		label						: "SCAa" ;
 		name						: string(STR_SCAa_NAME) ;
 		menu_text					: string(STR_SCAa_NAME) ;
-		build_window_caption		: string(STR_SAAA_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
+		build_window_caption		: string(STR_SAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_15KV] ;
 		curve_speed_multiplier		: 0 ;
@@ -17,7 +17,6 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 		construction_cost			: 20 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1935,1,1) ;
 		sort_order					: 66 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;

@@ -556,7 +556,7 @@ spriteset (gfx_catenary_masts_1500, "gfx/catenary_masts.png") {
 spriteset (gfx_catenary_masts_3, "gfx/catenary_masts.png") {
     tmpl_catenary_masts(60)
 }
-# 1 "src/definitions.pnml" 539
+# 1 "src/definitions.pnml" 540
 
 # 1 "sukts.pnml" 2
 
@@ -1254,12 +1254,12 @@ item(FEAT_RAILTYPES, rail_SAAN) {
 		toolbar_caption				: string(STR_RAIL_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		introduces_railtype_list	: ["RAIL", "SBAN", "SCAN"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 6 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1804,1,1) ;
 		sort_order					: 50 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
@@ -1287,12 +1287,12 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		toolbar_caption				: string(STR_ELRL_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ"] ;
+		introduces_railtype_list	: ["ELRL", "SBAE", "SCAE"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 60 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
@@ -1397,7 +1397,6 @@ item(FEAT_RAILTYPES, rail_SBAN) {
 		construction_cost			: 11 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1804,1,1) ;
 		sort_order					: 53 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
@@ -1430,7 +1429,6 @@ item(FEAT_RAILTYPES, rail_SBAE) {
 		construction_cost			: 14 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 63 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
@@ -1535,7 +1533,6 @@ item(FEAT_RAILTYPES, rail_SCAN) {
 		construction_cost			: 17 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1935,1,1) ;
 		sort_order					: 56 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
@@ -1568,7 +1565,6 @@ item(FEAT_RAILTYPES, rail_SCAE) {
 		construction_cost			: 20 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1935,1,1) ;
 		sort_order					: 66 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
@@ -1607,7 +1603,6 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 60 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
@@ -1653,7 +1648,6 @@ item(FEAT_RAILTYPES, rail_SBAA) {
 		construction_cost			: 14 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 63 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
@@ -1699,7 +1693,6 @@ item(FEAT_RAILTYPES, rail_SCAA) {
 		construction_cost			: 20 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1935,1,1) ;
 		sort_order					: 66 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
@@ -1746,7 +1739,6 @@ item(FEAT_RAILTYPES, rail_SAAa) {
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 60 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
@@ -1781,10 +1773,10 @@ item(FEAT_RAILTYPES, rail_SBAa) {
 		label						: "SBAa" ;
 		name						: string(STR_SBAa_NAME) ;
 		menu_text					: string(STR_SBAa_NAME) ;
-		build_window_caption		: string(STR_SAAA_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
+		build_window_caption		: string(STR_SAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa"] ;
 		curve_speed_multiplier		: 0 ;
@@ -1792,7 +1784,6 @@ item(FEAT_RAILTYPES, rail_SBAa) {
 		construction_cost			: 14 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 63 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
@@ -1827,10 +1818,10 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 		label						: "SCAa" ;
 		name						: string(STR_SCAa_NAME) ;
 		menu_text					: string(STR_SCAa_NAME) ;
-		build_window_caption		: string(STR_SAAA_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
+		build_window_caption		: string(STR_SAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa"] ;
 		curve_speed_multiplier		: 0 ;
@@ -1838,7 +1829,6 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 		construction_cost			: 20 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1935,1,1) ;
 		sort_order					: 66 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
@@ -1952,7 +1942,6 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 		construction_cost			: 8 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1880,1,1) ;
 		sort_order					: 70 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
@@ -1986,7 +1975,6 @@ item(FEAT_RAILTYPES, rail_SAAZ) {
 		construction_cost			: 10 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 80 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
@@ -2119,7 +2107,6 @@ item(FEAT_RAILTYPES, rail_SBA3) {
 		construction_cost			: 13 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1880,1,1) ;
 		sort_order					: 73;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
@@ -2153,7 +2140,6 @@ item(FEAT_RAILTYPES, rail_SBAZ) {
 		construction_cost			: 15 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 83 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
@@ -2286,7 +2272,6 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 		construction_cost			: 19 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1935,1,1) ;
 		sort_order					: 76 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
@@ -2398,9 +2383,8 @@ item(FEAT_RAILTYPES, rail_SBA4) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1907,1,1) ;
 		sort_order					: 90 ;
-		speed_limit					: param[2] mph ;
+		speed_limit					: param[2] km/h ;
 	}
 	graphics {
 		track_overlay		: gfx_overlays_SBA4 ;

@@ -84,7 +84,6 @@ item(FEAT_RAILTYPES, rail_SBAN) {
 		construction_cost			: 11 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1804,1,1) ;
 		sort_order					: 53 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
@@ -117,7 +116,6 @@ item(FEAT_RAILTYPES, rail_SBAE) {
 		construction_cost			: 14 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		introduction_date			: date(1883,1,1) ;
 		sort_order					: 63 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;

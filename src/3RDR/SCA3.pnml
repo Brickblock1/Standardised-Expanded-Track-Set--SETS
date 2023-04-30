@@ -84,7 +84,6 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 		construction_cost			: 19 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		introduction_date			: date(1935,1,1) ;
 		sort_order					: 76 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;

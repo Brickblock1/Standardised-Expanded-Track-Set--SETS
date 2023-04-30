@@ -50,7 +50,7 @@ grf{
 			desc    : string(STR_PARAM_SPEED_DESC) ;
 			min_value	: 0 ;
 			max_value	: 500 ;
-			def_value	: 160 ;
+			def_value	: 161 ;
 		}
 	}
 	param 4{
