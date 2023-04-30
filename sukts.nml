@@ -656,6 +656,20 @@ grf{
 			def_value	: 0 ;
 		}
 	}
+	param 5{
+		metro_track {
+ 			type:    int;
+ 			name:    string(STR_PARAM_METRO_TRACK_NAME);
+ 			desc:    string(STR_PARAM_METRO_TRACK_DESC);
+ 			min_value: 0;
+ 			max_value: 1;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_METRO_TRACK_3RDR);
+ 				1: string(STR_PARAM_METRO_TRACK_SBA4);
+ 			};
+		}
+	}
 	param 12{
 		signal_elec {
  			type:    int;
@@ -1255,6 +1269,7 @@ item(FEAT_RAILTYPES, rail_SAAN) {
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		introduces_railtype_list	: ["RAIL", "SBAN", "SCAN"] ;
+		alternative_railtype_list	: ["SAAN", "SABN", "SACN", "SADN", "SAEN", "IHA_"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 6 ;
@@ -1288,6 +1303,7 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ"] ;
 		introduces_railtype_list	: ["ELRL", "SBAE", "SCAE"] ;
+		alternative_railtype_list	: ["SAAE", "SABE", "SACE", "SADE", "SAEE", "IHG_"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;
@@ -1528,6 +1544,7 @@ item(FEAT_RAILTYPES, rail_SCAN) {
 		toolbar_caption				: string(STR_RAIL_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		alternative_railtype_list	: ["IHAA"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 17 ;
@@ -1599,6 +1616,7 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA"] ;
 		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA"] ;
+		alternative_railtype_list	: ["SABA", "SACA", "SADA", "SAEA", "IHB_"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;
@@ -1689,6 +1707,7 @@ item(FEAT_RAILTYPES, rail_SCAA) {
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA"] ;
+		alternative_railtype_list	: ["IHBA"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 20 ;
@@ -1736,6 +1755,7 @@ item(FEAT_RAILTYPES, rail_SAAa) {
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa"] ;
 		introduces_railtype_list	: ["SAAa", "SBAa", "SCAa"] ;
+		alternative_railtype_list	: ["SABa", "SACa", "SADa", "SAEa"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;
@@ -1940,6 +1960,7 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ"] ;
 		introduces_railtype_list	: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ"] ;
+		alternative_railtype_list	: ["3RDR", "SAB3", "SAC3", "SAD3", "SAE3"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 8 ;
@@ -1961,6 +1982,13 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 	}
 }
 
+if (metro_track == 0) {
+	item(FEAT_RAILTYPES, rail_SAA3) {
+		property {
+			alternative_railtype_list: ["MTRO", "IHC_"] ;
+		}
+	}
+}
 
 item(FEAT_RAILTYPES, rail_SAAZ) {
 	property {
@@ -1973,6 +2001,8 @@ item(FEAT_RAILTYPES, rail_SAAZ) {
 		toolbar_caption				: string(STR_3RDC_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "ELRL", "SBAE", "SCAE"] ;
+		introduces_railtype_list	: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "ELRL", "SBAE", "SCAE"] ;
+		alternative_railtype_list	: ["3RDC", "SABZ", "SACZ", "SADZ", "SAEZ"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 10 ;
@@ -2299,7 +2329,7 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 //#include "src/4RDR/SAA4.pnml"
 //#include "src/4RDR/SBA4.pnml"
 //#include "src/4RDR/SCA4.pnml"
-# 1 "src/4RDR/SDA4.pnml" 1
+# 1 "src/4RDR/SBA4.pnml" 1
 
 
 
@@ -2381,6 +2411,7 @@ item(FEAT_RAILTYPES, rail_SBA4) {
 		toolbar_caption				: string(STR_4RDR_TOOLBAR) ;
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SAAA", "SBAA", "SCAA", "SAAD", "SBAD", "SCAD", "SAAd", "SBAd", "SCAd", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAA4", "SBA4", "SCA4"] ;
+		alternative_railtype_list	: ["SAA4", "SAB4", "SAC4", "SAD4", "SAE4"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 7 ;
@@ -2401,6 +2432,11 @@ item(FEAT_RAILTYPES, rail_SBA4) {
 	}
 }
 
-
-
+if (metro_track == 1) {
+	item(FEAT_RAILTYPES, rail_SBA4) {
+		property {
+			alternative_railtype_list: ["MTRO", "IHC_"] ;
+		}
+	}
+}
 # 1 "sukts.pnml" 2

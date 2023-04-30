@@ -80,6 +80,7 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3RD] ;
 		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_3RD] ;
+		alternative_railtype_list	: ["3RDR", "SAB3", "SAC3", "SAD3", "SAE3"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 8 ;
@@ -101,6 +102,13 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 	}
 }
 
+if (metro_track == 0) {
+	item(FEAT_RAILTYPES, rail_SAA3) {
+		property {
+			alternative_railtype_list: ["MTRO", "IHC_"] ;
+		}
+	}
+}
 
 item(FEAT_RAILTYPES, rail_SAAZ) {
 	property {
@@ -113,6 +121,8 @@ item(FEAT_RAILTYPES, rail_SAAZ) {
 		toolbar_caption				: string(STR_3RDC_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3RD, STANDARD_GAUGE_RAILTYPE_MULTI] ;
+		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_3RD, STANDARD_GAUGE_RAILTYPE_MULTI] ;
+		alternative_railtype_list	: ["3RDC", "SABZ", "SACZ", "SADZ", "SAEZ"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 10 ;

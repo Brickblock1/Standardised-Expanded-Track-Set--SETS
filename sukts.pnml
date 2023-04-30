@@ -20,6 +20,14 @@
 #include "src/SAAa_/SBAa.pnml"
 #include "src/SAAa_/SCAa.pnml"
 
+#include "src/SAAD/SAAD.pnml"
+#include "src/SAAD/SBAD.pnml"
+#include "src/SAAD/SCAD.pnml"
+
+#include "src/SAAd_/SAAd.pnml"
+#include "src/SAAd_/SBAd.pnml"
+#include "src/SAAd_/SCAd.pnml"
+
 #include "src/3RDR/SAA3.pnml"
 #include "src/3RDR/SBA3.pnml"
 #include "src/3RDR/SCA3.pnml"
@@ -27,4 +35,4 @@
 //#include "src/4RDR/SAA4.pnml"
 //#include "src/4RDR/SBA4.pnml"
 //#include "src/4RDR/SCA4.pnml"
-#include "src/4RDR/SDA4.pnml"
+#include "src/4RDR/SBA4.pnml"

@@ -80,6 +80,7 @@ item(FEAT_RAILTYPES, rail_SAAN) {
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_NONE] ;
+		alternative_railtype_list	: ["SAAN", "SABN", "SACN", "SADN", "SAEN", "IHA_"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 6 ;
@@ -113,6 +114,7 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_OHLE] ;
 		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_MULTI] ;
+		alternative_railtype_list	: ["SAAE", "SABE", "SACE", "SADE", "SAEE", "IHG_"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 9 ;

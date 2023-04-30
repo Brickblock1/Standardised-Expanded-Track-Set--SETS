@@ -54,6 +54,13 @@ STR_PARAM_SAAZ					:Allow traversing SAAX
 STR_PARAM_SAAZ_DESC				:
 
 
+STR_PARAM_METRO_TRACK_NAME      :Metro track
+STR_PARAM_METRO_TRACK_DESC      :Changes what track some metro train show up on.
+
+STR_PARAM_METRO_TRACK_3RDR      :Third rail
+STR_PARAM_METRO_TRACK_SBA4      :Fourth rail
+
+
 STR_PARAM_SIGNAL_ELEC_NAME				:Modern Signal Type
 STR_PARAM_SIGNAL_ELEC_DESC				:Changes type of modern signal
 

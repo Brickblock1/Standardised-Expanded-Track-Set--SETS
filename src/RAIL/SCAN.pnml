@@ -79,6 +79,7 @@ item(FEAT_RAILTYPES, rail_SCAN) {
 		toolbar_caption				: string(STR_RAIL_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_ALL] ;
+		alternative_railtype_list	: ["IHAA"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 17 ;
