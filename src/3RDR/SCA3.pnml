@@ -86,7 +86,7 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 		railtype_flags				: bitmask() ;
 		introduction_date			: date(1935,1,1) ;
 		sort_order					: 76 ;
-		speed_limit					: param[8] mph ;
+		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {

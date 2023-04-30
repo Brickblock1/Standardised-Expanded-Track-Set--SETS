@@ -1,23 +1,16 @@
 grf{
-	grfid: "SUKT" ;
+	grfid: "BBST" ;
 	name: string(STR_GRF_NAME) ;
 	desc: string(STR_GRF_DESC) ;
-	version: 17 ;
+	version: 0 ;
 	min_compatible_version: 0 ;
 	param 0{
-		toggle_limits{
-			type    : bool ;
-			name    : string(STR_PARAM_SPEEDLIMITS_NAME) ;
-			desc    : string(STR_PARAM_SPEEDLIMITS_DESC) ;
-			bit     : 1 ;
-			def_value : 0 ;
-		}
 		wide_ballast{
 			type    : bool ;
 			name    : string(STR_PARAM_TRACK_WIDE_BALLAST_NAME) ;
 			desc    : string(STR_PARAM_TRACK_WIDE_BALLAST_DESC) ;
 			bit     : 2 ;
-			def_value : 0 ;
+			def_value : 1 ;
 		}
 	}
 	param 1{
@@ -47,7 +40,7 @@ grf{
 			desc    : string(STR_PARAM_SPEED_DESC) ;
 			min_value	: 0 ;
 			max_value	: 500 ;
-			def_value	: 15 ;
+			def_value	: 80 ;
 		}
 	}
 	param 3{
@@ -57,7 +50,7 @@ grf{
 			desc    : string(STR_PARAM_SPEED_DESC) ;
 			min_value	: 0 ;
 			max_value	: 500 ;
-			def_value	: 20 ;
+			def_value	: 160 ;
 		}
 	}
 	param 4{
@@ -67,83 +60,37 @@ grf{
 			desc    : string(STR_PARAM_SPEED_DESC) ;
 			min_value	: 0 ;
 			max_value	: 500 ;
-			def_value	: 40 ;
+			def_value	: 0 ;
 		}
 	}
 	param 5{
-		speed_4{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_4) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 60 ;
+		SAAZ_SAAA{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 1 ;
+			def_value	: 1 ;
 		}
-	}
-	param 6{
-		speed_5{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_5) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 75 ;
-		}
-	}
-	param 7{
-		speed_6{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_6) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 100 ;
-		}
-	}
-	param 8{
-		speed_7{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_7) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 100 ;
-		}
-	}
-	param 9{
-		speed_8{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_8) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 125 ;
-		}
-	}
-	param 10{
-		speed_9{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_9) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 187 ;
-		}
-	}
-	param 11{
-		extra_tracks{
-			type    : int ;
-			name    : string(STR_PARAM_TRACK_LIST_NAME) ;
-			desc    : string(STR_PARAM_TRACK_LIST_DESC) ;
-			min_value	: 0 ;
-			max_value	: 3 ;
+		SAAZ_SAAa_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 2 ;
 			def_value	: 0 ;
-			names		: {
-				0	: string(STR_PARAM_TRACK_ONE ) ;
-				1	: string(STR_PARAM_TRACK_MIN ) ;
-				2	: string(STR_PARAM_TRACK_STANDARD ) ;
-				3	: string(STR_PARAM_TRACK_EXTRA ) ;
-			} ;
+		}
+		SAAZ_SAAD{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 3 ;
+			def_value	: 0 ;
+		}
+		SAAZ_SAAd_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 4 ;
+			def_value	: 0 ;
 		}
 	}
 	param 12{

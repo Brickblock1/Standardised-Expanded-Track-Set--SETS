@@ -86,7 +86,7 @@ item(FEAT_RAILTYPES, rail_SBA3) {
 		railtype_flags				: bitmask() ;
 		introduction_date			: date(1880,1,1) ;
 		sort_order					: 73;
-		speed_limit					: param[5] mph ;
+		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {
@@ -102,11 +102,11 @@ item(FEAT_RAILTYPES, rail_SBA3) {
 }
 
 
-item(FEAT_RAILTYPES, rail_3RDC) {
+item(FEAT_RAILTYPES, rail_SBAZ) {
 	property {
-		label						: "3RDC" ;
-		name						: string(STR_3RDC_NAME) ;
-		menu_text					: string(STR_3RDC_NAME) ;
+		label						: "SBAZ" ;
+		name						: string(STR_SBAZ_NAME) ;
+		menu_text					: string(STR_SBAZ_NAME) ;
 		build_window_caption		: string(STR_3RDC_BUILD_NAME) ;
 		autoreplace_text			: string(STR_3RDC_REPLACE_NAME) ;
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN) ;
@@ -120,7 +120,7 @@ item(FEAT_RAILTYPES, rail_3RDC) {
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		introduction_date			: date(1883,1,1) ;
 		sort_order					: 83 ;
-		speed_limit					: param[5] mph ;
+		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {
@@ -135,3 +135,31 @@ item(FEAT_RAILTYPES, rail_3RDC) {
 	}
 }
 
+if (SAAZ_SAAA == 1) {
+	item(FEAT_RAILTYPES, rail_SBAZ) {
+		property {
+			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_25KV] ;
+		}
+	}
+}
+if (SAAZ_SAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_SBAZ) {
+		property {
+			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_15KV] ;
+		}
+	}
+}
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SBAZ) {
+		property {
+			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_3KV] ;
+		}
+	}
+}
+if (SAAZ_SAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_SBAZ) {
+		property {
+			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_1500V] ;
+		}
+	}
+}
