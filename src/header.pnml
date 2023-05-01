@@ -66,28 +66,28 @@ grf{
 	param 5{
 		SAAZ_SAAA{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
+			name    : string(STR_PARAM_SAAZ_1) ;
 			desc    : string(STR_PARAM_SAAZ_DESC) ;
 			bit		: 1 ;
 			def_value	: 1 ;
 		}
 		SAAZ_SAAa_{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
+			name    : string(STR_PARAM_SAAZ_2) ;
 			desc    : string(STR_PARAM_SAAZ_DESC) ;
 			bit		: 2 ;
 			def_value	: 0 ;
 		}
 		SAAZ_SAAD{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
+			name    : string(STR_PARAM_SAAZ_3) ;
 			desc    : string(STR_PARAM_SAAZ_DESC) ;
 			bit		: 3 ;
 			def_value	: 0 ;
 		}
 		SAAZ_SAAd_{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
+			name    : string(STR_PARAM_SAAZ_4) ;
 			desc    : string(STR_PARAM_SAAZ_DESC) ;
 			bit		: 4 ;
 			def_value	: 0 ;

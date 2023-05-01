@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 STR_GRF_NAME	:Standardised Multivoltage Track Set - SMTS
-STR_GRF_DESC	:{GOLD}A track set that adds a customisable roster of different track types that follow the standardised track scheme! Graphics drawn by and coded by {RED}UnholyPhish {GOLD}and {PURPLE}Gwyd{GOLD}, additional code and graphics by {BLUE}Brickblock1{GOLD}. Licenced under GPL v2. Check licence for details.
+STR_GRF_DESC	:{GOLD}A track set that adds a customisable roster of Multi-voltage track types that follow the standardised track scheme! {}{}SUKTS Graphics drawn by and coded by {RED}UnholyPhish {GOLD}and {PURPLE}Gwyd{GOLD}. Industrial grounds from {GREEN}Erato's{GOLD} Industrial trackset with additional code and graphics by {BLUE}Brickblock1{GOLD}. Licenced under GPL{NBSP}v2. Check licence for details.
 
 STR_PARAM_SPEEDLIMITS_DESC			:Turn on track speed limits.
 
@@ -50,8 +50,11 @@ STR_PARAM_SPEED_2					:Speed limit - Medium
 STR_PARAM_SPEED_3					:Speed limit - High
 
 
-STR_PARAM_SAAZ					:Allow traversing SAAX
-STR_PARAM_SAAZ_DESC				:
+STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 25kv AC tracks
+STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 15kv AC tracks
+STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 3kv DC tracks
+STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 1.5kv DC tracks
+STR_PARAM_SAAZ_DESC				    :Dual voltage means trains with third rail and catenary.
 
 
 STR_PARAM_METRO_TRACK_NAME      :Metro track
