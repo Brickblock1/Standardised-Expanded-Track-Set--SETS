@@ -150,7 +150,7 @@ grf{
 			bit		: 6 ;
 			def_value	: 0 ;
 		}
-		disable_SAA4_{
+		disable_SAA4{
 			type    : bool ;
 			name    : string(STR_PARAM_DISABLE_SAA4) ;
 			desc    : string(STR_PARAM_DISABLE_SAA4_DESC) ;
@@ -159,7 +159,7 @@ grf{
 		}
 		disable_NORD{
 			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_NORd) ;
+			name    : string(STR_PARAM_DISABLE_NORD) ;
 			desc    : string(STR_PARAM_DISABLE_NORD_DESC) ;
 			bit		: 8 ;
 			def_value	: 0 ;

@@ -673,57 +673,57 @@ grf{
 	param 7{
 		hide_SAAE{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			name    : string(STR_PARAM_HIDE_SAAE) ;
+			desc    : string(STR_PARAM_HIDE_SAAE_DESC) ;
 			bit		: 1 ;
 			def_value	: 1 ;
 		}
 		disable_SAAA{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			name    : string(STR_PARAM_DISABLE_SAAA) ;
+			desc    : string(STR_PARAM_DISABLE_SAAA_DESC) ;
 			bit		: 2 ;
 			def_value	: 0 ;
 		}
 		disable_SAAa_{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			name    : string(STR_PARAM_DISABLE_SAAa) ;
+			desc    : string(STR_PARAM_DISABLE_SAAa_DESC) ;
 			bit		: 3 ;
 			def_value	: 0 ;
 		}
 		disable_SAAD{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			name    : string(STR_PARAM_DISABLE_SAAD) ;
+			desc    : string(STR_PARAM_DISABLE_SAAD_DESC) ;
 			bit		: 4 ;
 			def_value	: 0 ;
 		}
 		disable_SAAd_{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			name    : string(STR_PARAM_DISABLE_SAAd) ;
+			desc    : string(STR_PARAM_DISABLE_SAAd_DESC) ;
 			bit		: 5 ;
 			def_value	: 0 ;
 		}
 		disable_SAA3{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			name    : string(STR_PARAM_DISABLE_SAA3) ;
+			desc    : string(STR_PARAM_DISABLE_SAA3_DESC) ;
 			bit		: 6 ;
 			def_value	: 0 ;
 		}
-		disable_SAA4_{
+		disable_SAA4{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			name    : string(STR_PARAM_DISABLE_SAA4) ;
+			desc    : string(STR_PARAM_DISABLE_SAA4_DESC) ;
 			bit		: 7 ;
 			def_value	: 0 ;
 		}
 		disable_NORD{
 			type    : bool ;
-			name    : string(STR_PARAM_SAAZ) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			name    : string(STR_PARAM_DISABLE_NORD) ;
+			desc    : string(STR_PARAM_DISABLE_NORD_DESC) ;
 			bit		: 8 ;
 			def_value	: 0 ;
 		}
@@ -1311,7 +1311,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SAAN, fence_number < 1){
 
 
 
-
+if (disable_SAA3 == 0) {
 
 // Item
 
@@ -1383,6 +1383,14 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 	}
 }
 
+if (hide_SAAE == 1) {
+	item(FEAT_RAILTYPES, rail_SAAE) {
+		property {
+			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+		}
+	}
+}
+}
 # 1 "sukts.pnml" 2
 # 1 "src/RAIL/SBAN.pnml" 1
 
@@ -1519,6 +1527,13 @@ item(FEAT_RAILTYPES, rail_SBAE) {
 	}
 }
 
+if (hide_SAAE == 1) {
+	item(FEAT_RAILTYPES, rail_SBAE) {
+		property {
+			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+		}
+	}
+}
 # 1 "sukts.pnml" 2
 # 1 "src/RAIL/SCAN.pnml" 1
 
@@ -1587,7 +1602,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SCAN, fence_number < 2){
 
 
 
-
+if (disable_SAA3 == 0) {
 
 // Item
 
@@ -1656,8 +1671,17 @@ item(FEAT_RAILTYPES, rail_SCAE) {
 	}
 }
 
+if (hide_SAAE == 1) {
+	item(FEAT_RAILTYPES, rail_SCAE) {
+		property {
+			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+		}
+	}
+}
+}
 # 1 "sukts.pnml" 2
 
+if (disable_SAAA == 0) {
 # 1 "src/SAAA/SAAA.pnml" 1
 
 // Item
@@ -1796,7 +1820,9 @@ if (SAAZ_SAAA == 1) {
 	}
 }
 # 1 "sukts.pnml" 2
+}
 
+if (disable_SAAa_ == 0) {
 # 1 "src/SAAa_/SAAa.pnml" 1
 
 // Item
@@ -1934,7 +1960,9 @@ if (SAAZ_SAAa_ == 1) {
 	}
 }
 # 1 "sukts.pnml" 2
+}
 
+if (disable_SAAD == 0) {
 # 1 "src/SAAD/SAAD.pnml" 1
 
 // Item
@@ -2072,7 +2100,9 @@ if (SAAZ_SAAD == 1) {
 	}
 }
 # 1 "sukts.pnml" 2
+}
 
+if (disable_SAAd_ == 0) {
 # 1 "src/SAAd_/SAAd.pnml" 1
 
 // Item
@@ -2210,6 +2240,7 @@ if (SAAZ_SAAd_ == 1) {
 	}
 }
 # 1 "sukts.pnml" 2
+}
 
 # 1 "src/3RDR/SAA3.pnml" 1
 
@@ -2454,7 +2485,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SBA3, fence_number < 2){
 
 
 
-
+if (disable_SAA3 == 0) {
 
 // Item
 
@@ -2550,6 +2581,7 @@ if (SAAZ_SAAd_ == 1) {
 			powered_railtype_list: ["SAAd", "SBAd", "SCAd"] ;
 		}
 	}
+}
 }
 # 1 "sukts.pnml" 2
 # 1 "src/3RDR/SCA3.pnml" 1
@@ -2660,9 +2692,6 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 
 # 1 "sukts.pnml" 2
 
-//#include "src/4RDR/SAA4.pnml"
-//#include "src/4RDR/SBA4.pnml"
-//#include "src/4RDR/SCA4.pnml"
 # 1 "src/4RDR/SBA4.pnml" 1
 
 
@@ -2731,6 +2760,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SBA4, fence_number < 2){
 
 
 
+if (disable_SAA4 == 0) {
 
 // Item
 
@@ -2772,5 +2802,6 @@ if (metro_track == 1) {
 			alternative_railtype_list: ["MTRO", "IHC_"] ;
 		}
 	}
+}
 }
 # 1 "sukts.pnml" 2

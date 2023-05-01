@@ -132,3 +132,10 @@ item(FEAT_RAILTYPES, rail_SBAE) {
 	}
 }
 
+if (hide_SAAE == 1) {
+	item(FEAT_RAILTYPES, rail_SBAE) {
+		property {
+			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+		}
+	}
+}

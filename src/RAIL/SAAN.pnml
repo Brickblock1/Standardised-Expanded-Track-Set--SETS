@@ -64,7 +64,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SAAN, fence_number < 1){
 
 
 
-
+if (disable_SAA3 == 0) {
 
 // Item
 
@@ -136,3 +136,11 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 	}
 }
 
+if (hide_SAAE == 1) {
+	item(FEAT_RAILTYPES, rail_SAAE) {
+		property {
+			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+		}
+	}
+}
+}

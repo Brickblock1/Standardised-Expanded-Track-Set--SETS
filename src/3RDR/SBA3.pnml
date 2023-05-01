@@ -64,7 +64,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SBA3, fence_number < 2){
 
 
 
-
+if (disable_SAA3 == 0) {
 
 // Item
 
@@ -160,4 +160,5 @@ if (SAAZ_SAAd_ == 1) {
 			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_1500V] ;
 		}
 	}
+}
 }
