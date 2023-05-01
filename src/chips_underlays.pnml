@@ -1,3 +1,7 @@
 spriteset(gfx_underlay_SY2N,			"gfx/EYCA/Underlay_SY2N.png")		{	template_underlay_auz()				}
 spriteset(gfx_underlay_SY3N,			"gfx/EYCA/Underlay_SY3N.png")		{	template_underlay_auz()				}
 spriteset(gfx_underlay_SY4N,			"gfx/EYCA/Underlay_SY4N.png")		{	template_underlay_auz()				}
+
+spriteset(gfx_underlay_SY23,			"gfx/EYCA/Underlay_SY23.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_SY33,			"gfx/EYCA/Underlay_SY33.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_SY43,			"gfx/EYCA/Underlay_SY43.png")		{	template_underlay_auz()				}

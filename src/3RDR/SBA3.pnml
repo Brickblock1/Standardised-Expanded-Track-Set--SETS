@@ -161,4 +161,11 @@ if (SAAZ_SAAd_ == 1) {
 		}
 	}
 }
+
+if (decor_tracks == 1) {
+#include "src/3RDR/SY23.pnml"
+#include "src/3RDR/SY33.pnml"
+#include "src/3RDR/SY43.pnml"
+}
+
 }

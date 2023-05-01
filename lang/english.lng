@@ -1,6 +1,6 @@
 ##grflangid 0x01
 
-STR_GRF_NAME	:Standardised Multivoltage Track Set - SMTS
+STR_GRF_NAME	:Standardised Multi-voltage International Track Set - SMITS
 STR_GRF_DESC	:{GOLD}A track set that adds a customisable roster of Multi-voltage track types that follow the standardised track scheme! {}{}SUKTS Graphics drawn by and coded by {RED}UnholyPhish {GOLD}and {PURPLE}Gwyd{GOLD}. Industrial grounds from {GREEN}Erato's{GOLD} Industrial trackset with additional code and graphics by {BLUE}Brickblock1{GOLD}. Licenced under GPL{NBSP}v2. Check licence for details.
 
 STR_PARAM_SPEEDLIMITS_DESC			:Turn on track speed limits.
@@ -194,6 +194,11 @@ STR_SBA4_NAME				:Standard Gauge {LTBLUE}(630v 4th Rail) {GOLD}(Sleeper: Wooden,
 STR_SAAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SBAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
 STR_SCAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+
+STR_SY1Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: ISR, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY2Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY3Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY4Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
 
 
 STR_SAAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}

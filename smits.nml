@@ -562,6 +562,10 @@ spriteset (gfx_catenary_masts_3, "gfx/catenary_masts.png") {
 spriteset(gfx_underlay_SY2N,			"gfx/EYCA/Underlay_SY2N.png")		{	template_underlay_auz()				}
 spriteset(gfx_underlay_SY3N,			"gfx/EYCA/Underlay_SY3N.png")		{	template_underlay_auz()				}
 spriteset(gfx_underlay_SY4N,			"gfx/EYCA/Underlay_SY4N.png")		{	template_underlay_auz()				}
+
+spriteset(gfx_underlay_SY23,			"gfx/EYCA/Underlay_SY23.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_SY33,			"gfx/EYCA/Underlay_SY33.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_SY43,			"gfx/EYCA/Underlay_SY43.png")		{	template_underlay_auz()				}
 # 1 "src/definitions.pnml" 540
 # 1 "smits.pnml" 2
 
@@ -1328,8 +1332,8 @@ item(FEAT_RAILTYPES, rail_SAAN) {
 		autoreplace_text			: string(STR_RAIL_REPLACE_NAME) ;
 		new_engine_text				: string(STR_RAIL_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_RAIL_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		introduces_railtype_list	: ["RAIL", "SBAN", "SCAN"] ;
 		alternative_railtype_list	: ["SAAN", "SABN", "SACN", "SADN", "SAEN", "IHA_"] ;
 		curve_speed_multiplier		: 0 ;
@@ -1362,9 +1366,9 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		autoreplace_text			: string(STR_ELRL_REPLACE_NAME) ;
 		new_engine_text				: string(STR_ELRL_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_ELRL_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ"] ;
-		introduces_railtype_list	: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
+		introduces_railtype_list	: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		alternative_railtype_list	: ["SAAE", "SABE", "SACE", "SADE", "SAEE", "IHG_"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -1475,8 +1479,8 @@ item(FEAT_RAILTYPES, rail_SBAN) {
 		autoreplace_text			: string(STR_RAIL_REPLACE_NAME) ;
 		new_engine_text				: string(STR_RAIL_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_RAIL_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 11 ;
@@ -1507,8 +1511,8 @@ item(FEAT_RAILTYPES, rail_SBAE) {
 		autoreplace_text			: string(STR_ELRL_REPLACE_NAME) ;
 		new_engine_text				: string(STR_ELRL_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_ELRL_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 14 ;
@@ -1617,8 +1621,8 @@ item(FEAT_RAILTYPES, rail_SCAN) {
 		autoreplace_text			: string(STR_RAIL_REPLACE_NAME) ;
 		new_engine_text				: string(STR_RAIL_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_RAIL_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		alternative_railtype_list	: ["IHAA"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -1650,8 +1654,8 @@ item(FEAT_RAILTYPES, rail_SCAE) {
 		autoreplace_text			: string(STR_ELRL_REPLACE_NAME) ;
 		new_engine_text				: string(STR_ELRL_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_ELRL_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 20 ;
@@ -1696,7 +1700,7 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
 		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
 		alternative_railtype_list	: ["SABA", "SACA", "SADA", "SAEA", "IHB_"] ;
@@ -1725,7 +1729,7 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SAAA) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -1743,7 +1747,7 @@ item(FEAT_RAILTYPES, rail_SBAA) {
 		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -1770,7 +1774,7 @@ item(FEAT_RAILTYPES, rail_SBAA) {
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SBAA) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -1788,7 +1792,7 @@ item(FEAT_RAILTYPES, rail_SCAA) {
 		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
 		alternative_railtype_list	: ["IHBA"] ;
 		curve_speed_multiplier		: 0 ;
@@ -1816,7 +1820,7 @@ item(FEAT_RAILTYPES, rail_SCAA) {
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SCAA) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -1836,7 +1840,7 @@ item(FEAT_RAILTYPES, rail_SY2A) {
 		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -1860,10 +1864,10 @@ item(FEAT_RAILTYPES, rail_SY2A) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY2A) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -1881,7 +1885,7 @@ item(FEAT_RAILTYPES, rail_SY3A) {
 		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -1905,10 +1909,10 @@ item(FEAT_RAILTYPES, rail_SY3A) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY3A) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -1926,7 +1930,7 @@ item(FEAT_RAILTYPES, rail_SY4A) {
 		autoreplace_text			: string(STR_SAAA_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAA_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -1950,10 +1954,10 @@ item(FEAT_RAILTYPES, rail_SY4A) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY4A) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -1975,7 +1979,7 @@ item(FEAT_RAILTYPES, rail_SAAa) {
 		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
 		introduces_railtype_list	: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
 		alternative_railtype_list	: ["SABa", "SACa", "SADa", "SAEa"] ;
@@ -2004,7 +2008,7 @@ item(FEAT_RAILTYPES, rail_SAAa) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SAAa) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2022,7 +2026,7 @@ item(FEAT_RAILTYPES, rail_SBAa) {
 		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2049,7 +2053,7 @@ item(FEAT_RAILTYPES, rail_SBAa) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SBAa) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2067,7 +2071,7 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2094,7 +2098,7 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SCAa) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2114,7 +2118,7 @@ item(FEAT_RAILTYPES, rail_SY2a) {
 		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2141,7 +2145,7 @@ item(FEAT_RAILTYPES, rail_SY2a) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY2a) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2159,7 +2163,7 @@ item(FEAT_RAILTYPES, rail_SY3a) {
 		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2186,7 +2190,7 @@ item(FEAT_RAILTYPES, rail_SY3a) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY3a) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2204,7 +2208,7 @@ item(FEAT_RAILTYPES, rail_SY4a) {
 		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2231,7 +2235,7 @@ item(FEAT_RAILTYPES, rail_SY4a) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY4a) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2253,7 +2257,7 @@ item(FEAT_RAILTYPES, rail_SAAD) {
 		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
 		introduces_railtype_list	: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
 		alternative_railtype_list	: ["SABD", "SACD", "SADD", "SAED", "IHF_"] ;
@@ -2282,7 +2286,7 @@ item(FEAT_RAILTYPES, rail_SAAD) {
 if (SAAZ_SAAD == 1) {
 	item(FEAT_RAILTYPES, rail_SAAD) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2300,7 +2304,7 @@ item(FEAT_RAILTYPES, rail_SBAD) {
 		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2327,7 +2331,7 @@ item(FEAT_RAILTYPES, rail_SBAD) {
 if (SAAZ_SAAD == 1) {
 	item(FEAT_RAILTYPES, rail_SBAD) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2345,7 +2349,7 @@ item(FEAT_RAILTYPES, rail_SCAD) {
 		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2372,7 +2376,7 @@ item(FEAT_RAILTYPES, rail_SCAD) {
 if (SAAZ_SAAD == 1) {
 	item(FEAT_RAILTYPES, rail_SCAD) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2392,7 +2396,7 @@ item(FEAT_RAILTYPES, rail_SY2D) {
 		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2419,7 +2423,7 @@ item(FEAT_RAILTYPES, rail_SY2D) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY2D) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2437,7 +2441,7 @@ item(FEAT_RAILTYPES, rail_SY3D) {
 		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2464,7 +2468,7 @@ item(FEAT_RAILTYPES, rail_SY3D) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY3D) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2482,7 +2486,7 @@ item(FEAT_RAILTYPES, rail_SY4D) {
 		autoreplace_text			: string(STR_SAAD_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAD_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAD_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2509,7 +2513,7 @@ item(FEAT_RAILTYPES, rail_SY4D) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY4D) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2531,7 +2535,7 @@ item(FEAT_RAILTYPES, rail_SAAd) {
 		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
 		introduces_railtype_list	: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
 		alternative_railtype_list	: ["SABd", "SACd", "SADd", "SAEd"] ;
@@ -2560,7 +2564,7 @@ item(FEAT_RAILTYPES, rail_SAAd) {
 if (SAAZ_SAAd_ == 1) {
 	item(FEAT_RAILTYPES, rail_SAAd) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2578,7 +2582,7 @@ item(FEAT_RAILTYPES, rail_SBAd) {
 		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2605,7 +2609,7 @@ item(FEAT_RAILTYPES, rail_SBAd) {
 if (SAAZ_SAAd_ == 1) {
 	item(FEAT_RAILTYPES, rail_SBAd) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2623,7 +2627,7 @@ item(FEAT_RAILTYPES, rail_SCAd) {
 		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2650,7 +2654,7 @@ item(FEAT_RAILTYPES, rail_SCAd) {
 if (SAAZ_SAAd_ == 1) {
 	item(FEAT_RAILTYPES, rail_SCAd) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2670,7 +2674,7 @@ item(FEAT_RAILTYPES, rail_SY2d) {
 		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2697,7 +2701,7 @@ item(FEAT_RAILTYPES, rail_SY2d) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY2d) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2715,7 +2719,7 @@ item(FEAT_RAILTYPES, rail_SY3d) {
 		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2742,7 +2746,7 @@ item(FEAT_RAILTYPES, rail_SY3d) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY3d) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2760,7 +2764,7 @@ item(FEAT_RAILTYPES, rail_SY4d) {
 		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2787,7 +2791,7 @@ item(FEAT_RAILTYPES, rail_SY4d) {
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY4d) {
 		property {
-			powered_railtype_list: ["SAAZ", "SBAZ"] ;
+			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		}
 	}
 }
@@ -2876,9 +2880,9 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 		autoreplace_text			: string(STR_3RDR_REPLACE_NAME) ;
 		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ"] ;
-		introduces_railtype_list	: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
+		introduces_railtype_list	: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		alternative_railtype_list	: ["3RDR", "SAB3", "SAC3", "SAD3", "SAE3"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -2918,9 +2922,9 @@ item(FEAT_RAILTYPES, rail_SAAZ) {
 		autoreplace_text			: string(STR_3RDC_REPLACE_NAME) ;
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_3RDC_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "ELRL", "SBAE", "SCAE"] ;
-		introduces_railtype_list	: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "ELRL", "SBAE", "SCAE"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "ELRL", "SBAE", "SCAE"] ;
+		introduces_railtype_list	: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "ELRL", "SBAE", "SCAE"] ;
 		alternative_railtype_list	: ["3RDC", "SABZ", "SACZ", "SADZ", "SAEZ"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -3053,8 +3057,8 @@ item(FEAT_RAILTYPES, rail_SBA3) {
 		autoreplace_text			: string(STR_3RDR_REPLACE_NAME) ;
 		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 13 ;
@@ -3086,8 +3090,8 @@ item(FEAT_RAILTYPES, rail_SBAZ) {
 		autoreplace_text			: string(STR_3RDC_REPLACE_NAME) ;
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_3RDC_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 15 ;
@@ -3137,6 +3141,298 @@ if (SAAZ_SAAd_ == 1) {
 		}
 	}
 }
+
+if (decor_tracks == 1) {
+# 1 "src/3RDR/SY23.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SY23) {
+	property {
+		label						: "SY23" ;
+		name						: string(STR_SY23_NAME) ;
+		menu_text					: string(STR_SY23_NAME) ;
+		build_window_caption		: string(STR_3RDR_BUILD_NAME) ;
+		autoreplace_text			: string(STR_3RDR_REPLACE_NAME) ;
+		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBA3 ;
+		underlay			: gfx_underlay_SY23 ;
+		bridge_surfaces		: gfx_bridge_tracks_SBA3 ;
+		tunnels				: gfx_tunnel_tracks_SBA3 ;
+		level_crossings		: sw_lc_SBA3_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_SY2Z) {
+	property {
+		label						: "SY2Z" ;
+		name						: string(STR_SY2Z_NAME) ;
+		menu_text					: string(STR_SY2Z_NAME) ;
+		build_window_caption		: string(STR_3RDC_BUILD_NAME) ;
+		autoreplace_text			: string(STR_3RDC_REPLACE_NAME) ;
+		new_engine_text				: string(STR_3RDC_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_3RDC_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "ELRL", "SBAE", "SCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBA3 ;
+		underlay			: gfx_underlay_SY23 ;
+		bridge_surfaces		: gfx_bridge_tracks_SBA3 ;
+		tunnels				: gfx_tunnel_tracks_SBA3 ;
+		level_crossings		: sw_lc_SBA3_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (SAAZ_SAAA == 1) {
+	item(FEAT_RAILTYPES, rail_SY2Z) {
+		property {
+			powered_railtype_list: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
+		}
+	}
+}
+if (SAAZ_SAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_SY2Z) {
+		property {
+			powered_railtype_list: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
+		}
+	}
+}
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SY2Z) {
+		property {
+			powered_railtype_list: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
+		}
+	}
+}
+if (SAAZ_SAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_SY2Z) {
+		property {
+			powered_railtype_list: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
+		}
+	}
+}
+# 1 "src/3RDR/SBA3.pnml" 166
+# 1 "src/3RDR/SY33.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SY33) {
+	property {
+		label						: "SY33" ;
+		name						: string(STR_SY33_NAME) ;
+		menu_text					: string(STR_SY33_NAME) ;
+		build_window_caption		: string(STR_3RDR_BUILD_NAME) ;
+		autoreplace_text			: string(STR_3RDR_REPLACE_NAME) ;
+		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBA3 ;
+		underlay			: gfx_underlay_SY33 ;
+		bridge_surfaces		: gfx_bridge_tracks_SBA3 ;
+		tunnels				: gfx_tunnel_tracks_SBA3 ;
+		level_crossings		: sw_lc_SBA3_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_SY3Z) {
+	property {
+		label						: "SY3Z" ;
+		name						: string(STR_SY3Z_NAME) ;
+		menu_text					: string(STR_SY3Z_NAME) ;
+		build_window_caption		: string(STR_3RDC_BUILD_NAME) ;
+		autoreplace_text			: string(STR_3RDC_REPLACE_NAME) ;
+		new_engine_text				: string(STR_3RDC_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_3RDC_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "ELRL", "SBAE", "SCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBA3 ;
+		underlay			: gfx_underlay_SY33 ;
+		bridge_surfaces		: gfx_bridge_tracks_SBA3 ;
+		tunnels				: gfx_tunnel_tracks_SBA3 ;
+		level_crossings		: sw_lc_SBA3_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (SAAZ_SAAA == 1) {
+	item(FEAT_RAILTYPES, rail_SY3Z) {
+		property {
+			powered_railtype_list: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
+		}
+	}
+}
+if (SAAZ_SAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_SY3Z) {
+		property {
+			powered_railtype_list: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
+		}
+	}
+}
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SY3Z) {
+		property {
+			powered_railtype_list: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
+		}
+	}
+}
+if (SAAZ_SAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_SY3Z) {
+		property {
+			powered_railtype_list: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
+		}
+	}
+}
+# 1 "src/3RDR/SBA3.pnml" 166
+# 1 "src/3RDR/SY43.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SY43) {
+	property {
+		label						: "SY43" ;
+		name						: string(STR_SY43_NAME) ;
+		menu_text					: string(STR_SY43_NAME) ;
+		build_window_caption		: string(STR_3RDR_BUILD_NAME) ;
+		autoreplace_text			: string(STR_3RDR_REPLACE_NAME) ;
+		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBA3 ;
+		underlay			: gfx_underlay_SY43 ;
+		bridge_surfaces		: gfx_bridge_tracks_SBA3 ;
+		tunnels				: gfx_tunnel_tracks_SBA3 ;
+		level_crossings		: sw_lc_SBA3_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_SY4Z) {
+	property {
+		label						: "SY4Z" ;
+		name						: string(STR_SY4Z_NAME) ;
+		menu_text					: string(STR_SY4Z_NAME) ;
+		build_window_caption		: string(STR_3RDC_BUILD_NAME) ;
+		autoreplace_text			: string(STR_3RDC_REPLACE_NAME) ;
+		new_engine_text				: string(STR_3RDC_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_3RDC_TOOLBAR) ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "ELRL", "SBAE", "SCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBA3 ;
+		underlay			: gfx_underlay_SY43 ;
+		bridge_surfaces		: gfx_bridge_tracks_SBA3 ;
+		tunnels				: gfx_tunnel_tracks_SBA3 ;
+		level_crossings		: sw_lc_SBA3_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (SAAZ_SAAA == 1) {
+	item(FEAT_RAILTYPES, rail_SY4Z) {
+		property {
+			powered_railtype_list: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A"] ;
+		}
+	}
+}
+if (SAAZ_SAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_SY4Z) {
+		property {
+			powered_railtype_list: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a"] ;
+		}
+	}
+}
+if (SAAZ_SAAD == 1) {
+	item(FEAT_RAILTYPES, rail_SY4Z) {
+		property {
+			powered_railtype_list: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D"] ;
+		}
+	}
+}
+if (SAAZ_SAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_SY4Z) {
+		property {
+			powered_railtype_list: ["SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d"] ;
+		}
+	}
+}
+# 1 "src/3RDR/SBA3.pnml" 166
+}
+
 }
 # 1 "smits.pnml" 2
 # 1 "src/3RDR/SCA3.pnml" 1
@@ -3220,8 +3516,8 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 		autoreplace_text			: string(STR_3RDR_REPLACE_NAME) ;
 		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+		powered_railtype_list		: ["SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 19 ;
@@ -3329,7 +3625,7 @@ item(FEAT_RAILTYPES, rail_SBA4) {
 		autoreplace_text			: string(STR_4RDR_REPLACE_NAME) ;
 		new_engine_text				: string(STR_4RDR_NEW_TRAIN) ;
 		toolbar_caption				: string(STR_4RDR_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SAA3", "SBA3", "SCA3", "SAAZ", "SBAZ", "SAA4", "SBA4", "SCA4"] ;
+		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "ELRL", "SBAE", "SCAE", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAA4", "SBA4", "SCA4"] ;
 		alternative_railtype_list	: ["SAA4", "SAB4", "SAC4", "SAD4", "SAE4"] ;
 		curve_speed_multiplier		: 0 ;
