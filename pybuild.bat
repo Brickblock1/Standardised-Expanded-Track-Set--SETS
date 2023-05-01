@@ -1,6 +1,6 @@
 @ECHO OFF
 :start
-nml_patcher.py -f "sukts.pnml" -o "sukts.nml"
-python nmlc.py sukts.nml -o sukts.grf
+nml_patcher.py -f "smits.pnml" -o "smits.nml"
+python nmlc.py smits.nml -o smits.grf
 PAUSE
 goto start
