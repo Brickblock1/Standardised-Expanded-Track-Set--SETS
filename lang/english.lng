@@ -61,6 +61,31 @@ STR_PARAM_METRO_TRACK_3RDR      :Third rail
 STR_PARAM_METRO_TRACK_SBA4      :Fourth rail
 
 
+STR_PARAM_HIDE_SAAE             :Hide Multivoltage tracks
+STR_PARAM_HIDE_SAAE_DESC        :Hides SAAE, SBAE, SCAE
+
+STR_PARAM_DISABLE_SAAA             :Disable 25kv AC tracks
+STR_PARAM_DISABLE_SAAA_DESC        :Disables SAAA, SBAA, SCAA
+
+STR_PARAM_DISABLE_SAAa             :Disable 15kv AC tracks
+STR_PARAM_DISABLE_SAAa_DESC        :Disables SAAa, SBAa, SCAa
+
+STR_PARAM_DISABLE_SAAD             :Disable 3kv DC tracks
+STR_PARAM_DISABLE_SAAD_DESC        :Disables SAAD, SBAD, SCAD
+
+STR_PARAM_DISABLE_SAAd             :Disable 1.5kv DC tracks
+STR_PARAM_DISABLE_SAAd_DESC        :Disables SAAd, SBAd, SCAd
+
+STR_PARAM_DISABLE_SAA3             :Disable 750v third rail tracks
+STR_PARAM_DISABLE_SAA3_DESC        :Disables SAA3, SBA3, SCA3, SAAZ, SBAZ
+
+STR_PARAM_DISABLE_SAA4             :Disable 630v fourth rail tracks
+STR_PARAM_DISABLE_SAA4_DESC        :Disables SBA4
+
+STR_PARAM_DISABLE_NORD             :Disable the NORD track
+STR_PARAM_DISABLE_NORD_DESC        :Disables NORD which is only used for compatibility with SNDTS.
+
+
 STR_PARAM_SIGNAL_ELEC_NAME				:Modern Signal Type
 STR_PARAM_SIGNAL_ELEC_DESC				:Changes type of modern signal
 
@@ -161,12 +186,7 @@ STR_SY23_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Cobblest
 STR_SY33_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SY43_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
 
-
-STR_SAA4_NAME				:Standard Gauge {LTBLUE}(630v 4th Rail) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SBA4_NAME				:Standard Gauge {LTBLUE}(630v 4th Rail) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCA4_NAME				:Standard Gauge {LTBLUE}(630v 4th Rail) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
-STR_SDA4_NAME				:Standard Gauge {LTBLUE}(630v 4th Rail) {GOLD}(Sleeper: Wooden, Rail: Light Grey){YELLOW}
-
 
 STR_SAAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SBAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}

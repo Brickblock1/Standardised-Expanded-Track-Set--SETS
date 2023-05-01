@@ -670,6 +670,64 @@ grf{
  			};
 		}
 	}
+	param 7{
+		hide_SAAE{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 1 ;
+			def_value	: 1 ;
+		}
+		disable_SAAA{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 2 ;
+			def_value	: 0 ;
+		}
+		disable_SAAa_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 3 ;
+			def_value	: 0 ;
+		}
+		disable_SAAD{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 4 ;
+			def_value	: 0 ;
+		}
+		disable_SAAd_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 5 ;
+			def_value	: 0 ;
+		}
+		disable_SAA3{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 6 ;
+			def_value	: 0 ;
+		}
+		disable_SAA4_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 7 ;
+			def_value	: 0 ;
+		}
+		disable_NORD{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 8 ;
+			def_value	: 0 ;
+		}
+	}
 	param 12{
 		signal_elec {
  			type:    int;
