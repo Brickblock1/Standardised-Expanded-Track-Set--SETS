@@ -22,6 +22,12 @@ if (disable_SAAa_ == 0) {
 #include "src/SAAa_/SAAa.pnml"
 #include "src/SAAa_/SBAa.pnml"
 #include "src/SAAa_/SCAa.pnml"
+
+if (decor_tracks == 1) {
+#include "src/SAAa_/SY2a.pnml"
+#include "src/SAAa_/SY3a.pnml"
+#include "src/SAAa_/SY4a.pnml"
+}
 }
 
 if (disable_SAAD == 0) {

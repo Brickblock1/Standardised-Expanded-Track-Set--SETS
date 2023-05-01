@@ -64,6 +64,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SCA3, fence_number < 2){
 
 
 
+if (disable_SAA3 == 0) {
 
 
 // Item
@@ -99,7 +100,7 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 		signals				: sw_signals ;
 	}
 }
-
+}
 
 
 

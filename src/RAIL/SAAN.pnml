@@ -64,7 +64,6 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SAAN, fence_number < 1){
 
 
 
-if (disable_SAA3 == 0) {
 
 // Item
 
@@ -113,7 +112,7 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		toolbar_caption				: string(STR_ELRL_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_OHLE] ;
-		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_MULTI] ;
+		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_OHLE] ;
 		alternative_railtype_list	: ["SAAE", "SABE", "SACE", "SADE", "SAEE", "IHG_"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
@@ -142,5 +141,4 @@ if (hide_SAAE == 1) {
 			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
 		}
 	}
-}
 }

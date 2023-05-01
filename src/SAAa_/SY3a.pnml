@@ -1,0 +1,43 @@
+
+// Item
+
+item(FEAT_RAILTYPES, rail_SY3a) {
+	property {
+		label						: "SY3a" ;
+		name						: string(STR_SY3a_NAME) ;
+		menu_text					: string(STR_SY3a_NAME) ;
+		build_window_caption		: string(STR_SAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_SAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_SAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_SAAa_TOOLBAR) ;
+		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_15KV] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 14 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 63 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_SBAN ;
+		underlay			: gfx_underlay_SY3N ;
+		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+		tunnels				: gfx_tunnel_tracks_SBAN ;
+		level_crossings		: sw_lc_SBAN_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_15 ;
+	}
+}
+
+if (SAAZ_SAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_SY3a) {
+		property {
+			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+		}
+	}
+}

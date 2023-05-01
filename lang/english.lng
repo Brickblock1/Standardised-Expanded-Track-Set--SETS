@@ -51,10 +51,10 @@ STR_PARAM_SPEED_3					:Speed limit - High
 
 
 STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 25kv AC tracks
-STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 15kv AC tracks
-STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 3kv DC tracks
-STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 1.5kv DC tracks
-STR_PARAM_SAAZ_DESC				    :Dual voltage means trains with third rail and catenary.
+STR_PARAM_SAAZ_2					:Allow dual voltage trains to traverse 15kv AC tracks
+STR_PARAM_SAAZ_3					:Allow dual voltage trains to traverse 3kv DC tracks
+STR_PARAM_SAAZ_4					:Allow dual voltage trains to traverse 1.5kv DC tracks
+STR_PARAM_SAAZ_DESC				    :Dual voltage does in this case mean trains with third rail and catenary. This parameter works both ways so if 25kv is enabled those trains will also be able to run on daul voltage tracks.
 
 
 STR_PARAM_METRO_TRACK_NAME      :Metro track
@@ -203,6 +203,10 @@ STR_SCAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, R
 STR_SAAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SBAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
 STR_SCAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+
+STR_SY2a_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY3a_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY4a_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
 
 
 STR_SAAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}

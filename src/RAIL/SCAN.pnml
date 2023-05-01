@@ -64,7 +64,6 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SCAN, fence_number < 2){
 
 
 
-if (disable_SAA3 == 0) {
 
 // Item
 
@@ -139,5 +138,4 @@ if (hide_SAAE == 1) {
 			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
 		}
 	}
-}
 }
