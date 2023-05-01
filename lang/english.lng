@@ -200,6 +200,10 @@ STR_SAAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, R
 STR_SBAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
 STR_SCAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
 
+STR_SY2A_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY3A_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY4A_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
+
 STR_SAAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SBAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
 STR_SCAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
@@ -213,6 +217,14 @@ STR_SAAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rai
 STR_SBAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
 STR_SCAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
 
+STR_SY2D_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY3D_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY4D_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
+
 STR_SAAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
 STR_SBAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
 STR_SCAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+
+STR_SY2d_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY3d_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY4d_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}

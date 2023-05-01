@@ -16,6 +16,12 @@ if (disable_SAAA == 0) {
 #include "src/SAAA/SAAA.pnml"
 #include "src/SAAA/SBAA.pnml"
 #include "src/SAAA/SCAA.pnml"
+
+if (decor_tracks == 1) {
+#include "src/SAAA/SY2A.pnml"
+#include "src/SAAA/SY3A.pnml"
+#include "src/SAAA/SY4A.pnml"
+}
 }
 
 if (disable_SAAa_ == 0) {
@@ -34,12 +40,24 @@ if (disable_SAAD == 0) {
 #include "src/SAAD/SAAD.pnml"
 #include "src/SAAD/SBAD.pnml"
 #include "src/SAAD/SCAD.pnml"
+
+if (decor_tracks == 1) {
+#include "src/SAAD/SY2D.pnml"
+#include "src/SAAD/SY3D.pnml"
+#include "src/SAAD/SY4D.pnml"
+}
 }
 
 if (disable_SAAd_ == 0) {
 #include "src/SAAd_/SAAd.pnml"
 #include "src/SAAd_/SBAd.pnml"
 #include "src/SAAd_/SCAd.pnml"
+
+if (decor_tracks == 1) {
+#include "src/SAAd_/SY2d.pnml"
+#include "src/SAAd_/SY3d.pnml"
+#include "src/SAAd_/SY4d.pnml"
+}
 }
 
 #include "src/3RDR/SAA3.pnml"
