@@ -17,7 +17,7 @@ grf{
 		cost_multiplier{
 			type    : int ;
 			name    : string(STR_PARAM_COSTS_BUILD_NAME) ;
-			desc    : string(STR_PARAM_SPEEDLIMITS_DESC) ;
+			desc    : string(STR_PARAM_COSTS_BUILD_DESC) ;
 			min_value	: 0 ;
 			max_value	: 7 ;
 			def_value	: 4 ;
