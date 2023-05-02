@@ -88,6 +88,9 @@ STR_PARAM_DISABLE_SAA4_DESC        :Disables SBA4
 STR_PARAM_DISABLE_NORD             :Disable the NORD track
 STR_PARAM_DISABLE_NORD_DESC        :Disables NORD which is only used for compatibility with SNDTS.
 
+STR_PARAM_DISABLE_INVS             :Disable the invisable track
+STR_PARAM_DISABLE_INVS_DESC        :Disables INVS which is only used for compatibility with SNDTS.
+
 
 STR_PARAM_SIGNAL_ELEC_NAME				:Modern Signal Type
 STR_PARAM_SIGNAL_ELEC_DESC				:Changes type of modern signal
@@ -101,7 +104,14 @@ STR_PARAM_SIGNAL_ELEC_4ASP				:4 Aspect Signals {RED}(requires JGR Patch Pack)
 STR_BLST_TOOLBAR			:Empty track ballast construction.{YELLOW}
 STR_BLST_BUILD_NAME			:New track ballast vehicles.
 STR_BLST_REPLACE_NAME		:Replace track ballast vehicles.
-STR_BLST_NEW_TRAIN			:track ballast.
+STR_BLST_NEW_TRAIN			:track ballast
+
+
+STR_OTER_TOOLBAR            :Invisible track construction.{YELLOW}
+STR_OTER_BUILD_NAME         :New invisible track vehicles.
+STR_OTER_REPLACE_NAME       :Replace invisible track vehicles.
+STR_OTER_NEW_TRAIN          :Invisible track
+
 
 STR_RAIL_TOOLBAR			:Standard Gauge construction.{YELLOW}
 STR_RAIL_BUILD_NAME			:New Standard Gauge vehicles.
@@ -160,76 +170,84 @@ STR_SAAd_NEW_TRAIN			:Standard Gauge (1.5kv Overhead)
 STR_BLST_NAME				:Empty track ballast.{YELLOW}
 STR_BLS2_NAME				:Empty track ballast. {GOLD}(Overgrown){YELLOW}
 
-STR_SAAN_NAME				:Standard Gauge {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBAN_NAME				:Standard Gauge {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCAN_NAME				:Standard Gauge {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+STR_NORD_NAME               :NORD should not be visible
+STR_INVS_NAME               :Invisible Track {GOLD}(Useful for landscaping){YELLOW}
 
-STR_SY1N_NAME				:Standard Gauge {GOLD}(Sleeper: ISR, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY2N_NAME				:Standard Gauge {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY3N_NAME				:Standard Gauge {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY4N_NAME				:Standard Gauge {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_IND_2                   :Trackless {GOLD}(CHIPS Dirt ground){YELLOW}
+STR_IND_3                   :Trackless {GOLD}(CHIPS Asphalt ground){YELLOW}
+STR_IND_4                   :Trackless {GOLD}(CHIPS Cobblestone ground){YELLOW}
 
 
-STR_SAAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+STR_SAAN_NAME				:Standard Gauge {GOLD}(Overgrown){YELLOW}
+STR_SBAN_NAME				:Standard Gauge {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAN_NAME				:Standard Gauge {GOLD}(Concrete sleepers){YELLOW}
 
-STR_SY1E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: ISR, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY2E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY3E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY4E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
-
-
-STR_SAA3_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBA3_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCA3_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
-
-STR_SY13_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: ISR, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY23_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY33_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY43_NAME				:Standard Gauge {BROWN}(750v 3rd Rail) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
-
-STR_SBA4_NAME				:Standard Gauge {LTBLUE}(630v 4th Rail) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-
-STR_SAAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
-
-STR_SY1Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: ISR, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY2Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY3Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY4Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY1N_NAME				:Standard Gauge {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_SY2N_NAME				:Standard Gauge {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3N_NAME				:Standard Gauge {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4N_NAME				:Standard Gauge {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
-STR_SAAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCAA_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+STR_SAAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Overgrown){YELLOW}
+STR_SBAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_SY2A_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY3A_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY4A_NAME				:Standard Gauge {BLUE}(25kv Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
-
-STR_SAAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCAa_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
-
-STR_SY2a_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY3a_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY4a_NAME				:Standard Gauge {LTBLUE}(15kv Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY1E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_SY2E_NAME				:Standard Gauge {GREEN}(Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3E_NAME				:Standard Gauge {GREEN}(Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4E_NAME				:Standard Gauge {GREEN}(Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
-STR_SAAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCAD_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+STR_SAA3_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SBA3_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCA3_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_SY2D_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY3D_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY4D_NAME				:Standard Gauge {RED}(3kv Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SY13_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_SY23_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY33_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY43_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
-STR_SAAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SBAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Light Grey, Overgrown){YELLOW}
-STR_SCAd_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Wooden, Rail: Grey){YELLOW}
+STR_SBA4_NAME				:Standard Gauge {CREAM}(630v DC 4th Rail) {GOLD}(Wooden sleepers){YELLOW}
 
-STR_SY2d_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Cobblestone, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY3d_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Dirt, Rail: Dark Grey, Overgrown){YELLOW}
-STR_SY4d_NAME				:Standard Gauge {CREAM}(1.5kv Overhead) {GOLD}(Sleeper: Asphalt, Rail: Dark Grey, Overgrown){YELLOW}
+STR_SAAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Overgrown){YELLOW}
+STR_SBAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_SY1Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_SY2Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+
+STR_SAAA_NAME				:Standard Gauge {BLUE}(25kv AC Overhead) {GOLD}(Overgrown){YELLOW}
+STR_SBAA_NAME				:Standard Gauge {BLUE}(25kv AC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAA_NAME				:Standard Gauge {BLUE}(25kv AC Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_SY2A_NAME				:Standard Gauge {BLUE}(25kv AC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3A_NAME				:Standard Gauge {BLUE}(25kv AC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4A_NAME				:Standard Gauge {BLUE}(25kv AC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+STR_SAAa_NAME				:Standard Gauge {LTBLUE}(15kv AC Overhead) {GOLD}(Overgrown){YELLOW}
+STR_SBAa_NAME				:Standard Gauge {LTBLUE}(15kv AC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAa_NAME				:Standard Gauge {LTBLUE}(15kv AC Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_SY2a_NAME				:Standard Gauge {LTBLUE}(15kv AC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3a_NAME				:Standard Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4a_NAME				:Standard Gauge {LTBLUE}(15kv AC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+
+STR_SAAD_NAME				:Standard Gauge {RED}(3kv DC Overhead) {GOLD}(Overgrown){YELLOW}
+STR_SBAD_NAME				:Standard Gauge {RED}(3kv DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAD_NAME				:Standard Gauge {RED}(3kv DC Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_SY2D_NAME				:Standard Gauge {RED}(3kv DC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3D_NAME				:Standard Gauge {RED}(3kv DC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4D_NAME				:Standard Gauge {RED}(3kv DC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+STR_SAAd_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {GOLD}(Overgrown){YELLOW}
+STR_SBAd_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAd_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_SY2d_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3d_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4d_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}

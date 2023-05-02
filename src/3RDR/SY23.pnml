@@ -16,7 +16,7 @@ item(FEAT_RAILTYPES, rail_SY23) {
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 14 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
-		sort_order					: 63 ;
+		sort_order					: 84 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -48,7 +48,7 @@ item(FEAT_RAILTYPES, rail_SY2Z) {
 		construction_cost			: 14 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 63 ;
+		sort_order					: 74 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}

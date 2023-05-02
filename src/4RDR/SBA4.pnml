@@ -86,7 +86,7 @@ item(FEAT_RAILTYPES, rail_SBA4) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 90 ;
+		sort_order					: 91 ;
 		speed_limit					: param[2] km/h ;
 	}
 	graphics {

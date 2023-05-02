@@ -1,0 +1,32 @@
+
+// Item
+
+item(FEAT_RAILTYPES, rail_INVS) {
+	property {
+		label						: "INVS" ;
+		name						: string(STR_INVS_NAME) ;
+		menu_text					: string(STR_INVS_NAME) ;
+		build_window_caption		: string(STR_OTER_BUILD_NAME) ;
+		autoreplace_text			: string(STR_OTER_REPLACE_NAME) ;
+		new_engine_text				: string(STR_OTER_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_OTER_TOOLBAR) ;
+		compatible_railtype_list	: [] ;
+		powered_railtype_list		: [] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 5 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		introduction_date			: date(0,1,1) ;
+		sort_order					: 3 ;
+		speed_limit					: 0 km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_blank ;
+		underlay			: gfx_blank ;
+		bridge_surfaces		: gfx_blank ;
+		tunnels				: gfx_blank ;
+		level_crossings		: gfx_blank ;
+	}
+}

@@ -85,7 +85,7 @@ item(FEAT_RAILTYPES, rail_SAAN) {
 		construction_cost			: 6 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 50 ;
+		sort_order					: 11 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -119,7 +119,7 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 60 ;
+		sort_order					: 21 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}

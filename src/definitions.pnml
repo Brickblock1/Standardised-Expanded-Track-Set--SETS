@@ -18,7 +18,7 @@
 
 #define STANDARD_GAUGE_RAILTYPE_DUAL "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"
 
-#define STANDARD_GAUGE_RAILTYPE_NONE "RAIL", "SBAN", "SCAN"
+#define STANDARD_GAUGE_RAILTYPE_NONE "RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N"
 
 
 spriteset(gfx_blank, "gfx/tracks.png"){

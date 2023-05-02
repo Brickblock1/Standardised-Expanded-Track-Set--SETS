@@ -1,0 +1,34 @@
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NORD) {
+	property {
+		label						: "NORD" ;
+		name						: string(STR_NORD_NAME) ;
+		menu_text					: string(STR_NORD_NAME) ;
+		build_window_caption		: string(STR_OTER_BUILD_NAME) ;
+		autoreplace_text			: string(STR_OTER_REPLACE_NAME) ;
+		new_engine_text				: string(STR_OTER_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_OTER_TOOLBAR) ;
+		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_25KV, STANDARD_GAUGE_RAILTYPE_15KV] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 11 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_HIDDEN) ;
+		sort_order					: 255 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_blank_tile ;
+		underlay			: gfx_blank_tile ;
+		bridge_surfaces		: gfx_blank_tile ;
+		tunnels				: gfx_blank_tile ;
+		level_crossings		: sw_lc_SBAN_state ;
+		fences				: sw_fences_SBAN ;
+		depots				: sw_depot_SBAN ;
+		signals				: sw_signals ;
+	}
+}
