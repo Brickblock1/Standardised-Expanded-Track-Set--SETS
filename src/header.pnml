@@ -168,7 +168,7 @@ grf{
 			type    : bool ;
 			name    : string(STR_PARAM_DISABLE_INVS) ;
 			desc    : string(STR_PARAM_DISABLE_INVS_DESC) ;
-			bit		: 8 ;
+			bit		: 9 ;
 			def_value	: 0 ;
 		}
 	}

@@ -589,7 +589,7 @@ grf{
 		cost_multiplier{
 			type    : int ;
 			name    : string(STR_PARAM_COSTS_BUILD_NAME) ;
-			desc    : string(STR_PARAM_SPEEDLIMITS_DESC) ;
+			desc    : string(STR_PARAM_COSTS_BUILD_DESC) ;
 			min_value	: 0 ;
 			max_value	: 7 ;
 			def_value	: 4 ;
@@ -740,7 +740,7 @@ grf{
 			type    : bool ;
 			name    : string(STR_PARAM_DISABLE_INVS) ;
 			desc    : string(STR_PARAM_DISABLE_INVS_DESC) ;
-			bit		: 8 ;
+			bit		: 9 ;
 			def_value	: 0 ;
 		}
 	}
