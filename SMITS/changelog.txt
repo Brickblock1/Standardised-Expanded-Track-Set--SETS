@@ -1,0 +1,4 @@
+Version 1.1:
+    Fix: Allow all OHLE trains on the overhead electrified tracks.
+    Fix: INVS parameter was using wrong bit.
+    Fix: Incorrect parameter descriptions.
