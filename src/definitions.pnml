@@ -540,3 +540,5 @@ template template_catenarywires() {
 #include "src/catenary_masts.pnml"
 
 #include "src/chips_underlays.pnml"
+
+#include "src/tunnels.pnml"

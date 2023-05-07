@@ -132,6 +132,7 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		fences				: sw_fences_SAAN ;
 		depots				: sw_depot_SAAN ;
 		signals				: sw_signals ;
+		tunnel_overlay		: gfx_blank ;
 	}
 }
 

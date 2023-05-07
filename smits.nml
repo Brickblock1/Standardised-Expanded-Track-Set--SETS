@@ -567,6 +567,33 @@ spriteset(gfx_underlay_SY23,			"gfx/EYCA/Underlay_SY23.png")		{	template_underla
 spriteset(gfx_underlay_SY33,			"gfx/EYCA/Underlay_SY33.png")		{	template_underlay_auz()				}
 spriteset(gfx_underlay_SY43,			"gfx/EYCA/Underlay_SY43.png")		{	template_underlay_auz()				}
 # 1 "src/definitions.pnml" 540
+
+# 1 "src/tunnels.pnml" 1
+template template_tunnel() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+    [   3,    1,       64,    39,       -31,        -8]
+    [   3,   56,       64,    39,       -31,       -38]
+    [  68,    1,       64,    39,       -31,        -8]
+    [  68,   56,       64,    39,       -31,       -38]
+    [   3,    1,       64,    39,       -31,        -8]
+    [   3,   56,       64,    39,       -31,       -38]
+    [  68,    1,       64,    39,       -31,        -8]
+    [  68,   56,       64,    39,       -31,       -38]
+    [   3,    1,       64,    39,       -31,        -8]
+    [   3,   56,       64,    39,       -31,       -38]
+    [  68,    1,       64,    39,       -31,        -8]
+    [  68,   56,       64,    39,       -31,       -38]
+    [   3,    1,       64,    39,       -31,        -8]
+    [   3,   56,       64,    39,       -31,       -38]
+    [  68,    1,       64,    39,       -31,        -8]
+    [  68,   56,       64,    39,       -31,       -38]
+    
+}
+
+replacenew (RAILTYPE_TUNNELS, "gfx/tunnels.png") {
+    template_tunnel()
+}
+# 1 "src/definitions.pnml" 540
 # 1 "smits.pnml" 2
 
 # 1 "src/header.pnml" 1
@@ -574,7 +601,7 @@ grf{
 	grfid: "BBST" ;
 	name: string(STR_GRF_NAME) ;
 	desc: string(STR_GRF_DESC) ;
-	version: 2 ;
+	version: 3 ;
 	min_compatible_version: 2 ;
 	param 0{
 		wide_ballast{
@@ -1424,6 +1451,7 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		fences				: sw_fences_SAAN ;
 		depots				: sw_depot_SAAN ;
 		signals				: sw_signals ;
+		tunnel_overlay		: gfx_blank ;
 	}
 }
 
