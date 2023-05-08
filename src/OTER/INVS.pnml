@@ -28,5 +28,6 @@ item(FEAT_RAILTYPES, rail_INVS) {
 		bridge_surfaces		: gfx_blank ;
 		tunnels				: gfx_blank ;
 		level_crossings		: gfx_blank ;
+		fences				: spriteset_nofences ;
 	}
 }
