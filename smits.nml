@@ -1137,7 +1137,7 @@ item(FEAT_RAILTYPES, rail_BLST) {
 		sort_order					: 1 ;
 	}
 	graphics {
-		track_overlay		: sw_underlay_BLST ;
+		track_overlay		: gfx_blank ;
 		underlay			: sw_underlay_BLST ;
 		bridge_surfaces		: gfx_bridge_tracks_BLST ;
 		tunnels				: gfx_tunnel_tracks_BLST ;
@@ -3876,6 +3876,7 @@ item(FEAT_RAILTYPES, rail_INVS) {
 		bridge_surfaces		: gfx_blank ;
 		tunnels				: gfx_blank ;
 		level_crossings		: gfx_blank ;
+		fences				: spriteset_nofences ;
 	}
 }
 # 1 "smits.pnml" 2
