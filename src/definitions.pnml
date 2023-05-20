@@ -397,7 +397,7 @@ template template_nofences() {
 	[  0,0,1,1,0,0]
 }
 
-spriteset(spriteset_nofences, "gfx/track.png") {
+spriteset(spriteset_nofences, "gfx/tracks.png") {
  template_nofences()
 }
 
