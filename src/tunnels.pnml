@@ -1,0 +1,41 @@
+template template_tunnel() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+    [   3,    1,       64,    39,       -31,        -8] //sw 
+    [   3,   56,       64,    39,       -31,       -38] //sw 
+    [  68,  102,       64,    39,       -31,        -8] //nw
+    [  68,  157,       64,    39,       -31,       -38] //nw
+    [   3,  102,       64,    39,       -31,        -8] //ne
+    [   3,  157,       64,    39,       -31,       -38] //ne
+    [  68,    1,       64,    39,       -31,        -8] //se
+    [  68,   56,       64,    39,       -31,       -38] //se
+}
+
+template template_tunnel_top () {
+	//left_x, upper_y, width, height, offset_x, offset_y
+    [   3,    1,       64,    39,       -31,       -38] //sw 
+    [  68,   56,       64,    39,       -31,       -38] //nw 
+    [   3,   56,       64,    39,       -31,       -38] //ne
+    [  68,    1,       64,    39,       -31,       -38] //se
+}
+
+if (custom_tunnels == 1) {
+    replacenew (RAILTYPE_TUNNELS, "gfx/tunnels.png") {
+        template_tunnel()
+    }
+
+    replacenew (RAILTYPE_TUNNELS, "gfx/tunnels.png", 8) {
+        template_tunnel()
+    }
+}
+
+spriteset (gfx_cobble_tunnels, "gfx/cobblestone_tunnels.png") {
+    template_tunnel_top() 
+}
+
+spriteset (gfx_dirt_tunnels, "gfx/dirt_tunnels.png") {
+    template_tunnel_top() 
+}
+
+spriteset (gfx_asphalt_tunnels, "gfx/asphalt_tunnels.png") {
+    template_tunnel_top() 
+}

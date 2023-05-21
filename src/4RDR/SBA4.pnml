@@ -101,6 +101,14 @@ item(FEAT_RAILTYPES, rail_SBA4) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBA4) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (metro_track == 1) {
 	item(FEAT_RAILTYPES, rail_SBA4) {
 		property {

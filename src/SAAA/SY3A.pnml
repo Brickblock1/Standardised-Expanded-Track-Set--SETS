@@ -34,6 +34,14 @@ item(FEAT_RAILTYPES, rail_SY3A) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY3A) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY3A) {
 		property {

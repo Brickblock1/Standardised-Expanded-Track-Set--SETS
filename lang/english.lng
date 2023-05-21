@@ -11,6 +11,9 @@ STR_PARAM_TRACK_WIDE_BALLAST_DESC	:Enable full tile ballast graphics.
 STR_PARAM_DECOR_NAME				:Decorative industrial tracks
 STR_PARAM_DECOR_DESC				:Enable decorative tracks to match industry tile sets and industrial object sets. (CHIPS & FIRS compatible)
 
+STR_PARAM_TUNNELS_NAME				:Custom tunnel entrances 
+STR_PARAM_TUNNELS_DESC				:Enable custom tunnels to match industry wide ballast. Enabeling this can cause tunnels from other grfs to look weird.
+
 STR_PARAM_COSTS_BUILD_NAME			:Construction costs
 STR_PARAM_COSTS_BUILD_DESC			:Changes the cost of purchasing tracks from this GRF.
 

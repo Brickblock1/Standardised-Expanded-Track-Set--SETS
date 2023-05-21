@@ -100,6 +100,13 @@ item(FEAT_RAILTYPES, rail_SBA3) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBA3) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
 
 item(FEAT_RAILTYPES, rail_SBAZ) {
 	property {
@@ -130,6 +137,14 @@ item(FEAT_RAILTYPES, rail_SBAZ) {
 		fences				: sw_fences_SBA3 ;
 		depots				: sw_depot_SBA3 ;
 		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBAZ) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
 	}
 }
 

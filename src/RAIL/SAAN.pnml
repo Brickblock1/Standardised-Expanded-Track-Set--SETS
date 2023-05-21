@@ -135,6 +135,23 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 	}
 }
 
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAN) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAE) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (hide_SAAE == 1) {
 	item(FEAT_RAILTYPES, rail_SAAE) {
 		property {
