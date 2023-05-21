@@ -1,4 +1,250 @@
 # 1 "smits.pnml"
+# 1 "src/header.pnml" 1
+grf{
+	grfid: "BBST" ;
+	name: string(STR_GRF_NAME) ;
+	desc: string(STR_GRF_DESC) ;
+	version: 3 ;
+	min_compatible_version: 2 ;
+	param 0{
+		wide_ballast{
+			type    : bool ;
+			name    : string(STR_PARAM_TRACK_WIDE_BALLAST_NAME) ;
+			desc    : string(STR_PARAM_TRACK_WIDE_BALLAST_DESC) ;
+			bit     : 2 ;
+			def_value : 1 ;
+		}
+	}
+	param 1{
+		cost_multiplier{
+			type    : int ;
+			name    : string(STR_PARAM_COSTS_BUILD_NAME) ;
+			desc    : string(STR_PARAM_COSTS_BUILD_DESC) ;
+			min_value	: 0 ;
+			max_value	: 7 ;
+			def_value	: 4 ;
+			names		: {
+				0	: string(STR_PARAM_VVVLOW  ) ;
+				1	: string(STR_PARAM_VVLOW) ;
+				2	: string(STR_PARAM_VLOW) ;
+				3	: string(STR_PARAM_LOW ) ;
+				4	: string(STR_PARAM_MEDIUM ) ;
+				5	: string(STR_PARAM_HIGH ) ;
+				6	: string(STR_PARAM_TOOMUCH ) ;
+				7	: string(STR_PARAM_TOOTOOMUCH ) ;
+			} ;
+		}
+	}
+	param 2{
+		speed_1{
+			type    : int ;
+			name    : string(STR_PARAM_SPEED_1) ;
+			desc    : string(STR_PARAM_SPEED_DESC) ;
+			min_value	: 0 ;
+			max_value	: 500 ;
+			def_value	: 80 ;
+		}
+	}
+	param 3{
+		speed_2{
+			type    : int ;
+			name    : string(STR_PARAM_SPEED_2) ;
+			desc    : string(STR_PARAM_SPEED_DESC) ;
+			min_value	: 0 ;
+			max_value	: 500 ;
+			def_value	: 161 ;
+		}
+	}
+	param 4{
+		speed_3{
+			type    : int ;
+			name    : string(STR_PARAM_SPEED_3) ;
+			desc    : string(STR_PARAM_SPEED_DESC) ;
+			min_value	: 0 ;
+			max_value	: 500 ;
+			def_value	: 0 ;
+		}
+	}
+	param 5{
+		SAAZ_SAAA{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ_1) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 1 ;
+			def_value	: 1 ;
+		}
+		SAAZ_SAAa_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ_2) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 2 ;
+			def_value	: 0 ;
+		}
+		SAAZ_SAAD{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ_3) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 3 ;
+			def_value	: 0 ;
+		}
+		SAAZ_SAAd_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ_4) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 4 ;
+			def_value	: 0 ;
+		}
+	}
+	param 6{
+		metro_track {
+ 			type:    int;
+ 			name:    string(STR_PARAM_METRO_TRACK_NAME);
+ 			desc:    string(STR_PARAM_METRO_TRACK_DESC);
+ 			min_value: 0;
+ 			max_value: 1;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_METRO_TRACK_3RDR);
+ 				1: string(STR_PARAM_METRO_TRACK_SBA4);
+ 			};
+		}
+	}
+	param 7{
+		hide_SAAE{
+			type    : bool ;
+			name    : string(STR_PARAM_HIDE_SAAE) ;
+			desc    : string(STR_PARAM_HIDE_SAAE_DESC) ;
+			bit		: 1 ;
+			def_value	: 1 ;
+		}
+		disable_SAAA{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAA) ;
+			desc    : string(STR_PARAM_DISABLE_SAAA_DESC) ;
+			bit		: 2 ;
+			def_value	: 0 ;
+		}
+		disable_SAAa_{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAa) ;
+			desc    : string(STR_PARAM_DISABLE_SAAa_DESC) ;
+			bit		: 3 ;
+			def_value	: 0 ;
+		}
+		disable_SAAD{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAD) ;
+			desc    : string(STR_PARAM_DISABLE_SAAD_DESC) ;
+			bit		: 4 ;
+			def_value	: 0 ;
+		}
+		disable_SAAd_{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAd) ;
+			desc    : string(STR_PARAM_DISABLE_SAAd_DESC) ;
+			bit		: 5 ;
+			def_value	: 0 ;
+		}
+		disable_SAA3{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAA3) ;
+			desc    : string(STR_PARAM_DISABLE_SAA3_DESC) ;
+			bit		: 6 ;
+			def_value	: 0 ;
+		}
+		disable_SAA4{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAA4) ;
+			desc    : string(STR_PARAM_DISABLE_SAA4_DESC) ;
+			bit		: 7 ;
+			def_value	: 0 ;
+		}
+		disable_NORD{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_NORD) ;
+			desc    : string(STR_PARAM_DISABLE_NORD_DESC) ;
+			bit		: 8 ;
+			def_value	: 0 ;
+		}
+		disable_INVS{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_INVS) ;
+			desc    : string(STR_PARAM_DISABLE_INVS_DESC) ;
+			bit		: 9 ;
+			def_value	: 0 ;
+		}
+	}
+	param 12{
+		signal_elec {
+ 			type:    int;
+ 			name:    string(STR_PARAM_SIGNAL_ELEC_NAME);
+ 			desc:    string(STR_PARAM_SIGNAL_ELEC_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_SIGNAL_ELEC_2ASP);
+ 				1: string(STR_PARAM_SIGNAL_ELEC_3ASP);
+ 				2: string(STR_PARAM_SIGNAL_ELEC_4ASP);
+ 			};
+		}
+	}
+	param 13{
+		fence_number {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_FENCE_NAME);
+ 			desc:    string(STR_PARAM_GFX_FENCE_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_FENCE_ALL);
+ 				1: string(STR_PARAM_GFX_FENCE_MOST);
+ 				2: string(STR_PARAM_GFX_FENCE_SOME);
+ 				3: string(STR_PARAM_GFX_FENCE_NONE);
+ 			};
+		}
+	}
+	param 14{
+		depot_type {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_DEPOT_NAME);
+ 			desc:    string(STR_PARAM_GFX_DEPOT_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_DEPOT_ALL);
+ 				1: string(STR_PARAM_GFX_DEPOT_ONE);
+ 				2: string(STR_PARAM_GFX_DEPOT_DEFAULT);
+ 			};
+		}
+	}
+	param 15{
+		decor_tracks{
+			type    : bool ;
+			name    : string(STR_PARAM_DECOR_NAME) ;
+			desc    : string(STR_PARAM_DECOR_DESC) ;
+			bit     : 1 ;
+			def_value : 1 ;
+		}
+	}
+	param 15{
+		custom_tunnels{
+			type    : bool ;
+			name    : string(STR_PARAM_TUNNELS_NAME) ;
+			desc    : string(STR_PARAM_TUNNELS_DESC) ;
+			bit     : 2 ;
+			def_value : 1 ;
+		}
+	}
+}
+
+basecost{
+	PR_BUILD_RAIL	: (param[1]-3) ;
+}
+
+# 1 "smits.pnml" 1
 
 # 1 "src/definitions.pnml" 1
 
@@ -389,7 +635,7 @@ template template_nofences() {
 	[  0,0,1,1,0,0]
 }
 
-spriteset(spriteset_nofences, "gfx/track.png") {
+spriteset(spriteset_nofences, "gfx/tracks.png") {
  template_nofences()
 }
 
@@ -571,268 +817,47 @@ spriteset(gfx_underlay_SY43,			"gfx/EYCA/Underlay_SY43.png")		{	template_underla
 # 1 "src/tunnels.pnml" 1
 template template_tunnel() {
 	//left_x, upper_y, width, height, offset_x, offset_y
-    [   3,    1,       64,    39,       -31,        -8]
-    [   3,   56,       64,    39,       -31,       -38]
-    [  68,    1,       64,    39,       -31,        -8]
-    [  68,   56,       64,    39,       -31,       -38]
-    [   3,    1,       64,    39,       -31,        -8]
-    [   3,   56,       64,    39,       -31,       -38]
-    [  68,    1,       64,    39,       -31,        -8]
-    [  68,   56,       64,    39,       -31,       -38]
-    [   3,    1,       64,    39,       -31,        -8]
-    [   3,   56,       64,    39,       -31,       -38]
-    [  68,    1,       64,    39,       -31,        -8]
-    [  68,   56,       64,    39,       -31,       -38]
-    [   3,    1,       64,    39,       -31,        -8]
-    [   3,   56,       64,    39,       -31,       -38]
-    [  68,    1,       64,    39,       -31,        -8]
-    [  68,   56,       64,    39,       -31,       -38]
-    
+    [   3,    1,       64,    39,       -31,        -8] //sw 
+    [   3,   56,       64,    39,       -31,       -38] //sw 
+    [  68,  102,       64,    39,       -31,        -8] //nw
+    [  68,  157,       64,    39,       -31,       -38] //nw
+    [   3,  102,       64,    39,       -31,        -8] //ne
+    [   3,  157,       64,    39,       -31,       -38] //ne
+    [  68,    1,       64,    39,       -31,        -8] //se
+    [  68,   56,       64,    39,       -31,       -38] //se
 }
 
-replacenew (RAILTYPE_TUNNELS, "gfx/tunnels.png") {
-    template_tunnel()
+template template_tunnel_top () {
+	//left_x, upper_y, width, height, offset_x, offset_y
+    [   3,    1,       64,    39,       -31,       -38] //sw 
+    [  68,   56,       64,    39,       -31,       -38] //nw 
+    [   3,   56,       64,    39,       -31,       -38] //ne
+    [  68,    1,       64,    39,       -31,       -38] //se
+}
+
+if (custom_tunnels == 1) {
+    replacenew (RAILTYPE_TUNNELS, "gfx/tunnels.png") {
+        template_tunnel()
+    }
+
+    replacenew (RAILTYPE_TUNNELS, "gfx/tunnels.png", 8) {
+        template_tunnel()
+    }
+}
+
+spriteset (gfx_cobble_tunnels, "gfx/cobblestone_tunnels.png") {
+    template_tunnel_top() 
+}
+
+spriteset (gfx_dirt_tunnels, "gfx/dirt_tunnels.png") {
+    template_tunnel_top() 
+}
+
+spriteset (gfx_asphalt_tunnels, "gfx/asphalt_tunnels.png") {
+    template_tunnel_top() 
 }
 # 1 "src/definitions.pnml" 540
-# 1 "smits.pnml" 2
-
-# 1 "src/header.pnml" 1
-grf{
-	grfid: "BBST" ;
-	name: string(STR_GRF_NAME) ;
-	desc: string(STR_GRF_DESC) ;
-	version: 3 ;
-	min_compatible_version: 2 ;
-	param 0{
-		wide_ballast{
-			type    : bool ;
-			name    : string(STR_PARAM_TRACK_WIDE_BALLAST_NAME) ;
-			desc    : string(STR_PARAM_TRACK_WIDE_BALLAST_DESC) ;
-			bit     : 2 ;
-			def_value : 1 ;
-		}
-	}
-	param 1{
-		cost_multiplier{
-			type    : int ;
-			name    : string(STR_PARAM_COSTS_BUILD_NAME) ;
-			desc    : string(STR_PARAM_COSTS_BUILD_DESC) ;
-			min_value	: 0 ;
-			max_value	: 7 ;
-			def_value	: 4 ;
-			names		: {
-				0	: string(STR_PARAM_VVVLOW  ) ;
-				1	: string(STR_PARAM_VVLOW) ;
-				2	: string(STR_PARAM_VLOW) ;
-				3	: string(STR_PARAM_LOW ) ;
-				4	: string(STR_PARAM_MEDIUM ) ;
-				5	: string(STR_PARAM_HIGH ) ;
-				6	: string(STR_PARAM_TOOMUCH ) ;
-				7	: string(STR_PARAM_TOOTOOMUCH ) ;
-			} ;
-		}
-	}
-	param 2{
-		speed_1{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_1) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 80 ;
-		}
-	}
-	param 3{
-		speed_2{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_2) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 161 ;
-		}
-	}
-	param 4{
-		speed_3{
-			type    : int ;
-			name    : string(STR_PARAM_SPEED_3) ;
-			desc    : string(STR_PARAM_SPEED_DESC) ;
-			min_value	: 0 ;
-			max_value	: 500 ;
-			def_value	: 0 ;
-		}
-	}
-	param 5{
-		SAAZ_SAAA{
-			type    : bool ;
-			name    : string(STR_PARAM_SAAZ_1) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
-			bit		: 1 ;
-			def_value	: 1 ;
-		}
-		SAAZ_SAAa_{
-			type    : bool ;
-			name    : string(STR_PARAM_SAAZ_2) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
-			bit		: 2 ;
-			def_value	: 0 ;
-		}
-		SAAZ_SAAD{
-			type    : bool ;
-			name    : string(STR_PARAM_SAAZ_3) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
-			bit		: 3 ;
-			def_value	: 0 ;
-		}
-		SAAZ_SAAd_{
-			type    : bool ;
-			name    : string(STR_PARAM_SAAZ_4) ;
-			desc    : string(STR_PARAM_SAAZ_DESC) ;
-			bit		: 4 ;
-			def_value	: 0 ;
-		}
-	}
-	param 6{
-		metro_track {
- 			type:    int;
- 			name:    string(STR_PARAM_METRO_TRACK_NAME);
- 			desc:    string(STR_PARAM_METRO_TRACK_DESC);
- 			min_value: 0;
- 			max_value: 1;
- 			def_value: 1;
- 			names: {
- 				0: string(STR_PARAM_METRO_TRACK_3RDR);
- 				1: string(STR_PARAM_METRO_TRACK_SBA4);
- 			};
-		}
-	}
-	param 7{
-		hide_SAAE{
-			type    : bool ;
-			name    : string(STR_PARAM_HIDE_SAAE) ;
-			desc    : string(STR_PARAM_HIDE_SAAE_DESC) ;
-			bit		: 1 ;
-			def_value	: 1 ;
-		}
-		disable_SAAA{
-			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_SAAA) ;
-			desc    : string(STR_PARAM_DISABLE_SAAA_DESC) ;
-			bit		: 2 ;
-			def_value	: 0 ;
-		}
-		disable_SAAa_{
-			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_SAAa) ;
-			desc    : string(STR_PARAM_DISABLE_SAAa_DESC) ;
-			bit		: 3 ;
-			def_value	: 0 ;
-		}
-		disable_SAAD{
-			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_SAAD) ;
-			desc    : string(STR_PARAM_DISABLE_SAAD_DESC) ;
-			bit		: 4 ;
-			def_value	: 0 ;
-		}
-		disable_SAAd_{
-			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_SAAd) ;
-			desc    : string(STR_PARAM_DISABLE_SAAd_DESC) ;
-			bit		: 5 ;
-			def_value	: 0 ;
-		}
-		disable_SAA3{
-			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_SAA3) ;
-			desc    : string(STR_PARAM_DISABLE_SAA3_DESC) ;
-			bit		: 6 ;
-			def_value	: 0 ;
-		}
-		disable_SAA4{
-			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_SAA4) ;
-			desc    : string(STR_PARAM_DISABLE_SAA4_DESC) ;
-			bit		: 7 ;
-			def_value	: 0 ;
-		}
-		disable_NORD{
-			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_NORD) ;
-			desc    : string(STR_PARAM_DISABLE_NORD_DESC) ;
-			bit		: 8 ;
-			def_value	: 0 ;
-		}
-		disable_INVS{
-			type    : bool ;
-			name    : string(STR_PARAM_DISABLE_INVS) ;
-			desc    : string(STR_PARAM_DISABLE_INVS_DESC) ;
-			bit		: 9 ;
-			def_value	: 0 ;
-		}
-	}
-	param 12{
-		signal_elec {
- 			type:    int;
- 			name:    string(STR_PARAM_SIGNAL_ELEC_NAME);
- 			desc:    string(STR_PARAM_SIGNAL_ELEC_DESC);
- 			min_value: 0;
- 			max_value: 2;
- 			def_value: 0;
- 			names: {
- 				0: string(STR_PARAM_SIGNAL_ELEC_2ASP);
- 				1: string(STR_PARAM_SIGNAL_ELEC_3ASP);
- 				2: string(STR_PARAM_SIGNAL_ELEC_4ASP);
- 			};
-		}
-	}
-	param 13{
-		fence_number {
- 			type:    int;
- 			name:    string(STR_PARAM_GFX_FENCE_NAME);
- 			desc:    string(STR_PARAM_GFX_FENCE_DESC);
- 			min_value: 0;
- 			max_value: 3;
- 			def_value: 0;
- 			names: {
- 				0: string(STR_PARAM_GFX_FENCE_ALL);
- 				1: string(STR_PARAM_GFX_FENCE_MOST);
- 				2: string(STR_PARAM_GFX_FENCE_SOME);
- 				3: string(STR_PARAM_GFX_FENCE_NONE);
- 			};
-		}
-	}
-	param 14{
-		depot_type {
- 			type:    int;
- 			name:    string(STR_PARAM_GFX_DEPOT_NAME);
- 			desc:    string(STR_PARAM_GFX_DEPOT_DESC);
- 			min_value: 0;
- 			max_value: 2;
- 			def_value: 1;
- 			names: {
- 				0: string(STR_PARAM_GFX_DEPOT_ALL);
- 				1: string(STR_PARAM_GFX_DEPOT_ONE);
- 				2: string(STR_PARAM_GFX_DEPOT_DEFAULT);
- 			};
-		}
-	}
-	param 15{
-		decor_tracks{
-			type    : bool ;
-			name    : string(STR_PARAM_DECOR_NAME) ;
-			desc    : string(STR_PARAM_DECOR_DESC) ;
-			bit     : 1 ;
-			def_value : 1 ;
-		}
-	}
-}
-
-basecost{
-	PR_BUILD_RAIL	: (param[1]-3) ;
-}
-
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 # 1 "src/signals.pnml" 1
 //Signal sprites for 2 aspect signals
@@ -1064,14 +1089,14 @@ switch(FEAT_RAILTYPES, SELF, sw_signals_low_speed, signal_elec){
 sw_signals_slow;
 }
 
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/depots.pnml" 1
 
 spriteset(gfx_depot_1,		"gfx/Depot/Depot_1.png")			{	template_depot()					}
 
 
 
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 # 1 "src/BLST/BLST.pnml" 1
 
@@ -1285,7 +1310,7 @@ item(FEAT_RAILTYPES, rail_BLS2) {
 		signals				: sw_signals ;
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
 # 1 "src/trackless.pnml" 1
@@ -1313,7 +1338,7 @@ item(FEAT_RAILTYPES, rail_ISR4) {
         speed_limit         : 0 ;
     }
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 }
 
 # 1 "src/RAIL/SAAN.pnml" 1
@@ -1451,7 +1476,23 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		fences				: sw_fences_SAAN ;
 		depots				: sw_depot_SAAN ;
 		signals				: sw_signals ;
-		tunnel_overlay		: gfx_blank ;
+	}
+}
+
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAN) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAE) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
 	}
 }
 
@@ -1462,7 +1503,7 @@ if (hide_SAAE == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/RAIL/SBAN.pnml" 1
 
 
@@ -1598,6 +1639,22 @@ item(FEAT_RAILTYPES, rail_SBAE) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBAN) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBAE) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (hide_SAAE == 1) {
 	item(FEAT_RAILTYPES, rail_SBAE) {
 		property {
@@ -1605,7 +1662,7 @@ if (hide_SAAE == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/RAIL/SCAN.pnml" 1
 
 
@@ -1748,7 +1805,7 @@ if (hide_SAAE == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 if (decor_tracks == 1) {
 # 1 "src/RAIL/SY2N.pnml" 1
@@ -1786,7 +1843,15 @@ item(FEAT_RAILTYPES, rail_SY2N) {
 		signals				: sw_signals ;
 	}
 }
-# 1 "smits.pnml" 2
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY2N) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+# 1 "smits.pnml" 1
 # 1 "src/RAIL/SY3N.pnml" 1
 
 // Item
@@ -1822,7 +1887,15 @@ item(FEAT_RAILTYPES, rail_SY3N) {
 		signals				: sw_signals ;
 	}
 }
-# 1 "smits.pnml" 2
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY3N) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+# 1 "smits.pnml" 1
 # 1 "src/RAIL/SY4N.pnml" 1
 
 // Item
@@ -1858,7 +1931,15 @@ item(FEAT_RAILTYPES, rail_SY4N) {
 		signals				: sw_signals ;
 	}
 }
-# 1 "smits.pnml" 2
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY4N) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+# 1 "smits.pnml" 1
 }
 
 if (disable_SAAA == 0) {
@@ -1901,6 +1982,14 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAA) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SAAA) {
 		property {
@@ -1908,7 +1997,7 @@ if (SAAZ_SAAA == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAA/SBAA.pnml" 1
 
 // Item
@@ -1946,6 +2035,14 @@ item(FEAT_RAILTYPES, rail_SBAA) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBAA) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SBAA) {
 		property {
@@ -1953,7 +2050,7 @@ if (SAAZ_SAAA == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAA/SCAA.pnml" 1
 
 // Item
@@ -1999,7 +2096,7 @@ if (SAAZ_SAAA == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 if (decor_tracks == 1) {
 # 1 "src/SAAA/SY2A.pnml" 1
@@ -2039,6 +2136,14 @@ item(FEAT_RAILTYPES, rail_SY2A) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY2A) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY2A) {
 		property {
@@ -2046,7 +2151,7 @@ if (SAAZ_SAAA == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAA/SY3A.pnml" 1
 
 // Item
@@ -2084,6 +2189,14 @@ item(FEAT_RAILTYPES, rail_SY3A) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY3A) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY3A) {
 		property {
@@ -2091,7 +2204,7 @@ if (SAAZ_SAAA == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAA/SY4A.pnml" 1
 
 // Item
@@ -2129,6 +2242,14 @@ item(FEAT_RAILTYPES, rail_SY4A) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY4A) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY4A) {
 		property {
@@ -2136,7 +2257,7 @@ if (SAAZ_SAAA == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 }
 }
 
@@ -2180,6 +2301,14 @@ item(FEAT_RAILTYPES, rail_SAAa) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAa) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SAAa) {
 		property {
@@ -2187,7 +2316,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAa_/SBAa.pnml" 1
 
 // Item
@@ -2225,6 +2354,14 @@ item(FEAT_RAILTYPES, rail_SBAa) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBAa) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SBAa) {
 		property {
@@ -2232,7 +2369,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAa_/SCAa.pnml" 1
 
 // Item
@@ -2277,7 +2414,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 if (decor_tracks == 1) {
 # 1 "src/SAAa_/SY2a.pnml" 1
@@ -2317,6 +2454,14 @@ item(FEAT_RAILTYPES, rail_SY2a) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY2a) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY2a) {
 		property {
@@ -2324,7 +2469,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAa_/SY3a.pnml" 1
 
 // Item
@@ -2362,6 +2507,14 @@ item(FEAT_RAILTYPES, rail_SY3a) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY3a) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY3a) {
 		property {
@@ -2369,7 +2522,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAa_/SY4a.pnml" 1
 
 // Item
@@ -2407,6 +2560,14 @@ item(FEAT_RAILTYPES, rail_SY4a) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY4a) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY4a) {
 		property {
@@ -2414,7 +2575,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 }
 }
 
@@ -2458,6 +2619,14 @@ item(FEAT_RAILTYPES, rail_SAAD) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAD) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAD == 1) {
 	item(FEAT_RAILTYPES, rail_SAAD) {
 		property {
@@ -2465,7 +2634,7 @@ if (SAAZ_SAAD == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAD/SBAD.pnml" 1
 
 // Item
@@ -2503,6 +2672,14 @@ item(FEAT_RAILTYPES, rail_SBAD) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBAD) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAD == 1) {
 	item(FEAT_RAILTYPES, rail_SBAD) {
 		property {
@@ -2510,7 +2687,7 @@ if (SAAZ_SAAD == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAD/SCAD.pnml" 1
 
 // Item
@@ -2555,7 +2732,7 @@ if (SAAZ_SAAD == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 if (decor_tracks == 1) {
 # 1 "src/SAAD/SY2D.pnml" 1
@@ -2595,6 +2772,14 @@ item(FEAT_RAILTYPES, rail_SY2D) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY2D) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY2D) {
 		property {
@@ -2602,7 +2787,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAD/SY3D.pnml" 1
 
 // Item
@@ -2640,6 +2825,14 @@ item(FEAT_RAILTYPES, rail_SY3D) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY3D) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY3D) {
 		property {
@@ -2647,7 +2840,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAD/SY4D.pnml" 1
 
 // Item
@@ -2685,6 +2878,14 @@ item(FEAT_RAILTYPES, rail_SY4D) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY4D) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY4D) {
 		property {
@@ -2692,7 +2893,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 }
 }
 
@@ -2736,6 +2937,14 @@ item(FEAT_RAILTYPES, rail_SAAd) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAd) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAd_ == 1) {
 	item(FEAT_RAILTYPES, rail_SAAd) {
 		property {
@@ -2743,7 +2952,7 @@ if (SAAZ_SAAd_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAd_/SBAd.pnml" 1
 
 // Item
@@ -2781,6 +2990,14 @@ item(FEAT_RAILTYPES, rail_SBAd) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBAd) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAd_ == 1) {
 	item(FEAT_RAILTYPES, rail_SBAd) {
 		property {
@@ -2788,7 +3005,7 @@ if (SAAZ_SAAd_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAd_/SCAd.pnml" 1
 
 // Item
@@ -2833,7 +3050,7 @@ if (SAAZ_SAAd_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 if (decor_tracks == 1) {
 # 1 "src/SAAd_/SY2d.pnml" 1
@@ -2873,6 +3090,14 @@ item(FEAT_RAILTYPES, rail_SY2d) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY2d) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY2d) {
 		property {
@@ -2880,7 +3105,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAd_/SY3d.pnml" 1
 
 // Item
@@ -2918,6 +3143,14 @@ item(FEAT_RAILTYPES, rail_SY3d) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY3d) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY3d) {
 		property {
@@ -2925,7 +3158,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/SAAd_/SY4d.pnml" 1
 
 // Item
@@ -2963,6 +3196,14 @@ item(FEAT_RAILTYPES, rail_SY4d) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY4d) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAa_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY4d) {
 		property {
@@ -2970,7 +3211,7 @@ if (SAAZ_SAAa_ == 1) {
 		}
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 }
 }
 
@@ -3080,6 +3321,15 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 	}
 }
 
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAA3) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (metro_track == 0) {
 	item(FEAT_RAILTYPES, rail_SAA3) {
 		property {
@@ -3122,6 +3372,14 @@ item(FEAT_RAILTYPES, rail_SAAZ) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAZ) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
@@ -3151,7 +3409,7 @@ if (SAAZ_SAAd_ == 1) {
 	}
 }
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/3RDR/SBA3.pnml" 1
 
 
@@ -3255,6 +3513,13 @@ item(FEAT_RAILTYPES, rail_SBA3) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBA3) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
 
 item(FEAT_RAILTYPES, rail_SBAZ) {
 	property {
@@ -3285,6 +3550,14 @@ item(FEAT_RAILTYPES, rail_SBAZ) {
 		fences				: sw_fences_SBA3 ;
 		depots				: sw_depot_SBA3 ;
 		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBAZ) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
 	}
 }
 
@@ -3385,6 +3658,22 @@ item(FEAT_RAILTYPES, rail_SY2Z) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY23) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY2Z) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
@@ -3413,7 +3702,7 @@ if (SAAZ_SAAd_ == 1) {
 		}
 	}
 }
-# 1 "src/3RDR/SBA3.pnml" 166
+# 1 "src/3RDR/SBA3.pnml" 181
 # 1 "src/3RDR/SY33.pnml" 1
 
 // Item
@@ -3481,6 +3770,22 @@ item(FEAT_RAILTYPES, rail_SY3Z) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY33) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY3Z) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
@@ -3509,7 +3814,7 @@ if (SAAZ_SAAd_ == 1) {
 		}
 	}
 }
-# 1 "src/3RDR/SBA3.pnml" 166
+# 1 "src/3RDR/SBA3.pnml" 181
 # 1 "src/3RDR/SY43.pnml" 1
 
 // Item
@@ -3577,6 +3882,22 @@ item(FEAT_RAILTYPES, rail_SY4Z) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY43) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY4Z) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
@@ -3605,11 +3926,11 @@ if (SAAZ_SAAd_ == 1) {
 		}
 	}
 }
-# 1 "src/3RDR/SBA3.pnml" 166
+# 1 "src/3RDR/SBA3.pnml" 181
 }
 
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 # 1 "src/3RDR/SCA3.pnml" 1
 
 
@@ -3717,7 +4038,7 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 
 
 
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 # 1 "src/4RDR/SBA4.pnml" 1
 
@@ -3823,6 +4144,14 @@ item(FEAT_RAILTYPES, rail_SBA4) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SBA4) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
 if (metro_track == 1) {
 	item(FEAT_RAILTYPES, rail_SBA4) {
 		property {
@@ -3831,7 +4160,7 @@ if (metro_track == 1) {
 	}
 }
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 
 if (disable_NORD == 0) {
 # 1 "src/OTER/NORD.pnml" 1
@@ -3869,7 +4198,7 @@ item(FEAT_RAILTYPES, rail_NORD) {
 		signals				: sw_signals ;
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 }
 
 if (disable_INVS == 0) {
@@ -3907,5 +4236,5 @@ item(FEAT_RAILTYPES, rail_INVS) {
 		fences				: spriteset_nofences ;
 	}
 }
-# 1 "smits.pnml" 2
+# 1 "smits.pnml" 1
 } 

@@ -132,7 +132,23 @@ item(FEAT_RAILTYPES, rail_SAAE) {
 		fences				: sw_fences_SAAN ;
 		depots				: sw_depot_SAAN ;
 		signals				: sw_signals ;
-		tunnel_overlay		: gfx_blank ;
+	}
+}
+
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAN) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SAAE) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
 	}
 }
 

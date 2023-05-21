@@ -32,3 +32,11 @@ item(FEAT_RAILTYPES, rail_SY4N) {
 		signals				: sw_signals ;
 	}
 }
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY4N) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}

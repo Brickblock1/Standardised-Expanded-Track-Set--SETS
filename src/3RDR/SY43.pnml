@@ -64,6 +64,22 @@ item(FEAT_RAILTYPES, rail_SY4Z) {
 	}
 }
 
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY43) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_SY4Z) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
 if (SAAZ_SAAA == 1) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
