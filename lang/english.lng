@@ -1,7 +1,9 @@
 ##grflangid 0x01
 
-STR_GRF_NAME	:Standardised Multi-voltage International Track Set - SMITS
-STR_GRF_DESC	:{GOLD}A track set that adds a customisable roster of Multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
+STR_GRF_NAME_STANDARD	:SETS: Standard Gauge
+STR_GRF_NAME_NARROW	    :SETS: Narrow Gauge
+STR_GRF_DESC_STANDARD	:{GOLD}Standardised Expanded Track Set: Standard Gauge{}{}A track set that adds a customisable roster of Multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
+STR_GRF_DESC_NARROW	    :{GOLD}Standardised Expanded Track Set: Narrow Gauge{}{}A track set that adds a customisable roster of Multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
 
 STR_PARAM_SPEEDLIMITS_DESC			:Turn on track speed limits.
 
@@ -59,6 +61,11 @@ STR_PARAM_SAAZ_3					:Allow dual voltage trains to traverse 3kv DC tracks
 STR_PARAM_SAAZ_4					:Allow dual voltage trains to traverse 1.5kv DC tracks
 STR_PARAM_SAAZ_DESC				    :Dual voltage does in this case mean trains with third rail and catenary. This parameter works both ways so if 25kv is enabled those trains will also be able to run on daul voltage tracks.
 
+STR_PARAM_NAAZ_1					:Allow dual voltage trains to traverse 25kv AC tracks
+STR_PARAM_NAAZ_2					:Allow dual voltage trains to traverse 15kv AC tracks
+STR_PARAM_NAAZ_3					:Allow dual voltage trains to traverse 3kv DC tracks
+STR_PARAM_NAAZ_4					:Allow dual voltage trains to traverse 1.5kv DC tracks
+STR_PARAM_NAAZ_DESC				    :Dual voltage does in this case mean trains with third rail and catenary. This parameter works both ways so if 25kv is enabled those trains will also be able to run on daul voltage tracks.
 
 STR_PARAM_METRO_TRACK_NAME      :Metro track
 STR_PARAM_METRO_TRACK_DESC      :Changes what track some metro train show up on.
@@ -93,6 +100,25 @@ STR_PARAM_DISABLE_NORD_DESC        :Disables NORD which is only used for compati
 
 STR_PARAM_DISABLE_INVS             :Disable the invisable track
 STR_PARAM_DISABLE_INVS_DESC        :Disables INVS
+
+
+STR_PARAM_HIDE_NAAE                :Hide Multivoltage tracks
+STR_PARAM_HIDE_NAAE_DESC           :Hides NAAE, SBAE, SCAE
+
+STR_PARAM_DISABLE_NAAA             :Disable 25kv AC tracks
+STR_PARAM_DISABLE_NAAA_DESC        :Disables NAAA, NBAA, NCAA
+
+STR_PARAM_DISABLE_NAAa             :Disable 15kv AC tracks
+STR_PARAM_DISABLE_NAAa_DESC        :Disables NAAa, NBAa, NCAa
+
+STR_PARAM_DISABLE_NAAD             :Disable 3kv DC tracks
+STR_PARAM_DISABLE_NAAD_DESC        :Disables NAAD, NBAD, NCAD
+
+STR_PARAM_DISABLE_NAAd             :Disable 1.5kv DC tracks
+STR_PARAM_DISABLE_NAAd_DESC        :Disables NAAd, NBAd, NCAd
+
+STR_PARAM_DISABLE_NAA3             :Disable 750v third rail tracks
+STR_PARAM_DISABLE_NAA3_DESC        :Disables NAA3, NBA3, NCA3, NAAZ, NBAZ
 
 
 STR_PARAM_SIGNAL_ELEC_NAME				:Modern Signal Type
@@ -170,8 +196,58 @@ STR_SAAd_NEW_TRAIN			:Standard Gauge (1.5kv Overhead)
 
 
 
+
+STR_NAAN_TOOLBAR			:Narrow Gauge construction.{YELLOW}
+STR_NAAN_BUILD_NAME			:New Narrow Gauge vehicles.
+STR_NAAN_REPLACE_NAME		:Replace Narrow Gauge vehicles.
+STR_NAAN_NEW_TRAIN			:Narrow Gauge
+
+
+STR_NAAE_TOOLBAR			:Narrow Gauge (Overhead) construction.{YELLOW}
+STR_NAAE_BUILD_NAME			:New Narrow Gauge (Overhead) vehicles.
+STR_NAAE_REPLACE_NAME		:Replace Narrow Gauge (Overhead) vehicles.
+STR_NAAE_NEW_TRAIN			:Narrow Gauge (Overhead)
+
+
+STR_NAA3_TOOLBAR			:Narrow Gauge (750v 3rd Rail) construction.{YELLOW}
+STR_NAA3_BUILD_NAME			:New Narrow Gauge (750v 3rd Rail) vehicles.
+STR_NAA3_REPLACE_NAME		:Replace Narrow Gauge (750v 3rd Rail) vehicles.
+STR_NAA3_NEW_TRAIN			:Narrow Gauge (750v 3rd Rail)
+
+
+STR_NAAZ_TOOLBAR			:Narrow Gauge (Dual Voltaage) construction.{YELLOW}
+STR_NAAZ_BUILD_NAME			:New Narrow Gauge (Dual Voltaage) vehicles.
+STR_NAAZ_REPLACE_NAME		:Replace Narrow Gauge (Dual Voltaage) vehicles.
+STR_NAAZ_NEW_TRAIN			:Narrow Gauge (Dual Voltaage)
+
+
+STR_NAAA_TOOLBAR			:Narrow Gauge (25kv Overhead) construction.{YELLOW}
+STR_NAAA_BUILD_NAME			:New Narrow Gauge (25kv Overhead) vehicles.
+STR_NAAA_REPLACE_NAME		:Replace Narrow Gauge (25kv Overhead) vehicles.
+STR_NAAA_NEW_TRAIN			:Narrow Gauge (25kv Overhead)
+
+STR_NAAa_TOOLBAR			:Narrow Gauge (15kv Overhead) construction.{YELLOW}
+STR_NAAa_BUILD_NAME			:New Narrow Gauge (15kv Overhead) vehicles.
+STR_NAAa_REPLACE_NAME		:Replace Narrow Gauge (15kv Overhead) vehicles.
+STR_NAAa_NEW_TRAIN			:Narrow Gauge (15kv Overhead)
+
+
+STR_NAAD_TOOLBAR			:Narrow Gauge (3kv Overhead) construction.{YELLOW}
+STR_NAAD_BUILD_NAME			:New Narrow Gauge (3kv Overhead) vehicles.
+STR_NAAD_REPLACE_NAME		:Replace Narrow Gauge (3kv Overhead) vehicles.
+STR_NAAD_NEW_TRAIN			:Narrow Gauge (3kv Overhead)
+
+STR_NAAd_TOOLBAR			:Narrow Gauge (1.5kv Overhead) construction.{YELLOW}
+STR_NAAd_BUILD_NAME			:New Narrow Gauge (1.5kv Overhead) vehicles.
+STR_NAAd_REPLACE_NAME		:Replace Narrow Gauge (1.5kv Overhead) vehicles.
+STR_NAAd_NEW_TRAIN			:Narrow Gauge (1.5kv Overhead)
+
+
+
+
 STR_BLST_NAME				:Empty track ballast.{YELLOW}
 STR_BLS2_NAME				:Empty track ballast. {GOLD}(Overgrown){YELLOW}
+STR_BLS3_NAME				:Empty track ballast. {GOLD}(Concrete){YELLOW}
 
 STR_NORD_NAME               :NORD should not be visible
 STR_INVS_NAME               :Invisible Track {GOLD}(Useful for landscaping){YELLOW}
@@ -254,3 +330,68 @@ STR_SCAd_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {GOLD}(Concrete slee
 STR_SY2d_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
 STR_SY3d_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
 STR_SY4d_NAME				:Standard Gauge {CREAM}(1.5kv DC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+
+STR_NAAN_NAME				:Narrow Gauge {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAN_NAME				:Narrow Gauge {GOLD}(Concrete sleepers){YELLOW}
+
+STR_NY1N_NAME				:Narrow Gauge {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_NY2N_NAME				:Narrow Gauge {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3N_NAME				:Narrow Gauge {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4N_NAME				:Narrow Gauge {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+
+STR_NAAE_NAME				:Narrow Gauge {GREEN}(Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAE_NAME				:Narrow Gauge {GREEN}(Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_NY1E_NAME				:Narrow Gauge {GREEN}(Overhead) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_NY2E_NAME				:Narrow Gauge {GREEN}(Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3E_NAME				:Narrow Gauge {GREEN}(Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4E_NAME				:Narrow Gauge {GREEN}(Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+
+STR_NAA3_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBA3_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_NY13_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_NY23_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY33_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY43_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+STR_NAAZ_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAZ_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_NY1Z_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_NY2Z_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3Z_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4Z_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+
+STR_NAAA_NAME				:Narrow Gauge {BLUE}(25kv AC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAA_NAME				:Narrow Gauge {BLUE}(25kv AC Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_NY2A_NAME				:Narrow Gauge {BLUE}(25kv AC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3A_NAME				:Narrow Gauge {BLUE}(25kv AC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4A_NAME				:Narrow Gauge {BLUE}(25kv AC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+STR_NAAa_NAME				:Narrow Gauge {LTBLUE}(15kv AC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAa_NAME				:Narrow Gauge {LTBLUE}(15kv AC Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_NY2a_NAME				:Narrow Gauge {LTBLUE}(15kv AC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3a_NAME				:Narrow Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4a_NAME				:Narrow Gauge {LTBLUE}(15kv AC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+
+STR_NAAD_NAME				:Narrow Gauge {RED}(3kv DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAD_NAME				:Narrow Gauge {RED}(3kv DC Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_NY2D_NAME				:Narrow Gauge {RED}(3kv DC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3D_NAME				:Narrow Gauge {RED}(3kv DC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4D_NAME				:Narrow Gauge {RED}(3kv DC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+
+STR_NAAd_NAME				:Narrow Gauge {CREAM}(1.5kv DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAd_NAME				:Narrow Gauge {CREAM}(1.5kv DC Overhead) {GOLD}(Concrete sleepers){YELLOW}
+
+STR_NY2d_NAME				:Narrow Gauge {CREAM}(1.5kv DC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3d_NAME				:Narrow Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4d_NAME				:Narrow Gauge {CREAM}(1.5kv DC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}

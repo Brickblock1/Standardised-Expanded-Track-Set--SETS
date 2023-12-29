@@ -1,0 +1,42 @@
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY3N) {
+	property {
+		label						: "NY3N" ;
+		name						: string(STR_NY3N_NAME) ;
+		menu_text					: string(STR_NY3N_NAME) ;
+		build_window_caption		: string(STR_NAAN_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAN_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAN_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAN_TOOLBAR) ;
+		compatible_railtype_list	: [NARROW_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [NARROW_GAUGE_RAILTYPE_ALL] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 9 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		sort_order					: 104 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY3N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY3N) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}

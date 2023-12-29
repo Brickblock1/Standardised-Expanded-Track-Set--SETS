@@ -9,7 +9,7 @@ item(FEAT_RAILTYPES, rail_SY2d) {
 		build_window_caption		: string(STR_SAAd_BUILD_NAME) ;
 		autoreplace_text			: string(STR_SAAd_REPLACE_NAME) ;
 		new_engine_text				: string(STR_SAAd_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAAA_TOOLBAR) ;
+		toolbar_caption				: string(STR_SAAd_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_1500V] ;
 		curve_speed_multiplier		: 0 ;
@@ -42,7 +42,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAd_ == 1) {
 	item(FEAT_RAILTYPES, rail_SY2d) {
 		property {
 			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;

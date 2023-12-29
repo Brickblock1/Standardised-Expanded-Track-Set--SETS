@@ -1,0 +1,3734 @@
+# 1 "sets_narrow.pnml"
+# 1 "src/header_narrow.pnml" 1
+grf{
+	grfid: "BBNT" ;
+	name: string(STR_GRF_NAME_NARROW) ;
+	desc: string(STR_GRF_DESC_NARROW) ;
+	version: 3 ;
+	min_compatible_version: 2 ;
+	param 0{
+		wide_ballast{
+			type    : bool ;
+			name    : string(STR_PARAM_TRACK_WIDE_BALLAST_NAME) ;
+			desc    : string(STR_PARAM_TRACK_WIDE_BALLAST_DESC) ;
+			bit     : 2 ;
+			def_value : 1 ;
+		}
+	}
+	param 1{
+		cost_multiplier{
+			type    : int ;
+			name    : string(STR_PARAM_COSTS_BUILD_NAME) ;
+			desc    : string(STR_PARAM_COSTS_BUILD_DESC) ;
+			min_value	: 0 ;
+			max_value	: 7 ;
+			def_value	: 4 ;
+			names		: {
+				0	: string(STR_PARAM_VVVLOW  ) ;
+				1	: string(STR_PARAM_VVLOW) ;
+				2	: string(STR_PARAM_VLOW) ;
+				3	: string(STR_PARAM_LOW ) ;
+				4	: string(STR_PARAM_MEDIUM ) ;
+				5	: string(STR_PARAM_HIGH ) ;
+				6	: string(STR_PARAM_TOOMUCH ) ;
+				7	: string(STR_PARAM_TOOTOOMUCH ) ;
+			} ;
+		}
+	}
+	param 2{
+		speed_1{
+			type    : int ;
+			name    : string(STR_PARAM_SPEED_1) ;
+			desc    : string(STR_PARAM_SPEED_DESC) ;
+			min_value	: 0 ;
+			max_value	: 500 ;
+			def_value	: 80 ;
+		}
+	}
+	param 3{
+		speed_2{
+			type    : int ;
+			name    : string(STR_PARAM_SPEED_2) ;
+			desc    : string(STR_PARAM_SPEED_DESC) ;
+			min_value	: 0 ;
+			max_value	: 500 ;
+			def_value	: 161 ;
+		}
+	}
+	param 5{
+		NAAZ_NAAA{
+			type    : bool ;
+			name    : string(STR_PARAM_NAAZ_1) ;
+			desc    : string(STR_PARAM_NAAZ_DESC) ;
+			bit		: 1 ;
+			def_value	: 1 ;
+		}
+		NAAZ_NAAa_{
+			type    : bool ;
+			name    : string(STR_PARAM_NAAZ_2) ;
+			desc    : string(STR_PARAM_NAAZ_DESC) ;
+			bit		: 2 ;
+			def_value	: 0 ;
+		}
+		NAAZ_NAAD{
+			type    : bool ;
+			name    : string(STR_PARAM_NAAZ_3) ;
+			desc    : string(STR_PARAM_NAAZ_DESC) ;
+			bit		: 3 ;
+			def_value	: 0 ;
+		}
+		NAAZ_NAAd_{
+			type    : bool ;
+			name    : string(STR_PARAM_NAAZ_4) ;
+			desc    : string(STR_PARAM_NAAZ_DESC) ;
+			bit		: 4 ;
+			def_value	: 0 ;
+		}
+	}
+	param 7{
+		hide_NAAE{
+			type    : bool ;
+			name    : string(STR_PARAM_HIDE_NAAE) ;
+			desc    : string(STR_PARAM_HIDE_NAAE_DESC) ;
+			bit		: 1 ;
+			def_value	: 1 ;
+		}
+		disable_NAAA{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_NAAA) ;
+			desc    : string(STR_PARAM_DISABLE_NAAA_DESC) ;
+			bit		: 2 ;
+			def_value	: 0 ;
+		}
+		disable_NAAa_{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_NAAa) ;
+			desc    : string(STR_PARAM_DISABLE_NAAa_DESC) ;
+			bit		: 3 ;
+			def_value	: 1 ;
+		}
+		disable_NAAD{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_NAAD) ;
+			desc    : string(STR_PARAM_DISABLE_NAAD_DESC) ;
+			bit		: 4 ;
+			def_value	: 0 ;
+		}
+		disable_NAAd_{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_NAAd) ;
+			desc    : string(STR_PARAM_DISABLE_NAAd_DESC) ;
+			bit		: 5 ;
+			def_value	: 1 ;
+		}
+		disable_NAA3{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_NAA3) ;
+			desc    : string(STR_PARAM_DISABLE_NAA3_DESC) ;
+			bit		: 6 ;
+			def_value	: 0 ;
+		}
+		disable_INVS{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_INVS) ;
+			desc    : string(STR_PARAM_DISABLE_INVS_DESC) ;
+			bit		: 9 ;
+			def_value	: 0 ;
+		}
+	}
+	param 12{
+		signal_elec {
+ 			type:    int;
+ 			name:    string(STR_PARAM_SIGNAL_ELEC_NAME);
+ 			desc:    string(STR_PARAM_SIGNAL_ELEC_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_SIGNAL_ELEC_2ASP);
+ 				1: string(STR_PARAM_SIGNAL_ELEC_3ASP);
+ 				2: string(STR_PARAM_SIGNAL_ELEC_4ASP);
+ 			};
+		}
+	}
+	param 13{
+		fence_number {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_FENCE_NAME);
+ 			desc:    string(STR_PARAM_GFX_FENCE_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_FENCE_ALL);
+ 				1: string(STR_PARAM_GFX_FENCE_MOST);
+ 				2: string(STR_PARAM_GFX_FENCE_SOME);
+ 				3: string(STR_PARAM_GFX_FENCE_NONE);
+ 			};
+		}
+	}
+	param 14{
+		depot_type {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_DEPOT_NAME);
+ 			desc:    string(STR_PARAM_GFX_DEPOT_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_DEPOT_ALL);
+ 				1: string(STR_PARAM_GFX_DEPOT_ONE);
+ 				2: string(STR_PARAM_GFX_DEPOT_DEFAULT);
+ 			};
+		}
+	}
+	param 15{
+		decor_tracks{
+			type    : bool ;
+			name    : string(STR_PARAM_DECOR_NAME) ;
+			desc    : string(STR_PARAM_DECOR_DESC) ;
+			bit     : 1 ;
+			def_value : 1 ;
+		}
+	}
+	param 15{
+		custom_tunnels{
+			type    : bool ;
+			name    : string(STR_PARAM_TUNNELS_NAME) ;
+			desc    : string(STR_PARAM_TUNNELS_DESC) ;
+			bit     : 2 ;
+			def_value : 1 ;
+		}
+	}
+}
+
+basecost{
+	PR_BUILD_RAIL	: (param[1]-3) ;
+}
+
+# 1 "sets_narrow.pnml" 1
+
+# 1 "src/definitions.pnml" 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+spriteset(gfx_blank, "gfx/tracks.png"){
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+	[ 0  , 0 , 1 , 1 , 0,  0  ]
+}
+
+spriteset(gfx_blank_tile, "gfx/tracks.png"){
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+	[ 0,	0,		64,		31,		-31,	0	]
+}
+
+
+template template_ballast(x, y){
+	[x+350,	y,		64,		31,		-31,	0	]//North East
+	[x+420,	y,		64,		31,		-31,	0	]//North West
+	[x+700,	y,		64,		31,		-31,	0	]//Horizontal Top
+	[x+630,	y,		64,		31,		-31,	0	]//Horizontal Bottom
+	[x+560,	y,		64,		31,		-31,	0	]//Vertical Right
+	[x+490,	y,		64,		31,		-31,	0	]//Vertical Left
+	[x+490,	y+70,	64,		41,		-31,	-10	]//Slope NE
+	[x+560,	y+70,	64,		41,		-31,	-10	]//Slope SE
+	[x+630,	y+70,	64,		41,		-31,	-10	]//Slope SW
+	[x+700,	y+70,	64,		41,		-31,	-10	]//Slope NW
+	[x+350,	y+35,	64,		31,		-31,	0	]//Cross over
+	[x+490,	y+35,	64,		31,		-31,	0 	]//Junction SW
+	[x+560,	y+35,	64,		31,		-31,	0	]//Junction NE
+	[x+630,	y+35,	64,		31,		-31,	0	]//Junction SE
+	[x+700,	y+35,	64,		31,		-31,	0	]//Junction NW
+	[x+420,	y+35,	64,		31,		-31,	0	]//Full tile
+}
+
+template template_overlay(x, y){
+	[x,		y,		64,		31,		-31,	0	]//North East
+	[x+70,	y,		64,		31,		-31,	0	]//North West
+	[x+350,	y,		64,		31,		-31,	0	]//Horizontal Top
+	[x+280,	y,		64,		31,		-31,	0	]//Horizontal Bottom
+	[x+210,	y,		64,		31,		-31,	0	]//Vertical Right
+	[x+140,	y,		64,		31,		-31,	0	]//Vertical Left
+	[x+560,	y+40,	64,		41,		-31,	-10	]//Slope NE
+	[x+630,	y+40,	64,		41,		-31,	-10	]//Slope SE
+	[x+700,	y+40,	64,		41,		-31,	-10	]//Slope SW
+	[x+770,	y+40,	64,		41,		-31,	-10	]//Slope NW
+}
+
+/*
+	[x+140,	y+40,	64,		41,		-31,	-10	]//Slope NE
+	[x+210,	y+40,	64,		41,		-31,	-10	]//Slope SE
+	[x+280,	y+40,	64,		41,		-31,	-10	]//Slope SW
+	[x+350,	y+40,	64,		41,		-31,	-10	]//Slope NW
+}*/
+
+template template_underlay(x, y , x2){
+	[x+420,		y+0,	64,		31,		-31,	0	]//North East
+	[x+490,		y+0,	64,		31,		-31,	0	]//North West
+	[x+770,		y+0,	64,		31,		-31,	0	]//Horizontal Top
+	[x+700,		y+0,	64,		31,		-31,	0	]//Horizontal Bottom
+	[x+630,		y+0,	64,		31,		-31,	0	]//Vertical Right
+	[x+560,		y+0,	64,		31,		-31,	0	]//Vertical Left
+	[x+560,		y+40,	64,		41,		-31,	-10	]//Slope NE
+	[x+630,		y+40,	64,		41,		-31,	-10	]//Slope SE
+	[x+700,		y+40,	64,		41,		-31,	-10	]//Slope SW
+	[x+770,		y+40,	64,		41,		-31,	-10	]//Slope NW
+	[x+420,		y+40,	64,		31,		-31,	0	]//Cross over
+	[x2+140,	35,		64,		31,		-31,	0 	]//Junction SW
+	[x2+210,	35,		64,		31,		-31,	0	]//Junction NE
+	[x2+280,	35,		64,		31,		-31,	0	]//Junction SE
+	[x2+350,	35,		64,		31,		-31,	0	]//Junction NW
+	[x2+70,		35,		64,		31,		-31,	0	]//Full tile
+}
+
+template template_underlay_bridge(x, y){
+	[x+420,		y+0,	64,		31,		-31,	0	]//North East
+	[x+490,		y+0,	64,		31,		-31,	0	]//North West
+	[x+560,		y+40,	64,		41,		-31,	-10	]//Slope NE
+	[x+630,		y+40,	64,		41,		-31,	-10	]//Slope SE
+	[x+700,		y+40,	64,		41,		-31,	-10	]//Slope SW
+	[x+770,		y+40,	64,		41,		-31,	-10	]//Slope NW
+	[x+770,		y+0,	64,		31,		-31,	0	]//Horizontal Top
+	[x+700,		y+0,	64,		31,		-31,	0	]//Horizontal Bottom
+	[x+630,		y+0,	64,		31,		-31,	0	]//Vertical Right
+	[x+560,		y+0,	64,		31,		-31,	0	]//Vertical Left
+}
+
+
+template template_tunnel_tracks(x, y) {
+	[213,		y,	64,		31,		-31,	0	]
+	[x+490,		y,	64,		31,		-31,	0	]
+	[x+420,		y,	64,		31,		-31,	0	]
+	[283,		y,	64,		31,		-31,	0	]
+}
+
+template template_lc_track(y){
+	[213,		y+40,		64,		31,		-31,	0	]//North East
+	[283,		y+40,		64,		31,		-31,	0	]//North West
+}
+
+template template_lc_decorations(x, y){
+	[213,		y+40,		64,		31,		-31,	0	]//North East
+	[283,		y+40,		64,		31,		-31,	0	]//North West
+	[ x  , 0 , 1 , 1 , 0,  0  ]
+	[ x  , 0 , 1 , 1 , 0,  0  ]
+	[ x  , 0 , 1 , 1 , 0,  0  ]
+	[ x  , 0 , 1 , 1 , 0,  0  ]
+	[ x  , 0 , 1 , 1 , 0,  0  ]
+	[ x  , 0 , 1 , 1 , 0,  0  ]
+	[ x  , 0 , 1 , 1 , 0,  0  ]
+	[ x  , 0 , 1 , 1 , 0,  0  ]
+}
+
+template template_signals(x, y){
+	[ x  , y , 20 , 30 , -10,  -28  ]
+	[ x+60  , y , 20 , 30 , -10,  -28  ]
+	[ x+120 , y , 20 , 30 , -10,  -28  ]
+	[ x+180 , y , 20 , 30 , -10,  -28  ]
+	[ x+240 , y , 20 , 30 , -10,  -28  ]
+	[ x+300 , y , 20 , 30 , -10,  -28  ]
+	[ x+360 , y , 20 , 30 , -10,  -28  ]
+	[ x+420 , y , 20 , 30 , -10,  -28  ]
+}
+
+
+
+
+
+
+
+
+/*******************************************
+// Newer track templates based off of AuzRails
+ *******************************************/
+
+
+
+
+template template_overlay_auz() {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    [   1,		1,		64,		31,		-31,	0	]
+    [  66,		1,		64,		31,		-31,	0	]
+    [ 131,		1,		64,		31,		-31,	0	]
+    [ 196,		1,		64,		31,		-31,	0	]
+    [ 261,		1,		64,		31,		-31,	0	]
+    [ 326,		1,		64,		31,		-31,	0	]
+	//Slopes
+    [ 391,		1,		64,		41,		-31,	-10	]
+    [ 456,		1,		64,		41,		-31,	-10	]
+    [ 521,		1,		64,		41,		-31,	-10	]
+    [ 586,		1,		64,		41,		-31,	-10	]
+}
+
+
+template template_underlay_auz() {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    [   1,		1,		64,		31,		-31,	0	]
+    [  66,		1,		64,		31,		-31,	0	]
+    [ 131,		1,		64,		31,		-31,	0	]
+    [ 196,		1,		64,		31,		-31,	0	]
+    [ 261,		1,		64,		31,		-31,	0	]
+    [ 326,		1,		64,		31,		-31,	0	]
+	//Slopes
+    [ 391,		1,		64,		41,		-31,	-10	]
+    [ 456,		1,		64,		41,		-31,	-10	]
+    [ 521,		1,		64,		41,		-31,	-10	]
+    [ 586,		1,		64,		41,		-31,	-10	]
+	//Crossing
+    [	1,		49,		64,		31,		-31,	0	]
+     //Ground for switches
+    [	66,		49,		64,		31,		-31,	0	]
+    [	131,	49,		64,		31,		-31,	0	]
+    [	196,	49,		64,		31,		-31,	0	]
+    [	261,	49,		64,		31,		-31,	0	]
+    [	326,	49,		64,		31,		-31,	0	]
+}
+
+
+//Tunnel Tracks, to be used for trackoverlay in vanilla tunnels or tunnels provided by a tunnel-replacement GRF
+template template_tunneltracks() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+    [   3,    1,       64,    31,       -31,        0]
+    [  68,    1,       64,    31,       -31,        0]
+    [   3,   64,       64,    31,       -31,        0]
+    [  68,   64,       64,    31,       -31,        0]
+}
+
+
+
+
+
+
+
+
+/*******************************************
+//Custom Tunnel
+ *******************************************/
+
+template tmpl_tunnel_overlaytracks() {
+	//left_x, upper_y, width, height, offset_x, offset_y 
+ [ 10, 50, 64, 50, -31, -19]
+ [158, 50, 64, 50, -31, -19]
+ [306, 50, 64, 50, -31, -19]
+ [454, 50, 64, 50, -31, -19]
+ }
+
+ template tmpl_tunnel_overlays() {
+	//left_x, upper_y, width, height, offset_x, offset_y 
+ [ 84, 50, 64, 50, -31, -49]
+ [232, 50, 64, 50, -31, -49]
+ [380, 50, 64, 50, -31, -49]
+ [528, 50, 64, 50, -31, -49]
+}
+
+
+
+
+
+
+
+/*******************************************
+//Bridge Surface Tracks
+ *******************************************/
+
+template template_bridgetracks() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[	1,		1,		64,		31,		-31,	0	]
+	[	66,		1,		64,		31,		-31,	0	]
+	//Slopes
+	[	131,	1,		64,		41,		-31,	-10	]
+	[	196,	1,		64,		41,		-31,	-10	]
+	[	261,	1,		64,		41,		-31,	-10	]
+	[	326,	1,		64,		41,		-31,	-10	]
+}
+
+
+
+
+/*******************************************
+// railtype level crossings
+ *******************************************/
+
+template tmpl_level_crossing_railtypes_empty() {
+ [ 1,1, 64,31, -31, 0]
+ [ 66,1, 64,31, -31, 0]
+}
+
+//Level Crossings (Closed)
+template template_levcrossclosed() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  1,     1,       64,    31,       -31,          0,	ANIM]
+	[ 66,     1,       64,    31,       -31,          0,	ANIM]
+	[  1,   115,       64,    50,       -31,        -19,	ANIM]	
+	[ 66,   115,       64,    50,       -31,        -19,	ANIM]
+	[  1,    50,       64,    50,       -57,        -32,	ANIM]
+	[196,   115,       64,    50,       -57,        -32,	ANIM]
+	[131,   115,       64,    50,        -5,        -32,	ANIM]
+	[ 66,    50,       64,    50,        -5,        -32,	ANIM]
+	[131,    50,       64,    50,       -31,        -45,	ANIM]
+	[196,    50,       64,    50,       -31,        -45,	ANIM]
+}
+
+//Level Crossings (Open)
+template template_levcrossopen() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  1,     1,       64,    31,       -31,          0,	ANIM]
+	[ 66,     1,       64,    31,       -31,          0,	ANIM]
+	[  1,   245,       64,    50,       -31,        -19,	ANIM]	
+	[ 66,   245,       64,    50,       -31,        -19,	ANIM]
+	[  1,   180,       64,    50,       -57,        -32,	ANIM]
+	[196,   245,       64,    50,       -57,        -32,	ANIM]
+	[131,   245,       64,    50,        -5,        -32,	ANIM]
+	[ 66,   180,       64,    50,        -5,        -32,	ANIM]
+	[131,   180,       64,    50,       -31,        -45,	ANIM]
+	[196,   180,       64,    50,       -31,        -45,	ANIM]
+}
+
+
+
+
+
+
+
+
+/*******************************************
+//Fences
+ *******************************************/
+
+template template_fences() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  2,  1, 33, 26,  -33,  -12] //Back of Track
+	[ 50,  1, 33, 26,    3,  -11] //Back of Track
+	[ 98,  5,  2, 38,    0, -22] //Right of Track
+	[114,  1, 65,  10,  -31,  -10] //Bottom of Track
+	[194,  1, 33, 19,  -33,  -13] //Back of Track (slope)
+	[242,  1, 33, 19,    3,  -12] //Back of Track (slope)
+	[290,  1, 33, 35,  -33, -21] //Back of Track (slope)
+	[338,  1, 33, 35,    3, -20] //Back of Track (slope)
+	[  2, 46, 33, 26,  -29,  -10] //Front of Track
+	[ 50, 46, 33, 26,   -1,  -9] //Front of Track
+	[ 98, 50,  2, 38,    1, -22] //Left of Track
+	[114, 46, 65,  10,  -31,  -10] //Top of Track
+	[194, 46, 33, 19,  -29,  -11] //Front of Track (slope)
+	[242, 46, 33, 19,   -1,  -10] //Front of Track (slope)
+	[290, 46, 33, 35,  -29, -19] //Front of Track (slope)
+	[338, 46, 33, 35,   -1, -18] //Front of Track (slope)
+
+}
+
+template tmpl_fences() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  2,  1, 33, 31,  -33,  -17] //Back of Track
+	[ 50,  1, 33, 31,    3,  -16] //Back of Track
+	[ 98,  5,  2, 38,    0, -22] //Right of Track
+	[114,  1, 65,  15,  -31,  -15] //Bottom of Track
+	[194,  1, 33, 24,  -33,  -18] //Back of Track (slope)
+	[242,  1, 33, 24,    3,  -17] //Back of Track (slope)
+	[290,  1, 33, 40,  -33, -26] //Back of Track (slope)
+	[338,  1, 33, 40,    3, -25] //Back of Track (slope)
+	[  2, 46, 33, 31,  -29,  -15] //Front of Track
+	[ 50, 46, 33, 31,   -1,  -14] //Front of Track
+	[ 98, 50,  2, 38,    1, -22] //Left of Track
+	[114, 46, 65,  15,  -31,  -15] //Top of Track
+	[194, 46, 33, 24,  -29,  -16] //Front of Track (slope)
+	[242, 46, 33, 24,   -1,  -15] //Front of Track (slope)
+	[290, 51, 33, 40,  -29, -24] //Front of Track (slope)
+	[338, 51, 33, 40,   -1, -23] //Front of Track (slope)
+
+}
+
+
+
+//No Fences
+template template_nofences() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+	[  0,0,1,1,0,0]
+}
+
+spriteset(spriteset_nofences, "gfx/tracks.png") {
+ template_nofences()
+}
+
+
+
+
+
+
+
+
+
+
+/*******************************************
+//Depot
+ *******************************************/
+
+template template_depot() {
+	//left_x, upper_y, width, height, offset_x, offset_y 
+  [   42, 85, 24, 25,   9,  -6]   
+  [    2, 24, 64, 58,  -9, -42] 
+  [   82, 85, 24, 25, -31,  -6] 
+  [   82, 24, 64, 58, -53, -42]
+  [  242, 24, 64, 58, -53, -42]
+  [  162, 24, 64, 58,  -9, -42] 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************************************
+//Catenarypylons
+ **********************************************/
+
+template template_catenarypylons() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ [ 10, 20, 14, 30, -11, -28]
+ [ 34, 20, 14, 30, 1, -28]
+ [ 58, 20, 14, 30, -1, -28]
+ [ 82, 20, 14, 30, -13, -28]
+ [ 106, 20, 14, 30, -6, -29]
+ [ 130, 20, 14, 30, -6, -28]
+ [ 154, 20, 14, 30, 0, -29]
+ [ 178, 20, 14, 30, -13, -29]
+}
+
+//Catenarypylons
+template template_catenarydoublepylons() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ [ 4, 28, 14, 32, -11, -30]
+ [ 20, 17, 40, 43, 1, -41]
+ [ 62, 28, 14, 32, -1, -30]
+ [ 78, 17, 40, 43, -39, -41]
+ [ 120, 28, 14, 32, -6, -39]
+ [ 136, 16, 14, 44, -6, -43]
+ [ 152, 28, 28, 32, 0, -31]
+ [ 181, 28, 27, 32, -26, -31]
+}
+
+//Catenarypylons
+template template_catenarymultipylons() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ [ 2, 22, 42, 38, -29, -27] //ok
+ [ 46, 11, 52, 49, -5, -44] //ok
+ [ 100, 22, 42, 38, -9, -27] //ok
+ [ 144, 11, 52, 49, -43, -44] //ok
+ [ 198, 28, 14, 32, -6, -43] //
+ [ 214, 12, 14, 44, -6, -47] //
+ [ 230, 28, 44, 32, -7, -31] //
+ [ 276, 28, 44, 32, -33, -31] //
+}
+
+//Catenarypylons
+template template_catenarycentrepylons() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ [ 2, 22, 42, 38, -25, -29] //ok
+ [ 46, 11, 52, 49, -13, -40] //ok
+ [ 100, 22, 42, 38, -15, -29] //ok
+ [ 144, 11, 52, 49, -37, -40] //ok
+ [ 198, 28, 14, 32, -6, -43] //
+ [ 214, 12, 14, 44, -6, -47] //
+ [ 230, 28, 44, 32, -20, -31] //ok
+ [ 276, 28, 44, 32, -28, -31] //ok
+}
+
+
+
+
+
+
+
+
+
+
+
+/**********************************************
+//Catenarywires
+ **********************************************/
+
+template template_catenarywires() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+ [ 10, 100, 64, 42, -45, -20]
+ [ 100, 100, 64, 42, -17, -20]
+ [ 200, 100, 32, 11, 0, -12] //-1
+ [ 300, 100, 1, 21, 1, -8] //0
+ [ 10, 200, 64, 50, -45, -21]
+ [ 100, 200, 64, 34, -17, -10]
+ [ 200, 200, 64, 34, -45, -10]
+ [ 300, 200, 64, 50, -17, -21]
+ [ 10, 300, 64, 42, -45, -20]
+ [ 100, 300, 64, 42, -17, -20]
+ [ 200, 300, 32, 11, 0, -12]
+ [ 300, 300, 1, 21, 1, -8] //0
+ [ 10, 400, 64, 50, -45, -21]
+ [ 100, 400, 64, 34, -17, -10]
+ [ 200, 400, 64, 34, -45, -10]
+ [ 300, 400, 64, 50, -17, -21]
+ [ 10, 500, 64, 42, -45, -20]
+ [ 100, 500, 64, 42, -17, -20]
+ [ 200, 500, 32, 11, 0, -12]
+ [ 300, 500, 1, 21, 1, -8] //0
+ [ 10, 600, 64, 50, -45, -21]
+ [ 100, 600, 64, 34, -17, -10]
+ [ 200, 600, 64, 34, -45, -10]
+ [ 300, 600, 64, 50, -17, -21]
+ [ 10, 700, 64, 42, -45, -20]
+ [ 100, 700, 64, 42, -17, -20]
+ [ 200, 700, 64, 42, -45, -20]
+ [ 300, 700, 64, 42, -17, -20]
+}
+
+# 1 "src/catenary_masts.pnml" 1
+template tmpl_catenary_masts (y) {
+    [0,  y, 8, 18, -7, -14]
+    [10, y, 8, 18,  1, -17]
+    [20, y, 8, 18,  1, -14]
+    [30, y, 8, 18, -7, -17]
+    [40, y, 2, 18, -0, -15]
+    [50, y, 2, 18, -0, -16]
+    [60, y, 8, 18,  1, -14]
+    [70, y, 8, 18, -7, -14]
+}
+
+spriteset (gfx_catenary_masts_15, "gfx/catenary_masts.png") {
+    tmpl_catenary_masts(0)
+}
+
+spriteset (gfx_catenary_masts_25, "gfx/catenary_masts.png") {
+    tmpl_catenary_masts(20)
+}
+
+spriteset (gfx_catenary_masts_1500, "gfx/catenary_masts.png") {
+    tmpl_catenary_masts(40)
+}
+
+spriteset (gfx_catenary_masts_3, "gfx/catenary_masts.png") {
+    tmpl_catenary_masts(60)
+}
+# 1 "src/definitions.pnml" 561
+
+# 1 "src/chips_underlays.pnml" 1
+spriteset(gfx_underlay_SY2N,			"gfx/EYCA/Underlay_SY2N.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_SY3N,			"gfx/EYCA/Underlay_SY3N.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_SY4N,			"gfx/EYCA/Underlay_SY4N.png")		{	template_underlay_auz()				}
+
+spriteset(gfx_underlay_SY23,			"gfx/EYCA/Underlay_SY23.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_SY33,			"gfx/EYCA/Underlay_SY33.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_SY43,			"gfx/EYCA/Underlay_SY43.png")		{	template_underlay_auz()				}
+
+
+spriteset(gfx_underlay_NY2N,			"gfx/EYCA/Underlay_NY2N.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_NY3N,			"gfx/EYCA/Underlay_NY3N.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_NY4N,			"gfx/EYCA/Underlay_NY4N.png")		{	template_underlay_auz()				}
+
+spriteset(gfx_underlay_NY23,			"gfx/EYCA/Underlay_NY23.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_NY33,			"gfx/EYCA/Underlay_NY33.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_NY43,			"gfx/EYCA/Underlay_NY43.png")		{	template_underlay_auz()				}
+# 1 "src/definitions.pnml" 561
+
+# 1 "src/tunnels.pnml" 1
+template template_tunnel() {
+	//left_x, upper_y, width, height, offset_x, offset_y
+    [   3,    1,       64,    39,       -31,        -8] //sw 
+    [   3,   56,       64,    39,       -31,       -38] //sw 
+    [  68,  102,       64,    39,       -31,        -8] //nw
+    [  68,  157,       64,    39,       -31,       -38] //nw
+    [   3,  102,       64,    39,       -31,        -8] //ne
+    [   3,  157,       64,    39,       -31,       -38] //ne
+    [  68,    1,       64,    39,       -31,        -8] //se
+    [  68,   56,       64,    39,       -31,       -38] //se
+}
+
+template template_tunnel_top () {
+	//left_x, upper_y, width, height, offset_x, offset_y
+    [   3,    1,       64,    39,       -31,       -38] //sw 
+    [  68,   56,       64,    39,       -31,       -38] //nw 
+    [   3,   56,       64,    39,       -31,       -38] //ne
+    [  68,    1,       64,    39,       -31,       -38] //se
+}
+
+if (custom_tunnels == 1) {
+    replacenew (RAILTYPE_TUNNELS, "gfx/tunnels.png") {
+        template_tunnel()
+    }
+
+    replacenew (RAILTYPE_TUNNELS, "gfx/tunnels.png", 8) {
+        template_tunnel()
+    }
+}
+
+spriteset (gfx_cobble_tunnels, "gfx/cobblestone_tunnels.png") {
+    template_tunnel_top() 
+}
+
+spriteset (gfx_dirt_tunnels, "gfx/dirt_tunnels.png") {
+    template_tunnel_top() 
+}
+
+spriteset (gfx_asphalt_tunnels, "gfx/asphalt_tunnels.png") {
+    template_tunnel_top() 
+}
+# 1 "src/definitions.pnml" 561
+# 1 "sets_narrow.pnml" 1
+
+# 1 "src/signals.pnml" 1
+//Signal sprites for 2 aspect signals
+spriteset(aspect2_r_block, "gfx/signal_electric_2asp.png") {template_signals(10,50)}
+spriteset(aspect2_g_block, "gfx/signal_electric_2asp.png") {template_signals(40,50)}
+spriteset(aspect2_r_en, "gfx/signal_electric_2asp.png") {template_signals(10,85)}
+spriteset(aspect2_g_en, "gfx/signal_electric_2asp.png") {template_signals(40,85)}
+spriteset(aspect2_r_ex, "gfx/signal_electric_2asp.png") {template_signals(10,120)}
+spriteset(aspect2_g_ex, "gfx/signal_electric_2asp.png") {template_signals(40,120)}
+spriteset(aspect2_r_co, "gfx/signal_electric_2asp.png") {template_signals(10,155)}
+spriteset(aspect2_g_co, "gfx/signal_electric_2asp.png") {template_signals(40,155)}
+spriteset(aspect2_r_path, "gfx/signal_electric_2asp.png") {template_signals(10,190)}
+spriteset(aspect2_g_path, "gfx/signal_electric_2asp.png") {template_signals(40,190)}
+spriteset(aspect2_r_owp, "gfx/signal_electric_2asp.png") {template_signals(10,225)}
+spriteset(aspect2_g_owp, "gfx/signal_electric_2asp.png") {template_signals(40,225)}
+
+//Switches for 2 aspect signals
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect2_r, getbits(extra_callback_info2, 16, 8)){
+00 : aspect2_r_block;
+01 : aspect2_r_en;
+02 : aspect2_r_ex;
+03 : aspect2_r_co;
+04 : aspect2_r_path;
+05 : aspect2_r_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect2_g, getbits(extra_callback_info2, 16, 8)){
+00 : aspect2_g_block;
+01 : aspect2_g_en;
+02 : aspect2_g_ex;
+03 : aspect2_g_co;
+04 : aspect2_g_path;
+05 : aspect2_g_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect2, getbits(extra_callback_info2, 0, 8)){
+00 : sw_aspect2_r;
+01 : sw_aspect2_g;
+}
+
+//Signal sprites for 3 aspect green/red signals
+spriteset(aspect3_r_block, "gfx/signal_electric_3asp_2.png") {template_signals(10,50)}
+spriteset(aspect3_g_block, "gfx/signal_electric_3asp_2.png") {template_signals(40,50)}
+spriteset(aspect3_r_en, "gfx/signal_electric_3asp_2.png") {template_signals(10,85)}
+spriteset(aspect3_g_en, "gfx/signal_electric_3asp_2.png") {template_signals(40,85)}
+spriteset(aspect3_r_ex, "gfx/signal_electric_3asp_2.png") {template_signals(10,120)}
+spriteset(aspect3_g_ex, "gfx/signal_electric_3asp_2.png") {template_signals(40,120)}
+spriteset(aspect3_r_co, "gfx/signal_electric_3asp_2.png") {template_signals(10,155)}
+spriteset(aspect3_g_co, "gfx/signal_electric_3asp_2.png") {template_signals(40,155)}
+spriteset(aspect3_r_path, "gfx/signal_electric_3asp_2.png") {template_signals(10,190)}
+spriteset(aspect3_g_path, "gfx/signal_electric_3asp_2.png") {template_signals(40,190)}
+spriteset(aspect3_r_owp, "gfx/signal_electric_3asp_2.png") {template_signals(10,225)}
+spriteset(aspect3_g_owp, "gfx/signal_electric_3asp_2.png") {template_signals(40,225)}
+spriteset(aspect3_y_block, "gfx/signal_electric_3asp_2.png") {template_signals(40,260)}
+spriteset(aspect3_y_path, "gfx/signal_electric_3asp_2.png") {template_signals(40,295)}
+spriteset(aspect3_y_owp, "gfx/signal_electric_3asp_2.png") {template_signals(40,330)}
+
+//Switches for 3 aspect green/red signals
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect3_r, getbits(extra_callback_info2, 16, 8)){
+00 : aspect3_r_block;
+01 : aspect3_r_en;
+02 : aspect3_r_ex;
+03 : aspect3_r_co;
+04 : aspect3_r_path;
+05 : aspect3_r_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect3_g, getbits(extra_callback_info2, 16, 8)){
+00 : aspect3_g_block;
+01 : aspect3_g_en;
+02 : aspect3_g_ex;
+03 : aspect3_g_co;
+04 : aspect3_g_path;
+05 : aspect3_g_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect3_y, getbits(extra_callback_info2, 16, 8)){
+00 : aspect3_y_block;
+01 : aspect3_g_en;
+02 : aspect3_g_ex;
+03 : aspect3_g_co;
+04 : aspect3_y_path;
+05 : aspect3_y_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect3, getbits(extra_callback_info2, 0, 2)){
+00 : sw_aspect3_r;
+01 : sw_aspect3_g;
+02 : sw_aspect3_y;
+}
+
+
+//Signal sprites for 4 aspect green/red signals
+spriteset(aspect4_r_block, "gfx/signal_electric_full_4asp.png") {template_signals(10,50)}
+spriteset(aspect4_g_block, "gfx/signal_electric_full_4asp.png") {template_signals(40,50)}
+spriteset(aspect4_r_en, "gfx/signal_electric_full_4asp.png") {template_signals(10,85)}
+spriteset(aspect4_g_en, "gfx/signal_electric_full_4asp.png") {template_signals(40,85)}
+spriteset(aspect4_r_ex, "gfx/signal_electric_full_4asp.png") {template_signals(10,120)}
+spriteset(aspect4_g_ex, "gfx/signal_electric_full_4asp.png") {template_signals(40,120)}
+spriteset(aspect4_r_co, "gfx/signal_electric_full_4asp.png") {template_signals(10,155)}
+spriteset(aspect4_g_co, "gfx/signal_electric_full_4asp.png") {template_signals(40,155)}
+spriteset(aspect4_r_path, "gfx/signal_electric_full_4asp.png") {template_signals(10,190)}
+spriteset(aspect4_g_path, "gfx/signal_electric_full_4asp.png") {template_signals(40,190)}
+spriteset(aspect4_r_owp, "gfx/signal_electric_full_4asp.png") {template_signals(10,225)}
+spriteset(aspect4_g_owp, "gfx/signal_electric_full_4asp.png") {template_signals(40,225)}
+spriteset(aspect4_y_block, "gfx/signal_electric_full_4asp.png") {template_signals(10,260)}
+spriteset(aspect4_yy_block, "gfx/signal_electric_full_4asp.png") {template_signals(40,260)}
+spriteset(aspect4_y_path, "gfx/signal_electric_full_4asp.png") {template_signals(10,295)}
+spriteset(aspect4_yy_path, "gfx/signal_electric_full_4asp.png") {template_signals(40,295)}
+spriteset(aspect4_y_owp, "gfx/signal_electric_full_4asp.png") {template_signals(10,330)}
+spriteset(aspect4_yy_owp, "gfx/signal_electric_full_4asp.png") {template_signals(40,330)}
+
+//Switches for 4 aspect green/red signals
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect4_r, getbits(extra_callback_info2, 16, 8)){
+00 : aspect4_r_block;
+01 : aspect4_r_en;
+02 : aspect4_r_ex;
+03 : aspect4_r_co;
+04 : aspect4_r_path;
+05 : aspect4_r_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect4_g, getbits(extra_callback_info2, 16, 8)){
+00 : aspect4_g_block;
+01 : aspect4_g_en;
+02 : aspect4_g_ex;
+03 : aspect4_g_co;
+04 : aspect4_g_path;
+05 : aspect4_g_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect4_y, getbits(extra_callback_info2, 16, 8)){
+00 : aspect4_y_block;
+01 : aspect4_g_en;
+02 : aspect4_g_ex;
+03 : aspect4_g_co;
+04 : aspect4_y_path;
+05 : aspect4_y_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect4_yy, getbits(extra_callback_info2, 16, 8)){
+00 : aspect4_yy_block;
+01 : aspect4_g_en;
+02 : aspect4_g_ex;
+03 : aspect4_g_co;
+04 : aspect4_yy_path;
+05 : aspect4_yy_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect4, getbits(extra_callback_info2, 0, 2)) {
+    00: sw_aspect4_r;
+    01: sw_aspect4_g;
+    02: sw_aspect4_y;
+    03: sw_aspect4_yy;
+}
+
+//Signal sprites for 2 aspect SEMAPHORE signals
+spriteset(aspect2_S_r_block, "gfx/signal_semaphore_2asp.png") {template_signals(10,50)}
+spriteset(aspect2_S_g_block, "gfx/signal_semaphore_2asp.png") {template_signals(40,50)}
+spriteset(aspect2_S_r_en, "gfx/signal_semaphore_2asp.png") {template_signals(10,85)}
+spriteset(aspect2_S_g_en, "gfx/signal_semaphore_2asp.png") {template_signals(40,85)}
+spriteset(aspect2_S_r_ex, "gfx/signal_semaphore_2asp.png") {template_signals(10,120)}
+spriteset(aspect2_S_g_ex, "gfx/signal_semaphore_2asp.png") {template_signals(40,120)}
+spriteset(aspect2_S_r_co, "gfx/signal_semaphore_2asp.png") {template_signals(10,155)}
+spriteset(aspect2_S_g_co, "gfx/signal_semaphore_2asp.png") {template_signals(40,155)}
+spriteset(aspect2_S_r_path, "gfx/signal_semaphore_2asp.png") {template_signals(10,190)}
+spriteset(aspect2_S_g_path, "gfx/signal_semaphore_2asp.png") {template_signals(40,190)}
+spriteset(aspect2_S_r_owp, "gfx/signal_semaphore_2asp.png") {template_signals(10,225)}
+spriteset(aspect2_S_g_owp, "gfx/signal_semaphore_2asp.png") {template_signals(40,225)}
+
+//Switches for 2 aspect SEMAPHORE signals
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect2_S_r, getbits(extra_callback_info2, 16, 8)){
+00 : aspect2_S_r_block;
+01 : aspect2_S_r_en;
+02 : aspect2_S_r_ex;
+03 : aspect2_S_r_co;
+04 : aspect2_S_r_path;
+05 : aspect2_S_r_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect2_S_g, getbits(extra_callback_info2, 16, 8)){
+00 : aspect2_S_g_block;
+01 : aspect2_S_g_en;
+02 : aspect2_S_g_ex;
+03 : aspect2_S_g_co;
+04 : aspect2_S_g_path;
+05 : aspect2_S_g_owp;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_aspect2_S, getbits(extra_callback_info2, 0, 2)) {
+    00: sw_aspect2_S_r;
+    01: sw_aspect2_S_g;
+    02: sw_aspect2_S_g;
+    03: sw_aspect2_S_g;
+}
+
+//What kind of electric signal do you want?
+
+switch(FEAT_RAILTYPES, SELF, sw_electric_signals_general, signal_elec){
+0 : sw_aspect2;
+1 : sw_aspect3;
+2 : sw_aspect4;
+3 : sw_aspect4;
+sw_aspect2;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_electric_signals_slow, signal_elec){
+0 : sw_aspect2;
+1 : sw_aspect3;
+sw_aspect4;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_signals, getbits(extra_callback_info2, 8, 8)){
+0 : sw_electric_signals_general;
+sw_aspect2_S;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_signals_slow, getbits(extra_callback_info2, 8, 8)){
+0 : sw_electric_signals_slow;
+sw_aspect2_S;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_signals_low_speed, signal_elec){
+0..2 : sw_signals;
+sw_signals_slow;
+}
+
+# 1 "sets_narrow.pnml" 1
+# 1 "src/depots.pnml" 1
+
+spriteset(gfx_depot_1,		"gfx/Depot/Depot_1.png")			{	template_depot()					}
+
+
+
+# 1 "sets_narrow.pnml" 1
+
+# 1 "src/BLST/BLST.pnml" 1
+
+
+
+//spriteset(gfx_overlays_BLST,			"gfx/BLST/BLST/Overlay_BLST.png")		{	template_overlay_auz()				}
+spriteset(gfx_underlays_BLST,			"gfx/BLST/BLST/Underlay_BLST.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlays_BLST_wide,		"gfx/BLST/BLST/Underlay_BLST_wide.png")	{	template_underlay_auz()				}
+spriteset(gfx_tunnel_tracks_BLST,		"gfx/BLST/BLST/TunnelTrack_BLST.png")	{	template_tunneltracks()				}
+spriteset(gfx_bridge_tracks_BLST,		"gfx/BLST/BLST/BridgeTrack_BLST.png")	{	template_bridgetracks()				}
+
+
+spriteset(gfx_fences_BLST,				"gfx/BLST/BLST/Fences_BLST.png")		{	template_fences()					}
+spriteset(gfx_depot_BLST,				"gfx/BLST/BLST/Depot_BLST.png")			{	template_depot()					}
+
+
+spriteset(gfx_level_crossing_BLST_empty,	"gfx/BLST/BLST/LevelCrossing_BLST.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_BLST_closed,	"gfx/BLST/BLST/LevelCrossing_BLST.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_BLST_open,		"gfx/BLST/BLST/LevelCrossing_BLST.png")	{template_levcrossopen()				}
+
+spriteset(gfx_level_crossing_BLST_empty_modern,		"gfx/BLST/BLST/LevelCrossingModern_BLST.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_BLST_closed_modern,	"gfx/BLST/BLST/LevelCrossingModern_BLST.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_BLST_open_modern,		"gfx/BLST/BLST/LevelCrossingModern_BLST.png")	{template_levcrossopen()				}
+
+
+// Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_BLST_closed, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_BLST_closed ;
+	gfx_level_crossing_BLST_closed_modern;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_BLST_open, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_BLST_open ;
+	gfx_level_crossing_BLST_open_modern;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_lc_BLST_state, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : sw_lc_BLST_closed ;
+	sw_lc_BLST_open ;
+}
+
+
+// Wide ballast?
+
+switch(FEAT_RAILTYPES, SELF, sw_underlay_BLST, wide_ballast) {
+ 1: gfx_underlays_BLST_wide;
+ gfx_underlays_BLST;
+}
+
+
+// Custom depot?
+
+switch(FEAT_RAILTYPES, SELF, sw_depot_BLST, depot_type){
+	0 : gfx_depot_BLST ;
+	1 : gfx_depot_1 ;
+}
+
+
+// Fences?
+
+switch(FEAT_RAILTYPES, SELF, sw_fences_BLST, fence_number < 1){
+	1 : gfx_fences_BLST ;
+	gfx_blank ;
+}
+
+
+
+
+
+// Item
+
+item(FEAT_RAILTYPES, rail_BLST) {
+	property {
+		label						: "BLST" ;
+		name						: string(STR_BLST_NAME) ;
+		menu_text					: string(STR_BLST_NAME) ;
+		build_window_caption		: string(STR_BLST_BUILD_NAME) ;
+		autoreplace_text			: string(STR_BLST_REPLACE_NAME) ;
+		new_engine_text				: string(STR_BLST_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_BLST_TOOLBAR) ;
+		compatible_railtype_list	: ["BLST", "BLS2", "BLS3", "PLAN"] ;
+		powered_railtype_list		: ["BLST", "BLS2", "BLS3", "PLAN"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 1 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		introduction_date			: date(0,1,1) ;
+		sort_order					: 0 ;
+	}
+	graphics {
+		track_overlay		: gfx_blank ;
+		underlay			: sw_underlay_BLST ;
+		bridge_surfaces		: gfx_bridge_tracks_BLST ;
+		tunnels				: gfx_tunnel_tracks_BLST ;
+		level_crossings		: sw_lc_BLST_state ;
+		fences				: sw_fences_BLST ;
+		depots				: sw_depot_BLST ;
+		signals				: sw_signals ;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//spriteset(gfx_overlays_BLS2,			"gfx/BLST/BLS2/Overlay_BLS2.png")		{	template_overlay_auz()				}
+spriteset(gfx_underlays_BLS2,			"gfx/BLST/BLS2/Underlay_BLS2.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlays_BLS2_wide,		"gfx/BLST/BLS2/Underlay_BLS2_wide.png")	{	template_underlay_auz()				}
+spriteset(gfx_tunnel_tracks_BLS2,		"gfx/BLST/BLS2/TunnelTrack_BLS2.png")	{	template_tunneltracks()				}
+spriteset(gfx_bridge_tracks_BLS2,		"gfx/BLST/BLS2/BridgeTrack_BLS2.png")	{	template_bridgetracks()				}
+
+
+spriteset(gfx_fences_BLS2,				"gfx/BLST/BLS2/Fences_BLS2.png")		{	template_fences()					}
+spriteset(gfx_depot_BLS2,				"gfx/BLST/BLS2/Depot_BLS2.png")			{	template_depot()					}
+
+
+spriteset(gfx_level_crossing_BLS2_empty,	"gfx/BLST/BLS2/LevelCrossing_BLS2.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_BLS2_closed,	"gfx/BLST/BLS2/LevelCrossing_BLS2.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_BLS2_open,		"gfx/BLST/BLS2/LevelCrossing_BLS2.png")	{template_levcrossopen()				}
+
+spriteset(gfx_level_crossing_BLS2_empty_modern,		"gfx/BLST/BLS2/LevelCrossingModern_BLS2.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_BLS2_closed_modern,	"gfx/BLST/BLS2/LevelCrossingModern_BLS2.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_BLS2_open_modern,		"gfx/BLST/BLS2/LevelCrossingModern_BLS2.png")	{template_levcrossopen()				}
+
+
+// Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_BLS2_closed, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_BLS2_closed ;
+	gfx_level_crossing_BLS2_closed_modern;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_BLS2_open, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_BLS2_open ;
+	gfx_level_crossing_BLS2_open_modern;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_lc_BLS2_state, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : sw_lc_BLS2_closed ;
+	sw_lc_BLS2_open ;
+}
+
+
+// Wide ballast?
+
+switch(FEAT_RAILTYPES, SELF, sw_underlay_BLS2, wide_ballast) {
+ 1: gfx_underlays_BLS2_wide;
+ gfx_underlays_BLS2;
+}
+
+
+// Custom depot?
+
+switch(FEAT_RAILTYPES, SELF, sw_depot_BLS2, depot_type){
+	0 : gfx_depot_BLS2 ;
+	1 : gfx_depot_1 ;
+}
+
+
+// Fences?
+
+switch(FEAT_RAILTYPES, SELF, sw_fences_BLS2, fence_number < 1){
+	1 : gfx_fences_BLS2 ;
+	gfx_blank ;
+}
+
+
+
+
+
+// Item
+
+if(decor_tracks){
+
+item(FEAT_RAILTYPES, rail_BLS2) {
+	property {
+		label						: "BLS2" ;
+		name						: string(STR_BLS2_NAME) ;
+		menu_text					: string(STR_BLS2_NAME) ;
+		build_window_caption		: string(STR_BLST_BUILD_NAME) ;
+		autoreplace_text			: string(STR_BLST_REPLACE_NAME) ;
+		new_engine_text				: string(STR_BLST_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_BLST_TOOLBAR) ;
+		compatible_railtype_list	: ["BLST", "BLS2", "BLS3", "PLAN"] ;
+		powered_railtype_list		: ["BLST", "BLS2", "BLS3", "PLAN"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 1 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		introduction_date			: date(0,1,1) ;
+		sort_order					: 1 ;
+	}
+	graphics {
+		track_overlay		: gfx_blank ;
+		underlay			: sw_underlay_BLS2 ;
+		bridge_surfaces		: gfx_bridge_tracks_BLS2 ;
+		tunnels				: gfx_tunnel_tracks_BLS2 ;
+		level_crossings		: sw_lc_BLS2_state ;
+		fences				: sw_fences_BLS2 ;
+		depots				: sw_depot_BLS2 ;
+		signals				: sw_signals ;
+	}
+}
+
+}
+
+
+
+
+
+
+
+
+
+//spriteset(gfx_overlays_BLS3,			"gfx/BLST/BLS3/Overlay_BLS3.png")		{	template_overlay_auz()				}
+spriteset(gfx_underlays_BLS3,			"gfx/BLST/BLS3/Underlay_BLS3.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlays_BLS3_wide,		"gfx/BLST/BLS3/Underlay_BLS3_wide.png")	{	template_underlay_auz()				}
+spriteset(gfx_tunnel_tracks_BLS3,		"gfx/BLST/BLS3/TunnelTrack_BLS3.png")	{	template_tunneltracks()				}
+spriteset(gfx_bridge_tracks_BLS3,		"gfx/BLST/BLS3/BridgeTrack_BLS3.png")	{	template_bridgetracks()				}
+
+
+spriteset(gfx_fences_BLS3,				"gfx/BLST/BLS3/Fences_BLS3.png")		{	template_fences()					}
+spriteset(gfx_depot_BLS3,				"gfx/BLST/BLS3/Depot_BLS3.png")			{	template_depot()					}
+
+/*
+spriteset(gfx_level_crossing_BLS3_empty,	"gfx/BLST/BLS3/LevelCrossing_BLS3.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_BLS3_closed,	"gfx/BLST/BLS3/LevelCrossing_BLS3.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_BLS3_open,		"gfx/BLST/BLS3/LevelCrossing_BLS3.png")	{template_levcrossopen()				}*/
+
+spriteset(gfx_level_crossing_BLS3_empty_modern,		"gfx/BLST/BLS3/LevelCrossingModern_BLS3.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_BLS3_closed_modern,	"gfx/BLST/BLS3/LevelCrossingModern_BLS3.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_BLS3_open_modern,		"gfx/BLST/BLS3/LevelCrossingModern_BLS3.png")	{template_levcrossopen()				}
+
+
+/* Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_BLS3_closed, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_BLS3_closed ;
+	gfx_level_crossing_BLS3_closed_modern;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_BLS3_open, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_BLS3_open ;
+	gfx_level_crossing_BLS3_open_modern;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_lc_BLS3_state, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : sw_lc_BLS3_closed ;
+	sw_lc_BLS3_open ;
+}
+*/
+
+// Wide ballast?
+
+switch(FEAT_RAILTYPES, SELF, sw_underlay_BLS3, wide_ballast) {
+ 1: gfx_underlays_BLS3_wide;
+ gfx_underlays_BLS3;
+}
+
+
+// Custom depot?
+
+switch(FEAT_RAILTYPES, SELF, sw_depot_BLS3, depot_type){
+	0 : gfx_depot_BLS3 ;
+	1 : gfx_depot_1 ;
+}
+
+
+// Fences?
+
+switch(FEAT_RAILTYPES, SELF, sw_fences_BLS3, fence_number < 1){
+	1 : gfx_fences_BLS3 ;
+	gfx_blank ;
+}
+
+
+
+
+// Item
+
+if(decor_tracks){
+
+item(FEAT_RAILTYPES, rail_BLS3) {
+	property {
+		label						: "BLS3" ;
+		name						: string(STR_BLS3_NAME) ;
+		menu_text					: string(STR_BLS3_NAME) ;
+		build_window_caption		: string(STR_BLST_BUILD_NAME) ;
+		autoreplace_text			: string(STR_BLST_REPLACE_NAME) ;
+		new_engine_text				: string(STR_BLST_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_BLST_TOOLBAR) ;
+		compatible_railtype_list	: ["BLST", "BLS2", "BLS3", "PLAN"] ;
+		powered_railtype_list		: ["BLST", "BLS2", "BLS3", "PLAN"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 1 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING) ;
+		introduction_date			: date(0,1,1) ;
+		sort_order					: 2 ;
+	}
+	graphics {
+		track_overlay		: gfx_blank ;
+		underlay			: sw_underlay_BLS3 ;
+		bridge_surfaces		: gfx_bridge_tracks_BLS3 ;
+		tunnels				: gfx_tunnel_tracks_BLS3 ;
+		//level_crossings		: sw_lc_BLS3_state ;
+		fences				: sw_fences_BLS3 ;
+		depots				: sw_depot_BLS3 ;
+		signals				: sw_signals ;
+	}
+}
+
+}
+# 1 "sets_narrow.pnml" 1
+
+if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
+# 1 "src/trackless.pnml" 1
+item(FEAT_RAILTYPES, rail_ISR2) {
+	property {
+		label				: "ISR2" ; //Dirt
+        name                : string(STR_IND_2) ;
+        sort_order          : 5 ;
+        speed_limit         : 0 ;
+    }
+}
+item(FEAT_RAILTYPES, rail_ISR3) {
+	property {
+		label				: "ISR3" ; //Asphalt
+        name                : string(STR_IND_3) ;
+        sort_order          : 6 ;
+        speed_limit         : 0 ;
+    }
+}
+item(FEAT_RAILTYPES, rail_ISR4) {
+	property {
+		label				: "ISR4" ; //Cobblestone
+        name                : string(STR_IND_4) ;
+        sort_order          : 4 ;
+        speed_limit         : 0 ;
+    }
+}
+# 1 "sets_narrow.pnml" 1
+}
+
+# 1 "src/NAAN/NAAN.pnml" 1
+
+
+
+spriteset(gfx_overlays_NAAN,			"gfx/NAAN/NAAN/Overlay_NAAN.png")		{	template_overlay_auz()				}
+spriteset(gfx_underlays_NAAN,			"gfx/NAAN/NAAN/Underlay_NAAN.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlays_NAAN_wide,		"gfx/NAAN/NAAN/Underlay_NAAN_wide.png")	{	template_underlay_auz()				}
+spriteset(gfx_tunnel_tracks_NAAN,		"gfx/NAAN/NAAN/TunnelTrack_NAAN.png")	{	template_tunneltracks()				}
+spriteset(gfx_bridge_tracks_NAAN,		"gfx/NAAN/NAAN/BridgeTrack_NAAN.png")	{	template_bridgetracks()				}
+
+
+spriteset(gfx_fences_NAAN,				"gfx/NAAN/NAAN/Fences_NAAN.png")		{	template_fences()					}
+spriteset(gfx_depot_NAAN,				"gfx/NAAN/NAAN/Depot_NAAN.png")			{	template_depot()					}
+
+
+spriteset(gfx_level_crossing_NAAN_empty,	"gfx/NAAN/NAAN/LevelCrossing_NAAN.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_NAAN_closed,	"gfx/NAAN/NAAN/LevelCrossing_NAAN.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_NAAN_open,		"gfx/NAAN/NAAN/LevelCrossing_NAAN.png")	{template_levcrossopen()				}
+
+spriteset(gfx_level_crossing_NAAN_empty_modern,		"gfx/NAAN/NAAN/LevelCrossingModern_NAAN.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_NAAN_closed_modern,	"gfx/NAAN/NAAN/LevelCrossingModern_NAAN.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_NAAN_open_modern,		"gfx/NAAN/NAAN/LevelCrossingModern_NAAN.png")	{template_levcrossopen()				}
+
+
+// Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_NAAN_closed, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_NAAN_closed ;
+	gfx_level_crossing_NAAN_closed_modern;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_NAAN_open, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_NAAN_open ;
+	gfx_level_crossing_NAAN_open_modern;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_lc_NAAN_state, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : sw_lc_NAAN_closed ;
+	sw_lc_NAAN_open ;
+}
+
+
+// Wide ballast?
+
+switch(FEAT_RAILTYPES, SELF, sw_underlay_NAAN, wide_ballast) {
+ 1: gfx_underlays_NAAN_wide;
+ gfx_underlays_NAAN;
+}
+
+
+// Custom depot?
+
+switch(FEAT_RAILTYPES, SELF, sw_depot_NAAN, depot_type){
+	0 : gfx_depot_NAAN ;
+	1 : gfx_depot_1 ;
+}
+
+
+// Fences?
+
+switch(FEAT_RAILTYPES, SELF, sw_fences_NAAN, fence_number < 1){
+	1 : gfx_fences_NAAN ;
+	gfx_blank ;
+}
+
+
+
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NAAN) {
+	property {
+		label						: "NAAN" ;
+		name						: string(STR_NAAN_NAME) ;
+		menu_text					: string(STR_NAAN_NAME) ;
+		build_window_caption		: string(STR_NAAN_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAN_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAN_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAN_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		introduces_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N"] ;
+		alternative_railtype_list	: ["NABN", "NACN", "NADN", "NAEN", "IHD_"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 4 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		sort_order					: 101 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: sw_underlay_NAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_NAAE) {
+	property {
+		label						: "NAAE" ;
+		name						: string(STR_NAAE_NAME) ;
+		menu_text					: string(STR_NAAE_NAME) ;
+		build_window_caption		: string(STR_NAAE_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAE_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAE_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAE_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		introduces_railtype_list	: ["NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		alternative_railtype_list	: ["NABE", "NACE", "NADE", "NAEE", "IHE_"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 111 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: sw_underlay_NAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+	}
+}
+
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NAAN) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NAAE) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (hide_NAAE == 1) {
+	item(FEAT_RAILTYPES, rail_NAAE) {
+		property {
+			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAN/NBAN.pnml" 1
+
+
+
+spriteset(gfx_overlays_NBAN,			"gfx/NAAN/NBAN/Overlay_NBAN.png")		{	template_overlay_auz()				}
+spriteset(gfx_underlays_NBAN,			"gfx/NAAN/NBAN/Underlay_NBAN.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlays_NBAN_wide,		"gfx/NAAN/NBAN/Underlay_NBAN_wide.png")	{	template_underlay_auz()				}
+spriteset(gfx_tunnel_tracks_NBAN,		"gfx/NAAN/NBAN/TunnelTrack_NBAN.png")	{	template_tunneltracks()				}
+spriteset(gfx_bridge_tracks_NBAN,		"gfx/NAAN/NBAN/BridgeTrack_NBAN.png")	{	template_bridgetracks()				}
+
+
+spriteset(gfx_fences_NBAN,				"gfx/NAAN/NBAN/Fences_NBAN.png")		{	template_fences()					}
+spriteset(gfx_depot_NBAN,				"gfx/NAAN/NBAN/Depot_NBAN.png")			{	template_depot()					}
+
+
+spriteset(gfx_level_crossing_NBAN_empty,	"gfx/NAAN/NBAN/LevelCrossing_NBAN.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_NBAN_closed,	"gfx/NAAN/NBAN/LevelCrossing_NBAN.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_NBAN_open,		"gfx/NAAN/NBAN/LevelCrossing_NBAN.png")	{template_levcrossopen()				}
+
+spriteset(gfx_level_crossing_NBAN_empty_modern,		"gfx/NAAN/NBAN/LevelCrossingModern_NBAN.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_NBAN_closed_modern,	"gfx/NAAN/NBAN/LevelCrossingModern_NBAN.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_NBAN_open_modern,		"gfx/NAAN/NBAN/LevelCrossingModern_NBAN.png")	{template_levcrossopen()				}
+
+
+// Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_NBAN_closed, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_NBAN_closed ;
+	gfx_level_crossing_NBAN_closed_modern;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_NBAN_open, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_NBAN_open ;
+	gfx_level_crossing_NBAN_open_modern;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_lc_NBAN_state, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : sw_lc_NBAN_closed ;
+	sw_lc_NBAN_open ;
+}
+
+
+// Wide ballast?
+
+switch(FEAT_RAILTYPES, SELF, sw_underlay_NBAN, wide_ballast) {
+ 1: gfx_underlays_NBAN_wide;
+ gfx_underlays_NBAN;
+}
+
+
+// Custom depot?
+
+switch(FEAT_RAILTYPES, SELF, sw_depot_NBAN, depot_type){
+	0 : gfx_depot_NBAN ;
+	1 : gfx_depot_1 ;
+}
+
+
+// Fences?
+
+switch(FEAT_RAILTYPES, SELF, sw_fences_NBAN, fence_number < 2){
+	1 : gfx_fences_NBAN ;
+	gfx_blank ;
+}
+
+
+
+
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NBAN) {
+	property {
+		label						: "NBAN" ;
+		name						: string(STR_NBAN_NAME) ;
+		menu_text					: string(STR_NBAN_NAME) ;
+		build_window_caption		: string(STR_NAAN_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAN_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAN_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAN_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 9 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		sort_order					: 102 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NBAN ;
+		underlay			: sw_underlay_NBAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NBAN ;
+		tunnels				: gfx_tunnel_tracks_NBAN ;
+		level_crossings		: sw_lc_NBAN_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_NBAE) {
+	property {
+		label						: "NBAE" ;
+		name						: string(STR_NBAE_NAME) ;
+		menu_text					: string(STR_NBAE_NAME) ;
+		build_window_caption		: string(STR_NAAE_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAE_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAE_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAE_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 12 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 112 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NBAN ;
+		underlay			: sw_underlay_NBAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NBAN ;
+		tunnels				: gfx_tunnel_tracks_NBAN ;
+		level_crossings		: sw_lc_NBAN_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NBAN) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NBAE) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (hide_NAAE == 1) {
+	item(FEAT_RAILTYPES, rail_NBAE) {
+		property {
+			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+
+if (decor_tracks == 1) {
+# 1 "src/NAAN/NY2N.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY2N) {
+	property {
+		label						: "NY2N" ;
+		name						: string(STR_NY2N_NAME) ;
+		menu_text					: string(STR_NY2N_NAME) ;
+		build_window_caption		: string(STR_NAAN_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAN_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAN_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAN_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 9 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		sort_order					: 103 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY2N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY2N) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAN/NY3N.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY3N) {
+	property {
+		label						: "NY3N" ;
+		name						: string(STR_NY3N_NAME) ;
+		menu_text					: string(STR_NY3N_NAME) ;
+		build_window_caption		: string(STR_NAAN_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAN_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAN_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAN_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 9 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		sort_order					: 104 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY3N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY3N) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAN/NY4N.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY4N) {
+	property {
+		label						: "NY4N" ;
+		name						: string(STR_NY4N_NAME) ;
+		menu_text					: string(STR_NY4N_NAME) ;
+		build_window_caption		: string(STR_NAAN_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAN_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAN_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAN_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 9 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		sort_order					: 105 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY4N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY4N) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+}
+
+if (disable_NAAA == 0) {
+# 1 "src/NAAA/NAAA.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NAAA) {
+	property {
+		label						: "NAAA" ;
+		name						: string(STR_NAAA_NAME) ;
+		menu_text					: string(STR_NAAA_NAME) ;
+		build_window_caption		: string(STR_NAAA_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAA_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAA_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAA_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		introduces_railtype_list	: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		alternative_railtype_list	: ["NABA", "NACA", "NADA", "NAEA"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 121 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: sw_underlay_NAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_25 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NAAA) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NAAA) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAA/NBAA.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NBAA) {
+	property {
+		label						: "NBAA" ;
+		name						: string(STR_NBAA_NAME) ;
+		menu_text					: string(STR_NBAA_NAME) ;
+		build_window_caption		: string(STR_NAAA_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAA_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAA_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAA_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 12 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 122 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NBAN ;
+		underlay			: sw_underlay_NBAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NBAN ;
+		tunnels				: gfx_tunnel_tracks_NBAN ;
+		level_crossings		: sw_lc_NBAN_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_25 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NBAA) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NBAA) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+
+if (decor_tracks == 1) {
+# 1 "src/NAAA/NY2A.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY2A) {
+	property {
+		label						: "NY2A" ;
+		name						: string(STR_NY2A_NAME) ;
+		menu_text					: string(STR_NY2A_NAME) ;
+		build_window_caption		: string(STR_NAAA_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAA_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAA_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAA_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 123 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY2N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_25 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY2A) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NY2A) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAA/NY3A.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY3A) {
+	property {
+		label						: "NY3A" ;
+		name						: string(STR_NY3A_NAME) ;
+		menu_text					: string(STR_NY3A_NAME) ;
+		build_window_caption		: string(STR_NAAA_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAA_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAA_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAA_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 124 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY3N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_25 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY3A) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NY3A) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAA/NY4A.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY4A) {
+	property {
+		label						: "NY4A" ;
+		name						: string(STR_NY4A_NAME) ;
+		menu_text					: string(STR_NY4A_NAME) ;
+		build_window_caption		: string(STR_NAAA_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAA_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAA_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAA_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 125 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY4N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_25 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY4A) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NY4A) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+}
+}
+
+if (disable_NAAa_ == 0) {
+# 1 "src/NAAa_/NAAa.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NAAa) {
+	property {
+		label						: "NAAa" ;
+		name						: string(STR_NAAa_NAME) ;
+		menu_text					: string(STR_NAAa_NAME) ;
+		build_window_caption		: string(STR_NAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAa_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		introduces_railtype_list	: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		alternative_railtype_list	: ["NABa", "NACa", "NADa", "NAEa"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 131 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: sw_underlay_NAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_15 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NAAa) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NAAa) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAa_/NBAa.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NBAa) {
+	property {
+		label						: "NBAa" ;
+		name						: string(STR_NBAa_NAME) ;
+		menu_text					: string(STR_NBAa_NAME) ;
+		build_window_caption		: string(STR_NAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAa_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 12 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 132 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NBAN ;
+		underlay			: sw_underlay_NBAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NBAN ;
+		tunnels				: gfx_tunnel_tracks_NBAN ;
+		level_crossings		: sw_lc_NBAN_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_15 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NBAa) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NBAa) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+
+if (decor_tracks == 1) {
+# 1 "src/NAAa_/NY2a.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY2a) {
+	property {
+		label						: "NY2a" ;
+		name						: string(STR_NY2a_NAME) ;
+		menu_text					: string(STR_NY2a_NAME) ;
+		build_window_caption		: string(STR_NAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAa_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 133 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_SY2N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_15 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY2a) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY2a) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAa_/NY3a.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY3a) {
+	property {
+		label						: "NY3a" ;
+		name						: string(STR_NY3a_NAME) ;
+		menu_text					: string(STR_NY3a_NAME) ;
+		build_window_caption		: string(STR_NAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAa_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 134 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_SY3N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_15 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY3a) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY3a) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAa_/NY4a.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY4a) {
+	property {
+		label						: "NY4a" ;
+		name						: string(STR_NY4a_NAME) ;
+		menu_text					: string(STR_NY4a_NAME) ;
+		build_window_caption		: string(STR_NAAa_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAa_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAa_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAa_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 125 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY4N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_15 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY4a) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY4a) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+}
+}
+
+if (disable_NAAD == 0) {
+# 1 "src/NAAD/NAAD.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NAAD) {
+	property {
+		label						: "NAAD" ;
+		name						: string(STR_NAAD_NAME) ;
+		menu_text					: string(STR_NAAD_NAME) ;
+		build_window_caption		: string(STR_NAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAD_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		introduces_railtype_list	: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		alternative_railtype_list	: ["NABD", "NACD", "NADD", "NAED"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 141 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: sw_underlay_NAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NAAD) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NAAD) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAD/NBAD.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NBAD) {
+	property {
+		label						: "NBAD" ;
+		name						: string(STR_NBAD_NAME) ;
+		menu_text					: string(STR_NBAD_NAME) ;
+		build_window_caption		: string(STR_NAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAD_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 12 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 142 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NBAN ;
+		underlay			: sw_underlay_NBAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NBAN ;
+		tunnels				: gfx_tunnel_tracks_NBAN ;
+		level_crossings		: sw_lc_NBAN_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NBAD) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NBAD) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+
+if (decor_tracks == 1) {
+# 1 "src/NAAD/NY2D.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY2D) {
+	property {
+		label						: "NY2D" ;
+		name						: string(STR_NY2D_NAME) ;
+		menu_text					: string(STR_NY2D_NAME) ;
+		build_window_caption		: string(STR_NAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAD_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 143 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY2N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY2D) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NY2D) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAD/NY3D.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY3D) {
+	property {
+		label						: "NY3D" ;
+		name						: string(STR_NY3D_NAME) ;
+		menu_text					: string(STR_NY3D_NAME) ;
+		build_window_caption		: string(STR_NAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAD_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 144 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY3N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY3D) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NY3D) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAD/NY4D.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY4D) {
+	property {
+		label						: "NY4D" ;
+		name						: string(STR_NY4D_NAME) ;
+		menu_text					: string(STR_NY4D_NAME) ;
+		build_window_caption		: string(STR_NAAD_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAD_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAD_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAD_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 145 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY4N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_3 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY4D) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NY4D) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+}
+}
+
+if (disable_NAAd_ == 0) {
+# 1 "src/NAAd_/NAAd.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NAAd) {
+	property {
+		label						: "NAAd" ;
+		name						: string(STR_NAAd_NAME) ;
+		menu_text					: string(STR_NAAd_NAME) ;
+		build_window_caption		: string(STR_NAAd_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAd_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAd_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAd_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		introduces_railtype_list	: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		alternative_railtype_list	: ["NABd", "NACd", "NADd", "NAEd"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 151 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: sw_underlay_NAAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_1500 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NAAd) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NAAd) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAd_/NBAd.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NBAd) {
+	property {
+		label						: "NBAd" ;
+		name						: string(STR_NBAd_NAME) ;
+		menu_text					: string(STR_NBAd_NAME) ;
+		build_window_caption		: string(STR_NAAd_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAd_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAd_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAd_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 12 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 152 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NBAN ;
+		underlay			: sw_underlay_NBAN ;
+		bridge_surfaces		: gfx_bridge_tracks_NBAN ;
+		tunnels				: gfx_tunnel_tracks_NBAN ;
+		level_crossings		: sw_lc_NBAN_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_1500 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NBAd) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NBAd) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+
+if (decor_tracks == 1) {
+# 1 "src/NAAd_/NY2d.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY2d) {
+	property {
+		label						: "NY2d" ;
+		name						: string(STR_NY2d_NAME) ;
+		menu_text					: string(STR_NY2d_NAME) ;
+		build_window_caption		: string(STR_NAAd_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAd_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAd_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAd_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 153 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY2N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_1500 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY2d) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY2d) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAd_/NY3d.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY3d) {
+	property {
+		label						: "NY3d" ;
+		name						: string(STR_NY3d_NAME) ;
+		menu_text					: string(STR_NY3d_NAME) ;
+		build_window_caption		: string(STR_NAAd_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAd_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAd_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAd_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 154 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY3N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_1500 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY3d) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY3d) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAAd_/NY4d.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY4d) {
+	property {
+		label						: "NY4d" ;
+		name						: string(STR_NY4d_NAME) ;
+		menu_text					: string(STR_NY4d_NAME) ;
+		build_window_caption		: string(STR_NAAd_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAd_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAd_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAd_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 155 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY4N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_1500 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY4d) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY4d) {
+		property {
+			powered_railtype_list: ["NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		}
+	}
+}
+# 1 "sets_narrow.pnml" 1
+}
+}
+
+# 1 "src/NAA3/NAA3.pnml" 1
+
+
+
+spriteset(gfx_overlays_NAA3,			"gfx/NAA3/NAA3/Overlay_NAA3.png")		{	template_overlay_auz()				}
+spriteset(gfx_underlays_NAA3,			"gfx/NAA3/NAA3/Underlay_NAA3.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlays_NAA3_wide,		"gfx/NAA3/NAA3/Underlay_NAA3_wide.png")	{	template_underlay_auz()				}
+spriteset(gfx_tunnel_tracks_NAA3,		"gfx/NAA3/NAA3/TunnelTrack_NAA3.png")	{	template_tunneltracks()				}
+spriteset(gfx_bridge_tracks_NAA3,		"gfx/NAA3/NAA3/BridgeTrack_NAA3.png")	{	template_bridgetracks()				}
+
+
+spriteset(gfx_fences_NAA3,				"gfx/NAA3/NAA3/Fences_NAA3.png")		{	template_fences()					}
+spriteset(gfx_depot_NAA3,				"gfx/NAA3/NAA3/Depot_NAA3.png")			{	template_depot()					}
+
+
+spriteset(gfx_level_crossing_NAA3_empty,	"gfx/NAA3/NAA3/LevelCrossing_NAA3.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_NAA3_closed,	"gfx/NAA3/NAA3/LevelCrossing_NAA3.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_NAA3_open,		"gfx/NAA3/NAA3/LevelCrossing_NAA3.png")	{template_levcrossopen()				}
+
+spriteset(gfx_level_crossing_NAA3_empty_modern,		"gfx/NAA3/NAA3/LevelCrossingModern_NAA3.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_NAA3_closed_modern,	"gfx/NAA3/NAA3/LevelCrossingModern_NAA3.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_NAA3_open_modern,		"gfx/NAA3/NAA3/LevelCrossingModern_NAA3.png")	{template_levcrossopen()				}
+
+
+// Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_NAA3_closed, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_NAA3_closed ;
+	gfx_level_crossing_NAA3_closed_modern;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_NAA3_open, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_NAA3_open ;
+	gfx_level_crossing_NAA3_open_modern;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_lc_NAA3_state, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : sw_lc_NAA3_closed ;
+	sw_lc_NAA3_open ;
+}
+
+
+// Wide ballast?
+
+switch(FEAT_RAILTYPES, SELF, sw_underlay_NAA3, wide_ballast) {
+ 1: gfx_underlays_NAA3_wide;
+ gfx_underlays_NAA3;
+}
+
+
+// Custom depot?
+
+switch(FEAT_RAILTYPES, SELF, sw_depot_NAA3, depot_type){
+	0 : gfx_depot_NAA3 ;
+	1 : gfx_depot_1 ;
+}
+
+
+// Fences?
+
+switch(FEAT_RAILTYPES, SELF, sw_fences_NAA3, fence_number < 1){
+	1 : gfx_fences_NAA3 ;
+	gfx_blank ;
+}
+
+
+if (disable_NAA3 == 0) {
+
+
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NAA3) {
+	property {
+		label						: "NAA3" ;
+		name						: string(STR_NAA3_NAME) ;
+		menu_text					: string(STR_NAA3_NAME) ;
+		build_window_caption		: string(STR_NAA3_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAA3_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAA3_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAA3_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		introduces_railtype_list	: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		alternative_railtype_list	: ["NAB3", "NAC3", "NAD3", "NAE3"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 6 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		sort_order					: 171 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: sw_underlay_NAA3 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NAA3 ;
+		depots				: sw_depot_NAA3 ;
+		signals				: sw_signals ;
+	}
+}
+
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NAA3) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+item(FEAT_RAILTYPES, rail_NAAZ) {
+	property {
+		label						: "NAAZ" ;
+		name						: string(STR_NAAZ_NAME) ;
+		menu_text					: string(STR_NAAZ_NAME) ;
+		build_window_caption		: string(STR_NAAZ_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAZ_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAZ_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAZ_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAAE", "NBAE", "NCAE"] ;
+		introduces_railtype_list	: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAAE", "NBAE", "NCAE"] ;
+		alternative_railtype_list	: ["NABZ", "NACZ", "NADZ", "NAEZ"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 8 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 161 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: sw_underlay_NAA3 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NAA3 ;
+		depots				: sw_depot_NAA3 ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NAAZ) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NAAZ) {
+		property {
+			powered_railtype_list: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NAAZ) {
+		property {
+			powered_railtype_list: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NAAZ) {
+		property {
+			powered_railtype_list: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NAAZ) {
+		property {
+			powered_railtype_list: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+
+if (decor_tracks == 1) {
+# 1 "src/NAA3/NY23.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY23) {
+	property {
+		label						: "NY23" ;
+		name						: string(STR_NY23_NAME) ;
+		menu_text					: string(STR_NY23_NAME) ;
+		build_window_caption		: string(STR_3RDR_BUILD_NAME) ;
+		autoreplace_text			: string(STR_3RDR_REPLACE_NAME) ;
+		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 6 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		sort_order					: 173 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY23 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_NY2Z) {
+	property {
+		label						: "NY2Z" ;
+		name						: string(STR_NY2Z_NAME) ;
+		menu_text					: string(STR_NY2Z_NAME) ;
+		build_window_caption		: string(STR_NAAZ_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAZ_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAZ_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAZ_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 8 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 163 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY23 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY23) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		property {
+			powered_railtype_list: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		property {
+			powered_railtype_list: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		property {
+			powered_railtype_list: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		property {
+			powered_railtype_list: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+# 1 "src/NAA3/NAA3.pnml" 187
+# 1 "src/NAA3/NY33.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY33) {
+	property {
+		label						: "NY33" ;
+		name						: string(STR_NY33_NAME) ;
+		menu_text					: string(STR_NY33_NAME) ;
+		build_window_caption		: string(STR_NAA3_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAA3_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAA3_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAA3_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 6 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		sort_order					: 174 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY33 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_NY3Z) {
+	property {
+		label						: "NY3Z" ;
+		name						: string(STR_NY3Z_NAME) ;
+		menu_text					: string(STR_NY3Z_NAME) ;
+		build_window_caption		: string(STR_NAA3_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAA3_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAA3_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAA3_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 8 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 164 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY33 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY33) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			powered_railtype_list: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			powered_railtype_list: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			powered_railtype_list: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			powered_railtype_list: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+# 1 "src/NAA3/NAA3.pnml" 187
+# 1 "src/NAA3/NY43.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY43) {
+	property {
+		label						: "NY43" ;
+		name						: string(STR_NY43_NAME) ;
+		menu_text					: string(STR_NY43_NAME) ;
+		build_window_caption		: string(STR_NAA3_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAA3_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAA3_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAA3_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 6 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		sort_order					: 175 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY43 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_NY4Z) {
+	property {
+		label						: "NY4Z" ;
+		name						: string(STR_NY4Z_NAME) ;
+		menu_text					: string(STR_NY4Z_NAME) ;
+		build_window_caption		: string(STR_NAAZ_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAZ_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAZ_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAZ_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAAE", "NBAE", "NCAE"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 8 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 165 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY43 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY43) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY4Z) {
+		graphics {
+			tunnel_overlay	: gfx_asphalt_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NY4Z) {
+		property {
+			powered_railtype_list: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY4Z) {
+		property {
+			powered_railtype_list: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NY4Z) {
+		property {
+			powered_railtype_list: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY4Z) {
+		property {
+			powered_railtype_list: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+# 1 "src/NAA3/NAA3.pnml" 187
+}
+
+}
+# 1 "sets_narrow.pnml" 1
+# 1 "src/NAA3/NBA3.pnml" 1
+
+
+
+spriteset(gfx_overlays_NBA3,			"gfx/NAA3/NBA3/Overlay_NBA3.png")		{	template_overlay_auz()				}
+spriteset(gfx_underlays_NBA3,			"gfx/NAA3/NBA3/Underlay_NBA3.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlays_NBA3_wide,		"gfx/NAA3/NBA3/Underlay_NBA3_wide.png")	{	template_underlay_auz()				}
+spriteset(gfx_tunnel_tracks_NBA3,		"gfx/NAA3/NBA3/TunnelTrack_NBA3.png")	{	template_tunneltracks()				}
+spriteset(gfx_bridge_tracks_NBA3,		"gfx/NAA3/NBA3/BridgeTrack_NBA3.png")	{	template_bridgetracks()				}
+
+
+spriteset(gfx_fences_NBA3,				"gfx/NAA3/NBA3/Fences_NBA3.png")		{	template_fences()					}
+spriteset(gfx_depot_NBA3,				"gfx/NAA3/NBA3/Depot_NBA3.png")			{	template_depot()					}
+
+
+spriteset(gfx_level_crossing_NBA3_empty,	"gfx/NAA3/NBA3/LevelCrossing_NBA3.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_NBA3_closed,	"gfx/NAA3/NBA3/LevelCrossing_NBA3.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_NBA3_open,		"gfx/NAA3/NBA3/LevelCrossing_NBA3.png")	{template_levcrossopen()				}
+
+spriteset(gfx_level_crossing_NBA3_empty_modern,		"gfx/NAA3/NBA3/LevelCrossingModern_NBA3.png")	{tmpl_level_crossing_railtypes_empty()	}
+spriteset(gfx_level_crossing_NBA3_closed_modern,	"gfx/NAA3/NBA3/LevelCrossingModern_NBA3.png")	{template_levcrossclosed()				}
+spriteset(gfx_level_crossing_NBA3_open_modern,		"gfx/NAA3/NBA3/LevelCrossingModern_NBA3.png")	{template_levcrossopen()				}
+
+
+// Level crossing switches
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_NBA3_closed, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_NBA3_closed ;
+	gfx_level_crossing_NBA3_closed_modern;
+}
+
+switch(FEAT_RAILTYPES,	SELF,	sw_lc_NBA3_open, current_year){ 
+	0 .. 1970 - 1	: gfx_level_crossing_NBA3_open ;
+	gfx_level_crossing_NBA3_open_modern;
+}
+
+switch(FEAT_RAILTYPES, SELF, sw_lc_NBA3_state, level_crossing_status){
+	LEVEL_CROSSING_CLOSED : sw_lc_NBA3_closed ;
+	sw_lc_NBA3_open ;
+}
+
+
+// Wide ballast?
+
+switch(FEAT_RAILTYPES, SELF, sw_underlay_NBA3, wide_ballast) {
+ 1: gfx_underlays_NBA3_wide;
+ gfx_underlays_NBA3;
+}
+
+
+// Custom depot?
+
+switch(FEAT_RAILTYPES, SELF, sw_depot_NBA3, depot_type){
+	0 : gfx_depot_NBA3 ;
+	1 : gfx_depot_1 ;
+}
+
+
+// Fences?
+
+switch(FEAT_RAILTYPES, SELF, sw_fences_NBA3, fence_number < 2){
+	1 : gfx_fences_NBA3 ;
+	gfx_blank ;
+}
+
+
+
+if (disable_NAA3 == 0) {
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NBA3) {
+	property {
+		label						: "NBA3" ;
+		name						: string(STR_NBA3_NAME) ;
+		menu_text					: string(STR_NBA3_NAME) ;
+		build_window_caption		: string(STR_NAA3_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAA3_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAA3_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAA3_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 11 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		sort_order					: 172;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NBA3 ;
+		underlay			: sw_underlay_NBA3 ;
+		bridge_surfaces		: gfx_bridge_tracks_NBA3 ;
+		tunnels				: gfx_tunnel_tracks_NBA3 ;
+		level_crossings		: sw_lc_NBA3_state ;
+		fences				: sw_fences_NBA3 ;
+		depots				: sw_depot_NBA3 ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NBA3) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+item(FEAT_RAILTYPES, rail_NBAZ) {
+	property {
+		label						: "NBAZ" ;
+		name						: string(STR_NBAZ_NAME) ;
+		menu_text					: string(STR_NBAZ_NAME) ;
+		build_window_caption		: string(STR_NAAZ_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAZ_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAZ_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAZ_TOOLBAR) ;
+		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		powered_railtype_list		: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 13 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 162 ;
+		speed_limit					: param[3] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NBA3 ;
+		underlay			: sw_underlay_NBA3 ;
+		bridge_surfaces		: gfx_bridge_tracks_NBA3 ;
+		tunnels				: gfx_tunnel_tracks_NBA3 ;
+		level_crossings		: sw_lc_NBA3_state ;
+		fences				: sw_fences_NBA3 ;
+		depots				: sw_depot_NBA3 ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NBAZ) {
+		graphics {
+			tunnel_overlay	: gfx_blank ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NBAZ) {
+		property {
+			powered_railtype_list: ["NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NBAZ) {
+		property {
+			powered_railtype_list: ["NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NBAZ) {
+		property {
+			powered_railtype_list: ["NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NBAZ) {
+		property {
+			powered_railtype_list: ["NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE"] ;
+		}
+	}
+}
+}
+# 1 "sets_narrow.pnml" 1
+
+if (disable_INVS == 0) {
+# 1 "src/OTER/INVS.pnml" 1
+
+// Item
+
+item(FEAT_RAILTYPES, rail_INVS) {
+	property {
+		label						: "INVS" ;
+		name						: string(STR_INVS_NAME) ;
+		menu_text					: string(STR_INVS_NAME) ;
+		build_window_caption		: string(STR_OTER_BUILD_NAME) ;
+		autoreplace_text			: string(STR_OTER_REPLACE_NAME) ;
+		new_engine_text				: string(STR_OTER_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_OTER_TOOLBAR) ;
+		compatible_railtype_list	: [] ;
+		powered_railtype_list		: [] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 5 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask() ;
+		introduction_date			: date(0,1,1) ;
+		sort_order					: 3 ;
+		speed_limit					: 0 km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_blank ;
+		underlay			: gfx_blank ;
+		bridge_surfaces		: gfx_blank ;
+		tunnels				: gfx_blank ;
+		level_crossings		: gfx_blank ;
+		fences				: spriteset_nofences ;
+	}
+}
+# 1 "sets_narrow.pnml" 1
+} 

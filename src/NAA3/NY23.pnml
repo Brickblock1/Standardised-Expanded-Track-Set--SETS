@@ -1,0 +1,110 @@
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY23) {
+	property {
+		label						: "NY23" ;
+		name						: string(STR_NY23_NAME) ;
+		menu_text					: string(STR_NY23_NAME) ;
+		build_window_caption		: string(STR_3RDR_BUILD_NAME) ;
+		autoreplace_text			: string(STR_3RDR_REPLACE_NAME) ;
+		new_engine_text				: string(STR_3RDR_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_3RDR_TOOLBAR) ;
+		compatible_railtype_list	: [NARROW_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [NARROW_GAUGE_RAILTYPE_3RD] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 6 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		sort_order					: 173 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY23 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+item(FEAT_RAILTYPES, rail_NY2Z) {
+	property {
+		label						: "NY2Z" ;
+		name						: string(STR_NY2Z_NAME) ;
+		menu_text					: string(STR_NY2Z_NAME) ;
+		build_window_caption		: string(STR_NAAZ_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAZ_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAZ_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAZ_TOOLBAR) ;
+		compatible_railtype_list	: [NARROW_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [NARROW_GAUGE_RAILTYPE_3RD, NARROW_GAUGE_RAILTYPE_MULTI] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 8 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 163 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY23 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY23) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		property {
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_25KV] ;
+		}
+	}
+}
+if (NAAZ_NAAa_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		property {
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_15KV] ;
+		}
+	}
+}
+if (NAAZ_NAAD == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		property {
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_3KV] ;
+		}
+	}
+}
+if (NAAZ_NAAd_ == 1) {
+	item(FEAT_RAILTYPES, rail_NY2Z) {
+		property {
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_1500V] ;
+		}
+	}
+}

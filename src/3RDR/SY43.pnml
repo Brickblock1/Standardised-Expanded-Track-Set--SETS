@@ -14,7 +14,7 @@ item(FEAT_RAILTYPES, rail_SY43) {
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3RD] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 14 ;
+		construction_cost			: 13 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		sort_order					: 86 ;
 		speed_limit					: param[3] km/h ;
@@ -45,7 +45,7 @@ item(FEAT_RAILTYPES, rail_SY4Z) {
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3RD, STANDARD_GAUGE_RAILTYPE_MULTI] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 14 ;
+		construction_cost			: 15 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 76 ;

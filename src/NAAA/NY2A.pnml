@@ -1,0 +1,51 @@
+
+// Item
+
+item(FEAT_RAILTYPES, rail_NY2A) {
+	property {
+		label						: "NY2A" ;
+		name						: string(STR_NY2A_NAME) ;
+		menu_text					: string(STR_NY2A_NAME) ;
+		build_window_caption		: string(STR_NAAA_BUILD_NAME) ;
+		autoreplace_text			: string(STR_NAAA_REPLACE_NAME) ;
+		new_engine_text				: string(STR_NAAA_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_NAAA_TOOLBAR) ;
+		compatible_railtype_list	: [NARROW_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [NARROW_GAUGE_RAILTYPE_25KV] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 7 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 123 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAAN ;
+		underlay			: gfx_underlay_NY2N ;
+		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
+		tunnels				: gfx_tunnel_tracks_NAAN ;
+		level_crossings		: sw_lc_NAAN_state ;
+		fences				: sw_fences_NAAN ;
+		depots				: sw_depot_NAAN ;
+		signals				: sw_signals ;
+		catenary_pylons		: gfx_catenary_masts_25 ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY2A) {
+		graphics {
+			tunnel_overlay	: gfx_cobble_tunnels ;
+		}
+	}
+}
+
+if (NAAZ_NAAA == 1) {
+	item(FEAT_RAILTYPES, rail_NY2A) {
+		property {
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_DUAL] ;
+		}
+	}
+}

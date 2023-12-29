@@ -1,0 +1,244 @@
+grf{
+	grfid: "BBST" ;
+	name: string(STR_GRF_NAME_STANDARD) ;
+	desc: string(STR_GRF_DESC_STANDARD) ;
+	version: 3 ;
+	min_compatible_version: 2 ;
+	param 0{
+		wide_ballast{
+			type    : bool ;
+			name    : string(STR_PARAM_TRACK_WIDE_BALLAST_NAME) ;
+			desc    : string(STR_PARAM_TRACK_WIDE_BALLAST_DESC) ;
+			bit     : 2 ;
+			def_value : 1 ;
+		}
+	}
+	param 1{
+		cost_multiplier{
+			type    : int ;
+			name    : string(STR_PARAM_COSTS_BUILD_NAME) ;
+			desc    : string(STR_PARAM_COSTS_BUILD_DESC) ;
+			min_value	: 0 ;
+			max_value	: 7 ;
+			def_value	: 4 ;
+			names		: {
+				0	: string(STR_PARAM_VVVLOW  ) ;
+				1	: string(STR_PARAM_VVLOW) ;
+				2	: string(STR_PARAM_VLOW) ;
+				3	: string(STR_PARAM_LOW ) ;
+				4	: string(STR_PARAM_MEDIUM ) ;
+				5	: string(STR_PARAM_HIGH ) ;
+				6	: string(STR_PARAM_TOOMUCH ) ;
+				7	: string(STR_PARAM_TOOTOOMUCH ) ;
+			} ;
+		}
+	}
+	param 2{
+		speed_1{
+			type    : int ;
+			name    : string(STR_PARAM_SPEED_1) ;
+			desc    : string(STR_PARAM_SPEED_DESC) ;
+			min_value	: 0 ;
+			max_value	: 500 ;
+			def_value	: 80 ;
+		}
+	}
+	param 3{
+		speed_2{
+			type    : int ;
+			name    : string(STR_PARAM_SPEED_2) ;
+			desc    : string(STR_PARAM_SPEED_DESC) ;
+			min_value	: 0 ;
+			max_value	: 500 ;
+			def_value	: 161 ;
+		}
+	}
+	param 4{
+		speed_3{
+			type    : int ;
+			name    : string(STR_PARAM_SPEED_3) ;
+			desc    : string(STR_PARAM_SPEED_DESC) ;
+			min_value	: 0 ;
+			max_value	: 500 ;
+			def_value	: 0 ;
+		}
+	}
+	param 5{
+		SAAZ_SAAA{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ_1) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 1 ;
+			def_value	: 1 ;
+		}
+		SAAZ_SAAa_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ_2) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 2 ;
+			def_value	: 0 ;
+		}
+		SAAZ_SAAD{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ_3) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 3 ;
+			def_value	: 0 ;
+		}
+		SAAZ_SAAd_{
+			type    : bool ;
+			name    : string(STR_PARAM_SAAZ_4) ;
+			desc    : string(STR_PARAM_SAAZ_DESC) ;
+			bit		: 4 ;
+			def_value	: 0 ;
+		}
+	}
+	param 6{
+		metro_track {
+ 			type:    int;
+ 			name:    string(STR_PARAM_METRO_TRACK_NAME);
+ 			desc:    string(STR_PARAM_METRO_TRACK_DESC);
+ 			min_value: 0;
+ 			max_value: 1;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_METRO_TRACK_3RDR);
+ 				1: string(STR_PARAM_METRO_TRACK_SBA4);
+ 			};
+		}
+	}
+	param 7{
+		hide_SAAE{
+			type    : bool ;
+			name    : string(STR_PARAM_HIDE_SAAE) ;
+			desc    : string(STR_PARAM_HIDE_SAAE_DESC) ;
+			bit		: 1 ;
+			def_value	: 1 ;
+		}
+		disable_SAAA{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAA) ;
+			desc    : string(STR_PARAM_DISABLE_SAAA_DESC) ;
+			bit		: 2 ;
+			def_value	: 0 ;
+		}
+		disable_SAAa_{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAa) ;
+			desc    : string(STR_PARAM_DISABLE_SAAa_DESC) ;
+			bit		: 3 ;
+			def_value	: 1 ;
+		}
+		disable_SAAD{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAD) ;
+			desc    : string(STR_PARAM_DISABLE_SAAD_DESC) ;
+			bit		: 4 ;
+			def_value	: 0 ;
+		}
+		disable_SAAd_{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAd) ;
+			desc    : string(STR_PARAM_DISABLE_SAAd_DESC) ;
+			bit		: 5 ;
+			def_value	: 1 ;
+		}
+		disable_SAA3{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAA3) ;
+			desc    : string(STR_PARAM_DISABLE_SAA3_DESC) ;
+			bit		: 6 ;
+			def_value	: 0 ;
+		}
+		disable_SAA4{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAA4) ;
+			desc    : string(STR_PARAM_DISABLE_SAA4_DESC) ;
+			bit		: 7 ;
+			def_value	: 0 ;
+		}
+		disable_NORD{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_NORD) ;
+			desc    : string(STR_PARAM_DISABLE_NORD_DESC) ;
+			bit		: 8 ;
+			def_value	: 0 ;
+		}
+		disable_INVS{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_INVS) ;
+			desc    : string(STR_PARAM_DISABLE_INVS_DESC) ;
+			bit		: 9 ;
+			def_value	: 0 ;
+		}
+	}
+	param 12{
+		signal_elec {
+ 			type:    int;
+ 			name:    string(STR_PARAM_SIGNAL_ELEC_NAME);
+ 			desc:    string(STR_PARAM_SIGNAL_ELEC_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_SIGNAL_ELEC_2ASP);
+ 				1: string(STR_PARAM_SIGNAL_ELEC_3ASP);
+ 				2: string(STR_PARAM_SIGNAL_ELEC_4ASP);
+ 			};
+		}
+	}
+	param 13{
+		fence_number {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_FENCE_NAME);
+ 			desc:    string(STR_PARAM_GFX_FENCE_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_FENCE_ALL);
+ 				1: string(STR_PARAM_GFX_FENCE_MOST);
+ 				2: string(STR_PARAM_GFX_FENCE_SOME);
+ 				3: string(STR_PARAM_GFX_FENCE_NONE);
+ 			};
+		}
+	}
+	param 14{
+		depot_type {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_DEPOT_NAME);
+ 			desc:    string(STR_PARAM_GFX_DEPOT_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_DEPOT_ALL);
+ 				1: string(STR_PARAM_GFX_DEPOT_ONE);
+ 				2: string(STR_PARAM_GFX_DEPOT_DEFAULT);
+ 			};
+		}
+	}
+	param 15{
+		decor_tracks{
+			type    : bool ;
+			name    : string(STR_PARAM_DECOR_NAME) ;
+			desc    : string(STR_PARAM_DECOR_DESC) ;
+			bit     : 1 ;
+			def_value : 1 ;
+		}
+	}
+	param 15{
+		custom_tunnels{
+			type    : bool ;
+			name    : string(STR_PARAM_TUNNELS_NAME) ;
+			desc    : string(STR_PARAM_TUNNELS_DESC) ;
+			bit     : 2 ;
+			def_value : 1 ;
+		}
+	}
+}
+
+basecost{
+	PR_BUILD_RAIL	: (param[1]-3) ;
+}
+

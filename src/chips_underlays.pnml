@@ -5,3 +5,12 @@ spriteset(gfx_underlay_SY4N,			"gfx/EYCA/Underlay_SY4N.png")		{	template_underla
 spriteset(gfx_underlay_SY23,			"gfx/EYCA/Underlay_SY23.png")		{	template_underlay_auz()				}
 spriteset(gfx_underlay_SY33,			"gfx/EYCA/Underlay_SY33.png")		{	template_underlay_auz()				}
 spriteset(gfx_underlay_SY43,			"gfx/EYCA/Underlay_SY43.png")		{	template_underlay_auz()				}
+
+
+spriteset(gfx_underlay_NY2N,			"gfx/EYCA/Underlay_NY2N.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_NY3N,			"gfx/EYCA/Underlay_NY3N.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_NY4N,			"gfx/EYCA/Underlay_NY4N.png")		{	template_underlay_auz()				}
+
+spriteset(gfx_underlay_NY23,			"gfx/EYCA/Underlay_NY23.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_NY33,			"gfx/EYCA/Underlay_NY33.png")		{	template_underlay_auz()				}
+spriteset(gfx_underlay_NY43,			"gfx/EYCA/Underlay_NY43.png")		{	template_underlay_auz()				}
