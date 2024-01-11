@@ -1189,6 +1189,8 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_BLST, fence_number < 1){
 
 // Item
 
+if(decor_tracks){
+
 item(FEAT_RAILTYPES, rail_BLST) {
 	property {
 		label						: "BLST" ;
@@ -1220,10 +1222,7 @@ item(FEAT_RAILTYPES, rail_BLST) {
 	}
 }
 
-
-
-
-
+}
 
 
 
