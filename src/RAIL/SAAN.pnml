@@ -101,61 +101,11 @@ item(FEAT_RAILTYPES, rail_SAAN) {
 	}
 }
 
-item(FEAT_RAILTYPES, rail_SAAE) {
-	property {
-		label						: "ELRL" ;
-		name						: string(STR_SAAE_NAME) ;
-		menu_text					: string(STR_SAAE_NAME) ;
-		build_window_caption		: string(STR_ELRL_BUILD_NAME) ;
-		autoreplace_text			: string(STR_ELRL_REPLACE_NAME) ;
-		new_engine_text				: string(STR_ELRL_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_ELRL_TOOLBAR) ;
-		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
-		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_OHLE] ;
-		introduces_railtype_list	: [STANDARD_GAUGE_RAILTYPE_OHLE] ;
-		alternative_railtype_list	: ["SAAE", "SABE", "SACE", "SADE", "SAEE", "IHG_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[2] km/h ;
-		extra_aspects				: signal_elec;
-	}
-	graphics {
-		track_overlay		: gfx_overlays_SAAN ;
-		underlay			: sw_underlay_SAAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SAAN ;
-		tunnels				: gfx_tunnel_tracks_SAAN ;
-		level_crossings		: sw_lc_SAAN_state ;
-		fences				: sw_fences_SAAN ;
-		depots				: sw_depot_SAAN ;
-		signals				: sw_signals ;
-	}
-}
-
 
 if (custom_tunnels == 1) {
 	item(FEAT_RAILTYPES, rail_SAAN) {
 		graphics {
 			tunnel_overlay	: gfx_blank ;
-		}
-	}
-}
-
-if (custom_tunnels == 1) {
-	item(FEAT_RAILTYPES, rail_SAAE) {
-		graphics {
-			tunnel_overlay	: gfx_blank ;
-		}
-	}
-}
-
-if (hide_SAAE == 1) {
-	item(FEAT_RAILTYPES, rail_SAAE) {
-		property {
-			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
 		}
 	}
 }

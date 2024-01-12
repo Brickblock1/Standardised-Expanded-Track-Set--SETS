@@ -6,10 +6,10 @@ item(FEAT_RAILTYPES, rail_INVS) {
 		label						: "INVS" ;
 		name						: string(STR_INVS_NAME) ;
 		menu_text					: string(STR_INVS_NAME) ;
-		build_window_caption		: string(STR_OTER_BUILD_NAME) ;
-		autoreplace_text			: string(STR_OTER_REPLACE_NAME) ;
-		new_engine_text				: string(STR_OTER_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_OTER_TOOLBAR) ;
+		build_window_caption		: string(STR_INVS_BUILD_NAME) ;
+		autoreplace_text			: string(STR_INVS_REPLACE_NAME) ;
+		new_engine_text				: string(STR_INVS_NEW_TRAIN) ;
+		toolbar_caption				: string(STR_INVS_TOOLBAR) ;
 		compatible_railtype_list	: [] ;
 		powered_railtype_list		: [] ;
 		curve_speed_multiplier		: 0 ;

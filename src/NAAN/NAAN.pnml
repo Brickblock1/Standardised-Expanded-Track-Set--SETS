@@ -113,7 +113,7 @@ item(FEAT_RAILTYPES, rail_NAAE) {
 		compatible_railtype_list	: [NARROW_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [NARROW_GAUGE_RAILTYPE_OHLE] ;
 		introduces_railtype_list	: [NARROW_GAUGE_RAILTYPE_OHLE] ;
-		alternative_railtype_list	: ["NABE", "NACE", "NADE", "NAEE", "IHE_"] ;
+		alternative_railtype_list	: ["NABE", "NACE", "NADE", "NAEE", "IHE_", "NAA*", "NAB*", "NAC*", "NAD*", "NAE*"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 7 ;

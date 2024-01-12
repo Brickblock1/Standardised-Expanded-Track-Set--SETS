@@ -75,10 +75,8 @@ if (decor_tracks == 1) {
 
 #include "src/4RDR/SBA4.pnml"
 
-if (disable_NORD == 0) {
-#include "src/OTER/NORD.pnml"
-}
+#include "src/SAAE/SAAE.pnml"
 
 if (disable_INVS == 0) {
-#include "src/OTER/INVS.pnml"
+#include "src/BLST/INVS.pnml"
 } 

@@ -95,8 +95,8 @@ STR_PARAM_DISABLE_SAA3_DESC        :Disables SAA3, SBA3, SCA3, SAAZ, SBAZ
 STR_PARAM_DISABLE_SAA4             :Disable 630v fourth rail tracks
 STR_PARAM_DISABLE_SAA4_DESC        :Disables SBA4
 
-STR_PARAM_DISABLE_NORD             :Disable the NORD track
-STR_PARAM_DISABLE_NORD_DESC        :Disables NORD which is only used for compatibility with SNDTS.
+STR_PARAM_DISABLE_SAAE             :Disable the excessive multivoltage tracks
+STR_PARAM_DISABLE_SAAE_DESC        :Disables SAA$, SAA=, SAA[, SAA], SAA(, SAA), SAA^, SAA', SAA,, and SAA_  which are only used for compatibility with some trainsets.
 
 STR_PARAM_DISABLE_INVS             :Disable the invisable track
 STR_PARAM_DISABLE_INVS_DESC        :Disables INVS
@@ -136,10 +136,70 @@ STR_BLST_REPLACE_NAME		:Replace track ballast vehicles.
 STR_BLST_NEW_TRAIN			:track ballast
 
 
-STR_OTER_TOOLBAR            :Invisible track construction.{YELLOW}
-STR_OTER_BUILD_NAME         :New invisible track vehicles.
-STR_OTER_REPLACE_NAME       :Replace invisible track vehicles.
-STR_OTER_NEW_TRAIN          :Invisible track
+STR_INVS_TOOLBAR            :Invisible track construction.{YELLOW}
+STR_INVS_BUILD_NAME         :New invisible track vehicles.
+STR_INVS_REPLACE_NAME       :Replace invisible track vehicles.
+STR_INVS_NEW_TRAIN          :Invisible track
+
+
+STR_SAA0_TOOLBAR			:Standard Gauge (25kv/15kv AC Overhead) construction.{YELLOW}
+STR_SAA0_BUILD_NAME		    :New Standard Gauge (25kv/15kv AC Overhead) vehicles.
+STR_SAA0_REPLACE_NAME		:Replace Standard Gauge (25kv/15kv AC Overhead) vehicles.
+STR_SAA0_NEW_TRAIN			:Standard Gauge (25kv/15kv AC Overhead)
+
+
+STR_SAA1_TOOLBAR			:Standard Gauge (3kv/1.5kv DC Overhead) construction.{YELLOW}
+STR_SAA1_BUILD_NAME	    	:New Standard Gauge (3kv/1.5kv DC Overhead) vehicles.
+STR_SAA1_REPLACE_NAME		:Replace Standard Gauge (3kv/1.5kv DC Overhead) vehicles.
+STR_SAA1_NEW_TRAIN			:Standard Gauge (3kv/1.5kv DC Overhead)
+
+
+STR_SAA2_TOOLBAR			:Standard Gauge (15kv/1.5kv AC/DC Overhead) construction.{YELLOW}
+STR_SAA2_BUILD_NAME		    :New Standard Gauge (15kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA2_REPLACE_NAME		:Replace Standard Gauge (15kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA2_NEW_TRAIN			:Standard Gauge (15kv/1.5kv AC/DC Overhead)
+
+
+STR_SAA5_TOOLBAR			:Standard Gauge (15kv/3kv AC/DC Overhead) construction.{YELLOW}
+STR_SAA5_BUILD_NAME		    :New Standard Gauge (15kv/3kv AC/DC Overhead) vehicles.
+STR_SAA5_REPLACE_NAME		:Replace Standard Gauge (15kv/3kv AC/DC Overhead) vehicles.
+STR_SAA5_NEW_TRAIN			:Standard Gauge (15kv/3kv AC/DC Overhead)
+
+
+STR_SAA6_TOOLBAR			:Standard Gauge (25kv/1.5kv AC/DC Overhead) construction.{YELLOW}
+STR_SAA6_BUILD_NAME		    :New Standard Gauge (25kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA6_REPLACE_NAME		:Replace Standard Gauge (25kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA6_NEW_TRAIN			:Standard Gauge (25kv/1.5kv AC/DC Overhead)
+
+
+STR_SAA7_TOOLBAR			:Standard Gauge (25kv/3kv AC/DC Overhead) construction.{YELLOW}
+STR_SAA7_BUILD_NAME		    :New Standard Gauge (25kv/3kv AC/DC Overhead) vehicles.
+STR_SAA7_REPLACE_NAME		:Replace Standard Gauge (25kv/3kv AC/DC Overhead) vehicles.
+STR_SAA7_NEW_TRAIN			:Standard Gauge (25kv/3kv AC/DC Overhead)
+
+
+STR_SAA8_TOOLBAR			:Standard Gauge (25kv/15kv/1.5kv AC/DC Overhead) construction.{YELLOW}
+STR_SAA8_BUILD_NAME		    :New Standard Gauge (25kv/15kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA8_REPLACE_NAME		:Replace Standard Gauge (25kv/15kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA8_NEW_TRAIN			:Standard Gauge (25kv/15kv/1.5kv AC/DC Overhead)
+
+
+STR_SAA9_TOOLBAR			:Standard Gauge (25kv/15kv/3kv AC/DC Overhead) construction.{YELLOW}
+STR_SAA9_BUILD_NAME		    :New Standard Gauge (25kv/15kv/3kv AC/DC Overhead) vehicles.
+STR_SAA9_REPLACE_NAME		:Replace Standard Gauge (25kv/15kv/3kv AC/DC Overhead) vehicles.
+STR_SAA9_NEW_TRAIN			:Standard Gauge (25kv/15kv/3kv AC/DC Overhead)
+
+
+STR_SAA10_TOOLBAR			:Standard Gauge (15kv/3kv/1.5kv AC/DC Overhead) construction.{YELLOW}
+STR_SAA10_BUILD_NAME		:New Standard Gauge (15kv/3kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA10_REPLACE_NAME		:Replace Standard Gauge (15kv/3kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA10_NEW_TRAIN			:Standard Gauge (15kv/3kv/1.5kv AC/DC Overhead)
+
+
+STR_SAA11_TOOLBAR			:Standard Gauge (25kv/3kv/1.5kv AC/DC Overhead) construction.{YELLOW}
+STR_SAA11_BUILD_NAME			:New Standard Gauge (25kv/3kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA11_REPLACE_NAME		:Replace Standard Gauge (25kv/3kv/1.5kv AC/DC Overhead) vehicles.
+STR_SAA11_NEW_TRAIN			:Standard Gauge (25kv/3kv/1.5kv AC/DC Overhead)
 
 
 STR_RAIL_TOOLBAR			:Standard Gauge construction.{YELLOW}
@@ -148,16 +208,16 @@ STR_RAIL_REPLACE_NAME		:Replace Standard Gauge vehicles.
 STR_RAIL_NEW_TRAIN			:Standard Gauge
 
 
-STR_ELRL_TOOLBAR			:Standard Gauge (Overhead) construction.{YELLOW}
-STR_ELRL_BUILD_NAME			:New Standard Gauge (Overhead) vehicles.
-STR_ELRL_REPLACE_NAME		:Replace Standard Gauge (Overhead) vehicles.
-STR_ELRL_NEW_TRAIN			:Standard Gauge (Overhead)
+STR_ELRL_TOOLBAR			:Standard Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) construction.{YELLOW}
+STR_ELRL_BUILD_NAME			:New Standard Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) vehicles.
+STR_ELRL_REPLACE_NAME		:Replace Standard Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) vehicles.
+STR_ELRL_NEW_TRAIN			:Standard Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead)
 
 
-STR_3RDR_TOOLBAR			:Standard Gauge (750v 3rd Rail) construction.{YELLOW}
-STR_3RDR_BUILD_NAME			:New Standard Gauge (750v 3rd Rail) vehicles.
-STR_3RDR_REPLACE_NAME		:Replace Standard Gauge (750v 3rd Rail) vehicles.
-STR_3RDR_NEW_TRAIN			:Standard Gauge (750v 3rd Rail)
+STR_3RDR_TOOLBAR			:Standard Gauge (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDR_BUILD_NAME			:New Standard Gauge (750v DC 3rd Rail) vehicles.
+STR_3RDR_REPLACE_NAME		:Replace Standard Gauge (750v DC 3rd Rail) vehicles.
+STR_3RDR_NEW_TRAIN			:Standard Gauge (750v DC 3rd Rail)
 
 
 STR_4RDR_TOOLBAR			:Standard Gauge (630v 4th Rail) construction.{YELLOW}
@@ -166,32 +226,32 @@ STR_4RDR_REPLACE_NAME		:Replace Standard Gauge (630v 4th Rail) vehicles.
 STR_4RDR_NEW_TRAIN			:Standard Gauge (630v 4th Rail)
 
 
-STR_3RDC_TOOLBAR			:Standard Gauge (Dual Voltaage) construction.{YELLOW}
-STR_3RDC_BUILD_NAME			:New Standard Gauge (Dual Voltaage) vehicles.
-STR_3RDC_REPLACE_NAME		:Replace Standard Gauge (Dual Voltaage) vehicles.
-STR_3RDC_NEW_TRAIN			:Standard Gauge (Dual Voltaage)
+STR_3RDC_TOOLBAR			:Standard Gauge (Dual Voltage) construction.{YELLOW}
+STR_3RDC_BUILD_NAME			:New Standard Gauge (Dual Voltage) vehicles.
+STR_3RDC_REPLACE_NAME		:Replace Standard Gauge (Dual Voltage) vehicles.
+STR_3RDC_NEW_TRAIN			:Standard Gauge (Dual Voltage)
 
 
-STR_SAAA_TOOLBAR			:Standard Gauge (25kv Overhead) construction.{YELLOW}
-STR_SAAA_BUILD_NAME			:New Standard Gauge (25kv Overhead) vehicles.
-STR_SAAA_REPLACE_NAME		:Replace Standard Gauge (25kv Overhead) vehicles.
-STR_SAAA_NEW_TRAIN			:Standard Gauge (25kv Overhead)
+STR_SAAA_TOOLBAR			:Standard Gauge (25kv AC Overhead) construction.{YELLOW}
+STR_SAAA_BUILD_NAME			:New Standard Gauge (25kv AC Overhead) vehicles.
+STR_SAAA_REPLACE_NAME		:Replace Standard Gauge (25kv AC Overhead) vehicles.
+STR_SAAA_NEW_TRAIN			:Standard Gauge (25kv AC Overhead)
 
-STR_SAAa_TOOLBAR			:Standard Gauge (15kv Overhead) construction.{YELLOW}
-STR_SAAa_BUILD_NAME			:New Standard Gauge (15kv Overhead) vehicles.
-STR_SAAa_REPLACE_NAME		:Replace Standard Gauge (15kv Overhead) vehicles.
-STR_SAAa_NEW_TRAIN			:Standard Gauge (15kv Overhead)
+STR_SAAa_TOOLBAR			:Standard Gauge (15kv AC Overhead) construction.{YELLOW}
+STR_SAAa_BUILD_NAME			:New Standard Gauge (15kv AC Overhead) vehicles.
+STR_SAAa_REPLACE_NAME		:Replace Standard Gauge (15kv AC Overhead) vehicles.
+STR_SAAa_NEW_TRAIN			:Standard Gauge (15kv AC Overhead)
 
 
-STR_SAAD_TOOLBAR			:Standard Gauge (3kv Overhead) construction.{YELLOW}
-STR_SAAD_BUILD_NAME			:New Standard Gauge (3kv Overhead) vehicles.
-STR_SAAD_REPLACE_NAME		:Replace Standard Gauge (3kv Overhead) vehicles.
-STR_SAAD_NEW_TRAIN			:Standard Gauge (3kv Overhead)
+STR_SAAD_TOOLBAR			:Standard Gauge (3kv DC Overhead) construction.{YELLOW}
+STR_SAAD_BUILD_NAME			:New Standard Gauge (3kv DC Overhead) vehicles.
+STR_SAAD_REPLACE_NAME		:Replace Standard Gauge (3kv DC Overhead) vehicles.
+STR_SAAD_NEW_TRAIN			:Standard Gauge (3kv DC Overhead)
 
-STR_SAAd_TOOLBAR			:Standard Gauge (1.5kv Overhead) construction.{YELLOW}
-STR_SAAd_BUILD_NAME			:New Standard Gauge (1.5kv Overhead) vehicles.
-STR_SAAd_REPLACE_NAME		:Replace Standard Gauge (1.5kv Overhead) vehicles.
-STR_SAAd_NEW_TRAIN			:Standard Gauge (1.5kv Overhead)
+STR_SAAd_TOOLBAR			:Standard Gauge (1.5kv DC Overhead) construction.{YELLOW}
+STR_SAAd_BUILD_NAME			:New Standard Gauge (1.5kv DC Overhead) vehicles.
+STR_SAAd_REPLACE_NAME		:Replace Standard Gauge (1.5kv DC Overhead) vehicles.
+STR_SAAd_NEW_TRAIN			:Standard Gauge (1.5kv DC Overhead)
 
 
 
@@ -203,44 +263,44 @@ STR_NAAN_REPLACE_NAME		:Replace Narrow Gauge vehicles.
 STR_NAAN_NEW_TRAIN			:Narrow Gauge
 
 
-STR_NAAE_TOOLBAR			:Narrow Gauge (Overhead) construction.{YELLOW}
-STR_NAAE_BUILD_NAME			:New Narrow Gauge (Overhead) vehicles.
-STR_NAAE_REPLACE_NAME		:Replace Narrow Gauge (Overhead) vehicles.
-STR_NAAE_NEW_TRAIN			:Narrow Gauge (Overhead)
+STR_NAAE_TOOLBAR			:Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) construction.{YELLOW}
+STR_NAAE_BUILD_NAME			:New Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) vehicles.
+STR_NAAE_REPLACE_NAME		:Replace Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) vehicles.
+STR_NAAE_NEW_TRAIN			:Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead)
 
 
-STR_NAA3_TOOLBAR			:Narrow Gauge (750v 3rd Rail) construction.{YELLOW}
-STR_NAA3_BUILD_NAME			:New Narrow Gauge (750v 3rd Rail) vehicles.
-STR_NAA3_REPLACE_NAME		:Replace Narrow Gauge (750v 3rd Rail) vehicles.
-STR_NAA3_NEW_TRAIN			:Narrow Gauge (750v 3rd Rail)
+STR_NAA3_TOOLBAR			:Narrow Gauge (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAA3_BUILD_NAME			:New Narrow Gauge (750v DC 3rd Rail) vehicles.
+STR_NAA3_REPLACE_NAME		:Replace Narrow Gauge (750v DC 3rd Rail) vehicles.
+STR_NAA3_NEW_TRAIN			:Narrow Gauge (750v DC 3rd Rail)
 
 
-STR_NAAZ_TOOLBAR			:Narrow Gauge (Dual Voltaage) construction.{YELLOW}
-STR_NAAZ_BUILD_NAME			:New Narrow Gauge (Dual Voltaage) vehicles.
-STR_NAAZ_REPLACE_NAME		:Replace Narrow Gauge (Dual Voltaage) vehicles.
-STR_NAAZ_NEW_TRAIN			:Narrow Gauge (Dual Voltaage)
+STR_NAAZ_TOOLBAR			:Narrow Gauge (Dual Voltage) construction.{YELLOW}
+STR_NAAZ_BUILD_NAME			:New Narrow Gauge (Dual Voltage) vehicles.
+STR_NAAZ_REPLACE_NAME		:Replace Narrow Gauge (Dual Voltage) vehicles.
+STR_NAAZ_NEW_TRAIN			:Narrow Gauge (Dual Voltage)
 
 
-STR_NAAA_TOOLBAR			:Narrow Gauge (25kv Overhead) construction.{YELLOW}
-STR_NAAA_BUILD_NAME			:New Narrow Gauge (25kv Overhead) vehicles.
-STR_NAAA_REPLACE_NAME		:Replace Narrow Gauge (25kv Overhead) vehicles.
-STR_NAAA_NEW_TRAIN			:Narrow Gauge (25kv Overhead)
+STR_NAAA_TOOLBAR			:Narrow Gauge (25kv AC Overhead) construction.{YELLOW}
+STR_NAAA_BUILD_NAME			:New Narrow Gauge (25kv AC Overhead) vehicles.
+STR_NAAA_REPLACE_NAME		:Replace Narrow Gauge (25kv AC Overhead) vehicles.
+STR_NAAA_NEW_TRAIN			:Narrow Gauge (25kv AC Overhead)
 
-STR_NAAa_TOOLBAR			:Narrow Gauge (15kv Overhead) construction.{YELLOW}
-STR_NAAa_BUILD_NAME			:New Narrow Gauge (15kv Overhead) vehicles.
-STR_NAAa_REPLACE_NAME		:Replace Narrow Gauge (15kv Overhead) vehicles.
-STR_NAAa_NEW_TRAIN			:Narrow Gauge (15kv Overhead)
+STR_NAAa_TOOLBAR			:Narrow Gauge (15kv AC Overhead) construction.{YELLOW}
+STR_NAAa_BUILD_NAME			:New Narrow Gauge (15kv AC Overhead) vehicles.
+STR_NAAa_REPLACE_NAME		:Replace Narrow Gauge (15kv AC Overhead) vehicles.
+STR_NAAa_NEW_TRAIN			:Narrow Gauge (15kv AC Overhead)
 
 
-STR_NAAD_TOOLBAR			:Narrow Gauge (3kv Overhead) construction.{YELLOW}
-STR_NAAD_BUILD_NAME			:New Narrow Gauge (3kv Overhead) vehicles.
-STR_NAAD_REPLACE_NAME		:Replace Narrow Gauge (3kv Overhead) vehicles.
-STR_NAAD_NEW_TRAIN			:Narrow Gauge (3kv Overhead)
+STR_NAAD_TOOLBAR			:Narrow Gauge (3kv DC Overhead) construction.{YELLOW}
+STR_NAAD_BUILD_NAME			:New Narrow Gauge (3kv DC Overhead) vehicles.
+STR_NAAD_REPLACE_NAME		:Replace Narrow Gauge (3kv DC Overhead) vehicles.
+STR_NAAD_NEW_TRAIN			:Narrow Gauge (3kv DC Overhead)
 
-STR_NAAd_TOOLBAR			:Narrow Gauge (1.5kv Overhead) construction.{YELLOW}
-STR_NAAd_BUILD_NAME			:New Narrow Gauge (1.5kv Overhead) vehicles.
-STR_NAAd_REPLACE_NAME		:Replace Narrow Gauge (1.5kv Overhead) vehicles.
-STR_NAAd_NEW_TRAIN			:Narrow Gauge (1.5kv Overhead)
+STR_NAAd_TOOLBAR			:Narrow Gauge (1.5kv DC Overhead) construction.{YELLOW}
+STR_NAAd_BUILD_NAME			:New Narrow Gauge (1.5kv DC Overhead) vehicles.
+STR_NAAd_REPLACE_NAME		:Replace Narrow Gauge (1.5kv DC Overhead) vehicles.
+STR_NAAd_NEW_TRAIN			:Narrow Gauge (1.5kv DC Overhead)
 
 
 
@@ -249,7 +309,6 @@ STR_BLST_NAME				:Empty track ballast.{YELLOW}
 STR_BLS2_NAME				:Empty track ballast. {GOLD}(Overgrown){YELLOW}
 STR_BLS3_NAME				:Empty track ballast. {GOLD}(Concrete){YELLOW}
 
-STR_NORD_NAME               :NORD should not be visible
 STR_INVS_NAME               :Invisible Track {GOLD}(Useful for landscaping){YELLOW}
 
 STR_IND_2                   :Trackless {GOLD}(CHIPS Dirt ground){YELLOW}
@@ -267,35 +326,39 @@ STR_SY3N_NAME				:Standard Gauge {BROWN}(CHIPS Dirt ground){YELLOW}
 STR_SY4N_NAME				:Standard Gauge {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
-STR_SAAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Overgrown){YELLOW}
-STR_SBAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Wooden sleepers){YELLOW}
-STR_SCAE_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Concrete sleepers){YELLOW}
+STR_SAAE_NAME				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
 
-STR_SY1E_NAME				:Standard Gauge {GREEN}(Overhead) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
-STR_SY2E_NAME				:Standard Gauge {GREEN}(Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
-STR_SY3E_NAME				:Standard Gauge {GREEN}(Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
-STR_SY4E_NAME				:Standard Gauge {GREEN}(Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SAA0_NAME				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA1_NAME				:Standard Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA2_NAME				:Standard Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA5_NAME				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA6_NAME				:Standard Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA7_NAME				:Standard Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA8_NAME				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA9_NAME				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA10_NAME				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_SAA11_NAME				:Standard Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
 
 
-STR_SAA3_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
-STR_SBA3_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
-STR_SCA3_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_SAA3_NAME				:Standard Gauge {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SBA3_NAME				:Standard Gauge {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCA3_NAME				:Standard Gauge {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_SY13_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
-STR_SY23_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
-STR_SY33_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
-STR_SY43_NAME				:Standard Gauge {LTBLUE}(730v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY13_NAME				:Standard Gauge {BROWN}(750v DC 3rd Rail) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_SY23_NAME				:Standard Gauge {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY33_NAME				:Standard Gauge {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY43_NAME				:Standard Gauge {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
-STR_SBA4_NAME				:Standard Gauge {CREAM}(630v DC 4th Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBA4_NAME				:Standard Gauge {DKBLUE}(630v DC 4th Rail) {GOLD}(Wooden sleepers){YELLOW}
 
-STR_SAAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Overgrown){YELLOW}
-STR_SBAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Wooden sleepers){YELLOW}
-STR_SCAZ_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Concrete sleepers){YELLOW}
+STR_SAAZ_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Overgrown){YELLOW}
+STR_SBAZ_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAZ_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_SY1Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
-STR_SY2Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
-STR_SY3Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {BROWN}(CHIPS Dirt ground){YELLOW}
-STR_SY4Z_NAME				:Standard Gauge {GREEN}(Dual Voltaage) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY1Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_SY2Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
 STR_SAAA_NAME				:Standard Gauge {BLUE}(25kv AC Overhead) {GOLD}(Overgrown){YELLOW}
@@ -341,30 +404,30 @@ STR_NY3N_NAME				:Narrow Gauge {BROWN}(CHIPS Dirt ground){YELLOW}
 STR_NY4N_NAME				:Narrow Gauge {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
-STR_NAAE_NAME				:Narrow Gauge {GREEN}(Overhead) {GOLD}(Wooden sleepers){YELLOW}
-STR_NBAE_NAME				:Narrow Gauge {GREEN}(Overhead) {GOLD}(Concrete sleepers){YELLOW}
+STR_NAAE_NAME				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAE_NAME				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_NY1E_NAME				:Narrow Gauge {GREEN}(Overhead) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
-STR_NY2E_NAME				:Narrow Gauge {GREEN}(Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
-STR_NY3E_NAME				:Narrow Gauge {GREEN}(Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
-STR_NY4E_NAME				:Narrow Gauge {GREEN}(Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY1E_NAME				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_NY2E_NAME				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3E_NAME				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4E_NAME				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
-STR_NAA3_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
-STR_NBA3_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NAA3_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBA3_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_NY13_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
-STR_NY23_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
-STR_NY33_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
-STR_NY43_NAME				:Narrow Gauge {LTBLUE}(730v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY13_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_NY23_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY33_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY43_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
-STR_NAAZ_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {GOLD}(Wooden sleepers){YELLOW}
-STR_NBAZ_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {GOLD}(Concrete sleepers){YELLOW}
+STR_NAAZ_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAZ_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_NY1Z_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
-STR_NY2Z_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
-STR_NY3Z_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {BROWN}(CHIPS Dirt ground){YELLOW}
-STR_NY4Z_NAME				:Narrow Gauge {GREEN}(Dual Voltaage) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY1Z_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
+STR_NY2Z_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3Z_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4Z_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
 STR_NAAA_NAME				:Narrow Gauge {BLUE}(25kv AC Overhead) {GOLD}(Wooden sleepers){YELLOW}
