@@ -157,6 +157,13 @@ grf{
 			bit		: 7 ;
 			def_value	: 0 ;
 		}
+		disable_SAAE{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAE) ;
+			desc    : string(STR_PARAM_DISABLE_SAAE_DESC) ;
+			bit		: 8 ;
+			def_value	: 0 ;
+		}
 		disable_INVS{
 			type    : bool ;
 			name    : string(STR_PARAM_DISABLE_INVS) ;
@@ -164,16 +171,6 @@ grf{
 			bit		: 9 ;
 			def_value	: 0 ;
 		}
-	}
-	param 8{
-		multivoltage_tracks{
-			type	:int ;
-			name	:string(STR_) ;
-			desc	:string(STR_) ;
-			min_value: 0 ;
-			max_value: 2 ;  
-
-		} 
 	}
 	param 12{
 		signal_elec {
