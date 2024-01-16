@@ -4,8 +4,24 @@ grf{
 	grfid: "BBST" ;
 	name: string(STR_GRF_NAME_STANDARD) ;
 	desc: string(STR_GRF_DESC_STANDARD) ;
-	version: 3 ;
-	min_compatible_version: 2 ;
+	version: 4 ;
+	min_compatible_version: 4 ;
+	param 8{
+		preset{
+			type:	int;
+			name:	string(STR_PARAM_PRESET_NAME);
+			desc:	string(STR_PARAM_PRESET_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_PRESET_MANUAL);
+ 				1: string(STR_PARAM_PRESET_AUTO);
+ 				2: string(STR_PARAM_PRESET_XUSSR);
+ 				3: string(STR_PARAM_PRESET_SCANDINAVIA);
+ 			};
+		}
+	}
 	param 0{
 		wide_ballast{
 			type    : bool ;
@@ -1472,6 +1488,31 @@ item(FEAT_RAILTYPES, rail_ISR4) {
 }
 # 1 "sets_standard.pnml" 1
 }
+# 1 "src/xussr.pnml" 1
+if (grf_order_behind("Meo\B1") != 1) {
+    error (FATAL, string(STR_XUSSR_FUTURE));
+}
+
+if (grf_current_status("MEO\B1") == 1) {
+    if ((preset == 0) || (preset == 3)) {
+        error (NOTICE, string(STR_XUSSR_BEHIND));
+    }
+}
+# 1 "sets_standard.pnml" 1
+
+# 1 "src/preset_standard.pnml" 1
+disable_SAAA_preset = disable_SAAA;
+disable_SAAa_preset = disable_SAAa_;
+disable_SAAD_preset = disable_SAAD;
+disable_SAAd_preset = disable_SAAd_;
+
+if (preset == 2) {
+    disable_SAAA_preset = 0;
+    disable_SAAa_preset = 0;
+    disable_SAAD_preset = 0;
+    disable_SAAd_preset = 0;
+}
+# 1 "sets_standard.pnml" 1
 
 # 1 "src/RAIL/SAAN.pnml" 1
 
@@ -1936,7 +1977,7 @@ if (custom_tunnels == 1) {
 # 1 "sets_standard.pnml" 1
 }
 
-if (disable_SAAA == 0) {
+if (disable_SAAA_preset == 0) {
 # 1 "src/SAAA/SAAA.pnml" 1
 
 // Item
@@ -2255,7 +2296,7 @@ if (SAAZ_SAAA == 1) {
 }
 }
 
-if (disable_SAAa_ == 0) {
+if (disable_SAAa_preset == 0) {
 # 1 "src/SAAa_/SAAa.pnml" 1
 
 // Item
@@ -2573,7 +2614,7 @@ if (SAAZ_SAAa_ == 1) {
 }
 }
 
-if (disable_SAAD == 0) {
+if (disable_SAAD_preset == 0) {
 # 1 "src/SAAD/SAAD.pnml" 1
 
 // Item
@@ -2891,7 +2932,7 @@ if (SAAZ_SAAD == 1) {
 }
 }
 
-if (disable_SAAd_ == 0) {
+if (disable_SAAd_preset == 0) {
 # 1 "src/SAAd_/SAAd.pnml" 1
 
 // Item
@@ -4160,54 +4201,58 @@ if (metro_track == 1) {
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAAE) {
-	property {
-		label						: "ELRL" ;
-		name						: string(STR_SAAE_NAME) ;
-		menu_text					: string(STR_SAAE_NAME) ;
-		build_window_caption		: string(STR_ELRL_BUILD_NAME) ;
-		autoreplace_text			: string(STR_ELRL_REPLACE_NAME) ;
-		new_engine_text				: string(STR_ELRL_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_ELRL_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
-		introduces_railtype_list	: ["ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
-		alternative_railtype_list	: ["SAAE", "SABE", "SACE", "SADE", "SAEE", "IHG_", "SAA*", "SAB*", "SAC*", "SAD*", "SAE*"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
-	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
-}
+if ((disable_SAAA == 0) || (disable_SAAa_ == 0) || (disable_SAAD == 0) || (disable_SAAd_ == 0)) {
 
-if (custom_tunnels == 1) {
-	item(FEAT_RAILTYPES, rail_SAAE) {
-		graphics {
-			tunnel_overlay	: gfx_blank ;
-		}
-	}
-}
-
-if (hide_SAAE == 1) {
 	item(FEAT_RAILTYPES, rail_SAAE) {
 		property {
-			railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+			label						: "ELRL" ;
+			name						: string(STR_SAAE_NAME) ;
+			menu_text					: string(STR_SAAE_NAME) ;
+			build_window_caption		: string(STR_ELRL_BUILD_NAME) ;
+			autoreplace_text			: string(STR_ELRL_REPLACE_NAME) ;
+			new_engine_text				: string(STR_ELRL_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_ELRL_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
+			introduces_railtype_list	: ["ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
+			alternative_railtype_list	: ["SAAE", "SABE", "SACE", "SADE", "SAEE", "IHG_", "SAA*", "SAB*", "SAC*", "SAD*", "SAE*"] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
 		}
 	}
+
+	if (custom_tunnels == 1) {
+		item(FEAT_RAILTYPES, rail_SAAE) {
+			graphics {
+				tunnel_overlay	: gfx_blank ;
+			}
+		}
+	}
+
+	if (hide_SAAE == 1) {
+		item(FEAT_RAILTYPES, rail_SAAE) {
+			property {
+				railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+			}
+		}
+}
+
 }
 
 if (disable_SAAE == 0) {
@@ -4217,142 +4262,162 @@ if (disable_SAAE == 0) {
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA9) {
-	property {
-		label						: "SAA'" ;
-		name						: string(STR_SAA9_NAME) ;
-		menu_text					: string(STR_SAA9_NAME) ;
-		build_window_caption		: string(STR_SAA9_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA9_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA9_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA9_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
+if ((disable_SAAA == 0) || (disable_SAAa_ == 0) || (disable_SAAD == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA9) {
+		property {
+			label						: "SAA'" ;
+			name						: string(STR_SAA9_NAME) ;
+			menu_text					: string(STR_SAA9_NAME) ;
+			build_window_caption		: string(STR_SAA9_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA9_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA9_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA9_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB'", "SAC'", "SAD'", "SAE'"] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
 	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
+
 }
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA8) {
-	property {
-		label						: "SAA^" ;
-		name						: string(STR_SAA8_NAME) ;
-		menu_text					: string(STR_SAA8_NAME) ;
-		build_window_caption		: string(STR_SAA8_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA8_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA8_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA8_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
+if ((disable_SAAA == 0) || (disable_SAAa_ == 0) || (disable_SAAd_ == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA8) {
+		property {
+			label						: "SAA^" ;
+			name						: string(STR_SAA8_NAME) ;
+			menu_text					: string(STR_SAA8_NAME) ;
+			build_window_caption		: string(STR_SAA8_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA8_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA8_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA8_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB^", "SAC^", "SAD^", "SAE^"] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
 	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
+
 }
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA11) {
-	property {
-		label						: "SAA_" ;
-		name						: string(STR_SAA11_NAME) ;
-		menu_text					: string(STR_SAA11_NAME) ;
-		build_window_caption		: string(STR_SAA11_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA11_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA11_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA11_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
+if ((disable_SAAA == 0) || (disable_SAAD == 0) || (disable_SAAd_ == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA11) {
+		property {
+			label						: "SAA_" ;
+			name						: string(STR_SAA11_NAME) ;
+			menu_text					: string(STR_SAA11_NAME) ;
+			build_window_caption		: string(STR_SAA11_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA11_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA11_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA11_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB_", "SAC_", "SAD_", "SAE_"] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
 	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
+
 }
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA10) {
-	property {
-		label						: "SAA," ;
-		name						: string(STR_SAA10_NAME) ;
-		menu_text					: string(STR_SAA10_NAME) ;
-		build_window_caption		: string(STR_SAA10_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA10_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA10_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA10_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
+if ((disable_SAAa_ == 0) || (disable_SAAD == 0) || (disable_SAAd_ == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA10) {
+		property {
+			label						: "SAA," ;
+			name						: string(STR_SAA10_NAME) ;
+			menu_text					: string(STR_SAA10_NAME) ;
+			build_window_caption		: string(STR_SAA10_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA10_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA10_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA10_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB,", "SAC,", "SAD,", "SAE,"] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
 	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
+
 }
 
 // Two voltages
@@ -4360,213 +4425,243 @@ item(FEAT_RAILTYPES, rail_SAA10) {
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA0) {
-	property {
-		label						: "SAA$" ;
-		name						: string(STR_SAA0_NAME) ;
-		menu_text					: string(STR_SAA0_NAME) ;
-		build_window_caption		: string(STR_SAA0_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA0_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA0_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA0_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,"] ;
-		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,"] ;
-		alternative_railtype_list	: ["NORD"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
+if ((disable_SAAA == 0) || (disable_SAAa_ == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA0) {
+		property {
+			label						: "SAA$" ;
+			name						: string(STR_SAA0_NAME) ;
+			menu_text					: string(STR_SAA0_NAME) ;
+			build_window_caption		: string(STR_SAA0_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA0_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA0_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA0_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,"] ;
+			introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,"] ;
+			alternative_railtype_list	: ["NORD", "SAB$", "SAC$", "SAD$", "SAE$"] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
 	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
+
 }
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA7) {
-	property {
-		label						: "SAA)" ;
-		name						: string(STR_SAA7_NAME) ;
-		menu_text					: string(STR_SAA7_NAME) ;
-		build_window_caption		: string(STR_SAA7_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA7_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA7_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA7_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
+if ((disable_SAAA == 0) || (disable_SAAD == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA7) {
+		property {
+			label						: "SAA)" ;
+			name						: string(STR_SAA7_NAME) ;
+			menu_text					: string(STR_SAA7_NAME) ;
+			build_window_caption		: string(STR_SAA7_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA7_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA7_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA7_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB)", "SAC)", "SAD)", "SAE)"] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
 	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
+
 }
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA6) {
-	property {
-		label						: "SAA(" ;
-		name						: string(STR_SAA6_NAME) ;
-		menu_text					: string(STR_SAA6_NAME) ;
-		build_window_caption		: string(STR_SAA6_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA6_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA6_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA6_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
+if ((disable_SAAA == 0) || (disable_SAAd_ == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA6) {
+		property {
+			label						: "SAA(" ;
+			name						: string(STR_SAA6_NAME) ;
+			menu_text					: string(STR_SAA6_NAME) ;
+			build_window_caption		: string(STR_SAA6_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA6_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA6_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA6_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB(", "SAC(", "SAD(", "SAE("] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
 	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
+
 }
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA5) {
-	property {
-		label						: "SAA]" ;
-		name						: string(STR_SAA5_NAME) ;
-		menu_text					: string(STR_SAA5_NAME) ;
-		build_window_caption		: string(STR_SAA5_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA5_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA5_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA5_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
+if ((disable_SAAa_ == 0) || (disable_SAAD == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA5) {
+		property {
+			label						: "SAA]" ;
+			name						: string(STR_SAA5_NAME) ;
+			menu_text					: string(STR_SAA5_NAME) ;
+			build_window_caption		: string(STR_SAA5_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA5_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA5_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA5_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB]", "SAC]", "SAD]", "SAE]"] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
+
 	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
+
+}
+
+	// Item
+
+	if ((disable_SAAa_ == 0) || (disable_SAAd_ == 0)) {
+
+	item(FEAT_RAILTYPES, rail_SAA2) {
+		property {
+			label						: "SAA[" ;
+			name						: string(STR_SAA2_NAME) ;
+			menu_text					: string(STR_SAA2_NAME) ;
+			build_window_caption		: string(STR_SAA2_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA2_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA2_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA2_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB[", "SAC[", "SAD[", "SAE["] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
 	}
+
 }
 
 // Item
 
-item(FEAT_RAILTYPES, rail_SAA2) {
-	property {
-		label						: "SAA[" ;
-		name						: string(STR_SAA2_NAME) ;
-		menu_text					: string(STR_SAA2_NAME) ;
-		build_window_caption		: string(STR_SAA2_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA2_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA2_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA2_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
-	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
-}
+if ((disable_SAAD == 0) || (disable_SAAd_ == 0)) {
 
-// Item
+	item(FEAT_RAILTYPES, rail_SAA1) {
+		property {
+			label						: "SAA=" ;
+			name						: string(STR_SAA1_NAME) ;
+			menu_text					: string(STR_SAA1_NAME) ;
+			build_window_caption		: string(STR_SAA1_BUILD_NAME) ;
+			autoreplace_text			: string(STR_SAA1_REPLACE_NAME) ;
+			new_engine_text				: string(STR_SAA1_NEW_TRAIN) ;
+			toolbar_caption				: string(STR_SAA1_TOOLBAR) ;
+			compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
+			powered_railtype_list		: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			introduces_railtype_list	: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
+			alternative_railtype_list	: ["SAB=", "SAC=", "SAD=", "SAE="] ;
+			curve_speed_multiplier		: 0 ;
+			station_graphics			: RAILTYPE_STATION_NORMAL ;
+			construction_cost			: 9 ;
+			acceleration_model			: ACC_MODEL_RAIL ;
+			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+			sort_order					: 21 ;
+			speed_limit					: param[3] km/h ;
+			extra_aspects				: signal_elec;
+		}
+		graphics {
+			track_overlay		: gfx_overlays_SBAN ;
+			underlay			: sw_underlay_SBAN ;
+			bridge_surfaces		: gfx_bridge_tracks_SBAN ;
+			tunnels				: gfx_tunnel_tracks_SBAN ;
+			level_crossings		: sw_lc_SBAN_state ;
+			fences				: sw_fences_SBAN ;
+			depots				: sw_depot_SBAN ;
+			signals				: sw_signals ;
+		}
+	}
 
-item(FEAT_RAILTYPES, rail_SAA1) {
-	property {
-		label						: "SAA=" ;
-		name						: string(STR_SAA1_NAME) ;
-		menu_text					: string(STR_SAA1_NAME) ;
-		build_window_caption		: string(STR_SAA1_BUILD_NAME) ;
-		autoreplace_text			: string(STR_SAA1_REPLACE_NAME) ;
-		new_engine_text				: string(STR_SAA1_NEW_TRAIN) ;
-		toolbar_caption				: string(STR_SAA1_TOOLBAR) ;
-		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
-		powered_railtype_list		: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		introduces_railtype_list	: ["SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_"] ;
-		curve_speed_multiplier		: 0 ;
-		station_graphics			: RAILTYPE_STATION_NORMAL ;
-		construction_cost			: 9 ;
-		acceleration_model			: ACC_MODEL_RAIL ;
-		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 21 ;
-		speed_limit					: param[3] km/h ;
-		extra_aspects				: signal_elec;
-	}
-	graphics {
-		track_overlay		: gfx_overlays_SBAN ;
-		underlay			: sw_underlay_SBAN ;
-		bridge_surfaces		: gfx_bridge_tracks_SBAN ;
-		tunnels				: gfx_tunnel_tracks_SBAN ;
-		level_crossings		: sw_lc_SBAN_state ;
-		fences				: sw_fences_SBAN ;
-		depots				: sw_depot_SBAN ;
-		signals				: sw_signals ;
-	}
 }
 
 }

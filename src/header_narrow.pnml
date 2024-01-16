@@ -2,8 +2,8 @@ grf{
 	grfid: "BBNT" ;
 	name: string(STR_GRF_NAME_NARROW) ;
 	desc: string(STR_GRF_DESC_NARROW) ;
-	version: 3 ;
-	min_compatible_version: 2 ;
+	version: 1 ;
+	min_compatible_version: 1 ;
 	param 0{
 		wide_ballast{
 			type    : bool ;

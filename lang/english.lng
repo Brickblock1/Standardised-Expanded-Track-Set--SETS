@@ -121,12 +121,25 @@ STR_PARAM_DISABLE_NAA3             :Disable 750v third rail tracks
 STR_PARAM_DISABLE_NAA3_DESC        :Disables NAA3, NBA3, NCA3, NAAZ, NBAZ
 
 
+STR_PARAM_PRESET_NAME                   :Preset
+STR_PARAM_PRESET_DESC                   :What selection of tracks should be used?{}Manual: Configure the set yourself.{}Auto: Tries to find a preset based on loaded track/trainset. Manual is used if no set is found.{}xUSSR: A selection for use with xUSSR Rails and accompanying trains.{}Scandinavia: 1.5kv, 15kv and 25kv{}Benelux: 1.5kv, 3kv and 25kv tracks.
+
+STR_PARAM_PRESET_MANUAL                 :Manual
+STR_PARAM_PRESET_AUTO                   :Auto
+STR_PARAM_PRESET_XUSSR                  :xUSSR
+STR_PARAM_PRESET_SCANDINAVIA            :Scandinavia
+STR_PARAM_PRESET_BENELUX                :Benelux
+
+
 STR_PARAM_SIGNAL_ELEC_NAME				:Modern Signal Type
 STR_PARAM_SIGNAL_ELEC_DESC				:Changes type of modern signal
 
 STR_PARAM_SIGNAL_ELEC_2ASP				:2 Aspect Signals
 STR_PARAM_SIGNAL_ELEC_3ASP				:3 Aspect Signals {RED}(requires JGR Patch Pack)
 STR_PARAM_SIGNAL_ELEC_4ASP				:4 Aspect Signals {RED}(requires JGR Patch Pack)
+
+STR_XUSSR_FUTURE                        :{STRING} must be loaded after xUSSR Rail or else some tracks will be hidden.
+STR_XUSSR_BEHIND                        :xUSSR mode recomended
 
 
 

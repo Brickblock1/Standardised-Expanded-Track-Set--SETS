@@ -4,6 +4,23 @@ grf{
 	desc: string(STR_GRF_DESC_STANDARD) ;
 	version: 4 ;
 	min_compatible_version: 4 ;
+	param 8{
+		preset{
+			type:	int;
+			name:	string(STR_PARAM_PRESET_NAME);
+			desc:	string(STR_PARAM_PRESET_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_PRESET_MANUAL);
+ 				1: string(STR_PARAM_PRESET_AUTO);
+ 				2: string(STR_PARAM_PRESET_XUSSR);
+ 				3: string(STR_PARAM_PRESET_SCANDINAVIA);
+ 				4: string(STR_PARAM_PRESET_BENELUX);
+ 			};
+		}
+	}
 	param 0{
 		wide_ballast{
 			type    : bool ;
@@ -162,7 +179,7 @@ grf{
 			name    : string(STR_PARAM_DISABLE_SAAE) ;
 			desc    : string(STR_PARAM_DISABLE_SAAE_DESC) ;
 			bit		: 8 ;
-			def_value	: 0 ;
+			def_value	: 1 ;
 		}
 		disable_INVS{
 			type    : bool ;

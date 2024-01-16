@@ -10,59 +10,62 @@
 if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
 #include "src/trackless.pnml"
 }
+#include "src/xussr.pnml"
+
+#include "src/preset_standard.pnml"
 
 #include "src/RAIL/SAAN.pnml"
 #include "src/RAIL/SBAN.pnml"
 #include "src/RAIL/SCAN.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/RAIL/SY2N.pnml"
 #include "src/RAIL/SY3N.pnml"
 #include "src/RAIL/SY4N.pnml"
 }
 
-if (disable_SAAA == 0) {
+if (disable_SAAA_preset == 0) {
 #include "src/SAAA/SAAA.pnml"
 #include "src/SAAA/SBAA.pnml"
 #include "src/SAAA/SCAA.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/SAAA/SY2A.pnml"
 #include "src/SAAA/SY3A.pnml"
 #include "src/SAAA/SY4A.pnml"
 }
 }
 
-if (disable_SAAa_ == 0) {
+if (disable_SAAa_preset == 0) {
 #include "src/SAAa_/SAAa.pnml"
 #include "src/SAAa_/SBAa.pnml"
 #include "src/SAAa_/SCAa.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/SAAa_/SY2a.pnml"
 #include "src/SAAa_/SY3a.pnml"
 #include "src/SAAa_/SY4a.pnml"
 }
 }
 
-if (disable_SAAD == 0) {
+if (disable_SAAD_preset == 0) {
 #include "src/SAAD/SAAD.pnml"
 #include "src/SAAD/SBAD.pnml"
 #include "src/SAAD/SCAD.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/SAAD/SY2D.pnml"
 #include "src/SAAD/SY3D.pnml"
 #include "src/SAAD/SY4D.pnml"
 }
 }
 
-if (disable_SAAd_ == 0) {
+if (disable_SAAd_preset == 0) {
 #include "src/SAAd_/SAAd.pnml"
 #include "src/SAAd_/SBAd.pnml"
 #include "src/SAAd_/SCAd.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/SAAd_/SY2d.pnml"
 #include "src/SAAd_/SY3d.pnml"
 #include "src/SAAd_/SY4d.pnml"
@@ -77,6 +80,6 @@ if (decor_tracks == 1) {
 
 #include "src/SAAE/SAAE.pnml"
 
-if (disable_INVS == 0) {
+if (disable_INVS_preset == 0) {
 #include "src/BLST/INVS.pnml"
 } 

@@ -13,6 +13,7 @@ if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
 
 #include "src/NAAN/NAAN.pnml"
 #include "src/NAAN/NBAN.pnml"
+#include "src/NAAE/NAAE.pnml"
 
 if (decor_tracks == 1) {
 #include "src/NAAN/NY2N.pnml"
@@ -68,5 +69,5 @@ if (decor_tracks == 1) {
 #include "src/NAA3/NBA3.pnml"
 
 if (disable_INVS == 0) {
-#include "src/OTER/INVS.pnml"
+#include "src/BLST/INVS.pnml"
 } 
