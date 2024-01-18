@@ -53,19 +53,20 @@ STR_PARAM_SPEED_DESC				:Speed in km/h (set to 0 to disable speed limit)
 STR_PARAM_SPEED_1					:Speed limit - Low
 STR_PARAM_SPEED_2					:Speed limit - Medium
 STR_PARAM_SPEED_3					:Speed limit - High
+STR_PARAM_SPEED_INFINATE            :Infinate
 
 
-STR_PARAM_SAAZ_1					:Allow dual voltage trains to traverse 25kv AC tracks
-STR_PARAM_SAAZ_2					:Allow dual voltage trains to traverse 15kv AC tracks
-STR_PARAM_SAAZ_3					:Allow dual voltage trains to traverse 3kv DC tracks
-STR_PARAM_SAAZ_4					:Allow dual voltage trains to traverse 1.5kv DC tracks
-STR_PARAM_SAAZ_DESC				    :Dual voltage does in this case mean trains with third rail and catenary. This parameter works both ways so if 25kv is enabled those trains will also be able to run on daul voltage tracks.
+STR_PARAM_SAAZ_1					:Allow 3rd rail and overhead trains to traverse 25kv AC tracks
+STR_PARAM_SAAZ_2					:Allow 3rd rail and overhead trains to traverse 15kv AC tracks
+STR_PARAM_SAAZ_3					:Allow 3rd rail and overhead trains to traverse 3kv DC tracks
+STR_PARAM_SAAZ_4					:Allow 3rd rail and overhead trains to traverse 1.5kv DC tracks
+STR_PARAM_SAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on 3rd rail and overhead tracks.
 
-STR_PARAM_NAAZ_1					:Allow dual voltage trains to traverse 25kv AC tracks
-STR_PARAM_NAAZ_2					:Allow dual voltage trains to traverse 15kv AC tracks
-STR_PARAM_NAAZ_3					:Allow dual voltage trains to traverse 3kv DC tracks
-STR_PARAM_NAAZ_4					:Allow dual voltage trains to traverse 1.5kv DC tracks
-STR_PARAM_NAAZ_DESC				    :Dual voltage does in this case mean trains with third rail and catenary. This parameter works both ways so if 25kv is enabled those trains will also be able to run on daul voltage tracks.
+STR_PARAM_NAAZ_1					:Allow 3rd rail and overhead trains to traverse 25kv AC tracks
+STR_PARAM_NAAZ_2					:Allow 3rd rail and overhead trains to traverse 15kv AC tracks
+STR_PARAM_NAAZ_3					:Allow 3rd rail and overhead trains to traverse 3kv DC tracks
+STR_PARAM_NAAZ_4					:Allow 3rd rail and overhead trains to traverse 1.5kv DC tracks
+STR_PARAM_NAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on d3rd rail and overhead tracks.
 
 STR_PARAM_METRO_TRACK_NAME      :Metro track
 STR_PARAM_METRO_TRACK_DESC      :Changes what track some metro train show up on.
@@ -74,61 +75,65 @@ STR_PARAM_METRO_TRACK_3RDR      :Third rail
 STR_PARAM_METRO_TRACK_SBA4      :Fourth rail
 
 
-STR_PARAM_HIDE_SAAE             :Hide Multivoltage tracks
-STR_PARAM_HIDE_SAAE_DESC        :Hides SAAE, SBAE, SCAE
+STR_PARAM_HIDE_SAAE             :Hide multi-voltage tracks
+STR_PARAM_HIDE_SAAE_DESC        :Hides all combinations of voltages exept those with third rail.
 
 STR_PARAM_DISABLE_SAAA             :Disable 25kv AC tracks
-STR_PARAM_DISABLE_SAAA_DESC        :Disables SAAA, SBAA, SCAA
+STR_PARAM_DISABLE_SAAA_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_SAAa             :Disable 15kv AC tracks
-STR_PARAM_DISABLE_SAAa_DESC        :Disables SAAa, SBAa, SCAa
+STR_PARAM_DISABLE_SAAa_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_SAAD             :Disable 3kv DC tracks
-STR_PARAM_DISABLE_SAAD_DESC        :Disables SAAD, SBAD, SCAD
+STR_PARAM_DISABLE_SAAD_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_SAAd             :Disable 1.5kv DC tracks
-STR_PARAM_DISABLE_SAAd_DESC        :Disables SAAd, SBAd, SCAd
+STR_PARAM_DISABLE_SAAd_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_SAA3             :Disable 750v third rail tracks
-STR_PARAM_DISABLE_SAA3_DESC        :Disables SAA3, SBA3, SCA3, SAAZ, SBAZ
+STR_PARAM_DISABLE_SAA3_DESC        :Will be overriden by the preset unless it is set to manual.
+
+STR_PARAM_DISABLE_SAAZ             :Disable 750v third rail and overhead tracks
+STR_PARAM_DISABLE_SAAZ_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_SAA4             :Disable 630v fourth rail tracks
-STR_PARAM_DISABLE_SAA4_DESC        :Disables SBA4
+STR_PARAM_DISABLE_SAA4_DESC        :Will be overriden by the preset unless it is set to manual.
 
-STR_PARAM_DISABLE_SAAE             :Disable the excessive multivoltage tracks
-STR_PARAM_DISABLE_SAAE_DESC        :Disables SAA$, SAA=, SAA[, SAA], SAA(, SAA), SAA^, SAA', SAA,, and SAA_  which are only used for compatibility with some trainsets.
+STR_PARAM_DISABLE_SAAE             :Disable multi-voltage tracks
+STR_PARAM_DISABLE_SAAE_DESC        :Disables all combinations of voltages other than those with third rail and the universal one which can't be dissabled. Disabling them could lead to worse compatibiliy with some trainsets.{}Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_INVS             :Disable the invisable track
-STR_PARAM_DISABLE_INVS_DESC        :Disables INVS
+STR_PARAM_DISABLE_INVS_DESC        :Disables the invisible track which is only for eyecandy{}Will be overriden by the preset unless it is set to manual.
 
 
-STR_PARAM_HIDE_NAAE                :Hide Multivoltage tracks
-STR_PARAM_HIDE_NAAE_DESC           :Hides NAAE, SBAE, SCAE
+STR_PARAM_HIDE_NAAE                :Hide multi-voltage tracks
+STR_PARAM_HIDE_NAAE_DESC           :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_NAAA             :Disable 25kv AC tracks
-STR_PARAM_DISABLE_NAAA_DESC        :Disables NAAA, NBAA, NCAA
+STR_PARAM_DISABLE_NAAA_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_NAAa             :Disable 15kv AC tracks
-STR_PARAM_DISABLE_NAAa_DESC        :Disables NAAa, NBAa, NCAa
+STR_PARAM_DISABLE_NAAa_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_NAAD             :Disable 3kv DC tracks
-STR_PARAM_DISABLE_NAAD_DESC        :Disables NAAD, NBAD, NCAD
+STR_PARAM_DISABLE_NAAD_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_NAAd             :Disable 1.5kv DC tracks
-STR_PARAM_DISABLE_NAAd_DESC        :Disables NAAd, NBAd, NCAd
+STR_PARAM_DISABLE_NAAd_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_NAA3             :Disable 750v third rail tracks
-STR_PARAM_DISABLE_NAA3_DESC        :Disables NAA3, NBA3, NCA3, NAAZ, NBAZ
+STR_PARAM_DISABLE_NAA3_DESC        :Will be overriden by the preset unless it is set to manual.
 
 
 STR_PARAM_PRESET_NAME                   :Preset
-STR_PARAM_PRESET_DESC                   :What selection of tracks should be used?{}Manual: Configure the set yourself.{}Auto: Tries to find a preset based on loaded track/trainset. Manual is used if no set is found.{}xUSSR: A selection for use with xUSSR Rails and accompanying trains.{}Scandinavia: 1.5kv, 15kv and 25kv{}Benelux: 1.5kv, 3kv and 25kv tracks.
+STR_PARAM_PRESET_DESC                   :What selection of tracks should be used?{}Manual: Configure the set yourself.{}Auto: Tries to find a preset based on loaded track/trainset. Manual is used if no set is found.{}xUSSR: A selection for use with xUSSR Rails and accompanying trains.{}Scandinavia: 1.5kv, 15kv and 25kv{}Benelux: 1.5kv, 3kv and 25kv tracks.{}DACH: 15kv track
 
 STR_PARAM_PRESET_MANUAL                 :Manual
 STR_PARAM_PRESET_AUTO                   :Auto
 STR_PARAM_PRESET_XUSSR                  :xUSSR
 STR_PARAM_PRESET_SCANDINAVIA            :Scandinavia
 STR_PARAM_PRESET_BENELUX                :Benelux
+STR_PARAM_PRESET_DACH                   :DACH
 
 
 STR_PARAM_SIGNAL_ELEC_NAME				:Modern Signal Type
@@ -239,10 +244,66 @@ STR_4RDR_REPLACE_NAME		:Replace Standard Gauge (630v 4th Rail) vehicles.
 STR_4RDR_NEW_TRAIN			:Standard Gauge (630v 4th Rail)
 
 
-STR_3RDC_TOOLBAR			:Standard Gauge (Dual Voltage) construction.{YELLOW}
-STR_3RDC_BUILD_NAME			:New Standard Gauge (Dual Voltage) vehicles.
-STR_3RDC_REPLACE_NAME		:Replace Standard Gauge (Dual Voltage) vehicles.
-STR_3RDC_NEW_TRAIN			:Standard Gauge (Dual Voltage)
+STR_3RDC_TOOLBAR_0			:Standard Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_1			:Standard Gauge (25kv/15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_2			:Standard Gauge (25kv/15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_3			:Standard Gauge (25kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_4			:Standard Gauge (15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_5			:Standard Gauge (25kv/15kv AC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_6			:Standard Gauge (25kv/3kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_7			:Standard Gauge (25kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_8			:Standard Gauge (15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_9			:Standard Gauge (15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_10			:Standard Gauge (3kv/1.5kv DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_11			:Standard Gauge (25kv AC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_12			:Standard Gauge (15kv AC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_13			:Standard Gauge (3kv DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_TOOLBAR_14			:Standard Gauge (1.5kv DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_3RDC_BUILD_NAME_0		:New Standard Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_1		:New Standard Gauge (25kv/15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_2		:New Standard Gauge (25kv/15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_3		:New Standard Gauge (25kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_4		:New Standard Gauge (15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_5		:New Standard Gauge (25kv/15kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_6		:New Standard Gauge (25kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_7		:New Standard Gauge (25kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_8		:New Standard Gauge (15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_9		:New Standard Gauge (15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_10		:New Standard Gauge (3kv/1.5kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_11		:New Standard Gauge (25kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_12		:New Standard Gauge (15kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_13		:New Standard Gauge (3kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_BUILD_NAME_14		:New Standard Gauge (1.5kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_0		:Replace Standard Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_1		:Replace Standard Gauge (25kv/15kv/3kv/ AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_2		:Replace Standard Gauge (25kv/15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_3		:Replace Standard Gauge (25kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_4		:Replace Standard Gauge (15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_5		:Replace Standard Gauge (25kv/15kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_6		:Replace Standard Gauge (25kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_7		:Replace Standard Gauge (25kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_8		:Replace Standard Gauge (15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_9		:Replace Standard Gauge (15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_10	:Replace Standard Gauge (3kv/1.5kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_11	:Replace Standard Gauge (25kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_12	:Replace Standard Gauge (15kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_13	:Replace Standard Gauge (3kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_REPLACE_NAME_14	:Replace Standard Gauge (1.5kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_3RDC_NEW_TRAIN_0		:Standard Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_1		:Standard Gauge (25kv/15kv/3kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_2		:Standard Gauge (25kv/15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_3		:Standard Gauge (25kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_4		:Standard Gauge (15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_5        :Standard Gauge (25kv/15kv AC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_6		:Standard Gauge (25kv/3kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_7		:Standard Gauge (25kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_8		:Standard Gauge (15kv/3kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_9		:Standard Gauge (15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_10		:Standard Gauge (3kv/1.5kv DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_11		:Standard Gauge (25kv AC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_12		:Standard Gauge (15kv AC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_13		:Standard Gauge (3kv DC Overhead) (750v DC 3rd Rail)
+STR_3RDC_NEW_TRAIN_14		:Standard Gauge (1.5kv DC Overhead) (750v DC 3rd Rail)
 
 
 STR_SAAA_TOOLBAR			:Standard Gauge (25kv AC Overhead) construction.{YELLOW}
@@ -288,10 +349,10 @@ STR_NAA3_REPLACE_NAME		:Replace Narrow Gauge (750v DC 3rd Rail) vehicles.
 STR_NAA3_NEW_TRAIN			:Narrow Gauge (750v DC 3rd Rail)
 
 
-STR_NAAZ_TOOLBAR			:Narrow Gauge (Dual Voltage) construction.{YELLOW}
-STR_NAAZ_BUILD_NAME			:New Narrow Gauge (Dual Voltage) vehicles.
-STR_NAAZ_REPLACE_NAME		:Replace Narrow Gauge (Dual Voltage) vehicles.
-STR_NAAZ_NEW_TRAIN			:Narrow Gauge (Dual Voltage)
+STR_NAAZ_TOOLBAR			:Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_BUILD_NAME			:New Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME		:Replace Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_NEW_TRAIN			:Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
 
 
 STR_NAAA_TOOLBAR			:Narrow Gauge (25kv AC Overhead) construction.{YELLOW}
@@ -364,9 +425,37 @@ STR_SY43_NAME				:Standard Gauge {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphal
 
 STR_SBA4_NAME				:Standard Gauge {DKBLUE}(630v DC 4th Rail) {GOLD}(Wooden sleepers){YELLOW}
 
-STR_SAAZ_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Overgrown){YELLOW}
-STR_SBAZ_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Wooden sleepers){YELLOW}
-STR_SCAZ_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Concrete sleepers){YELLOW}
+STR_SAAZ_NAME_0				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_1				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_2				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_3				:Standard Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_4				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_5				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_6				:Standard Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_7				:Standard Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_8				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_9				:Standard Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_10			:Standard Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_11			:Standard Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_12			:Standard Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_13			:Standard Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SAAZ_NAME_14			:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Overgrown){YELLOW}
+STR_SBAZ_NAME_0				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_1				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_2				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_3				:Standard Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_4				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_5				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_6				:Standard Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_7				:Standard Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_8				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_9				:Standard Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_10			:Standard Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_11			:Standard Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_12			:Standard Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_13			:Standard Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SBAZ_NAME_14			:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_SCAZ_NAME   			:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Concrete sleepers){YELLOW}
 
 STR_SY1Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
 STR_SY2Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}

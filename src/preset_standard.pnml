@@ -4,61 +4,83 @@ disable_SAAa_preset = disable_SAAa_;
 disable_SAAD_preset = disable_SAAD;
 disable_SAAd_preset = disable_SAAd_;
 disable_SAA3_preset = disable_SAA3;
+disable_SAAZ_preset = disable_SAAZ;
 disable_SAA4_preset = disable_SAA4;
 disable_SAAE_preset = disable_SAAE;
 disable_INVS_preset = disable_INVS;
 decor_tracks_preset = decor_tracks;
+xussr_special = 0;
 
 
 
 if (preset == 1) {
     if (grf_current_status("Meo\B1") == 1) {
-        metro_track_preset = 1
+        metro_track_preset = 1;
         disable_SAAA_preset = 0;
         disable_SAAa_preset = 0;
         disable_SAAD_preset = 0;
         disable_SAAd_preset = 0;
         disable_SAA3_preset = 0;
+        disable_SAAZ_preset = 0;
         disable_SAA4_preset = 0;
         disable_SAAE_preset = 0;
         disable_INVS_preset = 1;
         decor_tracks_preset = 0; 
+        xussr_special = 1;
     }
 }
 
-if (preset == 2) {
-    metro_track_preset = 1
+if (preset == 2) { //xUSSR
+    metro_track_preset = 1;
     disable_SAAA_preset = 0;
     disable_SAAa_preset = 0;
     disable_SAAD_preset = 0;
     disable_SAAd_preset = 0;
     disable_SAA3_preset = 0;
+    disable_SAAZ_preset = 0;
     disable_SAA4_preset = 0;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 1;
-    decor_tracks_preset = 0; 
+    decor_tracks_preset = 0;
+    xussr_special = 1;
 }
 
-if (preset == 3) {
-    metro_track_preset = 0
+if (preset == 3) { //Scandinavia
+    metro_track_preset = 0;
     disable_SAAA_preset = 0;
     disable_SAAa_preset = 0;
     disable_SAAD_preset = 1;
     disable_SAAd_preset = 0;
     disable_SAA3_preset = 0;
+    disable_SAAZ_preset = 1;
     disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 0;
     decor_tracks_preset = 1; 
 }
 
-if (preset == 4) {
-    metro_track_preset = 0
+if (preset == 4) { //Benelux
+    metro_track_preset = 0;
     disable_SAAA_preset = 0;
     disable_SAAa_preset = 1;
     disable_SAAD_preset = 0;
     disable_SAAd_preset = 0;
     disable_SAA3_preset = 0;
+    disable_SAAZ_preset = 1;
+    disable_SAA4_preset = 1;
+    disable_SAAE_preset = 0;
+    disable_INVS_preset = 0;
+    decor_tracks_preset = 1; 
+}
+
+if (preset == 5) { //Benelux
+    metro_track_preset = 0;
+    disable_SAAA_preset = 0;
+    disable_SAAa_preset = 1;
+    disable_SAAD_preset = 0;
+    disable_SAAd_preset = 0;
+    disable_SAA3_preset = 0;
+    disable_SAAZ_preset = 1;
     disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 0;

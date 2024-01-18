@@ -72,9 +72,27 @@ if (decor_tracks_preset == 1) {
 }
 }
 
-#include "src/3RDR/SAA3.pnml"
-#include "src/3RDR/SBA3.pnml"
-#include "src/3RDR/SCA3.pnml"
+#include "src/SAA3/SAA3.pnml"
+#include "src/SAA3/SBA3.pnml"
+#include "src/SAA3/SCA3.pnml"
+
+
+if (decor_tracks_preset == 1) {
+#include "src/SAA3/SY23.pnml"
+#include "src/SAA3/SY33.pnml"
+#include "src/SAA3/SY43.pnml"
+}
+
+if (disable_SAAZ_preset == 0) {
+#include "src/SAAZ/SAAZ.pnml"
+#include "src/SAAZ/SBAZ.pnml"
+
+if (decor_tracks_preset == 1) {
+#include "src/SAAZ/SY2Z.pnml"
+#include "src/SAAZ/SY3Z.pnml"
+#include "src/SAAZ/SY4Z.pnml"
+}
+}
 
 #include "src/4RDR/SBA4.pnml"
 

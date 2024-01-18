@@ -68,7 +68,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_BLST, fence_number < 1){
 
 // Item
 
-if(decor_tracks){
+if(decor_tracks_preset){
 
 item(FEAT_RAILTYPES, rail_BLST) {
 	property {
@@ -178,7 +178,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_BLS2, fence_number < 1){
 
 // Item
 
-if(decor_tracks){
+if(decor_tracks_preset){
 
 item(FEAT_RAILTYPES, rail_BLS2) {
 	property {
@@ -287,7 +287,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_BLS3, fence_number < 1){
 
 // Item
 
-if(decor_tracks){
+if(decor_tracks_preset){
 
 item(FEAT_RAILTYPES, rail_BLS3) {
 	property {
