@@ -114,6 +114,14 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0) && (disable_SAAD_pr
 		}
 	}
 
+	if ((SAAZ_SAAA_preset == 1) || (SAAZ_SAAa_preset == 1) || (SAAZ_SAAD_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+			}
+		}
+	}
+
 }
 
 // Item
@@ -166,6 +174,14 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0) && (disable_SAAd_pr
 		item(FEAT_RAILTYPES, rail_SAA8) {
 			property {
 				railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+			}
+		}
+	}
+
+	if ((SAAZ_SAAA_preset == 1) || (SAAZ_SAAa_preset == 1) || (SAAZ_SAAd_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
 			}
 		}
 	}
@@ -226,6 +242,14 @@ if ((disable_SAAA_preset == 0) && (disable_SAAD_preset == 0) && (disable_SAAd_pr
 		}
 	}
 
+	if ((SAAZ_SAAA_preset == 1) || (SAAZ_SAAD_preset == 1) || (SAAZ_SAAd_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+			}
+		}
+	}
+
 }
 
 // Item
@@ -278,6 +302,14 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0) && (disable_SAAd_pr
 		item(FEAT_RAILTYPES, rail_SAA10) {
 			property {
 				railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+			}
+		}
+	}
+
+	if ((SAAZ_SAAa_preset == 1) || (SAAZ_SAAD_preset == 1) || (SAAZ_SAAd_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
 			}
 		}
 	}
@@ -341,6 +373,14 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0)) {
 		}
 	}
 
+	if ((SAAZ_SAAA_preset == 1) || (SAAZ_SAAa_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+			}
+		}
+	}
+
 }
 
 // Item
@@ -397,6 +437,14 @@ if ((disable_SAAA_preset == 0) && (disable_SAAD_preset == 0)) {
 		}
 	}
 
+	if ((SAAZ_SAAA_preset == 1) || (SAAZ_SAAD_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+			}
+		}
+	}
+
 }
 
 // Item
@@ -449,6 +497,14 @@ if ((disable_SAAA_preset == 0) && (disable_SAAd_preset == 0)) {
 		item(FEAT_RAILTYPES, rail_SAA6) {
 			property {
 				railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+			}
+		}
+	}
+
+	if ((SAAZ_SAAA_preset == 1) || (SAAZ_SAAd_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
 			}
 		}
 	}
@@ -510,6 +566,14 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0)) {
 		}
 	}
 
+	if ((SAAZ_SAAa_preset == 1) || (SAAZ_SAAD_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+			}
+		}
+	}
+
 }
 
 	// Item
@@ -566,6 +630,14 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0)) {
 		}
 	}
 
+	if ((SAAZ_SAAa_preset == 1) || (SAAZ_SAAd_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
+			}
+		}
+	}
+
 }
 
 // Item
@@ -618,6 +690,14 @@ if ((disable_SAAD_preset == 0) && (disable_SAAd_preset == 0)) {
 		item(FEAT_RAILTYPES, rail_SAA1) {
 			property {
 				railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;
+			}
+		}
+	}
+
+	if ((SAAZ_SAAD_preset == 1) || (SAAZ_SAAd_preset == 1)) {
+		item(FEAT_RAILTYPES, rail_SAAA) {
+			property {
+				powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
 			}
 		}
 	}
