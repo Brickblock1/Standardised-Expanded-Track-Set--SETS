@@ -320,6 +320,74 @@ if (preset == 1) {
         SAAZ_SAAd_preset = 0; 
         xussr_special = 1;
     }
+    if (grf_current_status("KSTA") == 1) {
+        metro_track_preset = 0;
+        disable_SAAA_preset = 0;
+        disable_SAAa_preset = 0;
+        disable_SAAD_preset = 1;
+        disable_SAAd_preset = 0;
+        disable_SAA3_preset = 0;
+        disable_SAAZ_preset = 1;
+        disable_SAA4_preset = 1;
+        disable_SAAE_preset = 0;
+        disable_INVS_preset = 0;
+        decor_tracks_preset = 1;
+        SAAZ_SAAA_preset = 0;
+        SAAZ_SAAa_preset = 0;
+        SAAZ_SAAD_preset = 0;
+        SAAZ_SAAd_preset = 0; 
+    }
+    if ((grf_current_status("\54\4D\02\01") == 1) || (grf_current_status("\54\53\01\02")) || (grf_current_status("\4E\4D\09\04"))) {
+        metro_track_preset = 0;
+        disable_SAAA_preset = 0;
+        disable_SAAa_preset = 1;
+        disable_SAAD_preset = 0;
+        disable_SAAd_preset = 0;
+        disable_SAA3_preset = 0;
+        disable_SAAZ_preset = 0;
+        disable_SAA4_preset = 1;
+        disable_SAAE_preset = 0;
+        disable_INVS_preset = 0;
+        decor_tracks_preset = 1;
+        SAAZ_SAAA_preset = 0;
+        SAAZ_SAAa_preset = 0;
+        SAAZ_SAAD_preset = 0;
+        SAAZ_SAAd_preset = 1;  
+    }
+    if (grf_current_status("\44\4C\11\05") == 1) {
+        metro_track_preset = 0;
+        disable_SAAA_preset = 1;
+        disable_SAAa_preset = 0;
+        disable_SAAD_preset = 1;
+        disable_SAAd_preset = 1;
+        disable_SAA3_preset = 0;
+        disable_SAAZ_preset = 0;
+        disable_SAA4_preset = 1;
+        disable_SAAE_preset = 0;
+        disable_INVS_preset = 0;
+        decor_tracks_preset = 1;
+        SAAZ_SAAA_preset = 0;
+        SAAZ_SAAa_preset = 1;
+        SAAZ_SAAD_preset = 0;
+        SAAZ_SAAd_preset = 0;  
+    }
+    if (grf_current_status("\44\44\03\02") == 1) {
+        metro_track_preset = 0;
+        disable_SAAA_preset = 0;
+        disable_SAAa_preset = 1;
+        disable_SAAD_preset = 0;
+        disable_SAAd_preset = 1;
+        disable_SAA3_preset = 0;
+        disable_SAAZ_preset = 0;
+        disable_SAA4_preset = 1;
+        disable_SAAE_preset = 0;
+        disable_INVS_preset = 0;
+        decor_tracks_preset = 1;
+        SAAZ_SAAA_preset = 1;
+        SAAZ_SAAa_preset = 0;
+        SAAZ_SAAD_preset = 1;
+        SAAZ_SAAd_preset = 0;  
+    }
 }
 
 if (preset == 2) { //xUSSR Rails
