@@ -459,6 +459,51 @@ STR_SCAZ_NAME   			:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Concrete sleeper
 
 STR_SY1Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
 STR_SY2Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_0				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_1				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_2				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_3				:Standard Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_4				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_5				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_6				:Standard Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_7				:Standard Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_8				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_9				:Standard Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_10			:Standard Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_11			:Standard Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_12			:Standard Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_13			:Standard Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY2Z_NAME_14			:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_SY3Z_NAME_0				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_1				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_2				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_3				:Standard Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_4				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_5				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_6				:Standard Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_7				:Standard Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_8				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_9				:Standard Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_10			:Standard Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_11			:Standard Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_12			:Standard Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_13			:Standard Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY3Z_NAME_14			:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_SY4Z_NAME_0				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_1				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_2				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_3				:Standard Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_4				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_5				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_6				:Standard Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_7				:Standard Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_8				:Standard Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_9				:Standard Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_10			:Standard Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_11			:Standard Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_12			:Standard Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_13			:Standard Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_SY4Z_NAME_14			:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
 STR_SY3Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {BROWN}(CHIPS Dirt ground){YELLOW}
 STR_SY4Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {SILVER}(CHIPS Asphalt ground){YELLOW}
 

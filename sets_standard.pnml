@@ -1,5 +1,7 @@
 #include "src/header_standard.pnml"
 
+#include "src/preset_standard.pnml"
+
 #include "src/definitions.pnml"
 
 #include "src/signals.pnml"
@@ -11,8 +13,6 @@ if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
 #include "src/trackless.pnml"
 }
 #include "src/xussr.pnml"
-
-#include "src/preset_standard.pnml"
 
 #include "src/RAIL/SAAN.pnml"
 #include "src/RAIL/SBAN.pnml"
