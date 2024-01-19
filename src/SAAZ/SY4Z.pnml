@@ -41,7 +41,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name				 : string(STR_SY4Z_NAME_11) ;
@@ -54,7 +54,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name: 		           string(STR_SY4Z_NAME_12) ;
@@ -67,7 +67,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name				 : string(STR_SY4Z_NAME_13) ;
@@ -80,7 +80,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name				 : string(STR_SY4Z_NAME_14) ;
@@ -94,7 +94,7 @@ if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_5) ;
@@ -107,7 +107,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_6) ;
@@ -120,7 +120,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_7) ;
@@ -133,7 +133,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_8) ;
@@ -146,7 +146,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_9) ;
@@ -159,7 +159,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (dis
 	}
 }
 
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_10) ;
@@ -172,7 +172,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_1) ;
@@ -185,7 +185,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_2) ;
@@ -198,7 +198,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_3) ;
@@ -211,7 +211,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_4) ;
@@ -224,7 +224,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_0) ;

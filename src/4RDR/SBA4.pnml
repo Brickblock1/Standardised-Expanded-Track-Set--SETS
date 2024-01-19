@@ -65,7 +65,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SBA4, fence_number < 2){
 
 
 
-if (disable_SAA4 == 0) {
+if (disable_SAA4_preset == 0) {
 
 // Item
 

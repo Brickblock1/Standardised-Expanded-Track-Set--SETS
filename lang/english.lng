@@ -2,8 +2,8 @@
 
 STR_GRF_NAME_STANDARD	:SETS: Standard Gauge
 STR_GRF_NAME_NARROW	    :SETS: Narrow Gauge
-STR_GRF_DESC_STANDARD	:{GOLD}Standardised Expanded Track Set: Standard Gauge{}{}A track set that adds a customisable roster of Multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
-STR_GRF_DESC_NARROW	    :{GOLD}Standardised Expanded Track Set: Narrow Gauge{}{}A track set that adds a customisable roster of Multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
+STR_GRF_DESC_STANDARD	:{GOLD}Standardised Expanded Track Set: Standard Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
+STR_GRF_DESC_NARROW	    :{GOLD}Standardised Expanded Track Set: Narrow Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
 
 STR_PARAM_SPEEDLIMITS_DESC			:Turn on track speed limits.
 
@@ -56,17 +56,17 @@ STR_PARAM_SPEED_3					:Speed limit - High
 STR_PARAM_SPEED_INFINATE            :Infinate
 
 
-STR_PARAM_SAAZ_1					:Allow 3rd rail and overhead trains to traverse 25kv AC tracks
-STR_PARAM_SAAZ_2					:Allow 3rd rail and overhead trains to traverse 15kv AC tracks
-STR_PARAM_SAAZ_3					:Allow 3rd rail and overhead trains to traverse 3kv DC tracks
-STR_PARAM_SAAZ_4					:Allow 3rd rail and overhead trains to traverse 1.5kv DC tracks
-STR_PARAM_SAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on 3rd rail and overhead tracks.
+STR_PARAM_SAAZ_1					:Allow dual electrifid trains to traverse 25kv AC tracks
+STR_PARAM_SAAZ_2					:Allow dual electrifid trains to traverse 15kv AC tracks
+STR_PARAM_SAAZ_3					:Allow dual electrifid trains to traverse 3kv DC tracks
+STR_PARAM_SAAZ_4					:Allow dual electrifid trains to traverse 1.5kv DC tracks
+STR_PARAM_SAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on dual electrification tracks.
 
-STR_PARAM_NAAZ_1					:Allow 3rd rail and overhead trains to traverse 25kv AC tracks
-STR_PARAM_NAAZ_2					:Allow 3rd rail and overhead trains to traverse 15kv AC tracks
-STR_PARAM_NAAZ_3					:Allow 3rd rail and overhead trains to traverse 3kv DC tracks
-STR_PARAM_NAAZ_4					:Allow 3rd rail and overhead trains to traverse 1.5kv DC tracks
-STR_PARAM_NAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on d3rd rail and overhead tracks.
+STR_PARAM_NAAZ_1					:Allow dual electrifid trains to traverse 25kv AC tracks
+STR_PARAM_NAAZ_2					:Allow dual electrifid trains to traverse 15kv AC tracks
+STR_PARAM_NAAZ_3					:Allow dual electrifid trains to traverse 3kv DC tracks
+STR_PARAM_NAAZ_4					:Allow dual electrifid trains to traverse 1.5kv DC tracks
+STR_PARAM_NAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on dual electrification tracks.
 
 STR_PARAM_METRO_TRACK_NAME      :Metro track
 STR_PARAM_METRO_TRACK_DESC      :Changes what track some metro train show up on.
@@ -93,14 +93,14 @@ STR_PARAM_DISABLE_SAAd_DESC        :Will be overriden by the preset unless it is
 STR_PARAM_DISABLE_SAA3             :Disable 750v third rail tracks
 STR_PARAM_DISABLE_SAA3_DESC        :Will be overriden by the preset unless it is set to manual.
 
-STR_PARAM_DISABLE_SAAZ             :Disable 750v third rail and overhead tracks
+STR_PARAM_DISABLE_SAAZ             :Disable dual electrification tracks
 STR_PARAM_DISABLE_SAAZ_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_SAA4             :Disable 630v fourth rail tracks
 STR_PARAM_DISABLE_SAA4_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_SAAE             :Disable multi-voltage tracks
-STR_PARAM_DISABLE_SAAE_DESC        :Disables all combinations of voltages other than those with third rail and the universal one which can't be dissabled. Disabling them could lead to worse compatibiliy with some trainsets.{}Will be overriden by the preset unless it is set to manual.
+STR_PARAM_DISABLE_SAAE_DESC        :Disables all combinations of voltages other than dual electrification which have their own parameter and the universal ones which can't be dissabled. Disabling them could lead to worse compatibiliy with some trainsets.{}Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_INVS             :Disable the invisable track
 STR_PARAM_DISABLE_INVS_DESC        :Disables the invisible track which is only for eyecandy{}Will be overriden by the preset unless it is set to manual.
@@ -126,14 +126,15 @@ STR_PARAM_DISABLE_NAA3_DESC        :Will be overriden by the preset unless it is
 
 
 STR_PARAM_PRESET_NAME                   :Preset
-STR_PARAM_PRESET_DESC                   :What selection of tracks should be used?{}Manual: Configure the set yourself.{}Auto: Tries to find a preset based on loaded track/trainset. Manual is used if no set is found.{}xUSSR: A selection for use with xUSSR Rails and accompanying trains.{}Scandinavia: 1.5kv, 15kv and 25kv{}Benelux: 1.5kv, 3kv and 25kv tracks.{}DACH: 15kv track
+STR_PARAM_PRESET_DESC                   :What selection of tracks should be used?{}Manual: Configure the set yourself.{}Auto: Tries to find a preset based on loaded track/trainset. Manual is used if no set is found.{}xUSSR: A selection for use with xUSSR Rails and accompanying trains.{}Scandinavia: 1.5kv, 15kv and 25kv{}Benelux: 1.5kv, 3kv and 25kv tracks.{}DACH: 15kv track{}US: 25kv, 3kv and third rail tracks.
 
 STR_PARAM_PRESET_MANUAL                 :Manual
 STR_PARAM_PRESET_AUTO                   :Auto
-STR_PARAM_PRESET_XUSSR                  :xUSSR
+STR_PARAM_PRESET_XUSSR                  :xUSSR Rails
 STR_PARAM_PRESET_SCANDINAVIA            :Scandinavia
 STR_PARAM_PRESET_BENELUX                :Benelux
 STR_PARAM_PRESET_DACH                   :DACH
+STR_PARAM_PRESET_USA                    :US
 
 
 STR_PARAM_SIGNAL_ELEC_NAME				:Modern Signal Type

@@ -9,6 +9,10 @@ disable_SAA4_preset = disable_SAA4;
 disable_SAAE_preset = disable_SAAE;
 disable_INVS_preset = disable_INVS;
 decor_tracks_preset = decor_tracks;
+SAAZ_SAAA_preset = disable_SAAA;
+SAAZ_SAAa_preset = disable_SAAa_;
+SAAZ_SAAD_preset = disable_SAAD;
+SAAZ_SAAd_preset = disable_SAAd_;
 xussr_special = 0;
 
 
@@ -25,12 +29,16 @@ if (preset == 1) {
         disable_SAA4_preset = 0;
         disable_SAAE_preset = 0;
         disable_INVS_preset = 1;
-        decor_tracks_preset = 0; 
+        decor_tracks_preset = 0;
+        SAAZ_SAAA_preset = 1;
+        SAAZ_SAAa_preset = 0;
+        SAAZ_SAAD_preset = 0;
+        SAAZ_SAAd_preset = 0; 
         xussr_special = 1;
     }
 }
 
-if (preset == 2) { //xUSSR
+if (preset == 2) { //xUSSR Rails
     metro_track_preset = 1;
     disable_SAAA_preset = 0;
     disable_SAAa_preset = 0;
@@ -42,6 +50,10 @@ if (preset == 2) { //xUSSR
     disable_SAAE_preset = 0;
     disable_INVS_preset = 1;
     decor_tracks_preset = 0;
+    SAAZ_SAAA_preset = 1;
+    SAAZ_SAAa_preset = 0;
+    SAAZ_SAAD_preset = 0;
+    SAAZ_SAAd_preset = 0; 
     xussr_special = 1;
 }
 
@@ -56,7 +68,11 @@ if (preset == 3) { //Scandinavia
     disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 0;
-    decor_tracks_preset = 1; 
+    decor_tracks_preset = 1;
+    SAAZ_SAAA_preset = 0;
+    SAAZ_SAAa_preset = 0;
+    SAAZ_SAAD_preset = 0;
+    SAAZ_SAAd_preset = 0; 
 }
 
 if (preset == 4) { //Benelux
@@ -66,23 +82,49 @@ if (preset == 4) { //Benelux
     disable_SAAD_preset = 0;
     disable_SAAd_preset = 0;
     disable_SAA3_preset = 0;
-    disable_SAAZ_preset = 1;
+    disable_SAAZ_preset = 0;
     disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 0;
-    decor_tracks_preset = 1; 
+    decor_tracks_preset = 1;
+    SAAZ_SAAA_preset = 0;
+    SAAZ_SAAa_preset = 0;
+    SAAZ_SAAD_preset = 0;
+    SAAZ_SAAd_preset = 1;  
 }
 
-if (preset == 5) { //Benelux
+if (preset == 5) { //DACH
+    metro_track_preset = 0;
+    disable_SAAA_preset = 1;
+    disable_SAAa_preset = 0;
+    disable_SAAD_preset = 1;
+    disable_SAAd_preset = 1;
+    disable_SAA3_preset = 0;
+    disable_SAAZ_preset = 0;
+    disable_SAA4_preset = 1;
+    disable_SAAE_preset = 0;
+    disable_INVS_preset = 0;
+    decor_tracks_preset = 1;
+    SAAZ_SAAA_preset = 0;
+    SAAZ_SAAa_preset = 1;
+    SAAZ_SAAD_preset = 0;
+    SAAZ_SAAd_preset = 0;  
+}
+
+if (preset == 6) { //USA
     metro_track_preset = 0;
     disable_SAAA_preset = 0;
     disable_SAAa_preset = 1;
     disable_SAAD_preset = 0;
-    disable_SAAd_preset = 0;
+    disable_SAAd_preset = 1;
     disable_SAA3_preset = 0;
-    disable_SAAZ_preset = 1;
+    disable_SAAZ_preset = 0;
     disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 0;
-    decor_tracks_preset = 1; 
+    decor_tracks_preset = 1;
+    SAAZ_SAAA_preset = 1;
+    SAAZ_SAAa_preset = 0;
+    SAAZ_SAAD_preset = 1;
+    SAAZ_SAAd_preset = 0;  
 }

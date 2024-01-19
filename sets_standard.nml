@@ -12,7 +12,7 @@ grf{
 			name:	string(STR_PARAM_PRESET_NAME);
 			desc:	string(STR_PARAM_PRESET_DESC);
  			min_value: 0;
- 			max_value: 5;
+ 			max_value: 6;
  			def_value: 1;
  			names: {
  				0: string(STR_PARAM_PRESET_MANUAL);
@@ -21,6 +21,7 @@ grf{
  				3: string(STR_PARAM_PRESET_SCANDINAVIA);
  				4: string(STR_PARAM_PRESET_BENELUX);
  				5: string(STR_PARAM_PRESET_DACH);
+ 				6: string(STR_PARAM_PRESET_USA);
  			};
 		}
 	}
@@ -292,6 +293,10 @@ disable_SAA4_preset = disable_SAA4;
 disable_SAAE_preset = disable_SAAE;
 disable_INVS_preset = disable_INVS;
 decor_tracks_preset = decor_tracks;
+SAAZ_SAAA_preset = disable_SAAA;
+SAAZ_SAAa_preset = disable_SAAa_;
+SAAZ_SAAD_preset = disable_SAAD;
+SAAZ_SAAd_preset = disable_SAAd_;
 xussr_special = 0;
 
 
@@ -308,12 +313,16 @@ if (preset == 1) {
         disable_SAA4_preset = 0;
         disable_SAAE_preset = 0;
         disable_INVS_preset = 1;
-        decor_tracks_preset = 0; 
+        decor_tracks_preset = 0;
+        SAAZ_SAAA_preset = 1;
+        SAAZ_SAAa_preset = 0;
+        SAAZ_SAAD_preset = 0;
+        SAAZ_SAAd_preset = 0; 
         xussr_special = 1;
     }
 }
 
-if (preset == 2) { //xUSSR
+if (preset == 2) { //xUSSR Rails
     metro_track_preset = 1;
     disable_SAAA_preset = 0;
     disable_SAAa_preset = 0;
@@ -325,6 +334,10 @@ if (preset == 2) { //xUSSR
     disable_SAAE_preset = 0;
     disable_INVS_preset = 1;
     decor_tracks_preset = 0;
+    SAAZ_SAAA_preset = 1;
+    SAAZ_SAAa_preset = 0;
+    SAAZ_SAAD_preset = 0;
+    SAAZ_SAAd_preset = 0; 
     xussr_special = 1;
 }
 
@@ -339,7 +352,11 @@ if (preset == 3) { //Scandinavia
     disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 0;
-    decor_tracks_preset = 1; 
+    decor_tracks_preset = 1;
+    SAAZ_SAAA_preset = 0;
+    SAAZ_SAAa_preset = 0;
+    SAAZ_SAAD_preset = 0;
+    SAAZ_SAAd_preset = 0; 
 }
 
 if (preset == 4) { //Benelux
@@ -349,25 +366,51 @@ if (preset == 4) { //Benelux
     disable_SAAD_preset = 0;
     disable_SAAd_preset = 0;
     disable_SAA3_preset = 0;
-    disable_SAAZ_preset = 1;
+    disable_SAAZ_preset = 0;
     disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 0;
-    decor_tracks_preset = 1; 
+    decor_tracks_preset = 1;
+    SAAZ_SAAA_preset = 0;
+    SAAZ_SAAa_preset = 0;
+    SAAZ_SAAD_preset = 0;
+    SAAZ_SAAd_preset = 1;  
 }
 
-if (preset == 5) { //Benelux
+if (preset == 5) { //DACH
+    metro_track_preset = 0;
+    disable_SAAA_preset = 1;
+    disable_SAAa_preset = 0;
+    disable_SAAD_preset = 1;
+    disable_SAAd_preset = 1;
+    disable_SAA3_preset = 0;
+    disable_SAAZ_preset = 0;
+    disable_SAA4_preset = 1;
+    disable_SAAE_preset = 0;
+    disable_INVS_preset = 0;
+    decor_tracks_preset = 1;
+    SAAZ_SAAA_preset = 0;
+    SAAZ_SAAa_preset = 1;
+    SAAZ_SAAD_preset = 0;
+    SAAZ_SAAd_preset = 0;  
+}
+
+if (preset == 6) { //USA
     metro_track_preset = 0;
     disable_SAAA_preset = 0;
     disable_SAAa_preset = 1;
     disable_SAAD_preset = 0;
-    disable_SAAd_preset = 0;
+    disable_SAAd_preset = 1;
     disable_SAA3_preset = 0;
-    disable_SAAZ_preset = 1;
+    disable_SAAZ_preset = 0;
     disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 0;
-    decor_tracks_preset = 1; 
+    decor_tracks_preset = 1;
+    SAAZ_SAAA_preset = 1;
+    SAAZ_SAAa_preset = 0;
+    SAAZ_SAAD_preset = 1;
+    SAAZ_SAAd_preset = 0;  
 }
 # 1 "sets_standard.pnml" 1
 
@@ -2120,7 +2163,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAA == 1) {
+if (SAAZ_SAAA_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SAAA) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2173,7 +2216,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAA == 1) {
+if (SAAZ_SAAA_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SBAA) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2219,7 +2262,7 @@ item(FEAT_RAILTYPES, rail_SCAA) {
 	}
 }
 
-if (SAAZ_SAAA == 1) {
+if (SAAZ_SAAA_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SCAA) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2274,7 +2317,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAA == 1) {
+if (SAAZ_SAAA_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY2A) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2327,7 +2370,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAA == 1) {
+if (SAAZ_SAAA_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY3A) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2380,7 +2423,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAA == 1) {
+if (SAAZ_SAAA_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY4A) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2439,7 +2482,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAa_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SAAa) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2492,7 +2535,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAa_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SBAa) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2537,7 +2580,7 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAa_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SCAa) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2592,7 +2635,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAa_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY2a) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2645,7 +2688,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAa_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY3a) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2698,7 +2741,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAa_ == 1) {
+if (SAAZ_SAAa_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY4a) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2757,7 +2800,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAD == 1) {
+if (SAAZ_SAAD_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SAAD) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2810,7 +2853,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAD == 1) {
+if (SAAZ_SAAD_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SBAD) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2855,7 +2898,7 @@ item(FEAT_RAILTYPES, rail_SCAD) {
 	}
 }
 
-if (SAAZ_SAAD == 1) {
+if (SAAZ_SAAD_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SCAD) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2910,7 +2953,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAD == 1) {
+if (SAAZ_SAAD_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY2D) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -2963,7 +3006,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAD == 1) {
+if (SAAZ_SAAD_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY3D) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -3016,7 +3059,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAD == 1) {
+if (SAAZ_SAAD_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY4D) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -3075,7 +3118,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAd_ == 1) {
+if (SAAZ_SAAd_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SAAd) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -3128,7 +3171,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAd_ == 1) {
+if (SAAZ_SAAd_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SBAd) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -3173,7 +3216,7 @@ item(FEAT_RAILTYPES, rail_SCAd) {
 	}
 }
 
-if (SAAZ_SAAd_ == 1) {
+if (SAAZ_SAAd_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SCAd) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -3228,7 +3271,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAd_ == 1) {
+if (SAAZ_SAAd_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY2d) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -3281,7 +3324,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAd_ == 1) {
+if (SAAZ_SAAd_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY3d) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -3334,7 +3377,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAd_ == 1) {
+if (SAAZ_SAAd_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SY4d) {
 		property {
 			powered_railtype_list: ["SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z"] ;
@@ -3872,7 +3915,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name				 : string(STR_SAAZ_NAME_11) ;
@@ -3885,7 +3928,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name: 		           string(STR_SAAZ_NAME_12) ;
@@ -3898,7 +3941,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name				 : string(STR_SAAZ_NAME_13) ;
@@ -3911,7 +3954,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name				 : string(STR_SAAZ_NAME_14) ;
@@ -3925,7 +3968,7 @@ if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_5) ;
@@ -3938,7 +3981,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_6) ;
@@ -3951,7 +3994,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_7) ;
@@ -3964,7 +4007,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_8) ;
@@ -3977,7 +4020,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_9) ;
@@ -3990,7 +4033,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (dis
 	}
 }
 
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_10) ;
@@ -4003,7 +4046,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_1) ;
@@ -4016,7 +4059,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_2) ;
@@ -4029,7 +4072,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_3) ;
@@ -4042,7 +4085,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_4) ;
@@ -4055,7 +4098,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SAAZ) {
 		property {
 			name						: string(STR_SAAZ_NAME_0) ;
@@ -4112,7 +4155,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name				 : string(STR_SBAZ_NAME_11) ;
@@ -4125,7 +4168,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name: 		           string(STR_SBAZ_NAME_12) ;
@@ -4138,7 +4181,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name				 : string(STR_SBAZ_NAME_13) ;
@@ -4151,7 +4194,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name				 : string(STR_SBAZ_NAME_14) ;
@@ -4165,7 +4208,7 @@ if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_5) ;
@@ -4178,7 +4221,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_6) ;
@@ -4191,7 +4234,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_7) ;
@@ -4204,7 +4247,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_8) ;
@@ -4217,7 +4260,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_9) ;
@@ -4230,7 +4273,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (dis
 	}
 }
 
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_10) ;
@@ -4243,7 +4286,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_1) ;
@@ -4256,7 +4299,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_2) ;
@@ -4269,7 +4312,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_3) ;
@@ -4282,7 +4325,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_4) ;
@@ -4295,7 +4338,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SBAZ) {
 		property {
 			name						: string(STR_SBAZ_NAME_0) ;
@@ -4354,7 +4397,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name				 : string(STR_SY2Z_NAME_11) ;
@@ -4367,7 +4410,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name: 		           string(STR_SY2Z_NAME_12) ;
@@ -4380,7 +4423,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name				 : string(STR_SY2Z_NAME_13) ;
@@ -4393,7 +4436,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name				 : string(STR_SY2Z_NAME_14) ;
@@ -4407,7 +4450,7 @@ if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_5) ;
@@ -4420,7 +4463,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_6) ;
@@ -4433,7 +4476,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_7) ;
@@ -4446,7 +4489,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_8) ;
@@ -4459,7 +4502,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_9) ;
@@ -4472,7 +4515,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (dis
 	}
 }
 
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_10) ;
@@ -4485,7 +4528,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_1) ;
@@ -4498,7 +4541,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_2) ;
@@ -4511,7 +4554,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_3) ;
@@ -4524,7 +4567,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_4) ;
@@ -4537,7 +4580,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY2Z) {
 		property {
 			name						: string(STR_SY2Z_NAME_0) ;
@@ -4594,7 +4637,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name				 : string(STR_SY3Z_NAME_11) ;
@@ -4607,7 +4650,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name: 		           string(STR_SY3Z_NAME_12) ;
@@ -4620,7 +4663,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name				 : string(STR_SY3Z_NAME_13) ;
@@ -4633,7 +4676,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name				 : string(STR_SY3Z_NAME_14) ;
@@ -4647,7 +4690,7 @@ if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_5) ;
@@ -4660,7 +4703,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_6) ;
@@ -4673,7 +4716,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_7) ;
@@ -4686,7 +4729,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_8) ;
@@ -4699,7 +4742,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_9) ;
@@ -4712,7 +4755,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (dis
 	}
 }
 
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_10) ;
@@ -4725,7 +4768,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_1) ;
@@ -4738,7 +4781,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_2) ;
@@ -4751,7 +4794,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_3) ;
@@ -4764,7 +4807,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_4) ;
@@ -4777,7 +4820,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY3Z) {
 		property {
 			name						: string(STR_SY3Z_NAME_0) ;
@@ -4834,7 +4877,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name				 : string(STR_SY4Z_NAME_11) ;
@@ -4847,7 +4890,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name: 		           string(STR_SY4Z_NAME_12) ;
@@ -4860,7 +4903,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name				 : string(STR_SY4Z_NAME_13) ;
@@ -4873,7 +4916,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
 		}
 	}
 }
-if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name				 : string(STR_SY4Z_NAME_14) ;
@@ -4887,7 +4930,7 @@ if ((SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_5) ;
@@ -4900,7 +4943,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_6) ;
@@ -4913,7 +4956,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_7) ;
@@ -4926,7 +4969,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_8) ;
@@ -4939,7 +4982,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_9) ;
@@ -4952,7 +4995,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (dis
 	}
 }
 
-if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_10) ;
@@ -4965,7 +5008,7 @@ if ((SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_1) ;
@@ -4978,7 +5021,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_2) ;
@@ -4991,7 +5034,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_3) ;
@@ -5004,7 +5047,7 @@ if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAD == 1) && (disab
 	}
 }
 
-if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_4) ;
@@ -5017,7 +5060,7 @@ if ((SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disa
 	}
 }
 
-if ((SAAZ_SAAA == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_ == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_ == 1) && (disable_SAAd_preset == 0)) {
+if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset == 1) && (disable_SAAa_preset == 0) && (SAAZ_SAAD_preset == 1) && (disable_SAAD_preset == 0) && (SAAZ_SAAd_preset == 1) && (disable_SAAd_preset == 0)) {
 	item(FEAT_RAILTYPES, rail_SY4Z) {
 		property {
 			name						: string(STR_SY4Z_NAME_0) ;
@@ -5101,7 +5144,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SBA4, fence_number < 2){
 
 
 
-if (disable_SAA4 == 0) {
+if (disable_SAA4_preset == 0) {
 
 // Item
 

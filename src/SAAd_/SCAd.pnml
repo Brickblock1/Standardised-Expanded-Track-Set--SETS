@@ -34,7 +34,7 @@ item(FEAT_RAILTYPES, rail_SCAd) {
 	}
 }
 
-if (SAAZ_SAAd_ == 1) {
+if (SAAZ_SAAd_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SCAd) {
 		property {
 			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;

@@ -44,7 +44,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (SAAZ_SAAd_ == 1) {
+if (SAAZ_SAAd_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SAAd) {
 		property {
 			powered_railtype_list: [STANDARD_GAUGE_RAILTYPE_DUAL] ;
