@@ -352,10 +352,66 @@ STR_NAA3_REPLACE_NAME		:Replace Narrow Gauge (750v DC 3rd Rail) vehicles.
 STR_NAA3_NEW_TRAIN			:Narrow Gauge (750v DC 3rd Rail)
 
 
-STR_NAAZ_TOOLBAR			:Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
-STR_NAAZ_BUILD_NAME			:New Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
-STR_NAAZ_REPLACE_NAME		:Replace Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
-STR_NAAZ_NEW_TRAIN			:Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_TOOLBAR_0			:Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_1			:Narrow Gauge (25kv/15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_2			:Narrow Gauge (25kv/15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_3			:Narrow Gauge (25kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_4			:Narrow Gauge (15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_5			:Narrow Gauge (25kv/15kv AC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_6			:Narrow Gauge (25kv/3kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_7			:Narrow Gauge (25kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_8			:Narrow Gauge (15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_9			:Narrow Gauge (15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_10			:Narrow Gauge (3kv/1.5kv DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_11			:Narrow Gauge (25kv AC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_12			:Narrow Gauge (15kv AC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_13			:Narrow Gauge (3kv DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_TOOLBAR_14			:Narrow Gauge (1.5kv DC Overhead) (750v DC 3rd Rail) construction.{YELLOW}
+STR_NAAZ_BUILD_NAME_0		:New Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_1		:New Narrow Gauge (25kv/15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_2		:New Narrow Gauge (25kv/15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_3		:New Narrow Gauge (25kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_4		:New Narrow Gauge (15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_5		:New Narrow Gauge (25kv/15kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_6		:New Narrow Gauge (25kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_7		:New Narrow Gauge (25kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_8		:New Narrow Gauge (15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_9		:New Narrow Gauge (15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_10		:New Narrow Gauge (3kv/1.5kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_11		:New Narrow Gauge (25kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_12		:New Narrow Gauge (15kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_13		:New Narrow Gauge (3kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_BUILD_NAME_14		:New Narrow Gauge (1.5kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_0		:Replace Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_1		:Replace Narrow Gauge (25kv/15kv/3kv/ AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_2		:Replace Narrow Gauge (25kv/15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_3		:Replace Narrow Gauge (25kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_4		:Replace Narrow Gauge (15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_5		:Replace Narrow Gauge (25kv/15kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_6		:Replace Narrow Gauge (25kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_7		:Replace Narrow Gauge (25kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_8		:Replace Narrow Gauge (15kv/3kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_9		:Replace Narrow Gauge (15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_10	:Replace Narrow Gauge (3kv/1.5kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_11	:Replace Narrow Gauge (25kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_12	:Replace Narrow Gauge (15kv AC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_13	:Replace Narrow Gauge (3kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_REPLACE_NAME_14	:Replace Narrow Gauge (1.5kv DC Overhead) (750v DC 3rd Rail) vehicles.
+STR_NAAZ_NEW_TRAIN_0		:Narrow Gauge (25kv/15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_1		:Narrow Gauge (25kv/15kv/3kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_2		:Narrow Gauge (25kv/15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_3		:Narrow Gauge (25kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_4		:Narrow Gauge (15kv/3kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_5        :Narrow Gauge (25kv/15kv AC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_6		:Narrow Gauge (25kv/3kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_7		:Narrow Gauge (25kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_8		:Narrow Gauge (15kv/3kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_9		:Narrow Gauge (15kv/1.5kv AC/DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_10		:Narrow Gauge (3kv/1.5kv DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_11		:Narrow Gauge (25kv AC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_12		:Narrow Gauge (15kv AC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_13		:Narrow Gauge (3kv DC Overhead) (750v DC 3rd Rail)
+STR_NAAZ_NEW_TRAIN_14		:Narrow Gauge (1.5kv DC Overhead) (750v DC 3rd Rail)
 
 
 STR_NAAA_TOOLBAR			:Narrow Gauge (25kv AC Overhead) construction.{YELLOW}
@@ -567,13 +623,82 @@ STR_NY23_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblest
 STR_NY33_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
 STR_NY43_NAME				:Narrow Gauge {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
-STR_NAAZ_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {GOLD}(Wooden sleepers){YELLOW}
-STR_NBAZ_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {GOLD}(Concrete sleepers){YELLOW}
+STR_NAAZ_NAME_0				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_1				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_2				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_3				:Narrow Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_4				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_5				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_6				:Narrow Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_7				:Narrow Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_8				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_9				:Narrow Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_10			:Narrow Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_11			:Narrow Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_12			:Narrow Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_13			:Narrow Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NAAZ_NAME_14			:Narrow Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
+STR_NBAZ_NAME_0				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_1				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_2				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_3				:Narrow Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_4				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_5				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_6				:Narrow Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_7				:Narrow Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_8				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_9				:Narrow Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_10			:Narrow Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_11			:Narrow Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_12			:Narrow Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_13			:Narrow Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
+STR_NBAZ_NAME_14			:Narrow Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_NY1Z_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
-STR_NY2Z_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
-STR_NY3Z_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {BROWN}(CHIPS Dirt ground){YELLOW}
-STR_NY4Z_NAME				:Narrow Gauge {GREEN}(Dual Voltage) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY2Z_NAME_0				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_1				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_2				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_3				:Narrow Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_4				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_5				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_6				:Narrow Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_7				:Narrow Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_8				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_9				:Narrow Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_10			:Narrow Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_11			:Narrow Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_12			:Narrow Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_13			:Narrow Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY2Z_NAME_14			:Narrow Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
+STR_NY3Z_NAME_0				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_1				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_2				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_3				:Narrow Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_4				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_5				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_6				:Narrow Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_7				:Narrow Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_8				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_9				:Narrow Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_10			:Narrow Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_11			:Narrow Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_12			:Narrow Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_13			:Narrow Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY3Z_NAME_14			:Narrow Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {BROWN}(CHIPS Dirt ground){YELLOW}
+STR_NY4Z_NAME_0				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_1				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_2				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_3				:Narrow Gauge {BLUE}(25kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_4				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_5				:Narrow Gauge {BLUE}(25kv{LTBLUE}/15kv{SILVER} AC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_6				:Narrow Gauge {BLUE}(25kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_7				:Narrow Gauge {BLUE}(25kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_8				:Narrow Gauge {LTBLUE}(15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_9				:Narrow Gauge {LTBLUE}(15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_10			:Narrow Gauge {RED}(3kv{CREAM}/1.5kv{SILVER} DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_11			:Narrow Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_12			:Narrow Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_13			:Narrow Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
+STR_NY4Z_NAME_14			:Narrow Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
 STR_NAAA_NAME				:Narrow Gauge {BLUE}(25kv AC Overhead) {GOLD}(Wooden sleepers){YELLOW}

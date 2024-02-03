@@ -1,0 +1,235 @@
+item(FEAT_RAILTYPES, rail_NY3Z) {
+	property {
+		label						: "NY3Z" ;
+		name						: string(STR_NY3Z_NAME_0) ;
+		menu_text					: string(STR_NY3Z_NAME_0) ;
+		build_window_caption		: string(STR_NAAZ_BUILD_NAME_0) ;
+		autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_0) ;
+		new_engine_text				: string(STR_NAAZ_NEW_TRAIN_0) ;
+		toolbar_caption				: string(STR_NAAZ_TOOLBAR_0) ;
+		compatible_railtype_list	: [NARROW_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [NARROW_GAUGE_RAILTYPE_3RD, NARROW_GAUGE_RAILTYPE_MULTI] ;
+		curve_speed_multiplier		: 0 ;
+		station_graphics			: RAILTYPE_STATION_NORMAL ;
+		construction_cost			: 8 ;
+		acceleration_model			: ACC_MODEL_RAIL ;
+		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
+		sort_order					: 164 ;
+		speed_limit					: param[2] km/h ;
+		extra_aspects				: signal_elec;
+	}
+	graphics {
+		track_overlay		: gfx_overlays_NAA3 ;
+		underlay			: gfx_underlay_NY33 ;
+		bridge_surfaces		: gfx_bridge_tracks_NAA3 ;
+		tunnels				: gfx_tunnel_tracks_NAA3 ;
+		level_crossings		: sw_lc_NAA3_state ;
+		fences				: sw_fences_NBAN ;
+		depots				: sw_depot_NBAN ;
+		signals				: sw_signals ;
+	}
+}
+
+if (custom_tunnels == 1) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		graphics {
+			tunnel_overlay	: gfx_dirt_tunnels ;
+		}
+	}
+}
+
+if ((NAAZ_NAAA_preset == 1) && (disable_NAAA_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name				 : string(STR_NY3Z_NAME_11) ;
+			menu_text			 : string(STR_NY3Z_NAME_11) ;
+			build_window_caption : string(STR_NAAZ_BUILD_NAME_11) ;
+			autoreplace_text	 : string(STR_NAAZ_REPLACE_NAME_11) ;
+			new_engine_text		 : string(STR_NAAZ_NEW_TRAIN_11) ;
+			toolbar_caption		 : string(STR_NAAZ_TOOLBAR_11) ;
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_25KV] ;
+		}
+	}
+}
+if ((NAAZ_NAAa_preset == 1) && (disable_NAAa_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name: 		           string(STR_NY3Z_NAME_12) ;
+			menu_text: 			   string(STR_NY3Z_NAME_12) ;
+			build_window_caption:  string(STR_NAAZ_BUILD_NAME_12) ;
+			autoreplace_text:      string(STR_NAAZ_REPLACE_NAME_12) ;
+			new_engine_text: 	   string(STR_NAAZ_NEW_TRAIN_12) ;
+			toolbar_caption: 	   string(STR_NAAZ_TOOLBAR_12) ;
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_15KV] ;
+		}
+	}
+}
+if ((NAAZ_NAAD_preset == 1) && (disable_NAAD_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name				 : string(STR_NY3Z_NAME_13) ;
+			menu_text			 : string(STR_NY3Z_NAME_13) ;
+			build_window_caption : string(STR_NAAZ_BUILD_NAME_13) ;
+			autoreplace_text	 : string(STR_NAAZ_REPLACE_NAME_13) ;
+			new_engine_text		 : string(STR_NAAZ_NEW_TRAIN_13) ;
+			toolbar_caption		 : string(STR_NAAZ_TOOLBAR_13) ;
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_3KV] ;
+		}
+	}
+}
+if ((NAAZ_NAAd_preset == 1) && (disable_NAAd_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name				 : string(STR_NY3Z_NAME_14) ;
+			menu_text			 : string(STR_NY3Z_NAME_14) ;
+			build_window_caption : string(STR_NAAZ_BUILD_NAME_14) ;
+			autoreplace_text	 : string(STR_NAAZ_REPLACE_NAME_14) ;
+			new_engine_text		 : string(STR_NAAZ_NEW_TRAIN_14) ;
+			toolbar_caption		 : string(STR_NAAZ_TOOLBAR_14) ;
+			powered_railtype_list: [NARROW_GAUGE_RAILTYPE_1500V] ;
+		}
+	}
+}
+
+if ((NAAZ_NAAA_preset == 1) && (disable_NAAA_preset == 0) && (NAAZ_NAAa_preset == 1) && (disable_NAAa_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_5) ;
+			menu_text					: string(STR_NY3Z_NAME_5) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_5) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_5) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_5) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_5) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAA_preset == 1) && (disable_NAAA_preset == 0) && (NAAZ_NAAD_preset == 1) && (disable_NAAD_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_6) ;
+			menu_text					: string(STR_NY3Z_NAME_6) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_6) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_6) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_6) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_6) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAA_preset == 1) && (disable_NAAA_preset == 0) && (NAAZ_NAAd_preset == 1) && (disable_NAAd_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_7) ;
+			menu_text					: string(STR_NY3Z_NAME_7) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_7) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_7) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_7) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_7) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAa_preset == 1) && (disable_NAAa_preset == 0) && (NAAZ_NAAD_preset == 1) && (disable_NAAD_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_8) ;
+			menu_text					: string(STR_NY3Z_NAME_8) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_8) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_8) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_8) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_8) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAa_preset == 1) && (disable_NAAa_preset == 0) && (NAAZ_NAAd_preset == 1) && (disable_NAAd_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_9) ;
+			menu_text					: string(STR_NY3Z_NAME_9) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_9) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_9) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_9) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_9) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAD_preset == 1) && (disable_NAAD_preset == 0) && (NAAZ_NAAd_preset == 1) && (disable_NAAd_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_10) ;
+			menu_text					: string(STR_NY3Z_NAME_10) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_10) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_10) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_10) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_10) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAA_preset == 1) && (disable_NAAA_preset == 0) && (NAAZ_NAAa_preset == 1) && (disable_NAAa_preset == 0) && (NAAZ_NAAD_preset == 1) && (disable_NAAD_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_1) ;
+			menu_text					: string(STR_NY3Z_NAME_1) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_1) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_1) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_1) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_1) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAA_preset == 1) && (disable_NAAA_preset == 0) && (NAAZ_NAAa_preset == 1) && (disable_NAAa_preset == 0) && (NAAZ_NAAd_preset == 1) && (disable_NAAd_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_2) ;
+			menu_text					: string(STR_NY3Z_NAME_2) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_2) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_2) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_2) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_2) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAA_preset == 1) && (disable_NAAA_preset == 0) && (NAAZ_NAAD_preset == 1) && (disable_NAAD_preset == 0) && (NAAZ_NAAd_preset == 1) && (disable_NAAd_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_3) ;
+			menu_text					: string(STR_NY3Z_NAME_3) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_3) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_3) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_3) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_3) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAa_preset == 1) && (disable_NAAa_preset == 0) && (NAAZ_NAAD_preset == 1) && (disable_NAAD_preset == 0) && (NAAZ_NAAd_preset == 1) && (disable_NAAd_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_4) ;
+			menu_text					: string(STR_NY3Z_NAME_4) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_4) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_4) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_4) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_4) ;
+		}
+	}
+}
+
+if ((NAAZ_NAAA_preset == 1) && (disable_NAAA_preset == 0) && (NAAZ_NAAa_preset == 1) && (disable_NAAa_preset == 0) && (NAAZ_NAAD_preset == 1) && (disable_NAAD_preset == 0) && (NAAZ_NAAd_preset == 1) && (disable_NAAd_preset == 0)) {
+	item(FEAT_RAILTYPES, rail_NY3Z) {
+		property {
+			name						: string(STR_NY3Z_NAME_0) ;
+			menu_text					: string(STR_NY3Z_NAME_0) ;
+			build_window_caption		: string(STR_NAAZ_BUILD_NAME_0) ;
+			autoreplace_text			: string(STR_NAAZ_REPLACE_NAME_0) ;
+			new_engine_text				: string(STR_NAAZ_NEW_TRAIN_0) ;
+			toolbar_caption				: string(STR_NAAZ_TOOLBAR_0) ;
+		}
+	}
+}

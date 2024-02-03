@@ -6,10 +6,10 @@ disable_NAA3_preset = disable_NAA3;
 disable_NAAZ_preset = disable_NAAZ;
 disable_INVS_preset = disable_INVS;
 decor_tracks_preset = decor_tracks;
-NAAZ_NAAA_preset = disable_NAAA;
-NAAZ_NAAa_preset = disable_NAAa_;
-NAAZ_NAAD_preset = disable_NAAD;
-NAAZ_NAAd_preset = disable_NAAd_;
+NAAZ_NAAA_preset = NAAZ_NAAA;
+NAAZ_NAAa_preset = NAAZ_NAAa_;
+NAAZ_NAAD_preset = NAAZ_NAAD;
+NAAZ_NAAd_preset = NAAZ_NAAd_;
 
 
 

@@ -45,7 +45,7 @@ if ((disable_SAAA_preset == 0) || (disable_SAAa_preset == 0) || (disable_SAAD_pr
 		}
 	}
 
-	if (((disable_SAAA_preset == 1) && (disable_SAAa_preset == 1) && (disable_SAAD_preset == 1) && (disable_SAAd_preset == 1)) ? (hide_SAAE == 1) : (1 == 1)) {
+	if (((disable_SAAA_preset == 1) && (disable_SAAa_preset == 1) && (disable_SAAD_preset == 1) && (disable_SAAd_preset == 1)) ? (1 == 1) : (hide_SAAE == 1)) {
 		item(FEAT_RAILTYPES, rail_SAAE) {
 			property {
 				railtype_flags	:bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_HIDDEN) ;

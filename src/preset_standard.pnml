@@ -9,10 +9,10 @@ disable_SAA4_preset = disable_SAA4;
 disable_SAAE_preset = disable_SAAE;
 disable_INVS_preset = disable_INVS;
 decor_tracks_preset = decor_tracks;
-SAAZ_SAAA_preset = disable_SAAA;
-SAAZ_SAAa_preset = disable_SAAa_;
-SAAZ_SAAD_preset = disable_SAAD;
-SAAZ_SAAd_preset = disable_SAAd_;
+SAAZ_SAAA_preset = SAAZ_SAAA;
+SAAZ_SAAa_preset = SAAZ_SAAa_;
+SAAZ_SAAD_preset = SAAZ_SAAD;
+SAAZ_SAAd_preset = SAAZ_SAAd_;
 xussr_special = 0;
 
 

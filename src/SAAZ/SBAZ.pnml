@@ -11,7 +11,7 @@ item(FEAT_RAILTYPES, rail_SBAZ) {
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN_0) ;
 		toolbar_caption				: string(STR_3RDC_TOOLBAR_0) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
-		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_ALL] ;
+		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_3RD, STANDARD_GAUGE_RAILTYPE_MULTI] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 15 ;

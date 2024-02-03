@@ -69,6 +69,23 @@ if (decor_tracks_preset == 1) {
 #include "src/NAA3/NAA3.pnml"
 #include "src/NAA3/NBA3.pnml"
 
+if (decor_tracks_preset == 1) {
+#include "src/NAA3/NY23.pnml"
+#include "src/NAA3/NY33.pnml"
+#include "src/NAA3/NY43.pnml"
+}
+
+if (disable_NAAZ_preset == 0) {
+#include "src/NAAZ/NAAZ.pnml"
+#include "src/NAAZ/NBAZ.pnml"
+
+if (decor_tracks_preset == 1) {
+#include "src/NAAZ/NY2Z.pnml"
+#include "src/NAAZ/NY3Z.pnml"
+#include "src/NAAZ/NY4Z.pnml"
+}
+}
+
 if (disable_INVS_preset == 0) {
 #include "src/BLST/INVS.pnml"
 } 
