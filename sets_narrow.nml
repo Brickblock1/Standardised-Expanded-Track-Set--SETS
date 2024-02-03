@@ -4,8 +4,28 @@ grf{
 	grfid: "BBNT" ;
 	name: string(STR_GRF_NAME_NARROW) ;
 	desc: string(STR_GRF_DESC_NARROW) ;
+	url: string(STR_GRF_URL) ;
 	version: 1 ;
 	min_compatible_version: 1 ;
+	param 8{
+		preset{
+			type:	int;
+			name:	string(STR_PARAM_PRESET_NAME);
+			desc:	string(STR_PARAM_PRESET_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_PRESET_MANUAL);
+ 				1: string(STR_PARAM_PRESET_AUTO);
+ 				2: string(STR_PARAM_PRESET_XUSSR);
+ 				3: string(STR_PARAM_PRESET_SCANDINAVIA);
+ 				4: string(STR_PARAM_PRESET_BENELUX);
+ 				5: string(STR_PARAM_PRESET_DACH);
+ 				6: string(STR_PARAM_PRESET_USA);
+ 			};
+		}
+	}
 	param 0{
 		wide_ballast{
 			type    : bool ;
@@ -13,6 +33,61 @@ grf{
 			desc    : string(STR_PARAM_TRACK_WIDE_BALLAST_DESC) ;
 			bit     : 2 ;
 			def_value : 1 ;
+		}
+	}
+	param 15{
+		custom_tunnels{
+			type    : bool ;
+			name    : string(STR_PARAM_TUNNELS_NAME) ;
+			desc    : string(STR_PARAM_TUNNELS_DESC) ;
+			bit     : 2 ;
+			def_value : 1 ;
+		}
+	}
+	param 12{
+		signal_elec {
+ 			type:    int;
+ 			name:    string(STR_PARAM_SIGNAL_ELEC_NAME);
+ 			desc:    string(STR_PARAM_SIGNAL_ELEC_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_SIGNAL_ELEC_2ASP);
+ 				1: string(STR_PARAM_SIGNAL_ELEC_3ASP);
+ 				2: string(STR_PARAM_SIGNAL_ELEC_4ASP);
+ 			};
+		}
+	}
+	param 13{
+		fence_number {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_FENCE_NAME);
+ 			desc:    string(STR_PARAM_GFX_FENCE_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_FENCE_ALL);
+ 				1: string(STR_PARAM_GFX_FENCE_MOST);
+ 				2: string(STR_PARAM_GFX_FENCE_SOME);
+ 				3: string(STR_PARAM_GFX_FENCE_NONE);
+ 			};
+		}
+	}
+	param 14{
+		depot_type {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_DEPOT_NAME);
+ 			desc:    string(STR_PARAM_GFX_DEPOT_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_DEPOT_ALL);
+ 				1: string(STR_PARAM_GFX_DEPOT_ONE);
+ 				2: string(STR_PARAM_GFX_DEPOT_DEFAULT);
+ 			};
 		}
 	}
 	param 1{
@@ -128,58 +203,19 @@ grf{
 			bit		: 6 ;
 			def_value	: 0 ;
 		}
+		disable_NAAZ{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAZ) ;
+			desc    : string(STR_PARAM_DISABLE_SAAZ_DESC) ;
+			bit		: 10 ;
+			def_value	: 0 ;
+		}
 		disable_INVS{
 			type    : bool ;
 			name    : string(STR_PARAM_DISABLE_INVS) ;
 			desc    : string(STR_PARAM_DISABLE_INVS_DESC) ;
 			bit		: 9 ;
 			def_value	: 0 ;
-		}
-	}
-	param 12{
-		signal_elec {
- 			type:    int;
- 			name:    string(STR_PARAM_SIGNAL_ELEC_NAME);
- 			desc:    string(STR_PARAM_SIGNAL_ELEC_DESC);
- 			min_value: 0;
- 			max_value: 2;
- 			def_value: 0;
- 			names: {
- 				0: string(STR_PARAM_SIGNAL_ELEC_2ASP);
- 				1: string(STR_PARAM_SIGNAL_ELEC_3ASP);
- 				2: string(STR_PARAM_SIGNAL_ELEC_4ASP);
- 			};
-		}
-	}
-	param 13{
-		fence_number {
- 			type:    int;
- 			name:    string(STR_PARAM_GFX_FENCE_NAME);
- 			desc:    string(STR_PARAM_GFX_FENCE_DESC);
- 			min_value: 0;
- 			max_value: 3;
- 			def_value: 0;
- 			names: {
- 				0: string(STR_PARAM_GFX_FENCE_ALL);
- 				1: string(STR_PARAM_GFX_FENCE_MOST);
- 				2: string(STR_PARAM_GFX_FENCE_SOME);
- 				3: string(STR_PARAM_GFX_FENCE_NONE);
- 			};
-		}
-	}
-	param 14{
-		depot_type {
- 			type:    int;
- 			name:    string(STR_PARAM_GFX_DEPOT_NAME);
- 			desc:    string(STR_PARAM_GFX_DEPOT_DESC);
- 			min_value: 0;
- 			max_value: 2;
- 			def_value: 1;
- 			names: {
- 				0: string(STR_PARAM_GFX_DEPOT_ALL);
- 				1: string(STR_PARAM_GFX_DEPOT_ONE);
- 				2: string(STR_PARAM_GFX_DEPOT_DEFAULT);
- 			};
 		}
 	}
 	param 15{
@@ -191,21 +227,90 @@ grf{
 			def_value : 1 ;
 		}
 	}
-	param 15{
-		custom_tunnels{
-			type    : bool ;
-			name    : string(STR_PARAM_TUNNELS_NAME) ;
-			desc    : string(STR_PARAM_TUNNELS_DESC) ;
-			bit     : 2 ;
-			def_value : 1 ;
-		}
-	}
 }
 
 basecost{
 	PR_BUILD_RAIL	: (param[1]-3) ;
 }
 
+# 1 "sets_narrow.pnml" 1
+
+# 1 "src/preset_narrow.pnml" 1
+disable_NAAA_preset = disable_NAAA;
+disable_NAAa_preset = disable_NAAa_;
+disable_NAAD_preset = disable_NAAD;
+disable_NAAd_preset = disable_NAAd_;
+disable_NAA3_preset = disable_NAA3;
+disable_NAAZ_preset = disable_NAAZ;
+disable_INVS_preset = disable_INVS;
+decor_tracks_preset = decor_tracks;
+NAAZ_NAAA_preset = disable_NAAA;
+NAAZ_NAAa_preset = disable_NAAa_;
+NAAZ_NAAD_preset = disable_NAAD;
+NAAZ_NAAd_preset = disable_NAAd_;
+
+
+
+if (preset == 1) {
+    if (grf_future_status("Meo\B1") == 1) {
+        disable_NAAA_preset = 0;
+        disable_NAAa_preset = 0;
+        disable_NAAD_preset = 0;
+        disable_NAAd_preset = 0;
+        disable_NAA3_preset = 0;
+        disable_NAAZ_preset = 0;
+        disable_INVS_preset = 1;
+        decor_tracks_preset = 0;
+        NAAZ_NAAA_preset = 1;
+        NAAZ_NAAa_preset = 0;
+        NAAZ_NAAD_preset = 0;
+        NAAZ_NAAd_preset = 0; 
+    }
+    if (grf_future_status("KSTA") == 1) {
+        disable_NAAA_preset = 1;
+        disable_NAAa_preset = 0;
+        disable_NAAD_preset = 1;
+        disable_NAAd_preset = 0;
+        disable_NAA3_preset = 1;
+        disable_NAAZ_preset = 1;
+        disable_INVS_preset = 0;
+        decor_tracks_preset = 1;
+        NAAZ_NAAA_preset = 0;
+        NAAZ_NAAa_preset = 0;
+        NAAZ_NAAD_preset = 0;
+        NAAZ_NAAd_preset = 0; 
+    }
+}
+
+if (preset == 2) { //xUSSR Rails
+    disable_NAAA_preset = 0;
+    disable_NAAa_preset = 0;
+    disable_NAAD_preset = 0;
+    disable_NAAd_preset = 0;
+    disable_NAA3_preset = 0;
+    disable_NAAZ_preset = 0;
+    disable_INVS_preset = 1;
+    decor_tracks_preset = 0;
+    NAAZ_NAAA_preset = 1;
+    NAAZ_NAAa_preset = 0;
+    NAAZ_NAAD_preset = 0;
+    NAAZ_NAAd_preset = 0; 
+}
+
+if (preset == 3) { //Scandinavia
+    disable_NAAA_preset = 0;
+    disable_NAAa_preset = 0;
+    disable_NAAD_preset = 1;
+    disable_NAAd_preset = 0;
+    disable_NAA3_preset = 0;
+    disable_NAAZ_preset = 1;
+    disable_INVS_preset = 0;
+    decor_tracks_preset = 1;
+    NAAZ_NAAA_preset = 0;
+    NAAZ_NAAa_preset = 0;
+    NAAZ_NAAD_preset = 0;
+    NAAZ_NAAd_preset = 0; 
+}
 # 1 "sets_narrow.pnml" 1
 
 # 1 "src/definitions.pnml" 1
@@ -1406,34 +1511,45 @@ item(FEAT_RAILTYPES, rail_BLS3) {
 }
 # 1 "sets_narrow.pnml" 1
 
+# 1 "src/other_grfs.pnml" 1
 if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
-# 1 "src/trackless.pnml" 1
-item(FEAT_RAILTYPES, rail_ISR2) {
-	property {
-		label				: "ISR2" ; //Dirt
-        name                : string(STR_IND_2) ;
-        sort_order          : 5 ;
-        speed_limit         : 0 ;
+    item(FEAT_RAILTYPES, rail_ISR2) {
+        property {
+            label				: "ISR2" ; //Dirt
+            name                : string(STR_IND_2) ;
+            sort_order          : 5 ;
+            speed_limit         : 0 ;
+        }
+    }
+    item(FEAT_RAILTYPES, rail_ISR3) {
+        property {
+            label				: "ISR3" ; //Asphalt
+            name                : string(STR_IND_3) ;
+            sort_order          : 6 ;
+            speed_limit         : 0 ;
+        }
+    }
+    item(FEAT_RAILTYPES, rail_ISR4) {
+        property {
+            label				: "ISR4" ; //Cobblestone
+            name                : string(STR_IND_4) ;
+            sort_order          : 4 ;
+            speed_limit         : 0 ;
+        }
     }
 }
-item(FEAT_RAILTYPES, rail_ISR3) {
-	property {
-		label				: "ISR3" ; //Asphalt
-        name                : string(STR_IND_3) ;
-        sort_order          : 6 ;
-        speed_limit         : 0 ;
-    }
+
+if (grf_order_behind("Meo\B1") != 1) {
+    error (FATAL, string(STR_XUSSR_FUTURE));
 }
-item(FEAT_RAILTYPES, rail_ISR4) {
-	property {
-		label				: "ISR4" ; //Cobblestone
-        name                : string(STR_IND_4) ;
-        sort_order          : 4 ;
-        speed_limit         : 0 ;
+
+if (grf_current_status("MEO\B1") == 1) {
+    if ((preset == 0) || (preset == 3)) {
+        error (NOTICE, string(STR_XUSSR_BEHIND));
     }
 }
 # 1 "sets_narrow.pnml" 1
-}
+
 
 # 1 "src/NAAN/NAAN.pnml" 1
 
@@ -1717,7 +1833,7 @@ if ((disable_NAAA == 0) || (disable_NAAa_ == 0) || (disable_NAAD == 0) || (disab
 }
 # 1 "sets_narrow.pnml" 1
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 # 1 "src/NAAN/NY2N.pnml" 1
 
 // Item
@@ -1852,7 +1968,7 @@ if (custom_tunnels == 1) {
 # 1 "sets_narrow.pnml" 1
 }
 
-if (disable_NAAA == 0) {
+if (disable_NAAA_preset == 0) {
 # 1 "src/NAAA/NAAA.pnml" 1
 
 // Item
@@ -1962,7 +2078,7 @@ if (NAAZ_NAAA == 1) {
 }
 # 1 "sets_narrow.pnml" 1
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 # 1 "src/NAAA/NY2A.pnml" 1
 
 // Item
@@ -2125,7 +2241,7 @@ if (NAAZ_NAAA == 1) {
 }
 }
 
-if (disable_NAAa_ == 0) {
+if (disable_NAAa_preset == 0) {
 # 1 "src/NAAa_/NAAa.pnml" 1
 
 // Item
@@ -2235,7 +2351,7 @@ if (NAAZ_NAAa_ == 1) {
 }
 # 1 "sets_narrow.pnml" 1
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 # 1 "src/NAAa_/NY2a.pnml" 1
 
 // Item
@@ -2398,7 +2514,7 @@ if (NAAZ_NAAa_ == 1) {
 }
 }
 
-if (disable_NAAD == 0) {
+if (disable_NAAD_preset == 0) {
 # 1 "src/NAAD/NAAD.pnml" 1
 
 // Item
@@ -2508,7 +2624,7 @@ if (NAAZ_NAAD == 1) {
 }
 # 1 "sets_narrow.pnml" 1
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 # 1 "src/NAAD/NY2D.pnml" 1
 
 // Item
@@ -2671,7 +2787,7 @@ if (NAAZ_NAAD == 1) {
 }
 }
 
-if (disable_NAAd_ == 0) {
+if (disable_NAAd_preset == 0) {
 # 1 "src/NAAd_/NAAd.pnml" 1
 
 // Item
@@ -2781,7 +2897,7 @@ if (NAAZ_NAAd_ == 1) {
 }
 # 1 "sets_narrow.pnml" 1
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 # 1 "src/NAAd_/NY2d.pnml" 1
 
 // Item
@@ -3653,7 +3769,7 @@ if (NAAZ_NAAd_ == 1) {
 }
 # 1 "sets_narrow.pnml" 1
 
-if (disable_INVS == 0) {
+if (disable_INVS_preset == 0) {
 # 1 "src/BLST/INVS.pnml" 1
 
 // Item

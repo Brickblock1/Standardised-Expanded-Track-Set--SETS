@@ -1,0 +1,75 @@
+disable_NAAA_preset = disable_NAAA;
+disable_NAAa_preset = disable_NAAa_;
+disable_NAAD_preset = disable_NAAD;
+disable_NAAd_preset = disable_NAAd_;
+disable_NAA3_preset = disable_NAA3;
+disable_NAAZ_preset = disable_NAAZ;
+disable_INVS_preset = disable_INVS;
+decor_tracks_preset = decor_tracks;
+NAAZ_NAAA_preset = disable_NAAA;
+NAAZ_NAAa_preset = disable_NAAa_;
+NAAZ_NAAD_preset = disable_NAAD;
+NAAZ_NAAd_preset = disable_NAAd_;
+
+
+
+if (preset == 1) {
+    if (grf_future_status("Meo\B1") == 1) {
+        disable_NAAA_preset = 0;
+        disable_NAAa_preset = 0;
+        disable_NAAD_preset = 0;
+        disable_NAAd_preset = 0;
+        disable_NAA3_preset = 0;
+        disable_NAAZ_preset = 0;
+        disable_INVS_preset = 1;
+        decor_tracks_preset = 0;
+        NAAZ_NAAA_preset = 1;
+        NAAZ_NAAa_preset = 0;
+        NAAZ_NAAD_preset = 0;
+        NAAZ_NAAd_preset = 0; 
+    }
+    if (grf_future_status("KSTA") == 1) {
+        disable_NAAA_preset = 1;
+        disable_NAAa_preset = 0;
+        disable_NAAD_preset = 1;
+        disable_NAAd_preset = 0;
+        disable_NAA3_preset = 1;
+        disable_NAAZ_preset = 1;
+        disable_INVS_preset = 0;
+        decor_tracks_preset = 1;
+        NAAZ_NAAA_preset = 0;
+        NAAZ_NAAa_preset = 0;
+        NAAZ_NAAD_preset = 0;
+        NAAZ_NAAd_preset = 0; 
+    }
+}
+
+if (preset == 2) { //xUSSR Rails
+    disable_NAAA_preset = 0;
+    disable_NAAa_preset = 0;
+    disable_NAAD_preset = 0;
+    disable_NAAd_preset = 0;
+    disable_NAA3_preset = 0;
+    disable_NAAZ_preset = 0;
+    disable_INVS_preset = 1;
+    decor_tracks_preset = 0;
+    NAAZ_NAAA_preset = 1;
+    NAAZ_NAAa_preset = 0;
+    NAAZ_NAAD_preset = 0;
+    NAAZ_NAAd_preset = 0; 
+}
+
+if (preset == 3) { //Scandinavia
+    disable_NAAA_preset = 1;
+    disable_NAAa_preset = 0;
+    disable_NAAD_preset = 1;
+    disable_NAAd_preset = 0;
+    disable_NAA3_preset = 1;
+    disable_NAAZ_preset = 1;
+    disable_INVS_preset = 0;
+    decor_tracks_preset = 1;
+    NAAZ_NAAA_preset = 0;
+    NAAZ_NAAa_preset = 0;
+    NAAZ_NAAD_preset = 0;
+    NAAZ_NAAd_preset = 0; 
+}

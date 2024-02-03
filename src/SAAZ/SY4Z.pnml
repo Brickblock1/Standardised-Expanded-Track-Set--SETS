@@ -4,8 +4,8 @@
 item(FEAT_RAILTYPES, rail_SY4Z) {
 	property {
 		label						: "SY4Z" ;
-		name						: string(STR_SY4Z_NAME) ;
-		menu_text					: string(STR_SY4Z_NAME) ;
+		name						: string(STR_SY4Z_NAME_0) ;
+		menu_text					: string(STR_SY4Z_NAME_0) ;
 		build_window_caption		: string(STR_3RDC_BUILD_NAME_0) ;
 		autoreplace_text			: string(STR_3RDC_REPLACE_NAME_0) ;
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN_0) ;

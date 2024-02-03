@@ -2,8 +2,28 @@ grf{
 	grfid: "BBNT" ;
 	name: string(STR_GRF_NAME_NARROW) ;
 	desc: string(STR_GRF_DESC_NARROW) ;
+	url: string(STR_GRF_URL) ;
 	version: 1 ;
 	min_compatible_version: 1 ;
+	param 8{
+		preset{
+			type:	int;
+			name:	string(STR_PARAM_PRESET_NAME);
+			desc:	string(STR_PARAM_PRESET_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_PRESET_MANUAL);
+ 				1: string(STR_PARAM_PRESET_AUTO);
+ 				2: string(STR_PARAM_PRESET_XUSSR);
+ 				3: string(STR_PARAM_PRESET_SCANDINAVIA);
+ 				4: string(STR_PARAM_PRESET_BENELUX);
+ 				5: string(STR_PARAM_PRESET_DACH);
+ 				6: string(STR_PARAM_PRESET_USA);
+ 			};
+		}
+	}
 	param 0{
 		wide_ballast{
 			type    : bool ;
@@ -11,6 +31,61 @@ grf{
 			desc    : string(STR_PARAM_TRACK_WIDE_BALLAST_DESC) ;
 			bit     : 2 ;
 			def_value : 1 ;
+		}
+	}
+	param 15{
+		custom_tunnels{
+			type    : bool ;
+			name    : string(STR_PARAM_TUNNELS_NAME) ;
+			desc    : string(STR_PARAM_TUNNELS_DESC) ;
+			bit     : 2 ;
+			def_value : 1 ;
+		}
+	}
+	param 12{
+		signal_elec {
+ 			type:    int;
+ 			name:    string(STR_PARAM_SIGNAL_ELEC_NAME);
+ 			desc:    string(STR_PARAM_SIGNAL_ELEC_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_SIGNAL_ELEC_2ASP);
+ 				1: string(STR_PARAM_SIGNAL_ELEC_3ASP);
+ 				2: string(STR_PARAM_SIGNAL_ELEC_4ASP);
+ 			};
+		}
+	}
+	param 13{
+		fence_number {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_FENCE_NAME);
+ 			desc:    string(STR_PARAM_GFX_FENCE_DESC);
+ 			min_value: 0;
+ 			max_value: 3;
+ 			def_value: 0;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_FENCE_ALL);
+ 				1: string(STR_PARAM_GFX_FENCE_MOST);
+ 				2: string(STR_PARAM_GFX_FENCE_SOME);
+ 				3: string(STR_PARAM_GFX_FENCE_NONE);
+ 			};
+		}
+	}
+	param 14{
+		depot_type {
+ 			type:    int;
+ 			name:    string(STR_PARAM_GFX_DEPOT_NAME);
+ 			desc:    string(STR_PARAM_GFX_DEPOT_DESC);
+ 			min_value: 0;
+ 			max_value: 2;
+ 			def_value: 1;
+ 			names: {
+ 				0: string(STR_PARAM_GFX_DEPOT_ALL);
+ 				1: string(STR_PARAM_GFX_DEPOT_ONE);
+ 				2: string(STR_PARAM_GFX_DEPOT_DEFAULT);
+ 			};
 		}
 	}
 	param 1{
@@ -126,6 +201,13 @@ grf{
 			bit		: 6 ;
 			def_value	: 0 ;
 		}
+		disable_NAAZ{
+			type    : bool ;
+			name    : string(STR_PARAM_DISABLE_SAAZ) ;
+			desc    : string(STR_PARAM_DISABLE_SAAZ_DESC) ;
+			bit		: 10 ;
+			def_value	: 0 ;
+		}
 		disable_INVS{
 			type    : bool ;
 			name    : string(STR_PARAM_DISABLE_INVS) ;
@@ -134,67 +216,12 @@ grf{
 			def_value	: 0 ;
 		}
 	}
-	param 12{
-		signal_elec {
- 			type:    int;
- 			name:    string(STR_PARAM_SIGNAL_ELEC_NAME);
- 			desc:    string(STR_PARAM_SIGNAL_ELEC_DESC);
- 			min_value: 0;
- 			max_value: 2;
- 			def_value: 0;
- 			names: {
- 				0: string(STR_PARAM_SIGNAL_ELEC_2ASP);
- 				1: string(STR_PARAM_SIGNAL_ELEC_3ASP);
- 				2: string(STR_PARAM_SIGNAL_ELEC_4ASP);
- 			};
-		}
-	}
-	param 13{
-		fence_number {
- 			type:    int;
- 			name:    string(STR_PARAM_GFX_FENCE_NAME);
- 			desc:    string(STR_PARAM_GFX_FENCE_DESC);
- 			min_value: 0;
- 			max_value: 3;
- 			def_value: 0;
- 			names: {
- 				0: string(STR_PARAM_GFX_FENCE_ALL);
- 				1: string(STR_PARAM_GFX_FENCE_MOST);
- 				2: string(STR_PARAM_GFX_FENCE_SOME);
- 				3: string(STR_PARAM_GFX_FENCE_NONE);
- 			};
-		}
-	}
-	param 14{
-		depot_type {
- 			type:    int;
- 			name:    string(STR_PARAM_GFX_DEPOT_NAME);
- 			desc:    string(STR_PARAM_GFX_DEPOT_DESC);
- 			min_value: 0;
- 			max_value: 2;
- 			def_value: 1;
- 			names: {
- 				0: string(STR_PARAM_GFX_DEPOT_ALL);
- 				1: string(STR_PARAM_GFX_DEPOT_ONE);
- 				2: string(STR_PARAM_GFX_DEPOT_DEFAULT);
- 			};
-		}
-	}
 	param 15{
 		decor_tracks{
 			type    : bool ;
 			name    : string(STR_PARAM_DECOR_NAME) ;
 			desc    : string(STR_PARAM_DECOR_DESC) ;
 			bit     : 1 ;
-			def_value : 1 ;
-		}
-	}
-	param 15{
-		custom_tunnels{
-			type    : bool ;
-			name    : string(STR_PARAM_TUNNELS_NAME) ;
-			desc    : string(STR_PARAM_TUNNELS_DESC) ;
-			bit     : 2 ;
 			def_value : 1 ;
 		}
 	}

@@ -1,9 +1,0 @@
-if (grf_order_behind("Meo\B1") != 1) {
-    error (FATAL, string(STR_XUSSR_FUTURE));
-}
-
-if (grf_current_status("MEO\B1") == 1) {
-    if ((preset == 0) || (preset == 3)) {
-        error (NOTICE, string(STR_XUSSR_BEHIND));
-    }
-}

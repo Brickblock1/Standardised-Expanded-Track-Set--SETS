@@ -2,8 +2,8 @@
 
 STR_GRF_NAME_STANDARD	:SETS: Standard Gauge
 STR_GRF_NAME_NARROW	    :SETS: Narrow Gauge
-STR_GRF_DESC_STANDARD	:{GOLD}Standardised Expanded Track Set: Standard Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
-STR_GRF_DESC_NARROW	    :{GOLD}Standardised Expanded Track Set: Narrow Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2023 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
+STR_GRF_DESC_STANDARD	:{GOLD}Standardised Expanded Track Set: Standard Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2024 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
+STR_GRF_DESC_NARROW	    :{GOLD}Standardised Expanded Track Set: Narrow Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2024 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
 
 STR_GRF_URL             :https://www.tt-forums.net/viewtopic.php?t=90786
 
@@ -388,6 +388,7 @@ STR_BLS3_NAME				:Empty track ballast. {GOLD}(Concrete){YELLOW}
 
 STR_INVS_NAME               :Invisible Track {GOLD}(Useful for landscaping){YELLOW}
 
+STR_IND_1                   :Trackless {GOLD}(ISR ground){YELLOW}
 STR_IND_2                   :Trackless {GOLD}(CHIPS Dirt ground){YELLOW}
 STR_IND_3                   :Trackless {GOLD}(CHIPS Asphalt ground){YELLOW}
 STR_IND_4                   :Trackless {GOLD}(CHIPS Cobblestone ground){YELLOW}
@@ -458,10 +459,7 @@ STR_SBAZ_NAME_11			:Standard Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd 
 STR_SBAZ_NAME_12			:Standard Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
 STR_SBAZ_NAME_13			:Standard Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
 STR_SBAZ_NAME_14			:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {GOLD}(Wooden sleepers){YELLOW}
-STR_SCAZ_NAME   			:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Concrete sleepers){YELLOW}
 
-STR_SY1Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {GOLD}(Sleeper: ISR, Rail: Dark Grey){YELLOW}
-STR_SY2Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
 STR_SY2Z_NAME_0				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
 STR_SY2Z_NAME_1				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{RED}/3kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
 STR_SY2Z_NAME_2				:Standard Gauge {BLUE}(25kv{LTBLUE}/15kv{CREAM}/1.5kv{SILVER} AC/DC Overhead) {BROWN}(750v DC 3rd Rail) {ORANGE}(CHIPS Cobblestone ground){YELLOW}
@@ -507,8 +505,6 @@ STR_SY4Z_NAME_11			:Standard Gauge {BLUE}(25kv AC Overhead) {BROWN}(750v DC 3rd 
 STR_SY4Z_NAME_12			:Standard Gauge {LTBLUE}(15kv AC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
 STR_SY4Z_NAME_13			:Standard Gauge {RED}(3kv DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
 STR_SY4Z_NAME_14			:Standard Gauge {CREAM}(1.5kv DC Overhead) {BROWN}(750v DC 3rd Rail) {SILVER}(CHIPS Asphalt ground){YELLOW}
-STR_SY3Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {BROWN}(CHIPS Dirt ground){YELLOW}
-STR_SY4Z_NAME				:Standard Gauge {GREEN}(Dual Voltage) {SILVER}(CHIPS Asphalt ground){YELLOW}
 
 
 STR_SAAA_NAME				:Standard Gauge {BLUE}(25kv AC Overhead) {GOLD}(Overgrown){YELLOW}

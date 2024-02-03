@@ -1,5 +1,7 @@
 #include "src/header_narrow.pnml"
 
+#include "src/preset_narrow.pnml"
+
 #include "src/definitions.pnml"
 
 #include "src/signals.pnml"
@@ -7,58 +9,57 @@
 
 #include "src/BLST/BLST.pnml"
 
-if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
-#include "src/trackless.pnml"
-}
+#include "src/other_grfs.pnml"
+
 
 #include "src/NAAN/NAAN.pnml"
 #include "src/NAAN/NBAN.pnml"
 #include "src/NAAE/NAAE.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/NAAN/NY2N.pnml"
 #include "src/NAAN/NY3N.pnml"
 #include "src/NAAN/NY4N.pnml"
 }
 
-if (disable_NAAA == 0) {
+if (disable_NAAA_preset == 0) {
 #include "src/NAAA/NAAA.pnml"
 #include "src/NAAA/NBAA.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/NAAA/NY2A.pnml"
 #include "src/NAAA/NY3A.pnml"
 #include "src/NAAA/NY4A.pnml"
 }
 }
 
-if (disable_NAAa_ == 0) {
+if (disable_NAAa_preset == 0) {
 #include "src/NAAa_/NAAa.pnml"
 #include "src/NAAa_/NBAa.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/NAAa_/NY2a.pnml"
 #include "src/NAAa_/NY3a.pnml"
 #include "src/NAAa_/NY4a.pnml"
 }
 }
 
-if (disable_NAAD == 0) {
+if (disable_NAAD_preset == 0) {
 #include "src/NAAD/NAAD.pnml"
 #include "src/NAAD/NBAD.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/NAAD/NY2D.pnml"
 #include "src/NAAD/NY3D.pnml"
 #include "src/NAAD/NY4D.pnml"
 }
 }
 
-if (disable_NAAd_ == 0) {
+if (disable_NAAd_preset == 0) {
 #include "src/NAAd_/NAAd.pnml"
 #include "src/NAAd_/NBAd.pnml"
 
-if (decor_tracks == 1) {
+if (decor_tracks_preset == 1) {
 #include "src/NAAd_/NY2d.pnml"
 #include "src/NAAd_/NY3d.pnml"
 #include "src/NAAd_/NY4d.pnml"
@@ -68,6 +69,6 @@ if (decor_tracks == 1) {
 #include "src/NAA3/NAA3.pnml"
 #include "src/NAA3/NBA3.pnml"
 
-if (disable_INVS == 0) {
+if (disable_INVS_preset == 0) {
 #include "src/BLST/INVS.pnml"
 } 

@@ -9,10 +9,7 @@
 
 #include "src/BLST/BLST.pnml"
 
-if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
-#include "src/trackless.pnml"
-}
-#include "src/xussr.pnml"
+#include "src/other_grfs.pnml"
 
 #include "src/RAIL/SAAN.pnml"
 #include "src/RAIL/SBAN.pnml"

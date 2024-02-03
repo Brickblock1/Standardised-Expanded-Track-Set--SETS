@@ -4,6 +4,7 @@ grf{
 	grfid: "BBST" ;
 	name: string(STR_GRF_NAME_STANDARD) ;
 	desc: string(STR_GRF_DESC_STANDARD) ;
+	url: string(STR_GRF_URL) ;
 	version: 4 ;
 	min_compatible_version: 4 ;
 	param 8{
@@ -1680,35 +1681,42 @@ item(FEAT_RAILTYPES, rail_BLS3) {
 }
 # 1 "sets_standard.pnml" 1
 
+# 1 "src/other_grfs.pnml" 1
 if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
-# 1 "src/trackless.pnml" 1
-item(FEAT_RAILTYPES, rail_ISR2) {
-	property {
-		label				: "ISR2" ; //Dirt
-        name                : string(STR_IND_2) ;
-        sort_order          : 5 ;
-        speed_limit         : 0 ;
+    item(FEAT_RAILTYPES, rail_ISR1) {
+        property {
+            label				: "ISR1" ; //ISR
+            name                : string(STR_IND_1) ;
+            sort_order          : 4 ;
+            speed_limit         : 0 ;
+        }
+    }
+    item(FEAT_RAILTYPES, rail_ISR2) {
+        property {
+            label				: "ISR2" ; //Dirt
+            name                : string(STR_IND_2) ;
+            sort_order          : 5 ;
+            speed_limit         : 0 ;
+        }
+    }
+    item(FEAT_RAILTYPES, rail_ISR3) {
+        property {
+            label				: "ISR3" ; //Asphalt
+            name                : string(STR_IND_3) ;
+            sort_order          : 6 ;
+            speed_limit         : 0 ;
+        }
+    }
+    item(FEAT_RAILTYPES, rail_ISR4) {
+        property {
+            label				: "ISR4" ; //Cobblestone
+            name                : string(STR_IND_4) ;
+            sort_order          : 4 ;
+            speed_limit         : 0 ;
+        }
     }
 }
-item(FEAT_RAILTYPES, rail_ISR3) {
-	property {
-		label				: "ISR3" ; //Asphalt
-        name                : string(STR_IND_3) ;
-        sort_order          : 6 ;
-        speed_limit         : 0 ;
-    }
-}
-item(FEAT_RAILTYPES, rail_ISR4) {
-	property {
-		label				: "ISR4" ; //Cobblestone
-        name                : string(STR_IND_4) ;
-        sort_order          : 4 ;
-        speed_limit         : 0 ;
-    }
-}
-# 1 "sets_standard.pnml" 1
-}
-# 1 "src/xussr.pnml" 1
+
 if (grf_order_behind("Meo\B1") != 1) {
     error (FATAL, string(STR_XUSSR_FUTURE));
 }
@@ -4428,8 +4436,8 @@ if (decor_tracks_preset == 1) {
 item(FEAT_RAILTYPES, rail_SY2Z) {
 	property {
 		label						: "SY2Z" ;
-		name						: string(STR_SY2Z_NAME) ;
-		menu_text					: string(STR_SY2Z_NAME) ;
+		name						: string(STR_SY2Z_NAME_0) ;
+		menu_text					: string(STR_SY2Z_NAME_0) ;
 		build_window_caption		: string(STR_3RDC_BUILD_NAME_0) ;
 		autoreplace_text			: string(STR_3RDC_REPLACE_NAME_0) ;
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN_0) ;
@@ -4668,8 +4676,8 @@ if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset =
 item(FEAT_RAILTYPES, rail_SY3Z) {
 	property {
 		label						: "SY3Z" ;
-		name						: string(STR_SY3Z_NAME) ;
-		menu_text					: string(STR_SY3Z_NAME) ;
+		name						: string(STR_SY3Z_NAME_0) ;
+		menu_text					: string(STR_SY3Z_NAME_0) ;
 		build_window_caption		: string(STR_3RDC_BUILD_NAME_0) ;
 		autoreplace_text			: string(STR_3RDC_REPLACE_NAME_0) ;
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN_0) ;
@@ -4908,8 +4916,8 @@ if ((SAAZ_SAAA_preset == 1) && (disable_SAAA_preset == 0) && (SAAZ_SAAa_preset =
 item(FEAT_RAILTYPES, rail_SY4Z) {
 	property {
 		label						: "SY4Z" ;
-		name						: string(STR_SY4Z_NAME) ;
-		menu_text					: string(STR_SY4Z_NAME) ;
+		name						: string(STR_SY4Z_NAME_0) ;
+		menu_text					: string(STR_SY4Z_NAME_0) ;
 		build_window_caption		: string(STR_3RDC_BUILD_NAME_0) ;
 		autoreplace_text			: string(STR_3RDC_REPLACE_NAME_0) ;
 		new_engine_text				: string(STR_3RDC_NEW_TRAIN_0) ;
