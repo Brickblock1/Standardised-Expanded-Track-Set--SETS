@@ -26,7 +26,7 @@ if (preset == 1) {
         disable_SAAd_preset = 0;
         disable_SAA3_preset = 0;
         disable_SAAZ_preset = 0;
-        disable_SAA4_preset = 0;
+        disable_SAA4_preset = 1;
         disable_SAAE_preset = 0;
         disable_INVS_preset = 1;
         decor_tracks_preset = 0;
@@ -114,7 +114,7 @@ if (preset == 2) { //xUSSR Rails
     disable_SAAd_preset = 0;
     disable_SAA3_preset = 0;
     disable_SAAZ_preset = 0;
-    disable_SAA4_preset = 0;
+    disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 1;
     decor_tracks_preset = 0;
