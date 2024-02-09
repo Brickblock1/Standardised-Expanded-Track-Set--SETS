@@ -17,7 +17,7 @@ item(FEAT_RAILTYPES, rail_NY4D) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 145 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}

@@ -1513,36 +1513,40 @@ item(FEAT_RAILTYPES, rail_BLS3) {
 
 # 1 "src/other_grfs.pnml" 1
 if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
-    item(FEAT_RAILTYPES, rail_ISR1) {
-        property {
-            label				: "ISR1" ; //ISR
-            name                : string(STR_IND_1) ;
-            sort_order          : 4 ;
-            speed_limit         : 0 ;
+    if (param["\45\4E\37\01", 1] == 1) {
+        item(FEAT_RAILTYPES, rail_ISR1) {
+            property {
+                label				: "ISR1" ; //ISR
+                name                : string(STR_IND_1) ;
+                sort_order          : 4 ;
+                speed_limit         : 0 ;
+            }
         }
     }
-    item(FEAT_RAILTYPES, rail_ISR2) {
-        property {
-            label				: "ISR2" ; //Dirt
-            name                : string(STR_IND_2) ;
-            sort_order          : 5 ;
-            speed_limit         : 0 ;
+    if (param["\45\4E\37\01", 4] == 1) {
+        item(FEAT_RAILTYPES, rail_ISR2) {
+            property {
+                label				: "ISR2" ; //Dirt
+                name                : string(STR_IND_2) ;
+                sort_order          : 5 ;
+                speed_limit         : 0 ;
+            }
         }
-    }
-    item(FEAT_RAILTYPES, rail_ISR3) {
-        property {
-            label				: "ISR3" ; //Asphalt
-            name                : string(STR_IND_3) ;
-            sort_order          : 6 ;
-            speed_limit         : 0 ;
+        item(FEAT_RAILTYPES, rail_ISR3) {
+            property {
+                label				: "ISR3" ; //Asphalt
+                name                : string(STR_IND_3) ;
+                sort_order          : 6 ;
+                speed_limit         : 0 ;
+            }
         }
-    }
-    item(FEAT_RAILTYPES, rail_ISR4) {
-        property {
-            label				: "ISR4" ; //Cobblestone
-            name                : string(STR_IND_4) ;
-            sort_order          : 4 ;
-            speed_limit         : 0 ;
+        item(FEAT_RAILTYPES, rail_ISR4) {
+            property {
+                label				: "ISR4" ; //Cobblestone
+                name                : string(STR_IND_4) ;
+                sort_order          : 4 ;
+                speed_limit         : 0 ;
+            }
         }
     }
 }
@@ -1647,7 +1651,7 @@ item(FEAT_RAILTYPES, rail_NAAN) {
 		construction_cost			: 4 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 101 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -1758,7 +1762,7 @@ item(FEAT_RAILTYPES, rail_NBAN) {
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 102 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -1806,7 +1810,7 @@ if ((disable_NAAA == 0) || (disable_NAAa_ == 0) || (disable_NAAD == 0) || (disab
 			construction_cost			: 7 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 111 ;
+			sort_order					: 100 ;
 			speed_limit					: param[2] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -1862,7 +1866,7 @@ item(FEAT_RAILTYPES, rail_NY2N) {
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 103 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -1906,7 +1910,7 @@ item(FEAT_RAILTYPES, rail_NY3N) {
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 104 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -1950,7 +1954,7 @@ item(FEAT_RAILTYPES, rail_NY4N) {
 		construction_cost			: 9 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 105 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -1999,7 +2003,7 @@ item(FEAT_RAILTYPES, rail_NAAA) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 121 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2052,7 +2056,7 @@ item(FEAT_RAILTYPES, rail_NBAA) {
 		construction_cost			: 12 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 122 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2107,7 +2111,7 @@ item(FEAT_RAILTYPES, rail_NY2A) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 123 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2160,7 +2164,7 @@ item(FEAT_RAILTYPES, rail_NY3A) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 124 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2213,7 +2217,7 @@ item(FEAT_RAILTYPES, rail_NY4A) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 125 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2272,7 +2276,7 @@ item(FEAT_RAILTYPES, rail_NAAa) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 131 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2325,7 +2329,7 @@ item(FEAT_RAILTYPES, rail_NBAa) {
 		construction_cost			: 12 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 132 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2380,7 +2384,7 @@ item(FEAT_RAILTYPES, rail_NY2a) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 133 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2433,7 +2437,7 @@ item(FEAT_RAILTYPES, rail_NY3a) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 134 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2486,7 +2490,7 @@ item(FEAT_RAILTYPES, rail_NY4a) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 125 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2545,7 +2549,7 @@ item(FEAT_RAILTYPES, rail_NAAD) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 141 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2598,7 +2602,7 @@ item(FEAT_RAILTYPES, rail_NBAD) {
 		construction_cost			: 12 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 142 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2653,7 +2657,7 @@ item(FEAT_RAILTYPES, rail_NY2D) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 143 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2706,7 +2710,7 @@ item(FEAT_RAILTYPES, rail_NY3D) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 144 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2759,7 +2763,7 @@ item(FEAT_RAILTYPES, rail_NY4D) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 145 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2818,7 +2822,7 @@ item(FEAT_RAILTYPES, rail_NAAd) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 151 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2871,7 +2875,7 @@ item(FEAT_RAILTYPES, rail_NBAd) {
 		construction_cost			: 12 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 152 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2926,7 +2930,7 @@ item(FEAT_RAILTYPES, rail_NY2d) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 153 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2979,7 +2983,7 @@ item(FEAT_RAILTYPES, rail_NY3d) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 154 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3032,7 +3036,7 @@ item(FEAT_RAILTYPES, rail_NY4d) {
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 155 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3158,7 +3162,7 @@ item(FEAT_RAILTYPES, rail_NAA3) {
 		construction_cost			: 6 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 171 ;
+		sort_order					: 101 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3272,7 +3276,7 @@ item(FEAT_RAILTYPES, rail_NBA3) {
 		construction_cost			: 11 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 172;
+		sort_order					: 101;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3319,7 +3323,7 @@ item(FEAT_RAILTYPES, rail_NY23) {
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 6 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
-		sort_order					: 173 ;
+		sort_order					: 101 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3362,7 +3366,7 @@ item(FEAT_RAILTYPES, rail_NY33) {
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 6 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
-		sort_order					: 174 ;
+		sort_order					: 101 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3405,7 +3409,7 @@ item(FEAT_RAILTYPES, rail_NY43) {
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 6 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
-		sort_order					: 175 ;
+		sort_order					: 101 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3451,7 +3455,7 @@ item(FEAT_RAILTYPES, rail_NAAZ) {
 		construction_cost			: 8 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 161 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3688,7 +3692,7 @@ item(FEAT_RAILTYPES, rail_NBAZ) {
 		construction_cost			: 13 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 162 ;
+		sort_order					: 100 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3927,7 +3931,7 @@ item(FEAT_RAILTYPES, rail_NY2Z) {
 		construction_cost			: 8 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 163 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -4164,7 +4168,7 @@ item(FEAT_RAILTYPES, rail_NY3Z) {
 		construction_cost			: 8 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 164 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -4401,7 +4405,7 @@ item(FEAT_RAILTYPES, rail_NY4Z) {
 		construction_cost			: 8 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-		sort_order					: 165 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}

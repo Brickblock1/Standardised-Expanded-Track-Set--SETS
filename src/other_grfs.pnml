@@ -1,5 +1,5 @@
 if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
-    if param["\45\4E\37\01", 1] == 1) {
+    if (param["\45\4E\37\01", 1] == 1) {
         item(FEAT_RAILTYPES, rail_ISR1) {
             property {
                 label				: "ISR1" ; //ISR
@@ -8,7 +8,8 @@ if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
                 speed_limit         : 0 ;
             }
         }
-    if param["\45\4E\37\01", 4] == 1) {
+    }
+    if (param["\45\4E\37\01", 4] == 1) {
         item(FEAT_RAILTYPES, rail_ISR2) {
             property {
                 label				: "ISR2" ; //Dirt

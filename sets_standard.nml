@@ -311,7 +311,7 @@ if (preset == 1) {
         disable_SAAd_preset = 0;
         disable_SAA3_preset = 0;
         disable_SAAZ_preset = 0;
-        disable_SAA4_preset = 0;
+        disable_SAA4_preset = 1;
         disable_SAAE_preset = 0;
         disable_INVS_preset = 1;
         decor_tracks_preset = 0;
@@ -399,7 +399,7 @@ if (preset == 2) { //xUSSR Rails
     disable_SAAd_preset = 0;
     disable_SAA3_preset = 0;
     disable_SAAZ_preset = 0;
-    disable_SAA4_preset = 0;
+    disable_SAA4_preset = 1;
     disable_SAAE_preset = 0;
     disable_INVS_preset = 1;
     decor_tracks_preset = 0;
@@ -1683,36 +1683,40 @@ item(FEAT_RAILTYPES, rail_BLS3) {
 
 # 1 "src/other_grfs.pnml" 1
 if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
-    item(FEAT_RAILTYPES, rail_ISR1) {
-        property {
-            label				: "ISR1" ; //ISR
-            name                : string(STR_IND_1) ;
-            sort_order          : 4 ;
-            speed_limit         : 0 ;
+    if (param["\45\4E\37\01", 1] == 1) {
+        item(FEAT_RAILTYPES, rail_ISR1) {
+            property {
+                label				: "ISR1" ; //ISR
+                name                : string(STR_IND_1) ;
+                sort_order          : 4 ;
+                speed_limit         : 0 ;
+            }
         }
     }
-    item(FEAT_RAILTYPES, rail_ISR2) {
-        property {
-            label				: "ISR2" ; //Dirt
-            name                : string(STR_IND_2) ;
-            sort_order          : 5 ;
-            speed_limit         : 0 ;
+    if (param["\45\4E\37\01", 4] == 1) {
+        item(FEAT_RAILTYPES, rail_ISR2) {
+            property {
+                label				: "ISR2" ; //Dirt
+                name                : string(STR_IND_2) ;
+                sort_order          : 5 ;
+                speed_limit         : 0 ;
+            }
         }
-    }
-    item(FEAT_RAILTYPES, rail_ISR3) {
-        property {
-            label				: "ISR3" ; //Asphalt
-            name                : string(STR_IND_3) ;
-            sort_order          : 6 ;
-            speed_limit         : 0 ;
+        item(FEAT_RAILTYPES, rail_ISR3) {
+            property {
+                label				: "ISR3" ; //Asphalt
+                name                : string(STR_IND_3) ;
+                sort_order          : 6 ;
+                speed_limit         : 0 ;
+            }
         }
-    }
-    item(FEAT_RAILTYPES, rail_ISR4) {
-        property {
-            label				: "ISR4" ; //Cobblestone
-            name                : string(STR_IND_4) ;
-            sort_order          : 4 ;
-            speed_limit         : 0 ;
+        item(FEAT_RAILTYPES, rail_ISR4) {
+            property {
+                label				: "ISR4" ; //Cobblestone
+                name                : string(STR_IND_4) ;
+                sort_order          : 4 ;
+                speed_limit         : 0 ;
+            }
         }
     }
 }

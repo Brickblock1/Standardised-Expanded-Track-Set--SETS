@@ -85,7 +85,7 @@ item(FEAT_RAILTYPES, rail_NAAN) {
 		construction_cost			: 4 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 101 ;
+		sort_order					: 100 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}

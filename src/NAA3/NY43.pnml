@@ -16,7 +16,7 @@ item(FEAT_RAILTYPES, rail_NY43) {
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 6 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
-		sort_order					: 175 ;
+		sort_order					: 101 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
