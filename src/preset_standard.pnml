@@ -30,10 +30,6 @@ if (preset == 1) {
         disable_SAAE_preset = 0;
         disable_INVS_preset = 1;
         decor_tracks_preset = 0;
-        SAAZ_SAAA_preset = 1;
-        SAAZ_SAAa_preset = 0;
-        SAAZ_SAAD_preset = 0;
-        SAAZ_SAAd_preset = 0; 
         xussr_special = 1;
     }
     if (grf_future_status("KSTA") == 1) {
@@ -118,10 +114,6 @@ if (preset == 2) { //xUSSR Rails
     disable_SAAE_preset = 0;
     disable_INVS_preset = 1;
     decor_tracks_preset = 0;
-    SAAZ_SAAA_preset = 1;
-    SAAZ_SAAa_preset = 0;
-    SAAZ_SAAD_preset = 0;
-    SAAZ_SAAd_preset = 0; 
     xussr_special = 1;
 }
 
