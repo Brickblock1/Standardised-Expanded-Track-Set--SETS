@@ -2214,6 +2214,7 @@ item(FEAT_RAILTYPES, rail_SAAA) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 150 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2267,6 +2268,7 @@ item(FEAT_RAILTYPES, rail_SBAA) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 150 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2321,6 +2323,7 @@ item(FEAT_RAILTYPES, rail_SCAA) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 150 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2368,6 +2371,7 @@ item(FEAT_RAILTYPES, rail_SY2A) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 150 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2421,6 +2425,7 @@ item(FEAT_RAILTYPES, rail_SY3A) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 150 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2474,6 +2479,7 @@ item(FEAT_RAILTYPES, rail_SY4A) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 150 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2533,6 +2539,7 @@ item(FEAT_RAILTYPES, rail_SAAa) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 152 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2586,6 +2593,7 @@ item(FEAT_RAILTYPES, rail_SBAa) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 152 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2639,6 +2647,7 @@ item(FEAT_RAILTYPES, rail_SCAa) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 152 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2686,6 +2695,7 @@ item(FEAT_RAILTYPES, rail_SY2a) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 152 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2739,6 +2749,7 @@ item(FEAT_RAILTYPES, rail_SY3a) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 152 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2792,6 +2803,7 @@ item(FEAT_RAILTYPES, rail_SY4a) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 152 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2851,6 +2863,7 @@ item(FEAT_RAILTYPES, rail_SAAD) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 184 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2904,6 +2917,7 @@ item(FEAT_RAILTYPES, rail_SBAD) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 184 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -2957,6 +2971,7 @@ item(FEAT_RAILTYPES, rail_SCAD) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 184 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3004,6 +3019,7 @@ item(FEAT_RAILTYPES, rail_SY2D) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 184 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3057,6 +3073,7 @@ item(FEAT_RAILTYPES, rail_SY3D) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 184 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3110,6 +3127,7 @@ item(FEAT_RAILTYPES, rail_SY4D) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 184 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3169,6 +3187,7 @@ item(FEAT_RAILTYPES, rail_SAAd) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 79 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3222,6 +3241,7 @@ item(FEAT_RAILTYPES, rail_SBAd) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 79 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3275,6 +3295,7 @@ item(FEAT_RAILTYPES, rail_SCAd) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 79 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3322,6 +3343,7 @@ item(FEAT_RAILTYPES, rail_SY2d) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 79 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3375,6 +3397,7 @@ item(FEAT_RAILTYPES, rail_SY3d) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 79 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3428,6 +3451,7 @@ item(FEAT_RAILTYPES, rail_SY4d) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 79 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3554,6 +3578,7 @@ item(FEAT_RAILTYPES, rail_SAA3) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
 		sort_order					: 51 ;
+		map_colour					: 116 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3676,6 +3701,7 @@ item(FEAT_RAILTYPES, rail_SBA3) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
 		sort_order					: 51;
+		map_colour					: 116 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3790,6 +3816,7 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
 		sort_order					: 51 ;
+		map_colour					: 116 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3832,6 +3859,7 @@ item(FEAT_RAILTYPES, rail_SY23) {
 		construction_cost			: 13 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		sort_order					: 51 ;
+		map_colour					: 116 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3875,6 +3903,7 @@ item(FEAT_RAILTYPES, rail_SY33) {
 		construction_cost			: 13 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		sort_order					: 51 ;
+		map_colour					: 116 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3917,7 +3946,8 @@ item(FEAT_RAILTYPES, rail_SY43) {
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 13 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
-		sort_order					: 51 ;
+		sort_order					: 51 ; 
+		map_colour					: 116 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -3967,6 +3997,7 @@ item(FEAT_RAILTYPES, rail_SAAZ) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 207 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -4207,6 +4238,7 @@ item(FEAT_RAILTYPES, rail_SBAZ) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 207 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -4449,6 +4481,7 @@ item(FEAT_RAILTYPES, rail_SY2Z) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 207 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -4689,6 +4722,7 @@ item(FEAT_RAILTYPES, rail_SY3Z) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 207 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -4929,6 +4963,7 @@ item(FEAT_RAILTYPES, rail_SY4Z) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 50 ;
+		map_colour					: 207 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}
@@ -5298,6 +5333,7 @@ if ((disable_SAAA_preset == 0) || (disable_SAAa_preset == 0) || (disable_SAAD_pr
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5359,6 +5395,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0) && (disable_SAAD_pr
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5423,6 +5460,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0) && (disable_SAAd_pr
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5487,6 +5525,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAD_preset == 0) && (disable_SAAd_pr
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5551,6 +5590,7 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0) && (disable_SAAd_pr
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5618,6 +5658,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0)) {
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5682,6 +5723,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAD_preset == 0)) {
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5746,6 +5788,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAd_preset == 0)) {
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5810,6 +5853,7 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0)) {
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5875,6 +5919,7 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0)) {
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -5939,6 +5984,7 @@ if ((disable_SAAD_preset == 0) && (disable_SAAd_preset == 0)) {
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 			sort_order					: 50 ;
+			map_colour					: 207 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}

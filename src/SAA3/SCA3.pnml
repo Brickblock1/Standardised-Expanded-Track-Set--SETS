@@ -86,6 +86,7 @@ item(FEAT_RAILTYPES, rail_SCA3) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
 		sort_order					: 51 ;
+		map_colour					: 116 ;
 		speed_limit					: param[4] km/h ;
 		extra_aspects				: signal_elec;
 	}

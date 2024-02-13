@@ -20,6 +20,7 @@ item(FEAT_RAILTYPES, rail_NAAa) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 100 ;
+		map_colour					: 152 ;
 		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
