@@ -71,7 +71,7 @@ if (disable_SAA4_preset == 0) {
 
 item(FEAT_RAILTYPES, rail_SBA4) {
 	property {
-		label						: "SBA4" ;
+		label						: "SAA4" ;
 		name						: string(STR_SBA4_NAME) ;
 		menu_text					: string(STR_SBA4_NAME) ;
 		build_window_caption		: string(STR_4RDR_BUILD_NAME) ;
@@ -80,13 +80,14 @@ item(FEAT_RAILTYPES, rail_SBA4) {
 		toolbar_caption				: string(STR_4RDR_TOOLBAR) ;
 		compatible_railtype_list	: [STANDARD_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [STANDARD_GAUGE_RAILTYPE_4TH] ;
-		alternative_railtype_list	: ["SAA4", "SAB4", "SAC4", "SAD4", "SAE4"] ;
+		alternative_railtype_list	: ["SAB4", "SAC4", "SAD4", "SAE4"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 7 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
 		sort_order					: 91 ;
+		map_colour					: 133 ;
 		speed_limit					: param[2] km/h ;
 	}
 	graphics {

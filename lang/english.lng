@@ -109,7 +109,7 @@ STR_PARAM_DISABLE_INVS_DESC        :Disables the invisible track which is only f
 
 
 STR_PARAM_HIDE_NAAE                :Hide multi-voltage tracks
-STR_PARAM_HIDE_NAAE_DESC           :Will be overriden by the preset unless it is set to manual.
+STR_PARAM_HIDE_NAAE_DESC           :Hides all combinations of voltages exept those with third rail.
 
 STR_PARAM_DISABLE_NAAA             :Disable 25kv AC tracks
 STR_PARAM_DISABLE_NAAA_DESC        :Will be overriden by the preset unless it is set to manual.

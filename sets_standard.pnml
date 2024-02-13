@@ -21,6 +21,8 @@ if (decor_tracks_preset == 1) {
 #include "src/RAIL/SY4N.pnml"
 }
 
+#include "src/SAAE/SAAE.pnml"
+
 if (disable_SAAA_preset == 0) {
 #include "src/SAAA/SAAA.pnml"
 #include "src/SAAA/SBAA.pnml"
@@ -93,7 +95,6 @@ if (decor_tracks_preset == 1) {
 
 #include "src/4RDR/SBA4.pnml"
 
-#include "src/SAAE/SAAE.pnml"
 
 if (disable_INVS_preset == 0) {
 #include "src/BLST/INVS.pnml"
