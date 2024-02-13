@@ -73,7 +73,8 @@ if (decor_tracks_preset == 1) {
 #include "src/SAA3/SBA3.pnml"
 #include "src/SAA3/SCA3.pnml"
 
-if (decor_tracks_preset == 1) {
+
+if ((decor_tracks_preset == 1) && (disable_SAA3_preset == 0)) {
 #include "src/SAA3/SY23.pnml"
 #include "src/SAA3/SY33.pnml"
 #include "src/SAA3/SY43.pnml"

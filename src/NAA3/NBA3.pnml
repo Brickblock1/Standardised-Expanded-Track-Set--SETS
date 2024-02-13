@@ -64,7 +64,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_NBA3, fence_number < 2){
 
 
 
-if (disable_NAA3 == 0) {
+if (disable_NAA3_preset == 0) {
 
 // Item
 

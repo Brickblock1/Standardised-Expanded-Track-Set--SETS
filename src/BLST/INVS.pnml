@@ -18,7 +18,7 @@ item(FEAT_RAILTYPES, rail_INVS) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
 		introduction_date			: date(0,1,1) ;
-		sort_order					: 3 ;
+		sort_order					: 0 ;
 		speed_limit					: 0 km/h ;
 		extra_aspects				: signal_elec;
 	}

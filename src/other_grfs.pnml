@@ -4,7 +4,7 @@ if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
             property {
                 label				: "ISR1" ; //ISR
                 name                : string(STR_IND_1) ;
-                sort_order          : 4 ;
+                sort_order          : 0 ;
                 speed_limit         : 0 ;
             }
         }
@@ -14,7 +14,7 @@ if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
             property {
                 label				: "ISR2" ; //Dirt
                 name                : string(STR_IND_2) ;
-                sort_order          : 5 ;
+                sort_order          : 0 ;
                 speed_limit         : 0 ;
             }
         }
@@ -22,7 +22,7 @@ if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
             property {
                 label				: "ISR3" ; //Asphalt
                 name                : string(STR_IND_3) ;
-                sort_order          : 6 ;
+                sort_order          : 0 ;
                 speed_limit         : 0 ;
             }
         }
@@ -30,7 +30,7 @@ if (grf_future_status("\45\4E\37\01") == 1) { //Trackless tracks
             property {
                 label				: "ISR4" ; //Cobblestone
                 name                : string(STR_IND_4) ;
-                sort_order          : 4 ;
+                sort_order          : 0 ;
                 speed_limit         : 0 ;
             }
         }
@@ -41,8 +41,11 @@ if (grf_order_behind("Meo\B1") != 1) {
     error (FATAL, string(STR_XUSSR_FUTURE));
 }
 
-if (grf_current_status("MEO\B1") == 1) {
-    if ((preset == 0) || (preset == 3)) {
+if (grf_current_status("Meo\B1") == 1) {
+    if (0 == ((preset == 1) || (preset == 2))) {
         error (NOTICE, string(STR_XUSSR_BEHIND));
+    }
+    if ((param["Meo\B1", 0] != 5) && ((preset == 1) || (preset == 2))) {
+        error (NOTICE, string(STR_XUSSR_ELECTRIFICATION));
     }
 }

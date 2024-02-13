@@ -63,7 +63,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_SAA3, fence_number < 1){
 }
 
 
-if (disable_SAA3 == 0) {
+if (disable_SAA3_preset == 0) {
 
 
 

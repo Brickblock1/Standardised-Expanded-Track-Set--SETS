@@ -197,7 +197,7 @@ item(FEAT_RAILTYPES, rail_BLS2) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
 		introduction_date			: date(0,1,1) ;
-		sort_order					: 1 ;
+		sort_order					: 0 ;
 	}
 	graphics {
 		track_overlay		: gfx_blank ;
@@ -306,7 +306,7 @@ item(FEAT_RAILTYPES, rail_BLS3) {
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING) ;
 		introduction_date			: date(0,1,1) ;
-		sort_order					: 2 ;
+		sort_order					: 0 ;
 	}
 	graphics {
 		track_overlay		: gfx_blank ;

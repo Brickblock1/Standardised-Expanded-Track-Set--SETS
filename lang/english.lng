@@ -13,7 +13,7 @@ STR_PARAM_TRACK_WIDE_BALLAST_NAME	:Wide ballast
 STR_PARAM_TRACK_WIDE_BALLAST_DESC	:Enable full tile ballast graphics.
 
 STR_PARAM_DECOR_NAME				:Decorative industrial tracks
-STR_PARAM_DECOR_DESC				:Enable decorative tracks to match industry tile sets and industrial object sets. (CHIPS & FIRS compatible)
+STR_PARAM_DECOR_DESC				:Enable decorative tracks to match industry tile sets and industrial object sets. (CHIPS & FIRS compatible){}Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_TUNNELS_NAME				:Custom tunnel entrances 
 STR_PARAM_TUNNELS_DESC				:Enable custom tunnels to match industry wide ballast. Enabeling this can cause tunnels from other grfs to look weird.
@@ -62,16 +62,16 @@ STR_PARAM_SAAZ_1					:Allow dual electrifid trains to traverse 25kv AC tracks
 STR_PARAM_SAAZ_2					:Allow dual electrifid trains to traverse 15kv AC tracks
 STR_PARAM_SAAZ_3					:Allow dual electrifid trains to traverse 3kv DC tracks
 STR_PARAM_SAAZ_4					:Allow dual electrifid trains to traverse 1.5kv DC tracks
-STR_PARAM_SAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on dual electrification tracks.
+STR_PARAM_SAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on dual electrification tracks.{}Will be overriden by most presets.
 
 STR_PARAM_NAAZ_1					:Allow dual electrifid trains to traverse 25kv AC tracks
 STR_PARAM_NAAZ_2					:Allow dual electrifid trains to traverse 15kv AC tracks
 STR_PARAM_NAAZ_3					:Allow dual electrifid trains to traverse 3kv DC tracks
 STR_PARAM_NAAZ_4					:Allow dual electrifid trains to traverse 1.5kv DC tracks
-STR_PARAM_NAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on dual electrification tracks.
+STR_PARAM_NAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on dual electrification tracks.{}Will be overriden by most presets.
 
 STR_PARAM_METRO_TRACK_NAME      :Metro track
-STR_PARAM_METRO_TRACK_DESC      :Changes what track some metro train show up on.
+STR_PARAM_METRO_TRACK_DESC      :Changes what track some metro train show up on.{}Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_METRO_TRACK_3RDR      :Third rail
 STR_PARAM_METRO_TRACK_SBA4      :Fourth rail
@@ -147,7 +147,8 @@ STR_PARAM_SIGNAL_ELEC_3ASP				:3 Aspect Signals {RED}(requires JGR Patch Pack)
 STR_PARAM_SIGNAL_ELEC_4ASP				:4 Aspect Signals {RED}(requires JGR Patch Pack)
 
 STR_XUSSR_FUTURE                        :{STRING} must be loaded after xUSSR Rail or else some tracks will be hidden.
-STR_XUSSR_BEHIND                        :xUSSR mode recomended
+STR_XUSSR_BEHIND                        :xUSSR Rails preset recomended
+STR_XUSSR_ELECTRIFICATION               :It is recommended to set xUSSR Rails to "Short" electrification else you might be going past the 64 railtypes limit.
 
 
 
