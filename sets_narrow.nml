@@ -3141,7 +3141,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_NAA3, fence_number < 1){
 }
 
 
-if (disable_NAA3 == 0) {
+if (disable_NAA3_preset == 0) {
 
 
 
@@ -3259,7 +3259,7 @@ switch(FEAT_RAILTYPES, SELF, sw_fences_NBA3, fence_number < 2){
 
 
 
-if (disable_NAA3 == 0) {
+if (disable_NAA3_preset == 0) {
 
 // Item
 
@@ -3306,7 +3306,7 @@ if (custom_tunnels == 1) {
 }
 # 1 "sets_narrow.pnml" 1
 
-if (decor_tracks_preset == 1) {
+if ((decor_tracks_preset == 1) && (disable_NAA3_preset == 0)) {
 # 1 "src/NAA3/NY23.pnml" 1
 
 // Item

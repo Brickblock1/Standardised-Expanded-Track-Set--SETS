@@ -84,7 +84,7 @@ item(FEAT_RAILTYPES, rail_SBAN) {
 		construction_cost			: 11 ;
 		acceleration_model			: ACC_MODEL_RAIL ;
 		railtype_flags				: bitmask() ;
-		sort_order					: 12 ;
+		sort_order					: 50 ;
 		speed_limit					: param[3] km/h ;
 		extra_aspects				: signal_elec;
 	}

@@ -21,7 +21,7 @@ if ((disable_SAAA_preset == 0) || (disable_SAAa_preset == 0) || (disable_SAAD_pr
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -82,7 +82,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0) && (disable_SAAD_pr
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -146,7 +146,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0) && (disable_SAAd_pr
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -210,7 +210,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAD_preset == 0) && (disable_SAAd_pr
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -274,7 +274,7 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0) && (disable_SAAd_pr
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -341,7 +341,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAa_preset == 0)) {
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -405,7 +405,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAD_preset == 0)) {
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -469,7 +469,7 @@ if ((disable_SAAA_preset == 0) && (disable_SAAd_preset == 0)) {
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -533,7 +533,7 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0)) {
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -598,7 +598,7 @@ if ((disable_SAAa_preset == 0) && (disable_SAAD_preset == 0)) {
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
@@ -662,7 +662,7 @@ if ((disable_SAAD_preset == 0) && (disable_SAAd_preset == 0)) {
 			construction_cost			: 9 ;
 			acceleration_model			: ACC_MODEL_RAIL ;
 			railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
-			sort_order					: 21 ;
+			sort_order					: 50 ;
 			speed_limit					: param[3] km/h ;
 			extra_aspects				: signal_elec;
 		}
