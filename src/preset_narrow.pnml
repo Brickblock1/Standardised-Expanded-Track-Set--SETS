@@ -14,20 +14,6 @@ NAAZ_NAAd_preset = NAAZ_NAAd_;
 
 
 if (preset == 1) {
-    if (grf_future_status("Meo\B1") == 1) {
-        disable_NAAA_preset = 0;
-        disable_NAAa_preset = 0;
-        disable_NAAD_preset = 0;
-        disable_NAAd_preset = 0;
-        disable_NAA3_preset = 0;
-        disable_NAAZ_preset = 1;
-        disable_INVS_preset = 1;
-        decor_tracks_preset = 0;
-        NAAZ_NAAA_preset = 1;
-        NAAZ_NAAa_preset = 0;
-        NAAZ_NAAD_preset = 0;
-        NAAZ_NAAd_preset = 0; 
-    }
     if (grf_future_status("KSTA") == 1) {
         disable_NAAA_preset = 1;
         disable_NAAa_preset = 0;
@@ -41,6 +27,16 @@ if (preset == 1) {
         NAAZ_NAAa_preset = 0;
         NAAZ_NAAD_preset = 0;
         NAAZ_NAAd_preset = 0; 
+    }
+    if (grf_future_status("Meo\B1") == 1) {
+        disable_NAAA_preset = 0;
+        disable_NAAa_preset = 0;
+        disable_NAAD_preset = 0;
+        disable_NAAd_preset = 0;
+        disable_NAA3_preset = 0;
+        disable_NAAZ_preset = 1;
+        disable_INVS_preset = 1;
+        decor_tracks_preset = 0;
     }
 }
 

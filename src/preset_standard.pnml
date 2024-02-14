@@ -18,20 +18,6 @@ xussr_special = 0;
 
 
 if (preset == 1) {
-    if (grf_future_status("Meo\B1") == 1) {
-        metro_track_preset = 1;
-        disable_SAAA_preset = 0;
-        disable_SAAa_preset = 0;
-        disable_SAAD_preset = 0;
-        disable_SAAd_preset = 0;
-        disable_SAA3_preset = 0;
-        disable_SAAZ_preset = 0;
-        disable_SAA4_preset = 1;
-        disable_SAAE_preset = 0;
-        disable_INVS_preset = 1;
-        decor_tracks_preset = 0;
-        xussr_special = 1;
-    }
     if (grf_future_status("KSTA") == 1) {
         metro_track_preset = 0;
         disable_SAAA_preset = 0;
@@ -99,6 +85,20 @@ if (preset == 1) {
         SAAZ_SAAa_preset = 0;
         SAAZ_SAAD_preset = 1;
         SAAZ_SAAd_preset = 0;  
+    }
+    if (grf_future_status("Meo\B1") == 1) {
+        metro_track_preset = 1;
+        disable_SAAA_preset = 0;
+        disable_SAAa_preset = 0;
+        disable_SAAD_preset = 0;
+        disable_SAAd_preset = 0;
+        disable_SAA3_preset = 0;
+        disable_SAAZ_preset = 0;
+        disable_SAA4_preset = 1;
+        disable_SAAE_preset = 0;
+        disable_INVS_preset = 1;
+        decor_tracks_preset = 0;
+        xussr_special = 1;
     }
 }
 
