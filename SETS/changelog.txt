@@ -1,0 +1,19 @@
+Version 2.0:
+    Change: Rename to SETS.
+    Add: Narrow gauge NewGRF.
+    Add: Presets for different trainsets.
+    Add: Compatibility with xUSSR Rails.
+    Add: Map colour based on voltage.
+    Change: Ballast tracks only available when industrial tracks are.
+    Change: Order of parameters.
+    Change: Improved track sort order
+    Fix: Dual-electrification track behavior.  
+Version 1.2:
+    Add: Custom tunnel portals.
+    Fix: Empty ballast path reserveation bug. 
+    Fix: Fences were visible on invisible tracks. 
+Version 1.1:
+    Fix: Allow all OHLE trains on the overhead electrified tracks.
+    Fix: INVS parameter was using wrong bit.
+    Fix: Incorrect parameter descriptions.
+    Fix: .grf name overlap with other smits.

@@ -1,9 +1,0 @@
-Version 1.2:
-    Add: Custom tunnel portals.
-    Fix: Empty ballast path reserveation bug. 
-    Fix: Fences were visible on invisible tracks. 
-Version 1.1:
-    Fix: Allow all OHLE trains on the overhead electrified tracks.
-    Fix: INVS parameter was using wrong bit.
-    Fix: Incorrect parameter descriptions.
-    Fix: .grf name overlap with other smits.
