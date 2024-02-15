@@ -79,7 +79,7 @@ item(FEAT_RAILTYPES, rail_NAAN) {
 		compatible_railtype_list	: [NARROW_GAUGE_RAILTYPE_ALL] ;
 		powered_railtype_list		: [NARROW_GAUGE_RAILTYPE_ALL] ;
 		introduces_railtype_list	: [NARROW_GAUGE_RAILTYPE_NONE] ;
-		alternative_railtype_list	: ["NABN", "NACN", "NADN", "NAEN", "IHD_"] ;
+		alternative_railtype_list	: ["NABN", "NACN", "NADN", "NAEN", "IHD_", "NGRL"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 4 ;

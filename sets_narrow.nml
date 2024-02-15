@@ -1644,7 +1644,7 @@ item(FEAT_RAILTYPES, rail_NAAN) {
 		compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
 		powered_railtype_list		: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
 		introduces_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N"] ;
-		alternative_railtype_list	: ["NABN", "NACN", "NADN", "NAEN", "IHD_"] ;
+		alternative_railtype_list	: ["NABN", "NACN", "NADN", "NAEN", "IHD_", "NGRL"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 4 ;
@@ -1789,7 +1789,7 @@ if (custom_tunnels == 1) {
 
 // Item
 
-if ((disable_NAAA == 0) || (disable_NAAa_ == 0) || (disable_NAAD == 0) || (disable_NAAd_ == 0)) {
+if ((disable_NAAA_preset == 0) || (disable_NAAa_preset == 0) || (disable_NAAD_preset == 0) || (disable_NAAd_preset == 0)) {
 
 	item(FEAT_RAILTYPES, rail_NAAE) {
 		property {
@@ -1803,7 +1803,7 @@ if ((disable_NAAA == 0) || (disable_NAAa_ == 0) || (disable_NAAD == 0) || (disab
 			compatible_railtype_list	: ["NAAN", "NBAN", "NCAN", "NY2N", "NY3N", "NY4N", "NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z", "NAA3", "NBA3", "NCA3", "NY23", "NY33", "NY43", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
 			powered_railtype_list		: ["NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
 			introduces_railtype_list	: ["NAAE", "NBAE", "NCAE", "NAAa", "NBAa", "NCAa", "NY2a", "NY3a", "NY4a", "NAAE", "NBAE", "NCAE", "NAAA", "NBAA", "NCAA", "NY2A", "NY3A", "NY4A", "NAAE", "NBAE", "NCAE", "NAAD", "NBAD", "NCAD", "NY2D", "NY3D", "NY4D", "NAAE", "NBAE", "NCAE", "NAAd", "NBAd", "NCAd", "NY2d", "NY3d", "NY4d", "NAAE", "NBAE", "NCAE", "NAAZ", "NBAZ", "NY2Z", "NY3Z", "NY4Z"] ;
-			alternative_railtype_list	: ["NABE", "NACE", "NADE", "NAEE", "IHE_", "NAA*", "NAB*", "NAC*", "NAD*", "NAE*"] ;
+			alternative_railtype_list	: ["NABE", "NACE", "NADE", "NAEE", "IHE_", "NAA*", "NAB*", "NAC*", "NAD*", "NAE*", "ELNG"] ;
 			curve_speed_multiplier		: 0 ;
 			station_graphics			: RAILTYPE_STATION_NORMAL ;
 			construction_cost			: 7 ;

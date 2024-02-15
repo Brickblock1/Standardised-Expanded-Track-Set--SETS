@@ -1,7 +1,7 @@
 
 // Item
 
-if ((disable_NAAA == 0) || (disable_NAAa_ == 0) || (disable_NAAD == 0) || (disable_NAAd_ == 0)) {
+if ((disable_NAAA_preset == 0) || (disable_NAAa_preset == 0) || (disable_NAAD_preset == 0) || (disable_NAAd_preset == 0)) {
 
 	item(FEAT_RAILTYPES, rail_NAAE) {
 		property {
@@ -15,7 +15,7 @@ if ((disable_NAAA == 0) || (disable_NAAa_ == 0) || (disable_NAAD == 0) || (disab
 			compatible_railtype_list	: [NARROW_GAUGE_RAILTYPE_ALL] ;
 			powered_railtype_list		: [NARROW_GAUGE_RAILTYPE_OHLE] ;
 			introduces_railtype_list	: [NARROW_GAUGE_RAILTYPE_OHLE] ;
-			alternative_railtype_list	: ["NABE", "NACE", "NADE", "NAEE", "IHE_", "NAA*", "NAB*", "NAC*", "NAD*", "NAE*"] ;
+			alternative_railtype_list	: ["NABE", "NACE", "NADE", "NAEE", "IHE_", "NAA*", "NAB*", "NAC*", "NAD*", "NAE*", "ELNG"] ;
 			curve_speed_multiplier		: 0 ;
 			station_graphics			: RAILTYPE_STATION_NORMAL ;
 			construction_cost			: 7 ;
