@@ -55,7 +55,7 @@ STR_PARAM_SPEED_DESC				:Speed in km/h (set to 0 to disable speed limit)
 STR_PARAM_SPEED_1					:Speed limit - Low
 STR_PARAM_SPEED_2					:Speed limit - Medium
 STR_PARAM_SPEED_3					:Speed limit - High
-STR_PARAM_SPEED_INFINATE            :Infinate
+STR_PARAM_SPEED_INFINATE            :Infinite
 
 
 STR_PARAM_SAAZ_1					:Allow dual electrifid trains to traverse 25kv AC tracks
