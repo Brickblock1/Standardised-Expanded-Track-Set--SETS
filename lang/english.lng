@@ -55,7 +55,7 @@ STR_PARAM_SPEED_DESC				:Speed in km/h (set to 0 to disable speed limit)
 STR_PARAM_SPEED_1					:Speed limit - Low
 STR_PARAM_SPEED_2					:Speed limit - Medium
 STR_PARAM_SPEED_3					:Speed limit - High
-STR_PARAM_SPEED_INFINATE            :Infinate
+STR_PARAM_SPEED_INFINATE            :Infinite
 
 
 STR_PARAM_SAAZ_1					:Allow dual electrifid trains to traverse 25kv AC tracks
@@ -104,7 +104,7 @@ STR_PARAM_DISABLE_SAA4_DESC        :Will be overriden by the preset unless it is
 STR_PARAM_DISABLE_SAAE             :Disable multi-voltage tracks
 STR_PARAM_DISABLE_SAAE_DESC        :Disables all combinations of voltages other than dual electrification which have their own parameter and the universal ones which can't be dissabled. Disabling them could lead to worse compatibiliy with some trainsets.{}Will be overriden by the preset unless it is set to manual.
 
-STR_PARAM_DISABLE_INVS             :Disable the invisable track
+STR_PARAM_DISABLE_INVS             :Disable the invisible track
 STR_PARAM_DISABLE_INVS_DESC        :Disables the invisible track which is only for eyecandy{}Will be overriden by the preset unless it is set to manual.
 
 
