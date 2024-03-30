@@ -3,7 +3,7 @@ grf{
 	name: string(STR_GRF_NAME_STANDARD) ;
 	desc: string(STR_GRF_DESC_STANDARD) ;
 	url: string(STR_GRF_URL) ;
-	version: 4 ;
+	version: 5 ;
 	min_compatible_version: 4 ;
 	param 8{
 		preset{
