@@ -58,16 +58,16 @@ STR_PARAM_SPEED_3					:Speed limit - High
 STR_PARAM_SPEED_INFINATE            :Infinite
 
 
-STR_PARAM_SAAZ_1					:Allow dual electrifid trains to traverse 25kv AC tracks
-STR_PARAM_SAAZ_2					:Allow dual electrifid trains to traverse 15kv AC tracks
-STR_PARAM_SAAZ_3					:Allow dual electrifid trains to traverse 3kv DC tracks
-STR_PARAM_SAAZ_4					:Allow dual electrifid trains to traverse 1.5kv DC tracks
+STR_PARAM_SAAZ_1					:Allow dual electified trains to traverse 25kv AC tracks
+STR_PARAM_SAAZ_2					:Allow dual electified trains to traverse 15kv AC tracks
+STR_PARAM_SAAZ_3					:Allow dual electified trains to traverse 3kv DC tracks
+STR_PARAM_SAAZ_4					:Allow dual electified trains to traverse 1.5kv DC tracks
 STR_PARAM_SAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on dual electrification tracks.{}Will be overriden by most presets.
 
-STR_PARAM_NAAZ_1					:Allow dual electrifid trains to traverse 25kv AC tracks
-STR_PARAM_NAAZ_2					:Allow dual electrifid trains to traverse 15kv AC tracks
-STR_PARAM_NAAZ_3					:Allow dual electrifid trains to traverse 3kv DC tracks
-STR_PARAM_NAAZ_4					:Allow dual electrifid trains to traverse 1.5kv DC tracks
+STR_PARAM_NAAZ_1					:Allow dual electified trains to traverse 25kv AC tracks
+STR_PARAM_NAAZ_2					:Allow dual electified trains to traverse 15kv AC tracks
+STR_PARAM_NAAZ_3					:Allow dual electified trains to traverse 3kv DC tracks
+STR_PARAM_NAAZ_4					:Allow dual electified trains to traverse 1.5kv DC tracks
 STR_PARAM_NAAZ_DESC				    :This parameter works both ways so if 25kv is enabled those trains will also be able to run on dual electrification tracks.{}Will be overriden by most presets.
 
 STR_PARAM_METRO_TRACK_NAME      :Metro track
@@ -128,7 +128,8 @@ STR_PARAM_DISABLE_NAA3_DESC        :Will be overriden by the preset unless it is
 
 
 STR_PARAM_PRESET_NAME                   :Preset
-STR_PARAM_PRESET_DESC                   :What selection of tracks should be used?{}Manual: Configure the set yourself.{}Auto: Tries to find a preset based on loaded track/trainset. Manual is used if no set is found.{}xUSSR: A selection for use with xUSSR Rails and accompanying trains.{}Scandinavia: 1.5kv, 15kv and 25kv{}Benelux: 1.5kv, 3kv and 25kv tracks.{}DACH: 15kv track{}US: 25kv, 3kv and third rail tracks.{}Feel free to request changes to existing presets and new ones in the forum topic.
+STR_PARAM_PRESET_DESC_RAIL              :What selection of tracks should be used?{}Manual: Configure the set yourself.{}Auto: Tries to find a preset based on loaded track/trainset. Manual is used if no set is found.{}xUSSR: A selection for use with xUSSR Rails and accompanying trains.{}Scandinavia: 1.5kv, 15kv and 25kv{}Benelux: 1.5kv, 3kv and 25kv tracks.{}DACH: 15kv track{}US: 25kv, 3kv and third rail tracks.{}Feel free to request changes to existing presets and new ones in the forum topic.
+STR_PARAM_PRESET_DESC_NAAN              :What selection of tracks should be used?{}Manual: Configure the set yourself.{}Auto: Tries to find a preset based on loaded track/trainset. Manual is used if no set is found.{}xUSSR: A selection for use with xUSSR Rails and accompanying trains.{}Scandinavia: 1.5kv and 15kv{}Feel free to request changes to existing presets and new ones in the forum topic.
 
 STR_PARAM_PRESET_MANUAL                 :Manual
 STR_PARAM_PRESET_AUTO                   :Auto
