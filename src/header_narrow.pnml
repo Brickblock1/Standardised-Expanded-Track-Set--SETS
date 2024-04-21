@@ -4,7 +4,7 @@ grf{
 	desc: string(STR_GRF_DESC_NARROW) ;
 	url: string(STR_GRF_URL) ;
 	version: 2 ;
-	min_compatible_version: 1 ;
+	min_compatible_version: 2 ;
 	param 8{
 		preset{
 			type:	int;
