@@ -63,13 +63,12 @@ grf{
  			name:    string(STR_PARAM_GFX_FENCE_NAME);
  			desc:    string(STR_PARAM_GFX_FENCE_DESC);
  			min_value: 0;
- 			max_value: 3;
+ 			max_value: 2;
  			def_value: 0;
  			names: {
  				0: string(STR_PARAM_GFX_FENCE_ALL);
- 				1: string(STR_PARAM_GFX_FENCE_MOST);
- 				2: string(STR_PARAM_GFX_FENCE_SOME);
- 				3: string(STR_PARAM_GFX_FENCE_NONE);
+ 				1: string(STR_PARAM_GFX_FENCE_SOME);
+ 				2: string(STR_PARAM_GFX_FENCE_NONE);
  			};
 		}
 	}
