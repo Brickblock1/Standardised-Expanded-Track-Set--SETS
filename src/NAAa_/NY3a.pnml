@@ -24,7 +24,7 @@ item(FEAT_RAILTYPES, rail_NY3a) {
 	}
 	graphics {
 		track_overlay		: gfx_overlays_NAAN ;
-		underlay			: gfx_underlay_SY3N ;
+		underlay			: gfx_underlay_NY3N ;
 		bridge_surfaces		: gfx_bridge_tracks_NAAN ;
 		tunnels				: gfx_tunnel_tracks_NAAN ;
 		level_crossings		: sw_lc_NAAN_state ;
