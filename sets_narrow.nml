@@ -2948,7 +2948,7 @@ item(FEAT_RAILTYPES, rail_NY2d) {
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 100 ;
 		map_colour					: 79 ;
-		speed_limit					: param[3] km/h ;
+		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {
@@ -3002,7 +3002,7 @@ item(FEAT_RAILTYPES, rail_NY3d) {
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 100 ;
 		map_colour					: 79 ;
-		speed_limit					: param[3] km/h ;
+		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {
@@ -3056,7 +3056,7 @@ item(FEAT_RAILTYPES, rail_NY4d) {
 		railtype_flags				: bitmask(RAILTYPE_FLAG_CATENARY) ;
 		sort_order					: 100 ;
 		map_colour					: 79 ;
-		speed_limit					: param[3] km/h ;
+		speed_limit					: param[2] km/h ;
 		extra_aspects				: signal_elec;
 	}
 	graphics {
