@@ -5,7 +5,7 @@ grf{
 	name: string(STR_GRF_NAME_STANDARD) ;
 	desc: string(STR_GRF_DESC_STANDARD) ;
 	url: string(STR_GRF_URL) ;
-	version: 5 ;
+	version: 6 ;
 	min_compatible_version: 4 ;
 	param 8{
 		preset{
@@ -312,7 +312,7 @@ if (preset == 1) {
         disable_SAA3_preset = 0;
         disable_SAAZ_preset = 1;
         disable_SAA4_preset = 1;
-        disable_SAAE_preset = 0;
+        disable_SAAE_preset = 1;
         disable_INVS_preset = 0;
         decor_tracks_preset = 1;
         SAAZ_SAAA_preset = 0;
@@ -329,7 +329,7 @@ if (preset == 1) {
         disable_SAA3_preset = 0;
         disable_SAAZ_preset = 0;
         disable_SAA4_preset = 1;
-        disable_SAAE_preset = 0;
+        disable_SAAE_preset = 1;
         disable_INVS_preset = 0;
         decor_tracks_preset = 1;
         SAAZ_SAAA_preset = 0;
@@ -346,7 +346,7 @@ if (preset == 1) {
         disable_SAA3_preset = 0;
         disable_SAAZ_preset = 0;
         disable_SAA4_preset = 1;
-        disable_SAAE_preset = 0;
+        disable_SAAE_preset = 1;
         disable_INVS_preset = 0;
         decor_tracks_preset = 1;
         SAAZ_SAAA_preset = 0;
@@ -363,7 +363,7 @@ if (preset == 1) {
         disable_SAA3_preset = 0;
         disable_SAAZ_preset = 0;
         disable_SAA4_preset = 1;
-        disable_SAAE_preset = 0;
+        disable_SAAE_preset = 1;
         disable_INVS_preset = 0;
         decor_tracks_preset = 1;
         SAAZ_SAAA_preset = 1;
@@ -388,7 +388,7 @@ if (preset == 1) {
 }
 
 if (preset == 2) { //xUSSR Rails
-    metro_track_preset = 1;
+    metro_track_preset = 0;
     disable_SAAA_preset = 0;
     disable_SAAa_preset = 0;
     disable_SAAD_preset = 0;
@@ -411,7 +411,7 @@ if (preset == 3) { //Scandinavia
     disable_SAA3_preset = 0;
     disable_SAAZ_preset = 1;
     disable_SAA4_preset = 1;
-    disable_SAAE_preset = 0;
+    disable_SAAE_preset = 1;
     disable_INVS_preset = 0;
     decor_tracks_preset = 1;
     SAAZ_SAAA_preset = 0;
@@ -429,7 +429,7 @@ if (preset == 4) { //Benelux
     disable_SAA3_preset = 0;
     disable_SAAZ_preset = 0;
     disable_SAA4_preset = 1;
-    disable_SAAE_preset = 0;
+    disable_SAAE_preset = 1;
     disable_INVS_preset = 0;
     decor_tracks_preset = 1;
     SAAZ_SAAA_preset = 0;
@@ -447,7 +447,7 @@ if (preset == 5) { //DACH
     disable_SAA3_preset = 0;
     disable_SAAZ_preset = 0;
     disable_SAA4_preset = 1;
-    disable_SAAE_preset = 0;
+    disable_SAAE_preset = 1;
     disable_INVS_preset = 0;
     decor_tracks_preset = 1;
     SAAZ_SAAA_preset = 0;
@@ -465,7 +465,7 @@ if (preset == 6) { //USA
     disable_SAA3_preset = 0;
     disable_SAAZ_preset = 0;
     disable_SAA4_preset = 1;
-    disable_SAAE_preset = 0;
+    disable_SAAE_preset = 1;
     disable_INVS_preset = 0;
     decor_tracks_preset = 1;
     SAAZ_SAAA_preset = 1;
@@ -4332,7 +4332,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (metro_track == 0) {
+if (metro_track_preset == 0) {
 	item(FEAT_RAILTYPES, rail_SAA3) {
 		property {
 			alternative_railtype_list: ["MTRO", "IHC_"] ;
@@ -6028,7 +6028,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (metro_track == 1) {
+if (metro_track_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SBA4) {
 		property {
 			alternative_railtype_list: ["MTRO", "IHC_"] ;

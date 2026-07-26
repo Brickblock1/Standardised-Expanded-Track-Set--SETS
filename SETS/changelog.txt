@@ -1,3 +1,6 @@
+Version 2.2:
+    Add: Support for IH4's lgv_capable badge. (dukwon)
+    Fix: Metro track was not affected by preset
 Version 2.1:
     Add: Website.
     Fix: Multivoltage trains not working on dual electified track.

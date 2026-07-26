@@ -110,7 +110,7 @@ if (custom_tunnels == 1) {
 	}
 }
 
-if (metro_track == 1) {
+if (metro_track_preset == 1) {
 	item(FEAT_RAILTYPES, rail_SBA4) {
 		property {
 			alternative_railtype_list: ["MTRO", "IHC_"] ;

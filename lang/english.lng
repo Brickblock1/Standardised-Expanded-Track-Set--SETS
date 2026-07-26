@@ -2,7 +2,7 @@
 
 STR_GRF_NAME_STANDARD	:SETS: Standard Gauge
 STR_GRF_NAME_NARROW	    :SETS: Narrow Gauge
-STR_GRF_DESC_STANDARD	:{GOLD}Standardised Expanded Track Set: Standard Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2024 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
+STR_GRF_DESC_STANDARD	:{GOLD}Standardised Expanded Track Set: Standard Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2024 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}IH4 support: {BLUE}dukwon{GOLD}{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
 STR_GRF_DESC_NARROW	    :{GOLD}Standardised Expanded Track Set: Narrow Gauge{}{}A track set that adds a customisable roster of multi-voltage track types that follow the standardised track scheme! {}{}{COPYRIGHT}2024 {BLUE}Brickblock1{GOLD}{}Licenced under GPL{NBSP}v2. Check licence for details.{}{}Credit:{}SUKTS: {BLUE}UnholyPhish{GOLD} and {BLUE}Gwyd{GOLD}{}Industrial trackset: {BLUE}Erato et al{GOLD}.{}Tunnel foundations: {BLUE}SAC{GOLD}, taken from ISR/DWE-style objects.
 
 STR_GRF_URL             :https://brickblock1.github.io/Standardised-Expanded-Track-Set--SETS/
@@ -102,7 +102,7 @@ STR_PARAM_DISABLE_SAA4             :Disable 630v fourth rail tracks
 STR_PARAM_DISABLE_SAA4_DESC        :Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_SAAE             :Disable multi-voltage tracks
-STR_PARAM_DISABLE_SAAE_DESC        :Disables all combinations of voltages other than dual electrification which have their own parameter and the universal ones which can't be dissabled. Disabling them could lead to worse compatibiliy with some trainsets.{}Will be overriden by the preset unless it is set to manual.
+STR_PARAM_DISABLE_SAAE_DESC        :Disables all combinations of voltages other than dual electrification which have their own parameter and the universal one which can't be dissabled. Disabling them could lead to worse compatibiliy with some trainsets made prior to OpenTTD 15.0.{}Will be overriden by the preset unless it is set to manual.
 
 STR_PARAM_DISABLE_INVS             :Disable the invisible track
 STR_PARAM_DISABLE_INVS_DESC        :Disables the invisible track which is only for eyecandy{}Will be overriden by the preset unless it is set to manual.
