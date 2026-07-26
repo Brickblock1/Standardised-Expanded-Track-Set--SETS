@@ -475,6 +475,19 @@ if (preset == 6) { //USA
 }
 # 1 "sets_standard.pnml" 1
 
+# 1 "src/badges.pnml" 1
+badgetable {
+    "ih_behaviour/lgv_capable",
+}
+
+item(FEAT_BADGES, badge_ih_behaviour_lgv_capable) {
+    property {
+        label: "ih_behaviour/lgv_capable";
+        flags: bitmask();
+    }
+}
+# 1 "sets_standard.pnml" 1
+
 # 1 "src/definitions.pnml" 1
 
 
@@ -2033,6 +2046,7 @@ item(FEAT_RAILTYPES, rail_SCAN) {
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		alternative_railtype_list	: ["IHAA", "LGVN"] ;
+		badges						: ["ih_behaviour/lgv_capable"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 17 ;
@@ -3038,6 +3052,7 @@ item(FEAT_RAILTYPES, rail_SCAA) {
 		compatible_railtype_list	: ["RAIL", "SBAN", "SCAN", "SY2N", "SY3N", "SY4N", "ELRL", "SAA$", "SAA=", "SAA[", "SAA]", "SAA(", "SAA)", "SAA^", "SAA'", "SAA,", "SAA_", "SAAa", "SBAa", "SCAa", "SY2a", "SY3a", "SY4a", "ELRL", "SAA$", "SAA[", "SAA]", "SAA^", "SAA'", "SAA,", "SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_", "SAAD", "SBAD", "SCAD", "SY2D", "SY3D", "SY4D", "ELRL", "SAA=", "SAA]", "SAA)", "SAA'", "SAA,", "SAA_", "SAAd", "SBAd", "SCAd", "SY2d", "SY3d", "SY4d", "ELRL", "SAA=", "SAA[", "SAA(", "SAA^", "SAA,", "SAA_", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA3", "SBA3", "SCA3", "SY23", "SY33", "SY43", "SAAZ", "SBAZ", "SY2Z", "SY3Z", "SY4Z", "SAA4", "SBA4", "SCA4"] ;
 		powered_railtype_list		: ["SAAA", "SBAA", "SCAA", "SY2A", "SY3A", "SY4A", "ELRL", "SAA$", "SAA(", "SAA)", "SAA^", "SAA'", "SAA_"] ;
 		alternative_railtype_list	: ["IHBA", "LGVE"] ;
+		badges						: ["ih_behaviour/lgv_capable"] ;
 		curve_speed_multiplier		: 0 ;
 		station_graphics			: RAILTYPE_STATION_NORMAL ;
 		construction_cost			: 20 ;

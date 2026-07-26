@@ -2,6 +2,8 @@
 
 #include "src/preset_standard.pnml"
 
+#include "src/badges.pnml"
+
 #include "src/definitions.pnml"
 
 #include "src/signals.pnml"
