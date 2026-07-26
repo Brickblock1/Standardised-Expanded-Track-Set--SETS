@@ -479,13 +479,6 @@ if (preset == 6) { //USA
 badgetable {
     "ih_behaviour/lgv_capable",
 }
-
-item(FEAT_BADGES, badge_ih_behaviour_lgv_capable) {
-    property {
-        label: "ih_behaviour/lgv_capable";
-        flags: bitmask();
-    }
-}
 # 1 "sets_standard.pnml" 1
 
 # 1 "src/definitions.pnml" 1
